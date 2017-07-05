@@ -284,6 +284,7 @@
 	input[type="email"],
 	select {
 		height: 2.75em;
+    margin-bottom: 1em;
 	}
 
 	textarea {
@@ -1091,3 +1092,8 @@
 					margin-left: 0;
 					padding-left: 0;
 				}
+
+
+        #footer section {
+          margin-bottom: 1em;
+        }

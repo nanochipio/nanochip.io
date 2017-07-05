@@ -45,26 +45,6 @@
 			layers: {
 				config: {
 					mode: 'transform'
-				},
-				navPanel: {
-					animation: 'pushX',
-					breakpoints: 'medium',
-					clickToHide: true,
-					height: '100%',
-					hidden: true,
-					html: '<div data-action="moveElement" data-args="nav"></div>',
-					orientation: 'vertical',
-					position: 'top-left',
-					side: 'left',
-					width: 250
-				},
-				navButton: {
-					breakpoints: 'medium',
-					height: '4em',
-					html: '<span class="toggle" data-action="toggleLayer" data-args="navPanel"></span>',
-					position: 'top-left',
-					side: 'top',
-					width: '6em'
 				}
 			}
 		}

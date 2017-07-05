@@ -47,11 +47,3 @@
 			ul.actions.small li:first-child {
 				padding-top: 0;
 			}
-
-/* Button */
-
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"] {
-		padding: 0;
-	}
