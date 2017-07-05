@@ -216,16 +216,17 @@
 		-o-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: rgba(200, 200, 200, 0.475);
+		background: rgba(144, 144, 144, 0.375);
 		border-radius: 4px;
 		border: none;
-		border: solid 2px rgba(210, 210, 210, 0.25);
+		border: solid 2px rgba(210, 210, 210, 0.5);
 		color: inherit;
 		display: block;
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
     display: inline;
+    width: 15em;
 	}
 
 		input[type="text"]:invalid,
@@ -241,7 +242,7 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #ccc;
+			border-color: #ddd;
 			box-shadow: 0 0 0 1px #4dac71;
 		}
 
@@ -366,27 +367,27 @@
 	}
 
 	::-webkit-input-placeholder {
-		color: #888 !important;
+		color: #ddd !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: #888 !important;
+		color: #ddd !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: #888 !important;
+		color: #ddd !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: #888 !important;
+		color: #ddd !important;
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
-		color: #888 !important;
+		color: #ddd !important;
 		opacity: 1.0;
 	}
 
