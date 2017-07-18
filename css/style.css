@@ -24,7 +24,8 @@
 
 	a {
 		color: #4dac71;
-		text-decoration: underline;
+		text-decoration: none;
+		font-weight: bold;
 	}
 
 		a:hover {
@@ -964,7 +965,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		color: #ffffff;
-		padding: 8em 0em 12em;
+		padding: 8em 0em 4em;
 		text-align: center;
 	}
 
@@ -973,13 +974,17 @@
 			font-size: 4em;
 			font-weight: bold;
 			line-height: 1em;
-			margin: 0 0 2.5em 0;
+			margin: 0 0 1.5em 0;
 			padding: 0;
 		}
 
 		#banner p {
 			font-size: 1.5em;
-			margin: 1em 0 3em 0;
+			margin: .5em 0 .5em 0;
+		}
+
+		#banner div {
+			margin-bottom: 2em;
 		}
 
 		#banner .actions {
@@ -1097,3 +1102,9 @@
         #footer section {
           margin-bottom: 1em;
         }
+
+	.info {
+		opacity: 0;
+    padding: 0 3em;
+		margin-top: -2em;
+	}

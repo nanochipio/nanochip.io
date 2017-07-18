@@ -51,9 +51,18 @@
 	});
 
 	$(function() {
-
-		// ...
-
 	});
 
 })(jQuery);
+
+count = 1;
+
+function showInfo(e) {
+	p = e.parentElement;
+
+  $(e).animate({opacity: 1}, 400);
+	$(":first-child", p).css("visibility", "hidden");
+
+	ga('send', 'event', 'Info', 'show', p.id, 100./count);
+	count++;
+}
