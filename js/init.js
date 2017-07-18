@@ -60,7 +60,11 @@ function showInfo(e) {
 	p = e.parentElement;
   $(e).animate({opacity: 1}, 400);
 	$(":first-child", p).css("visibility", "hidden");
-	ga('send', 'event', 'Info', 'show', p.id, 100./count++);
+	dataLayer.push({
+		'event': 'showInfo',
+		'label': p.id,
+		'value': 100./count++,
+	});
 }
 
 vision_count = 1;
@@ -68,5 +72,9 @@ function showVision(e) {
 	p = e.parentElement;
   $(e).animate({opacity: 1}, 400);
 	$(":first-child", p).css("visibility", "hidden");
-	ga('send', 'event', 'Vision', 'show', p.id, 100./vision_count++);
+	dataLayer.push({
+		'event': 'showVision',
+		'label': p.id,
+		'value': 100./vision_count++,
+	});
 }
