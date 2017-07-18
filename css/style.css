@@ -24,7 +24,8 @@
 
 	a {
 		color: #4dac71;
-		text-decoration: underline;
+		text-decoration: none;
+		font-weight: bold;
 	}
 
 		a:hover {
@@ -964,7 +965,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		color: #ffffff;
-		padding: 8em 0em 12em;
+		padding: 8em 0em 4em;
 		text-align: center;
 	}
 
@@ -973,13 +974,17 @@
 			font-size: 4em;
 			font-weight: bold;
 			line-height: 1em;
-			margin: 0 0 2.5em 0;
+			margin: 0 0 1.5em 0;
 			padding: 0;
 		}
 
-		#banner p {
+		#banner p, #one p {
 			font-size: 1.5em;
-			margin: 1em 0 3em 0;
+			margin: 1em 0 1em 0;
+		}
+
+		#banner div, #one div {
+			margin-bottom: 2em;
 		}
 
 		#banner .actions {
@@ -996,10 +1001,14 @@
 				background-color: rgba(255, 255, 255, 0.2);
 			}
 
+#two {
+	padding: 5em 0;
+}
+
 /* Wrapper */
 
 	.wrapper {
-		padding: 6em 0em 4em;
+		padding: 4em 0em 0em;
 	}
 
 		.wrapper.style1 {
@@ -1025,14 +1034,6 @@
 				margin-bottom: 0.5em;
 			}
 
-		.wrapper.style2 .title, .wrapper.style2 header {
-			border-bottom: medium double rgba(144, 144, 144, 0.25);
-			padding-bottom: 1em;
-		}
-
-		.wrapper.style2 header {
-			margin-bottom: 4em;
-		}
 
 		.wrapper.style2 .feature {
 			margin: 0 0 2em 0;
@@ -1097,3 +1098,9 @@
         #footer section {
           margin-bottom: 1em;
         }
+
+	.info {
+		opacity: 0;
+    padding: 0 3em;
+		margin-top: -2em;
+	}
