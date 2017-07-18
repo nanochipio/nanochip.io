@@ -980,7 +980,7 @@
 
 		#banner p, #one p {
 			font-size: 1.5em;
-			margin: .5em 0 .5em 0;
+			margin: 1em 0 1em 0;
 		}
 
 		#banner div, #one div {
@@ -1004,7 +1004,7 @@
 /* Wrapper */
 
 	.wrapper {
-		padding: 4em 0em 4em;
+		padding: 4em 0em 0em;
 	}
 
 		.wrapper.style1 {
