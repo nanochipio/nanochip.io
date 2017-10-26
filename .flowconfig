@@ -1,0 +1,14 @@
+[options]
+module.file_ext=.js
+module.file_ext=.json
+module.file_ext=.jsx
+module.file_ext=.css
+module.file_ext=.scss
+module.name_mapper='.*\(.scss\)' -> 'empty/object'
+
+suppress_comment= \\(.\\|\n\\)*\\eslint-disable-next-line no-undef
+
+[ignore]
+.*/node_modules/graphql-skip-limit/.*
+.*/node_modules/mitt/src/.*
+.*/node_modules/config-chain/test/broken.json
