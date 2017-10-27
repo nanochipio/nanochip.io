@@ -48,7 +48,7 @@ const Nav = ({ data }: Object) => (
           <li className="nav-item"><a className="nav-link active" href="/about">About</a></li>
           <li className="nav-item"><a className="nav-link active" href="/contact">Contact</a></li>
           <div className="hidden-md-up lh-2">
-            <a className="btn btn-block btn-outline btn-secondary" href="https://app.ledgy.com/login">Login</a>
+            <a className="btn btn-block btn-outline btn-primary" href="https://app.ledgy.com/login">Login</a>
             <a className="btn btn-block btn-success" href="https://app.ledgy.com/signup">Sign Up</a>
           </div>
         </ul>
@@ -85,10 +85,10 @@ const Header = () => (
           <div className="col-10 offset-1 col-md-8 offset-md-2">
 
             <form className="form-glass row" action="https://app.ledgy.com/signup" method="get">
-              <div className="col-12 col-md-7">
+              <div className="col-12 col-md-7 my-1">
                 <input type="text" name="email" className="form-control form-control-lg" placeholder="Enter your email..." />
               </div>
-              <div className="col-12 col-md-5 py-2">
+              <div className="col-12 col-md-5 my-1">
                 <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">Get Started</button>
               </div>
             </form>
