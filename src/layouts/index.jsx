@@ -82,7 +82,7 @@ const Header = () => (
 
           <br />
 
-          <div className="col-12 col-md-8 offset-md-2">
+          <div className="col-10 offset-1 col-md-8 offset-md-2">
 
             <form className="form-glass row" action="https://app.ledgy.com/signup" method="get">
               <div className="col-12 col-md-7">
