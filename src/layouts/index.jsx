@@ -156,7 +156,7 @@ const Nav = ({ data }: Object) => (
 
 const Header = () => (
   <header className="header header-inverse h-fullscreen pb-80" style={{ backgroundColor: '#20a8d8' }}>
-    <canvas className="constellation" />
+    {/* <canvas className="constellation" /> */}
 
     <div className="container text-center">
 
@@ -173,22 +173,16 @@ const Header = () => (
             Make your life easy with the leading share register and cap table tool for Switzerland.
           </p>
 
-          <hr className="w-80" />
           <br />
 
-          <form className="row gap-y form-glass form-round">
-
-            <div className="input-group">
-              <input type="text" className="form-control" placeholder="Search for..." />
-              <span className="input-group-btn">
-                <button className="btn btn-primary" type="button">Go!</button>
-              </span>
+          <form className="form-glass row gap-y" action="https://app.ledgy.com/signup" method="get">
+            <div className="col-12 col-md-5 offset-md-2">
+              <input type="text" name="email" className="form-control form-control-lg" placeholder="Enter your email..." />
+            </div>
+            <div className="col-12 col-md-3">
+              <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">Get Started</button>
             </div>
           </form>
-
-          <a className="btn btn-xl btn-round btn-white w-200 hidden-sm-down" href="https://demo.ledgy.com">Launch Demo</a>
-          <a className="btn btn-lg btn-round btn-white w-200 hidden-md-up" href="https://demo.ledgy.com">Launch Demo</a>
-
         </div>
 
         <div className="col-12 align-self-end text-center">
