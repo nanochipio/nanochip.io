@@ -89,7 +89,7 @@ const Header = () => (
                 <input type="text" name="email" className="form-control form-control-lg" placeholder="Enter your email..." />
               </div>
               <div className="col-12 col-md-5 my-1">
-                <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">Get Started</button>
+                <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">Try free</button>
               </div>
             </form>
             <div className="row mt-2 pr-3 float-right">
