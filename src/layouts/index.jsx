@@ -6,6 +6,7 @@ import Img from 'gatsby-image';
 import '../assets/vendor/bootstrap/css/bootstrap.css';
 import '../assets/css/scss/thesaas.scss';
 import '../assets/vendor/font-awesome/css/font-awesome.css';
+import '../assets/vendor/themify-icons/css/themify-icons.css';
 
 import '../fonts/dosis-v7-latin-regular.eot';
 import '../fonts/dosis-v7-latin-regular.svg';
@@ -24,6 +25,11 @@ import '../assets/vendor/font-awesome/fonts/fontawesome-webfont.svg';
 import '../assets/vendor/font-awesome/fonts/fontawesome-webfont.woff';
 import '../assets/vendor/font-awesome/fonts/fontawesome-webfont.woff2';
 
+import '../assets/vendor/themify-icons/fonts/themify.eot';
+import '../assets/vendor/themify-icons/fonts/themify.svg';
+import '../assets/vendor/themify-icons/fonts/themify.ttf';
+import '../assets/vendor/themify-icons/fonts/themify.woff';
+
 const Nav = ({ data }: Object) => (
   <nav className="topbar topbar-inverse topbar-expand-md topbar-sticky">
     <div className="container">
@@ -41,8 +47,12 @@ const Nav = ({ data }: Object) => (
           <li className="nav-item"><a className="nav-link active" href="/features">Features</a></li>
           <li className="nav-item"><a className="nav-link active" href="/about">About</a></li>
           <li className="nav-item"><a className="nav-link active" href="/contact">Contact</a></li>
+          <div className="hidden-md-up lh-2">
+            <a className="btn btn-block btn-outline btn-secondary" href="https://app.ledgy.com/login">Login</a>
+            <a className="btn btn-block btn-success" href="https://app.ledgy.com/signup">Sign Up</a>
+          </div>
         </ul>
-        <div className="d-inline-flex ml-30">
+        <div className="d-inline-flex ml-30 hidden-sm-down">
           <a className="btn btn-sm btn-outline btn-secondary mr-4" href="https://app.ledgy.com/login">Login</a>
           <a className="btn btn-sm btn-success" href="https://app.ledgy.com/signup">Sign Up</a>
         </div>
@@ -78,7 +88,7 @@ const Header = () => (
               <div className="col-12 col-md-7">
                 <input type="text" name="email" className="form-control form-control-lg" placeholder="Enter your email..." />
               </div>
-              <div className="col-12 col-md-5">
+              <div className="col-12 col-md-5 py-2">
                 <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">Get Started</button>
               </div>
             </form>
