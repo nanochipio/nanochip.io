@@ -30,7 +30,7 @@ const Nav = ({ data }: Object) => (
 
       <div className="topbar-left">
         <button className="topbar-toggler">&#9776;</button>
-        <a className="topbar-brand" href="index.html">
+        <a className="topbar-brand" href="/">
           <Img className="logo-default logo-inverse" resolutions={data.logo.resolutions} alt="logo" />
         </a>
       </div>
@@ -38,116 +38,14 @@ const Nav = ({ data }: Object) => (
 
       <div className="topbar-right">
         <ul className="topbar-nav nav">
-          <li className="nav-item"><a className="nav-link active" href="index.html">Home</a></li>
-          <li className="nav-item">
-            <button className="nav-link btn-link">Samples <i className="fa fa-caret-down" /></button>
-            <div className="nav-submenu">
-              <a className="nav-link" href="demo-helpato.html">Helpato</a>
-              <a className="nav-link" href="demo-trello.html">Trello</a>
-              <a className="nav-link" href="demo-gmail.html">Gmail</a>
-              <a className="nav-link" href="demo-skype.html">Skype</a>
-              <a className="nav-link" href="demo-github.html">GitHub</a>
-              <a className="nav-link" href="demo-app.html">Mobile App</a>
-              <a className="nav-link" href="demo-bootstrap.html">Bootstrap</a>
-              <a className="nav-link" href="demo-slack.html">Slack</a>
-              <a className="nav-link" href="demo-zendesk.html">Zendesk</a>
-            </div>
-          </li>
-
-          <li className="nav-item">
-            <button className="nav-link btn-link" href="">Headers <i className="fa fa-caret-down" /></button>
-            <div className="nav-submenu">
-              <a className="nav-link active" href="header-color.html">Solid Color</a>
-              <a className="nav-link" href="header-gradient.html">Gradient</a>
-              <a className="nav-link" href="header-particle.html">Particle</a>
-              <a className="nav-link" href="header-typing.html">Typing Text</a>
-              <a className="nav-link" href="header-image.html">Background Image</a>
-              <a className="nav-link" href="header-video.html">Background Video</a>
-              <a className="nav-link" href="header-parallax.html">Parallax</a>
-              <a className="nav-link" href="header-slider.html">Slider</a>
-            </div>
-          </li>
-
-          <li className="nav-item">
-            <button className="nav-link btn-link" href="">Blocks <i className="fa fa-caret-down" /></button>
-            <div className="nav-submenu cols-2">
-              <a className="nav-link" href="block-feature.html">Feature</a>
-              <a className="nav-link" href="block-feature-textual.html">Textual feature</a>
-              <a className="nav-link" href="block-content.html">Content</a>
-              <a className="nav-link" href="block-portfolio.html">Portfolio</a>
-              <a className="nav-link" href="block-pricing.html">Pricing</a>
-              <a className="nav-link" href="block-cta.html">Call to action</a>
-              <a className="nav-link" href="block-testimonial.html">Testimonial</a>
-              <a className="nav-link" href="block-team.html">Team</a>
-              <a className="nav-link" href="block-contact.html">Contact</a>
-              <a className="nav-link" href="block-signup.html">Signup</a>
-              <a className="nav-link" href="block-subscribe.html">Subscribe</a>
-              <a className="nav-link" href="block-partner.html">Partner</a>
-              <a className="nav-link" href="block-topbar.html">Topbar</a>
-              <a className="nav-link" href="block-footer.html">Footer</a>
-            </div>
-          </li>
-
-          <li className="nav-item">
-            <button className="nav-link btn-link" href="">Blog <i className="fa fa-caret-down" /></button>
-            <div className="nav-submenu">
-              <a className="nav-link" href="blog-classic.html">Layout classic</a>
-              <a className="nav-link" href="blog-grid.html">Layout grid</a>
-              <a className="nav-link" href="blog-list.html">Layout list</a>
-              <a className="nav-link" href="blog-single.html">Single post</a>
-            </div>
-          </li>
-
-          <li className="nav-item">
-            <button className="nav-link btn-link" href="">Shop <i className="fa fa-caret-down" /></button>
-            <div className="nav-submenu">
-              <a className="nav-link" href="shop-list.html">Product list</a>
-              <a className="nav-link" href="shop-single.html">Single product</a>
-              <a className="nav-link" href="shop-cart.html">Cart overview</a>
-              <a className="nav-link" href="shop-checkout.html">Checkout</a>
-            </div>
-          </li>
-
-          <li className="nav-item">
-            <button className="nav-link btn-link" href="">Pages <i className="fa fa-caret-down" /></button>
-            <div className="nav-submenu">
-              <a className="nav-link" href="page-how-it-works.html">How it works</a>
-              <a className="nav-link" href="page-pricing.html">Pricing</a>
-              <a className="nav-link" href="page-portfolio.html">Portfolio</a>
-              <a className="nav-link" href="page-project.html">Project</a>
-              <a className="nav-link" href="page-job.html">Jobs</a>
-              <a className="nav-link" href="page-job-single.html">Job Info</a>
-              <a className="nav-link" href="page-demo.html">Request Demo</a>
-              <a className="nav-link" href="page-press.html">Press</a>
-              <a className="nav-link" href="page-about.html">About</a>
-              <a className="nav-link" href="page-contact.html">Contact</a>
-            </div>
-          </li>
-
-          <li className="nav-item">
-            <button className="nav-link btn-link" href="">Extra <i className="fa fa-caret-down" /></button>
-            <div className="nav-submenu">
-              <a className="nav-link" href="page-login.html">Login</a>
-              <a className="nav-link" href="page-register.html">Register</a>
-              <a className="nav-link" href="page-faq.html">FAQ</a>
-              <a className="nav-link" href="page-coming-soon.html">Coming soon</a>
-              <a className="nav-link" href="page-privacy.html">Privacy Policy</a>
-              <a className="nav-link" href="page-404.html">Error 404</a>
-            </div>
-          </li>
-
-          <li className="nav-item">
-            <button className="nav-link btn-link" href="">Doc <i className="fa fa-caret-down" /></button>
-            <div className="nav-submenu align-right">
-              <a className="nav-link" href="doc-element.html">Elements</a>
-              <a className="nav-link" href="doc-component.html">Components</a>
-              <a className="nav-link" href="doc-section.html">Sections</a>
-              <a className="nav-link" href="doc-card.html">Cards</a>
-              <a className="nav-link" href="doc-typography.html">Typography</a>
-              <a className="nav-link" href="doc-utility.html">Utility Classes</a>
-            </div>
-          </li>
+          <li className="nav-item"><a className="nav-link active" href="/features">Features</a></li>
+          <li className="nav-item"><a className="nav-link active" href="/about">About</a></li>
+          <li className="nav-item"><a className="nav-link active" href="/contact">Contact</a></li>
         </ul>
+        <div className="d-inline-flex ml-30">
+          <a className="btn btn-sm btn-outline btn-secondary mr-4" href="https://app.ledgy.com/login">Login</a>
+          <a className="btn btn-sm btn-success" href="https://app.ledgy.com/signup">Sign Up</a>
+        </div>
       </div>
 
     </div>
@@ -163,26 +61,37 @@ const Header = () => (
       <div className="row h-full">
         <div className="col-12 col-lg-10 offset-lg-1 align-self-center">
 
-          <h1 className="display-2 hidden-sm-down">Online Share Register</h1>
-          <h1 className="display-4 hidden-md-up">Online Share Register</h1>
+          <h1 className="display-2">Online Share Register</h1>
           <br />
           <p className="fs-20 w-400 mx-auto hidden-sm-down">
             Make your life easy with the leading share register and cap table tool for Switzerland.
           </p>
-          <p className="fs-16 w-250 mx-auto hidden-md-up">
+          <p className="fs-18 w-250 mx-auto hidden-md-up">
             Make your life easy with the leading share register and cap table tool for Switzerland.
           </p>
 
           <br />
 
-          <form className="form-glass row gap-y" action="https://app.ledgy.com/signup" method="get">
-            <div className="col-12 col-md-5 offset-md-2">
-              <input type="text" name="email" className="form-control form-control-lg" placeholder="Enter your email..." />
+          <div className="col-12 col-md-8 offset-md-2">
+
+            <form className="form-glass row" action="https://app.ledgy.com/signup" method="get">
+              <div className="col-12 col-md-7">
+                <input type="text" name="email" className="form-control form-control-lg" placeholder="Enter your email..." />
+              </div>
+              <div className="col-12 col-md-5">
+                <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">Get Started</button>
+              </div>
+            </form>
+            <div className="row mt-2 pr-3 float-right">
+              <a
+                style={{ textDecoration: 'underline' }}
+                className="text-white"
+                href="https://demo.ledgy.com"
+              >Watch the demo
+              </a>
             </div>
-            <div className="col-12 col-md-3">
-              <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">Get Started</button>
-            </div>
-          </form>
+
+          </div>
         </div>
 
         <div className="col-12 align-self-end text-center">
