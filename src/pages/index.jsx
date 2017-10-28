@@ -75,6 +75,27 @@ const Testimonial = ({ name, company, img, children }: TestimonialProps) => (
   </div>
 );
 
+
+const Feature = ({ title, text, right }: { title: string, text: string, right?: boolean }) => (
+  <div className="row gap-y align-items-center">
+    {!right &&
+      <div className="col-12 col-md-5">
+        <img className="rounded shadow-2 aos-init aos-animate" src="assets/img/demo/github/feature-1.png" alt="..." data-aos="zoom-in" />
+      </div>}
+
+    <div className="col-12 col-md-7">
+      <h4>{title}</h4>
+      <p>{text}</p>
+    </div>
+
+    {right &&
+      <div className="col-12 col-md-5">
+        <img className="rounded shadow-2 aos-init aos-animate" src="assets/img/demo/github/feature-1.png" alt="..." data-aos="zoom-in" />
+      </div>}
+  </div>
+);
+Feature.defaultProps = { right: false };
+
 const IndexPage = () => (
   <div>
     <Header />
@@ -119,72 +140,36 @@ const IndexPage = () => (
 
 
       <section className="section">
+        <header className="section-header">
+          <small>Features</small>
+          <h2>More to Discover</h2>
+          <hr />
+          <p className="lead">We waited until we could do it right. Then we did! Instead of creating a carbon copy.</p>
+        </header>
         <div className="container">
-          <header className="section-header">
-            <small>Features</small>
-            <h2>So Intuitive, So Easy</h2>
-            <hr />
-            <p className="lead">We are so excited and proud of our product.
-              It’s really easy to create a landing page for your awesome product.
-            </p>
-          </header>
 
-          <div className="row gap-y">
+          <Feature
+            title="Getting Started page"
+            text="As part of efforts to improve user onboarding, I shipped an experiment to a subset of new users showing them a Getting Started page immediately after signup to help them get to what we think are some of the most important actions for new users to take. We compared the subset of users against a control group to see whether such an experience improved engagement over a period of time."
+          />
 
-            <div className="col-12 col-md-6 col-xl-4 feature-1">
-              <p className="feature-icon text-dark"><i className="icon-mobile" /></p>
-              <h5>Responsive</h5>
-              <p>Your landing page displays smoothly on any device: desktop, tablet or mobile.</p>
-            </div>
+          <hr />
 
+          <Feature
+            right
+            title="Outdated comments toggling"
+            text="Last week we shipped outdated comments...well, brought them back, actually. We used to show collapsed comments on outdated diffs as a single line, but removed that when we shipped code review recently. We brought that back last week with an improvement: you can now toggle open threads on outdated diffs in a review individually."
+          />
 
-            <div className="col-12 col-md-6 col-xl-4 feature-1">
-              <p className="feature-icon text-info"><i className="icon-gears" /></p>
-              <h5>Customizable</h5>
-              <p>You can easily modify any block data to fits your need;
-                image, title, text, etc.
-              </p>
-            </div>
+          <hr />
 
-
-            <div className="col-12 col-md-6 col-xl-4 feature-1">
-              <p className="feature-icon"><i className="icon-tools" /></p>
-              <h5>UI Kit</h5>
-              <p>There is an extensive amount of UI
-                elements and shortcodes to easily develop your blocks.
-              </p>
-            </div>
-
-
-            <div className="col-12 col-md-6 col-xl-4 feature-1">
-              <p className="feature-icon text-warning"><i className="icon-layers" /></p>
-              <h5>Lego Base</h5>
-              <p>Designing a page is like playing with Lego!
-                Just stack blocks above each other.
-              </p>
-            </div>
-
-
-            <div className="col-12 col-md-6 col-xl-4 feature-1">
-              <p className="feature-icon text-danger"><i className="icon-recycle" /></p>
-              <h5>Clean Code</h5>
-              <p>You can find our code well organized,
-                commented, readable and easy for modification.
-              </p>
-            </div>
-
-
-            <div className="col-12 col-md-6 col-xl-4 feature-1">
-              <p className="feature-icon text-success"><i className="icon-chat" /></p>
-              <h5>Support</h5>
-              <p>Apart from free and regular updates, we are always ready to help you.</p>
-            </div>
-
-          </div>
+          <Feature
+            title="Code review illustrations"
+            text="Less an illustration, and more a literal proxy. These show up when the feature's introduced. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing."
+          />
 
         </div>
       </section>
-
 
       <section className="section section-inverse py-40" style={{ backgroundColor: '#00b38d' }}>
         <div className="container">
@@ -204,7 +189,7 @@ const IndexPage = () => (
                 </div>
 
                 <div className="col-12 col-md-3">
-                  <button className="btn btn-lg btn-primary btn-block">Subscribe</button>
+                  <button className="btn btn-lg btn-success btn-block">Subscribe</button>
                 </div>
               </form>
             </div>

@@ -26,7 +26,6 @@ const Nav = () => (
 
       <div className="topbar-right">
         <ul className="topbar-nav nav">
-          <li className="nav-item"><Link className="nav-link active" href to="/features">Features</Link></li>
           <li className="nav-item"><Link className="nav-link active" href to="/about">About</Link></li>
           <li className="nav-item"><Link className="nav-link active" href to="/contact">Contact</Link></li>
           <div className="hidden-md-up lh-2">
@@ -58,9 +57,6 @@ const Footer = () => (
 
         <div className="col-12 col-lg-6">
           <ul className="nav nav-primary nav-hero">
-            <li className="nav-item">
-              <Link className="nav-link" href to="/features">Features</Link>
-            </li>
             <li className="nav-item">
               <Link className="nav-link" href to="/about">About</Link>
             </li>
