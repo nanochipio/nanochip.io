@@ -76,6 +76,7 @@ const Footer = ({ data }: Object) => (
         </div>
       </div>
     </div>
+    <div data-provide="map" />
   </footer>
 );
 

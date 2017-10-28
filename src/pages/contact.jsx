@@ -15,6 +15,24 @@ const Header = () => (
   </header>
 );
 
+class Map extends React.Component<{}> {
+  componentDidMount() {
+    if (window.thesaas && window.google) { window.thesaas.map(); } // eslint-disable-line no-undef
+  }
+  render() {
+    return (<div
+      id="map"
+      className="h-400"
+      data-provide="map"
+      data-lat="47.3627638"
+      data-lng="8.5579592"
+      data-marker-lat="47.3627638"
+      data-marker-lng="8.5579592"
+      data-zoom="14"
+    />);
+  }
+}
+
 const IndexPage = () => (
   <div>
     <Header />
@@ -76,7 +94,7 @@ const IndexPage = () => (
         </div>
       </div>
 
-      <div className="h-400" data-provide="map" data-lat="47.3627638" data-lng="8.5579592" data-marker-lat="47.3627638" data-marker-lng="8.5579592" data-zoom="14" />
+      <Map />
     </main>
   </div>
 );
