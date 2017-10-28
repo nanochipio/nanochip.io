@@ -2,21 +2,25 @@
 
 import React from 'react';
 import Link from 'gatsby-link';
-import Img from 'gatsby-image';
 
 import '../assets/vendor/bootstrap/css/bootstrap.css';
 import '../assets/css/scss/thesaas.scss';
 import '../fonts';
+import logo from '../img/logo.png';
 
-const Nav = ({ data }: Object) => (
+const Logo = () => (
+  <Link href to="/">
+    <img className="logo-default logo-inverse" src={logo} width={100} height={40} alt="logo" />
+  </Link>
+);
+
+const Nav = () => (
   <nav className="topbar topbar-inverse topbar-expand-md topbar-sticky">
     <div className="container">
 
       <div className="topbar-left">
         <button className="topbar-toggler">&#9776;</button>
-        <Link className="topbar-brand" href to="/">
-          <Img className="logo-default logo-inverse" resolutions={data.logo.resolutions} alt="logo" />
-        </Link>
+        <Logo />
       </div>
 
 
@@ -42,15 +46,13 @@ const Nav = ({ data }: Object) => (
 );
 
 
-const Footer = ({ data }: Object) => (
+const Footer = () => (
   <footer className="site-footer">
     <div className="container">
       <div className="row gap-y align-items-center">
         <div className="col-12 col-lg-3">
           <div className="text-center text-lg-left">
-            <Link href to="/">
-              <Img className="logo-default logo-inverse" resolutions={data.logo.resolutions} alt="logo" />
-            </Link>
+            <Logo />
           </div>
         </div>
 
@@ -80,23 +82,12 @@ const Footer = ({ data }: Object) => (
   </footer>
 );
 
-const TemplateWrapper = ({ children, ...props }: { children: () => any }) => (
+const TemplateWrapper = ({ children }: { children: () => any }) => (
   <div>
-    <Nav {...props} />
+    <Nav />
     {children()}
-    <Footer {...props} />
+    <Footer />
   </div>
 );
 
 export default TemplateWrapper;
-
-// eslint-disable-next-line no-undef
-export const query = graphql`
-  query LogoQuery {
-    logo: imageSharp(id: { regex: "/logo/" }) {
-      resolutions(width: 80) {
-        ...GatsbyImageSharpResolutions_noBase64
-      }
-    }
-  }
-`;
