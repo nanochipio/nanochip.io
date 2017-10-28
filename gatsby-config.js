@@ -1,7 +1,5 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Ledgy - Online Share Register',
-  },
+  siteMetadata: { title: 'Ledgy - Online Share Register' },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',

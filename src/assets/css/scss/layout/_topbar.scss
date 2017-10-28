@@ -23,8 +23,8 @@
     // Fix .btn-outline.btn-white on sticky topbar
     //
     .btn-white.btn-outline {
-      border-color: $color-divider-light;
-      color: $color-text-secondary;
+      border-color: $color-primary;
+      color: $color-primary;
     }
 
   }
@@ -105,7 +105,7 @@
 
 
 // Topbar left
-// 
+//
 .topbar-left {
   display: flex;
   align-items: center;
@@ -242,7 +242,7 @@
 
 
   // 2 Cols
-  // 
+  //
   &.cols-2 {
     display: flex;
     flex-wrap: wrap;
@@ -456,7 +456,7 @@
 .topbar-reveal {
 
  //overflow: hidden;
-  
+
   .topbar {
     height: 0;
   }

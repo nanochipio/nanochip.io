@@ -5,15 +5,16 @@
   "author": "Ledgy AG <contact@ledgy.com>",
   "repository": "morloy/ledgy-app",
   "dependencies": {
-    "gatsby": "^1.9.73",
-    "gatsby-image": "^1.0.14",
-    "gatsby-link": "^1.6.22",
+    "gatsby": "^1.9.82",
+    "gatsby-image": "^1.0.16",
+    "gatsby-link": "^1.6.23",
     "gatsby-plugin-manifest": "^1.0.8",
     "gatsby-plugin-offline": "^1.0.10",
     "gatsby-plugin-sass": "^1.0.12",
-    "gatsby-plugin-sharp": "^1.6.10",
+    "gatsby-plugin-sharp": "^1.6.13",
     "gatsby-source-filesystem": "^1.5.5",
-    "gatsby-transformer-sharp": "^1.6.12"
+    "gatsby-transformer-sharp": "^1.6.13",
+    "react": "^15.0.0"
   },
   "keywords": [
     "ledgy"
@@ -27,24 +28,29 @@
   },
   "eslintConfig": {
     "extends": [
-      "@meteorjs/eslint-config-meteor",
-      "plugin:flowtype/recommended"
+      "plugin:flowtype/recommended",
+      "airbnb"
     ],
     "plugins": [
       "flowtype"
-    ]
+    ],
+    "rules": {
+      "object-curly-newline": [
+        "error",
+        {
+          "multiline": true
+        }
+      ]
+    }
   },
   "devDependencies": {
-    "@meteorjs/eslint-config-meteor": "^1.0.5",
     "babel-eslint": "^8.0.1",
-    "eslint": "^4.5.0",
+    "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-import-resolver-meteor": "^0.4.0",
-    "eslint-plugin-flowtype": "^2.35.0",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-meteor": "^4.1.4",
-    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-react": "^7.4.0",
     "flow-bin": "^0.57.3"
   }
 }
