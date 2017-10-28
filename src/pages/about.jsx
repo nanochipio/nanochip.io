@@ -31,7 +31,7 @@ type FounderProps = {
 }
 const Founder = ({ name, img }: FounderProps) => (
   <div className="col-12 col-md-6 col-lg-4 team-1">
-    {img && <Img resolutions={img.resolutions} alt={name} />}
+    {img && <Img {...img} alt={name} />}
     <h6>{name} <small>Co-Founder &amp; CEO</small></h6>
     <p>Uniquely grow resource maximizing outsourcing for excellent core competencies.</p>
     <div className="social social-boxed social-rounded social-gray">
@@ -43,7 +43,6 @@ const Founder = ({ name, img }: FounderProps) => (
 
 const Investor = ({ name }: ProfileProps) => (
   <div className="col-12 col-md-4 team-2">
-    <img src="assets/img/avatar/2.jpg" alt="..." />
     <h5>{name}</h5>
     <small>Co-Founder &amp; CTO</small>
     <p>

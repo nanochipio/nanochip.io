@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import Img from 'gatsby-image';
 
 const Header = () => (
   <header className="header header-inverse h-fullscreen pb-80" style={{ backgroundColor: '#20a8d8' }}>
@@ -76,12 +77,13 @@ const Testimonial = ({ name, company, img, children }: TestimonialProps) => (
 );
 
 
-const Feature = ({ title, text, right }: { title: string, text: string, right?: boolean }) => (
+const Feature =
+({ title, text, img, right }: { title: string, text: string, img: Object, right?: boolean}) => (
   <div className="row gap-y align-items-center">
     {!right &&
-      <div className="col-12 col-md-5">
-        <img className="rounded shadow-2 aos-init aos-animate" src="assets/img/demo/github/feature-1.png" alt="..." data-aos="zoom-in" />
-      </div>}
+    <div className="col-12 col-md-5">
+      <Img className="rounded shadow-2" {...img} alt={title} />
+    </div>}
 
     <div className="col-12 col-md-7">
       <h4>{title}</h4>
@@ -89,14 +91,14 @@ const Feature = ({ title, text, right }: { title: string, text: string, right?: 
     </div>
 
     {right &&
-      <div className="col-12 col-md-5">
-        <img className="rounded shadow-2 aos-init aos-animate" src="assets/img/demo/github/feature-1.png" alt="..." data-aos="zoom-in" />
-      </div>}
+    <div className="col-12 col-md-5">
+      <Img className="rounded shadow-2" {...img} alt={title} />
+    </div>}
   </div>
 );
 Feature.defaultProps = { right: false };
 
-const IndexPage = () => (
+const IndexPage = (props: Object) => (
   <div>
     <Header />
     <main className="main-content">
@@ -151,6 +153,7 @@ const IndexPage = () => (
           <Feature
             title="Getting Started page"
             text="As part of efforts to improve user onboarding, I shipped an experiment to a subset of new users showing them a Getting Started page immediately after signup to help them get to what we think are some of the most important actions for new users to take. We compared the subset of users against a control group to see whether such an experience improved engagement over a period of time."
+            img={props.data.feature1}
           />
 
           <hr />
@@ -159,6 +162,7 @@ const IndexPage = () => (
             right
             title="Outdated comments toggling"
             text="Last week we shipped outdated comments...well, brought them back, actually. We used to show collapsed comments on outdated diffs as a single line, but removed that when we shipped code review recently. We brought that back last week with an improvement: you can now toggle open threads on outdated diffs in a review individually."
+            img={props.data.feature2}
           />
 
           <hr />
@@ -166,6 +170,7 @@ const IndexPage = () => (
           <Feature
             title="Code review illustrations"
             text="Less an illustration, and more a literal proxy. These show up when the feature's introduced. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing."
+            img={props.data.feature3}
           />
 
         </div>
@@ -203,3 +208,24 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+// eslint-disable-next-line no-undef
+export const query = graphql`
+  query IndexQuery {
+    feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
+      sizes(maxWidth: 800) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    feature2: imageSharp(id: { regex: "/src\/img\/feature-2.png/" }) {
+      sizes(maxWidth: 800) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    feature3: imageSharp(id: { regex: "/src\/img\/feature-3.png/" }) {
+      sizes(maxWidth: 800) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;
