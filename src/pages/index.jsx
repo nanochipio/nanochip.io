@@ -15,16 +15,12 @@ const Header = () => (
           <br />
           <p className="fs-20 w-400 mx-auto hidden-sm-down">
             Make your life easy with the leading share register and cap table tool for Switzerland.
-            <br />
-            <strong>19 CHF/month. So Easy.</strong>
           </p>
           <p className="fs-18 w-250 mx-auto hidden-md-up">
             Make your life easy with the leading share register and cap table tool for Switzerland.
-            <br />
-            <strong>19 CHF/month. So Easy!</strong>
           </p>
 
-          <br />
+          <h4>First 3 months for free. Then 19 CHF/month</h4>
 
           <div className="col-10 offset-1 col-md-8 offset-md-2">
 
@@ -113,7 +109,7 @@ const IndexPage = () => (
         <div className="container">
           <div className="row gap-y align-items-center">
             <div className="col-12 col-md-5 offset-md-3">
-              <h4 className="fw-300 mb-0">All features included: <strong>19 CHF/month</strong></h4>
+              <h4 className="mb-0">First 3 months for free. Then 19 CHF/month</h4>
             </div>
 
             <div className="col-12 col-md-2">

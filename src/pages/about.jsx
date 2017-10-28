@@ -1,6 +1,8 @@
 // @flow
 
 import React from 'react';
+import Img from 'gatsby-image';
+
 import aboutUs from '../assets/img/about-us.jpg';
 
 const Header = () => (
@@ -21,11 +23,12 @@ const Header = () => (
 );
 
 type ProfileProps = {
-  name: string
+  name: string,
+  img?: Object,
 }
-const Founder = ({ name }: ProfileProps) => (
+const Founder = ({ name, img }: ProfileProps) => (
   <div className="col-12 col-md-6 col-lg-4 team-1">
-    <img src="assets/img/avatar/5.jpg" alt="..." />
+    {img && <Img resolutions={img.resolutions} alt={name} />}
     <h6>{name} <small>Co-Founder &amp; CEO</small></h6>
     <p>Uniquely grow resource maximizing outsourcing for excellent core competencies.</p>
     <div className="social social-boxed social-rounded social-gray">
@@ -60,7 +63,7 @@ const Advisor = ({ name }: ProfileProps) => (
   </div>
 );
 
-const IndexPage = () => (
+const IndexPage = ({ data }: Object) => (
   <div>
     <Header />
     <main className="main-content">
@@ -106,9 +109,9 @@ const IndexPage = () => (
 
 
           <div className="row gap-y">
-            <Founder name="Ben-Elias Brandt" />
-            <Founder name="Yoko Spirig" />
-            <Founder name="Timo Horstschaefer" />
+            <Founder name="Timo Horstschaefer" img={data.timo} />
+            <Founder name="Ben-Elias Brandt" img={data.ben} />
+            <Founder name="Yoko Spirig" img={data.yoko} />
           </div>
 
         </div>
@@ -143,3 +146,24 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+// eslint-disable-next-line no-undef
+export const query = graphql`
+  query AboutQuery {
+    ben: imageSharp(id: { regex: "/ben.jpg/" }) {
+      resolutions(width: 255, height: 255) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    yoko: imageSharp(id: { regex: "/yoko.jpg/" }) {
+      resolutions(width: 255, height: 255) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    timo: imageSharp(id: { regex: "/timo.jpg/" }) {
+      resolutions(width: 255, height: 255) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+  }
+`;

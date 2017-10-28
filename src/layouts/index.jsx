@@ -27,7 +27,7 @@ const Nav = ({ data }: Object) => (
           <div className="hidden-md-up lh-2">
             <a className="btn btn-block btn-outline btn-primary" href="https://app.ledgy.com/login">Login</a>
             <a className="btn btn-block btn-success" href="https://app.ledgy.com/signup">Sign Up</a>
-            <h4 className="mt-3">19 CHF/month. So Easy!</h4>
+            <h4 className="mt-3">First 3 months for free<br />Then 19 CHF/month</h4>
           </div>
         </ul>
         <div className="d-inline-flex ml-30 hidden-sm-down">
