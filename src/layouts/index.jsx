@@ -6,11 +6,13 @@ import Link from 'gatsby-link';
 import '../assets/vendor/bootstrap/css/bootstrap.css';
 import '../assets/css/scss/thesaas.scss';
 import '../fonts';
-import logo from '../img/logo.png';
+import logoDefault from '../img/logo_black.png';
+import logoInverse from '../img/logo_white.png';
 
 const Logo = () => (
   <Link href to="/">
-    <img className="logo-default logo-inverse" src={logo} width={100} height={40} alt="logo" />
+    <img className="logo-default" src={logoDefault} width={75} height={30} alt="logo" />
+    <img className="logo-inverse" src={logoInverse} width={75} height={30} alt="logo" />
   </Link>
 );
 
@@ -18,7 +20,7 @@ const Nav = () => (
   <nav className="topbar topbar-inverse topbar-expand-md topbar-sticky">
     <div className="container">
 
-      <div className="topbar-left">
+      <div className="topbar-brand">
         <button className="topbar-toggler">&#9776;</button>
         <Logo />
       </div>
