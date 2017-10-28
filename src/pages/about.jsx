@@ -24,9 +24,12 @@ const Header = () => (
 
 type ProfileProps = {
   name: string,
-  img?: Object,
 }
-const Founder = ({ name, img }: ProfileProps) => (
+type FounderProps = {
+  ...$Exact<ProfileProps>,
+  img: Object,
+}
+const Founder = ({ name, img }: FounderProps) => (
   <div className="col-12 col-md-6 col-lg-4 team-1">
     {img && <Img resolutions={img.resolutions} alt={name} />}
     <h6>{name} <small>Co-Founder &amp; CEO</small></h6>
@@ -39,7 +42,7 @@ const Founder = ({ name, img }: ProfileProps) => (
 );
 
 const Investor = ({ name }: ProfileProps) => (
-  <div className="col-12 col-md-6 team-2">
+  <div className="col-12 col-md-4 team-2">
     <img src="assets/img/avatar/2.jpg" alt="..." />
     <h5>{name}</h5>
     <small>Co-Founder &amp; CTO</small>
@@ -52,8 +55,7 @@ const Investor = ({ name }: ProfileProps) => (
 
 
 const Advisor = ({ name }: ProfileProps) => (
-  <div className="col-12 col-md-4 team-2">
-    <img src="assets/img/avatar/2.jpg" alt="..." />
+  <div className="col-12 col-md-6 team-2">
     <h5>{name}</h5>
     <small>Co-Founder &amp; CTO</small>
     <p>
@@ -130,10 +132,10 @@ const IndexPage = ({ data }: Object) => (
           <div className="row gap-y">
             <Investor name="Myke Naef" />
             <Investor name="Paul E. Sevinc" />
+            <Investor name="Luzius Meisser" />
           </div>
 
-          <div className="row gap-y">
-            <Advisor name="Luzius Meisser" />
+          <div className="row gap-y col-12 col-md-10 offset-md-1">
             <Advisor name="Adrian Buehrer" />
             <Advisor name="Elena Walder-Schiavone" />
           </div>

@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
 import '../assets/vendor/bootstrap/css/bootstrap.css';
@@ -13,17 +14,17 @@ const Nav = ({ data }: Object) => (
 
       <div className="topbar-left">
         <button className="topbar-toggler">&#9776;</button>
-        <a className="topbar-brand" href="/">
+        <Link className="topbar-brand" href to="/">
           <Img className="logo-default logo-inverse" resolutions={data.logo.resolutions} alt="logo" />
-        </a>
+        </Link>
       </div>
 
 
       <div className="topbar-right">
         <ul className="topbar-nav nav">
-          <li className="nav-item"><a className="nav-link active" href="/features">Features</a></li>
-          <li className="nav-item"><a className="nav-link active" href="/about">About</a></li>
-          <li className="nav-item"><a className="nav-link active" href="/contact">Contact</a></li>
+          <li className="nav-item"><Link className="nav-link active" href to="/features">Features</Link></li>
+          <li className="nav-item"><Link className="nav-link active" href to="/about">About</Link></li>
+          <li className="nav-item"><Link className="nav-link active" href to="/contact">Contact</Link></li>
           <div className="hidden-md-up lh-2">
             <a className="btn btn-block btn-outline btn-primary" href="https://app.ledgy.com/login">Login</a>
             <a className="btn btn-block btn-success" href="https://app.ledgy.com/signup">Sign Up</a>
@@ -47,22 +48,22 @@ const Footer = ({ data }: Object) => (
       <div className="row gap-y align-items-center">
         <div className="col-12 col-lg-3">
           <div className="text-center text-lg-left">
-            <a href="/">
+            <Link href to="/">
               <Img className="logo-default logo-inverse" resolutions={data.logo.resolutions} alt="logo" />
-            </a>
+            </Link>
           </div>
         </div>
 
         <div className="col-12 col-lg-6">
           <ul className="nav nav-primary nav-hero">
             <li className="nav-item">
-              <a className="nav-link" href="/features">Features</a>
+              <Link className="nav-link" href to="/features">Features</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">About</a>
+              <Link className="nav-link" href to="/about">About</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contact">Contact</a>
+              <Link className="nav-link" href to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
