@@ -20,8 +20,6 @@ const Header = () => (
             Make your life easy with the leading share register and cap table tool for Switzerland.
           </p>
 
-          <h4>First 3 months for free. Then 19 CHF/month</h4>
-
           <div className="col-10 offset-1 col-md-8 offset-md-2">
 
             <form className="form-glass row" action="https://app.ledgy.com/signup" method="get">
