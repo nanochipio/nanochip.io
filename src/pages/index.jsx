@@ -56,16 +56,16 @@ const Header = () => (
 type TestimonialProps = {
   name: string,
   company: string,
-  img: string,
-  children: string,
+  img: Object,
+  text: string,
 }
-const Testimonial = ({ name, company, img, children }: TestimonialProps) => (
+const Testimonial = ({ name, company, img, text }: TestimonialProps) => (
   <div className="col-12 col-md-3" >
     <div className="card">
       <div className="card-block px-10">
-        <p className="text-quoted mb-0">{children}</p>
+        <p className="text-quoted mb-0">{text}</p>
         <div className="media align-items-center pb-0">
-          <img className="avatar avatar-xs" src={img} alt="..." />
+          <Img className="avatar avatar-xs" {...img} alt={company} />
           <div className="media-body lh-1">
             <h6 className="mb-0">{name}</h6>
             <small>{company}</small>
@@ -98,7 +98,7 @@ const Feature =
 );
 Feature.defaultProps = { right: false };
 
-const IndexPage = (props: Object) => (
+const IndexPage = ({ data }: Object) => (
   <div>
     <Header />
     <main className="main-content">
@@ -109,18 +109,30 @@ const IndexPage = (props: Object) => (
           </header>
 
           <div className="row gap-y">
-            <Testimonial name="Reto Lämmler" company="TestingTime AG" img="/test">
-              Wow, so mind-blowing. The UX is amazing. I’m jealous!
-            </Testimonial>
-            <Testimonial name="David Christen" company="quitt.ch" img="/test">
-              I thought cap tables are boring. Ledgy proved me wrong.
-            </Testimonial>
-            <Testimonial text="Lorem ipsum" name="Bernadette Leuzinger" company="CryptoFund AG" img="/test">
-              We were looking for a intuitive cap table tool. This is just great!
-            </Testimonial>
-            <Testimonial text="Lorem ipsum" name="Mathias Brenner" company="Sherpany AG" img="/test">
-              How did earth even turn before there was Ledgy? Total mistery.
-            </Testimonial>
+            <Testimonial
+              text="Wow, so mind-blowing. The UX is amazing. I’m jealous!"
+              name="Reto Lämmler"
+              company="TestingTime AG"
+              img={data.testingtime}
+            />
+            <Testimonial
+              text="I thought cap tables were boring. Ledgy proved me wrong."
+              name="David Christen"
+              company="quitt.ch"
+              img={data.quitt}
+            />
+            <Testimonial
+              text="We were looking for a intuitive cap table tool. This is just great!"
+              name="Bernadette Leuzinger"
+              company="CryptoFund AG"
+              img={data.cryptofund}
+            />
+            <Testimonial
+              text="How did earth even turn before there was Ledgy? Total mistery."
+              name="Mathias Brenner"
+              company="Sherpany AG"
+              img={data.sherpany}
+            />
           </div>
 
         </div>
@@ -153,7 +165,7 @@ const IndexPage = (props: Object) => (
           <Feature
             title="Getting Started page"
             text="As part of efforts to improve user onboarding, I shipped an experiment to a subset of new users showing them a Getting Started page immediately after signup to help them get to what we think are some of the most important actions for new users to take. We compared the subset of users against a control group to see whether such an experience improved engagement over a period of time."
-            img={props.data.feature1}
+            img={data.feature1}
           />
 
           <hr />
@@ -162,7 +174,7 @@ const IndexPage = (props: Object) => (
             right
             title="Outdated comments toggling"
             text="Last week we shipped outdated comments...well, brought them back, actually. We used to show collapsed comments on outdated diffs as a single line, but removed that when we shipped code review recently. We brought that back last week with an improvement: you can now toggle open threads on outdated diffs in a review individually."
-            img={props.data.feature2}
+            img={data.feature2}
           />
 
           <hr />
@@ -170,7 +182,7 @@ const IndexPage = (props: Object) => (
           <Feature
             title="Code review illustrations"
             text="Less an illustration, and more a literal proxy. These show up when the feature's introduced. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing."
-            img={props.data.feature3}
+            img={data.feature3}
           />
 
         </div>
@@ -213,19 +225,26 @@ export default IndexPage;
 export const query = graphql`
   query IndexQuery {
     feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
-      sizes(maxWidth: 800) {
-        ...GatsbyImageSharpSizes
-      }
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
     feature2: imageSharp(id: { regex: "/src\/img\/feature-2.png/" }) {
-      sizes(maxWidth: 800) {
-        ...GatsbyImageSharpSizes
-      }
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
     feature3: imageSharp(id: { regex: "/src\/img\/feature-3.png/" }) {
-      sizes(maxWidth: 800) {
-        ...GatsbyImageSharpSizes
-      }
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+
+    testingtime: imageSharp(id: { regex: "/testingtime/" }) {
+      sizes(maxWidth: 200) { ...GatsbyImageSharpSizes }
+    }
+    quitt: imageSharp(id: { regex: "/quitt/" }) {
+      sizes(maxWidth: 200) { ...GatsbyImageSharpSizes }
+    }
+    cryptofund: imageSharp(id: { regex: "/cryptofund/" }) {
+      sizes(maxWidth: 200) { ...GatsbyImageSharpSizes }
+    }
+    sherpany: imageSharp(id: { regex: "/sherpany/" }) {
+      sizes(maxWidth: 200) { ...GatsbyImageSharpSizes }
     }
   }
 `;
