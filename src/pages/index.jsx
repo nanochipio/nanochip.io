@@ -225,14 +225,14 @@ const IndexPage = ({ data }: Object) => (
 
           <div className="row gap-y">
 
-            <div className="col-12 col-md-6 col-xl-4 feature-1">
+            <div className="col-12 col-md-4 feature-1">
               <p className="feature-icon text-warning"><i className="icon-linegraph" /></p>
               <h5>Employee Options</h5>
               <p>Enter your employee incentive plan and track it over time.</p>
             </div>
 
 
-            <div className="col-12 col-md-6 col-xl-4 feature-1">
+            <div className="col-12 col-md-4 feature-1">
               <p className="feature-icon text-danger"><i className="icon-telescope" /></p>
               <h5>Investment Scenarios</h5>
               <p>
@@ -241,7 +241,7 @@ const IndexPage = ({ data }: Object) => (
             </div>
 
 
-            <div className="col-12 col-md-6 col-xl-4 feature-1">
+            <div className="col-12 col-md-4 feature-1">
               <p className="feature-icon text-success"><i className="icon-profile-female" /></p>
               <h5>Shareholder Login</h5>
               <p>
