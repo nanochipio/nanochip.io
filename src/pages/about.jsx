@@ -74,9 +74,9 @@ const IndexPage = ({ data }: Object) => (
             <div className="col-12 col-lg-6 pl-50 pr-80">
               <h2>Our Mission</h2>
               <p className="lead">
-                 We really want Europe to be a startup paradise, however currently
+                 We want Europe to be a paradise for entrepreneurs. Currently,
                  the scene is not yet as strong and professional as in other parts of the world.
-                 Therefore we want to establish a new state of the art of how securities
+                 With Ledgy we want to establish a new state of the art of how securities
                  in private companies are managed, exchanged, and traded.
                  With the goal to make it a breeze for both companies and shareholders.
               </p>
@@ -138,7 +138,7 @@ const IndexPage = ({ data }: Object) => (
             <Investor
               name="Myke Naef"
               func="Board Member"
-              description="Founder Doodle.com"
+              description="Co-Founder Doodle.com"
               img={data.myke}
             />
             <Investor
