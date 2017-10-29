@@ -187,7 +187,7 @@ const IndexPage = ({ data }: Object) => (
           <Feature
             right
             title="Avoid costly errors"
-            text="Your cap table is build up from the past transactions.
+            text="Your cap table is built up from the past transactions.
             Its history ensures transparency and inconsistencies are automatically detected by the software.
             This prepares your company for legal requirements and audits in the future."
             img={data.feature2}
