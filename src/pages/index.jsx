@@ -170,15 +170,15 @@ const IndexPage = ({ data }: Object) => (
       <section className="section" id="features">
         <header className="section-header">
           <small>Features</small>
-          <h2>More to Discover</h2>
-          <hr />
-          <p className="lead">We waited until we could do it right. Then we did! Instead of creating a carbon copy.</p>
+          {/* <h2>Features</h2> */}
+          {/* <hr /> */}
         </header>
 
         <div className="container">
           <Feature
-            title="Getting Started page"
-            text="As part of efforts to improve user onboarding, I shipped an experiment to a subset of new users showing them a Getting Started page immediately after signup to help them get to what we think are some of the most important actions for new users to take. We compared the subset of users against a control group to see whether such an experience improved engagement over a period of time."
+            title="All information in one place"
+            text="Always have the current cap table ready and save all related documents in the ledgy cloud.
+            Understand who owns what in your company at a glance through our interactive charts."
             img={data.feature1}
           />
 
@@ -186,20 +186,74 @@ const IndexPage = ({ data }: Object) => (
 
           <Feature
             right
-            title="Outdated comments toggling"
-            text="Last week we shipped outdated comments...well, brought them back, actually. We used to show collapsed comments on outdated diffs as a single line, but removed that when we shipped code review recently. We brought that back last week with an improvement: you can now toggle open threads on outdated diffs in a review individually."
+            title="Avoid costly errors"
+            text="Your cap table is build up from the past transactions.
+            Its history ensures transparency and inconsistencies are automatically detected by our software.
+            This prepares your company for legal requirements and audits in the future."
             img={data.feature2}
           />
 
           <hr />
 
           <Feature
-            title="Code review illustrations"
-            text="Less an illustration, and more a literal proxy. These show up when the feature's introduced. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing."
+            title="Export and share pdf"
+            text="Legally in Switzerland your share register has to be signed by
+            the board of directors to be valid. On Ledgy, you can easily export it as a pdf."
             img={data.feature3}
           />
         </div>
       </section>
+
+      <section className="section section-inverse py-40" style={{ backgroundColor: '#60ae50' }}>
+        <div className="col-6 offset-3 col-md-4 offset-md-4">
+          <a className="btn btn-lg btn-success btn-block text-center" href="https://demo.ledgy.com">Watch Demo</a>
+        </div>
+      </section>
+
+
+      <section className="section bg-gray">
+        <div className="container">
+          <header className="section-header">
+            <small>Features</small>
+            <h2>Coming Soon</h2>
+            <hr />
+            <p className="lead">
+              We’re working hard on bringing new features online for you
+              in the next couple of months!
+            </p>
+          </header>
+
+          <div className="row gap-y">
+
+            <div className="col-12 col-md-6 col-xl-4 feature-1">
+              <p className="feature-icon text-warning"><i className="icon-linegraph" /></p>
+              <h5>Employee Options</h5>
+              <p>Enter your employee incentive plan and track it over time.</p>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-xl-4 feature-1">
+              <p className="feature-icon text-danger"><i className="icon-telescope" /></p>
+              <h5>Investment Scenarios</h5>
+              <p>
+                Plan investment rounds by simulating their effect on the cap table.
+              </p>
+            </div>
+
+
+            <div className="col-12 col-md-6 col-xl-4 feature-1">
+              <p className="feature-icon text-success"><i className="icon-profile-female" /></p>
+              <h5>Shareholder Login</h5>
+              <p>
+                Your shareholders can see all their investment anytime on ledgy.
+              </p>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
 
       <section className="section section-inverse py-40" style={{ backgroundColor: '#00b38d' }}>
         <div className="container">
@@ -228,7 +282,7 @@ const IndexPage = ({ data }: Object) => (
             <small>Faq</small>
             <h2>Frequently Asked Questions</h2>
             <hr />
-            <p className="lead">Drop us an email if you couldn’t find an answert to your question in the following list.</p>
+            <p className="lead">Drop us an email if you couldn’t find an answer to your question in the following list.</p>
           </header>
 
           <div className="row gap-y gap-3">
