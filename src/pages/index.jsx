@@ -5,7 +5,6 @@ import Img from 'gatsby-image';
 
 const Header = () => (
   <header className="header header-inverse h-fullscreen pb-80" style={{ backgroundColor: '#20a8d8' }} id="start">
-    {/* <canvas className="constellation" /> */}
 
     <div className="container text-center">
 
@@ -205,18 +204,18 @@ const IndexPage = ({ data }: Object) => (
       <section className="section section-inverse py-40" style={{ backgroundColor: '#00b38d' }}>
         <div className="container">
           <form className="form-glass row gap-y align-items-center" action="" method="post" target="_blank">
-            <div className="col-12 col-md-2 offset-md-2">
-              <h4 className="mb-0">Stay up to date</h4>
+            <div className="col-12 col-md-3 offset-md-1 col-lg-2 offset-lg-2 py-1">
+              <h4 className="mb-0 text-center">Stay up to date</h4>
             </div>
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-md-4 col-lg-4 py-1">
               <div className="input-group input-group-lg">
                 <span className="input-group-addon"><i className="fa fa-envelope" /></span>
                 <input type="email" name="EMAIL" className="form-control" placeholder="Email Address" />
               </div>
             </div>
 
-            <div className="col-12 col-md-2">
-              <button className="btn btn-lg btn-success btn-block">Subscribe</button>
+            <div className="col-12 col-md-3 col-lg-2 py-1">
+              <button className="btn btn-lg btn-success btn-block text-center">Subscribe</button>
             </div>
           </form>
         </div>
