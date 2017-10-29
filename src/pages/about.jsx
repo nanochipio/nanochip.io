@@ -37,7 +37,8 @@ type FounderProps = {
 const Founder = ({ name, func, description, img, twitterlink, linkedinlink }: FounderProps) => (
   <div className="col-12 col-md-6 col-lg-4 team-1">
     {img && <Img {...img} alt={name} />}
-    <h6>{name} <small>{func}</small></h6>
+    <h6>{name}</h6>
+    <small>{func}</small>
     <p>{description}</p>
     <div className="social social-boxed social-rounded social-gray">
       <a className="social-twitter" href={twitterlink}><i className="fa fa-twitter" /></a>
