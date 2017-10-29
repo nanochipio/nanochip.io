@@ -102,7 +102,7 @@ const IndexPage = ({ data }: Object) => (
           <div className="row gap-y">
             <Founder
               name="Timo Horstschaefer"
-              func=""
+              func="Physics MSc ETH"
               description="Computer vision background, badminton guy, excited about space elevators"
               twitterlink="https://twitter.com/thrstschfr"
               linkedinlink="https://www.linkedin.com/in/timohorstschaefer/"
@@ -110,7 +110,7 @@ const IndexPage = ({ data }: Object) => (
             />
             <Founder
               name="Ben-Elias Brandt"
-              func=""
+              func="Physics MSc ETH"
               description="Battery materials background, martial arts, fascinated by electric cars"
               twitterlink="https://twitter.com/bebinoy"
               linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
@@ -118,7 +118,7 @@ const IndexPage = ({ data }: Object) => (
             />
             <Founder
               name="Yoko Spirig"
-              func=""
+              func="Physics MSc ETH"
               description="Medical physics background, loves running, wondering about brain-machine interfaces."
               twitterlink="https://twitter.com/sp_yoko"
               linkedinlink="https://www.linkedin.com/in/yokospirig/"
