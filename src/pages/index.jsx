@@ -168,8 +168,10 @@ const IndexPage = ({ data }: Object) => (
       </section>
 
       <section className="section section-inverse py-40" style={{ backgroundColor: '#60ae50' }}>
-        <div className="col-6 offset-3 col-md-4 offset-md-4">
-          <a className="btn btn-lg btn-success btn-block text-center" href="https://demo.ledgy.com">Watch Demo</a>
+        <div className="row  justify-content-center">
+          <div className="col-10 col-sm-5 col-md-3">
+            <a className="btn btn-lg btn-success btn-block text-center" href="https://demo.ledgy.com">Watch the Demo</a>
+          </div>
         </div>
       </section>
 
