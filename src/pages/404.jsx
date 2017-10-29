@@ -2,8 +2,15 @@ import React from 'react';
 
 const NotFoundPage = () => (
   <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <header className="header py-40" style={{ backgroundColor: '#29363d' }} />
+
+    <div className="container py-200">
+      <header className="section-header">
+        <h2>Page Not Found</h2>
+        <hr />
+        <p className="lead">Seems you’re looking for something that doesn’t exist.</p>
+      </header>
+    </div>
   </div>
 );
 
