@@ -82,7 +82,7 @@ const IndexPage = ({ data }: Object) => (
               </p>
             </div>
             <div className="col-lg-6 hidden-md-down align-self-center">
-              <img className="shadow-3 aos-init aos-animate" src={data.mission} alt="..." data-aos="fade-left" data-aos-duration="1500" />
+              <Img {...data.mission} className="shadow-3 aos-init aos-animate" alt="mission" data-aos="fade-left" data-aos-duration="1500" />
             </div>
           </div>
         </div>
@@ -94,7 +94,6 @@ const IndexPage = ({ data }: Object) => (
             <small>Team</small>
             <h2>Who we are</h2>
             <hr />
-            {/* <p className="lead">Meet out small team that make those great products.</p> */}
           </header>
 
 
@@ -118,7 +117,7 @@ const IndexPage = ({ data }: Object) => (
             <Founder
               name="Yoko Spirig"
               func="Physics MSc ETH"
-              description="Medical physics background, loves running, wondering about brain-machine interfaces."
+              description="Medical physics background, loves running, wondering about brain-machine interfaces"
               twitterlink="https://twitter.com/sp_yoko"
               linkedinlink="https://www.linkedin.com/in/yokospirig/"
               img={data.yoko}
@@ -145,7 +144,7 @@ const IndexPage = ({ data }: Object) => (
             <Investor
               name="Paul E. Sevinc"
               func="Board Member"
-              description="Co-Founder Doodle.com"
+              description="Founder Doodle.com"
               img={data.paul}
             />
             <Investor
@@ -182,7 +181,7 @@ export default IndexPage;
 // eslint-disable-next-line no-undef
 export const query = graphql`
   query AboutQuery {
-    mission: imageSharp(id: { regex: "/mission.jpg/" }) {
+    mission: imageSharp(id: { regex: "/mission.jpeg/" }) {
       resolutions(width: 480, height: 320) {
         ...GatsbyImageSharpResolutions
       }
