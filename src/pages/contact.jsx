@@ -17,7 +17,9 @@ const Header = () => (
 
 class Map extends React.Component<{}> {
   componentDidMount() {
-    if (window.thesaas && window.google) { window.thesaas.map(); } // eslint-disable-line no-undef
+    if (window.thesaas && window.google) {
+      window.thesaas.map();
+    }
   }
   render() {
     return (<div

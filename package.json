@@ -35,6 +35,9 @@
     "plugins": [
       "flowtype"
     ],
+    "env": {
+      "browser": true
+    },
     "rules": {
       "object-curly-newline": [
         "error",
