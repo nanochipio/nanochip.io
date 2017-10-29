@@ -26,16 +26,12 @@ type ProfileProps = {
   name: string,
   func: string,
   description: string,
+  img: Object,
 }
 type FounderProps = {
   ...$Exact<ProfileProps>,
   twitterlink: string,
   linkedinlink: string,
-  img: Object,
-}
-type InvestorProps = {
-  ...$Exact<ProfileProps>,
-  img: Object,
 }
 
 const Founder = ({ name, func, description, img, twitterlink, linkedinlink }: FounderProps) => (
@@ -50,7 +46,7 @@ const Founder = ({ name, func, description, img, twitterlink, linkedinlink }: Fo
   </div>
 );
 
-const Investor = ({ name, func, description, img }: InvestorProps) => (
+const Investor = ({ name, func, description, img }: ProfileProps) => (
   <div className="col-12 col-md-4 team-2">
     {img && <Img {...img} alt={name} />}
     <h5>{name}</h5>
@@ -60,8 +56,9 @@ const Investor = ({ name, func, description, img }: InvestorProps) => (
 );
 
 
-const Advisor = ({ name, func, description }: ProfileProps) => (
+const Advisor = ({ name, func, description, img }: ProfileProps) => (
   <div className="col-12 col-md-6 team-2">
+    {img && <Img {...img} alt={name} />}
     <h5>{name}</h5>
     <small>{func}</small>
     <p>{description}</p>
@@ -179,11 +176,13 @@ const IndexPage = ({ data }: Object) => (
               name="Adrian Buehrer"
               func=""
               description=""
+              img={data.adrian}
             />
             <Advisor
               name="Elena Walder-Schiavone"
               func=""
               description=""
+              img={data.elena}
             />
           </div>
 
@@ -227,6 +226,16 @@ export const query = graphql`
       }
     }
     luzius: imageSharp(id: { regex: "/luzius.jpg/" }) {
+      resolutions(width: 128, height: 128) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    adrian: imageSharp(id: { regex: "/adrian.jpg/" }) {
+      resolutions(width: 128, height: 128) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    elena: imageSharp(id: { regex: "/elena.jpg/" }) {
       resolutions(width: 128, height: 128) {
         ...GatsbyImageSharpResolutions
       }
