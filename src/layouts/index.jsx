@@ -31,10 +31,10 @@ const Nav = () => (
           <li className="nav-item">
             <button className="nav-link active btn-link">Product <i className="fa fa-caret-down" /></button>
             <div className="nav-submenu">
-              <Link className="nav-link active" href to="/#testimonials">Testimonials</Link>
-              <Link className="nav-link active" href to="/#pricing">Pricing</Link>
-              <Link className="nav-link active" href to="/#features">Features</Link>
-              <Link className="nav-link active" href to="/#faq">FAQ</Link>
+              <Link className="nav-link active" href to="#testimonials" data-scrollto="testimonials">Testimonials</Link>
+              <Link className="nav-link active" href to="#pricing" data-scrollto="pricing">Pricing</Link>
+              <Link className="nav-link active" href to="#features" data-scrollto="features">Features</Link>
+              <Link className="nav-link active" href to="#faq" data-scrollto="faq">FAQ</Link>
             </div>
           </li>
           <li className="nav-item"><Link className="nav-link active" href to="/about">About</Link></li>
