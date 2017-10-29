@@ -167,7 +167,7 @@ const IndexPage = ({ data }: Object) => (
             <Advisor
               name="Elena Walder-Schiavone"
               func="Advisor"
-              description="lawyer, smartuplaw.ch"
+              description="Lawyer, smartuplaw.ch"
               img={data.elena}
             />
           </div>
