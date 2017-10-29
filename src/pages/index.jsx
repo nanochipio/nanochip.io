@@ -160,7 +160,7 @@ const IndexPage = ({ data }: Object) => (
             </div>
 
             <div className="col-12 col-md-4 col-lg-3">
-              <a className="btn btn-block btn-white" href="https://app.ledgy.com/signup">Sign Up Now</a>
+              <a className="btn btn-block btn-lg btn-white" href="https://app.ledgy.com/signup">Sign Up Now</a>
             </div>
           </div>
         </div>
