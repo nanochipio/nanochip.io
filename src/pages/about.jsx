@@ -151,17 +151,17 @@ export default IndexPage;
 // eslint-disable-next-line no-undef
 export const query = graphql`
   query AboutQuery {
-    ben: imageSharp(id: { regex: "/ben.jpg/" }) {
+    ben: imageSharp(id: { regex: "/ben_edit.jpg/" }) {
       resolutions(width: 255, height: 255) {
         ...GatsbyImageSharpResolutions
       }
     }
-    yoko: imageSharp(id: { regex: "/yoko.jpg/" }) {
+    yoko: imageSharp(id: { regex: "/yoko_edit.jpg/" }) {
       resolutions(width: 255, height: 255) {
         ...GatsbyImageSharpResolutions
       }
     }
-    timo: imageSharp(id: { regex: "/timo.jpg/" }) {
+    timo: imageSharp(id: { regex: "/timo_edit.jpg/" }) {
       resolutions(width: 255, height: 255) {
         ...GatsbyImageSharpResolutions
       }
