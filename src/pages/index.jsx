@@ -4,7 +4,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 
 const Header = () => (
-  <header className="header header-inverse h-fullscreen pb-80" style={{ backgroundColor: '#20a8d8' }}>
+  <header className="header header-inverse h-fullscreen pb-80" style={{ backgroundColor: '#20a8d8' }} id="start">
     {/* <canvas className="constellation" /> */}
 
     <div className="container text-center">
@@ -44,7 +44,7 @@ const Header = () => (
         </div>
 
         <div className="col-12 align-self-end text-center">
-          <a className="scroll-down-3 scroll-down-inverse" href="#section-intro" data-scrollto="section-intro"><span /></a>
+          <a className="scroll-down-3 scroll-down-inverse" href="#testimonials" data-scrollto="testimonials"><span /></a>
         </div>
 
       </div>
@@ -98,11 +98,22 @@ const Feature =
 );
 Feature.defaultProps = { right: false };
 
+type FAQProps = {
+  question: string,
+  answer: string,
+}
+const FAQ = ({ question, answer }: FAQProps) => (
+  <div className="col-12 col-md-6 col-lg-4">
+    <h6 className="fw-400">{question}</h6>
+    <p>{answer}</p>
+  </div>
+);
+
 const IndexPage = ({ data }: Object) => (
   <div>
     <Header />
     <main className="main-content">
-      <section className="section" id="section-intro">
+      <section className="section" id="testimonials">
         <div className="container">
           <header className="section-header">
             <small>Testimonials</small>
@@ -153,7 +164,7 @@ const IndexPage = ({ data }: Object) => (
       </section>
 
 
-      <section className="section">
+      <section className="section" id="features">
         <header className="section-header">
           <small>Features</small>
           <h2>More to Discover</h2>
@@ -211,6 +222,59 @@ const IndexPage = ({ data }: Object) => (
               </form>
             </div>
           </div>
+        </div>
+      </section>
+
+
+      <section className="section" id="faq">
+        <div className="container">
+          <header className="section-header">
+            <small>Faq</small>
+            <h2>Frequently Asked Questions</h2>
+            <hr />
+            <p className="lead">Drop us an email if you couldn’t find an answert to your question in the following list.</p>
+          </header>
+
+          <div className="row gap-y gap-3">
+            <FAQ
+              question="What is TheSaaS?"
+              answer="It is a collection of layouts, design patterns, components, and guidelines for creating admin templates, SaaS startups, and complex dashboards."
+            />
+            <FAQ
+              question="How long does it take?"
+              answer="It is a collection of layouts, design patterns, components, and guidelines for creating admin templates, SaaS startups, and complex dashboards."
+            />
+            <FAQ
+              question="What payment services do you support?"
+              answer="We accept all major credit cards."
+            />
+            <FAQ
+              question="Can I update my card details?"
+              answer="Yes. Go to the billing section of your dashboard and update your payment information."
+            />
+            <FAQ
+              question="Can I cancel my subscription?"
+              answer="You can cancel your subscription at any time. Cancelling your plan comes into effect the following month."
+            />
+            <FAQ
+              question="Can I get refund?"
+              answer="Unfortunately, not at this time! Please try our free plan for a while to make sure Helpato is what you want."
+            />
+            <FAQ
+              question="What if I want to change plans?"
+              answer="It's quick and easy to switch between our different pricing plans from your dashboard."
+            />
+            <FAQ
+              question="How long are your contracts?"
+              answer="You can upgrade, downgrade, or cancel your monthly account at any time with no further obligation."
+            />
+            <FAQ
+              question="Other questions?"
+              answer="We’re always available at support@domain.com"
+            />
+          </div>
+
+
         </div>
       </section>
 
