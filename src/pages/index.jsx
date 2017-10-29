@@ -177,8 +177,8 @@ const IndexPage = ({ data }: Object) => (
         <div className="container">
           <Feature
             title="All information in one place"
-            text="Always have the current cap table ready and save all related documents in the ledgy cloud.
-            Understand who owns what in your company at a glance through our interactive charts."
+            text="Always have the current cap table ready and save all related documents in the Ledgy cloud.
+            Understand who owns what in your company at a glance through the interactive charts."
             img={data.feature1}
           />
 
@@ -188,7 +188,7 @@ const IndexPage = ({ data }: Object) => (
             right
             title="Avoid costly errors"
             text="Your cap table is build up from the past transactions.
-            Its history ensures transparency and inconsistencies are automatically detected by our software.
+            Its history ensures transparency and inconsistencies are automatically detected by the software.
             This prepares your company for legal requirements and audits in the future."
             img={data.feature2}
           />
@@ -198,7 +198,7 @@ const IndexPage = ({ data }: Object) => (
           <Feature
             title="Export and share pdf"
             text="Legally in Switzerland your share register has to be signed by
-            the board of directors to be valid. On Ledgy, you can easily export it as a pdf."
+            the board of directors to be valid. For this purpose it can be exported as pdf on Ledgy."
             img={data.feature3}
           />
         </div>
@@ -245,7 +245,7 @@ const IndexPage = ({ data }: Object) => (
               <p className="feature-icon text-success"><i className="icon-profile-female" /></p>
               <h5>Shareholder Login</h5>
               <p>
-                Your shareholders can see all their investment anytime on ledgy.
+                Your shareholders can see all their investments anytime on Ledgy.
               </p>
             </div>
 
