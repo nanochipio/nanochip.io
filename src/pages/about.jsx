@@ -13,7 +13,7 @@ const Header = () => (
         <div className="col-12 col-lg-8 offset-lg-2">
 
           <h1>About Us</h1>
-          <p className="fs-20 opacity-70">Find out about our mission, services and meet our great team</p>
+          <p className="fs-20 opacity-70">Find out about our mission and meet our team and advisors</p>
 
         </div>
       </div>
@@ -24,44 +24,47 @@ const Header = () => (
 
 type ProfileProps = {
   name: string,
+  func: string,
+  description: string,
 }
 type FounderProps = {
   ...$Exact<ProfileProps>,
+  twitterlink: string,
+  linkedinlink: string,
   img: Object,
 }
-const Founder = ({ name, img }: FounderProps) => (
+type InvestorProps = {
+  ...$Exact<ProfileProps>,
+  img: Object,
+}
+
+const Founder = ({ name, func, description, img, twitterlink, linkedinlink }: FounderProps) => (
   <div className="col-12 col-md-6 col-lg-4 team-1">
     {img && <Img {...img} alt={name} />}
-    <h6>{name} <small>Co-Founder &amp; CEO</small></h6>
-    <p>Uniquely grow resource maximizing outsourcing for excellent core competencies.</p>
+    <h6>{name} <small>{func}</small></h6>
+    <p>{description}</p>
     <div className="social social-boxed social-rounded social-gray">
-      <a className="social-twitter" href="https://twitter.com"><i className="fa fa-twitter" /></a>
-      <a className="social-linkedin" href="https://linkedin.com"><i className="fa fa-linkedin" /></a>
+      <a className="social-twitter" href={twitterlink}><i className="fa fa-twitter" /></a>
+      <a className="social-linkedin" href={linkedinlink}><i className="fa fa-linkedin" /></a>
     </div>
   </div>
 );
 
-const Investor = ({ name, img }: FounderProps) => (
+const Investor = ({ name, func, description, img }: InvestorProps) => (
   <div className="col-12 col-md-4 team-2">
     {img && <Img {...img} alt={name} />}
     <h5>{name}</h5>
-    <small>Co-Founder &amp; CTO</small>
-    <p>
-      So firmament sea them sea.
-      Set saying land signs had the us replenish seed moved rule, place let.
-    </p>
+    <small>{func}</small>
+    <p>{description}</p>
   </div>
 );
 
 
-const Advisor = ({ name }: ProfileProps) => (
+const Advisor = ({ name, func, description }: ProfileProps) => (
   <div className="col-12 col-md-6 team-2">
     <h5>{name}</h5>
-    <small>Co-Founder &amp; CTO</small>
-    <p>
-      So firmament sea them sea.
-      Set saying land signs had the us replenish seed moved rule, place let.
-    </p>
+    <small>{func}</small>
+    <p>{description}</p>
   </div>
 );
 
@@ -111,9 +114,30 @@ const IndexPage = ({ data }: Object) => (
 
 
           <div className="row gap-y">
-            <Founder name="Timo Horstschaefer" img={data.timo} />
-            <Founder name="Ben-Elias Brandt" img={data.ben} />
-            <Founder name="Yoko Spirig" img={data.yoko} />
+            <Founder
+              name="Timo Horstschaefer"
+              func=""
+              description=""
+              twitterlink=""
+              linkedinlink=""
+              img={data.timo}
+            />
+            <Founder
+              name="Ben-Elias Brandt"
+              func=""
+              description=""
+              twitterlink=""
+              linkedinlink=""
+              img={data.ben}
+            />
+            <Founder
+              name="Yoko Spirig"
+              func=""
+              description=""
+              twitterlink=""
+              linkedinlink=""
+              img={data.yoko}
+            />
           </div>
 
         </div>
@@ -130,14 +154,37 @@ const IndexPage = ({ data }: Object) => (
 
 
           <div className="row gap-y">
-            <Investor name="Myke Naef" img={data.myke} />
-            <Investor name="Paul E. Sevinc" img={data.paul} />
-            <Investor name="Luzius Meisser" img={data.luzius} />
+            <Investor
+              name="Myke Naef"
+              func=""
+              description=""
+              img={data.myke}
+            />
+            <Investor
+              name="Paul E. Sevinc"
+              func=""
+              description=""
+              img={data.paul}
+            />
+            <Investor
+              name="Luzius Meisser"
+              func=""
+              description=""
+              img={data.luzius}
+            />
           </div>
 
           <div className="row gap-y col-12 col-md-10 offset-md-1">
-            <Advisor name="Adrian Buehrer" />
-            <Advisor name="Elena Walder-Schiavone" />
+            <Advisor
+              name="Adrian Buehrer"
+              func=""
+              description=""
+            />
+            <Advisor
+              name="Elena Walder-Schiavone"
+              func=""
+              description=""
+            />
           </div>
 
 
@@ -152,17 +199,17 @@ export default IndexPage;
 // eslint-disable-next-line no-undef
 export const query = graphql`
   query AboutQuery {
-    ben: imageSharp(id: { regex: "/ben_edit.jpg/" }) {
+    ben: imageSharp(id: { regex: "/ben.jpg/" }) {
       resolutions(width: 255, height: 255) {
         ...GatsbyImageSharpResolutions
       }
     }
-    yoko: imageSharp(id: { regex: "/yoko_edit.jpg/" }) {
+    yoko: imageSharp(id: { regex: "/yoko.jpg/" }) {
       resolutions(width: 255, height: 255) {
         ...GatsbyImageSharpResolutions
       }
     }
-    timo: imageSharp(id: { regex: "/timo_edit.jpg/" }) {
+    timo: imageSharp(id: { regex: "/timo.jpg/" }) {
       resolutions(width: 255, height: 255) {
         ...GatsbyImageSharpResolutions
       }
