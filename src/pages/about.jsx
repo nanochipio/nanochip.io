@@ -41,8 +41,9 @@ const Founder = ({ name, img }: FounderProps) => (
   </div>
 );
 
-const Investor = ({ name }: ProfileProps) => (
+const Investor = ({ name, img }: FounderProps) => (
   <div className="col-12 col-md-4 team-2">
+    {img && <Img {...img} alt={name} />}
     <h5>{name}</h5>
     <small>Co-Founder &amp; CTO</small>
     <p>
@@ -129,9 +130,9 @@ const IndexPage = ({ data }: Object) => (
 
 
           <div className="row gap-y">
-            <Investor name="Myke Naef" />
-            <Investor name="Paul E. Sevinc" />
-            <Investor name="Luzius Meisser" />
+            <Investor name="Myke Naef" img={data.myke} />
+            <Investor name="Paul E. Sevinc" img={data.paul} />
+            <Investor name="Luzius Meisser" img={data.luzius} />
           </div>
 
           <div className="row gap-y col-12 col-md-10 offset-md-1">
@@ -163,6 +164,23 @@ export const query = graphql`
     }
     timo: imageSharp(id: { regex: "/timo_edit.jpg/" }) {
       resolutions(width: 255, height: 255) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+
+
+    myke: imageSharp(id: { regex: "/myke.jpg/" }) {
+      resolutions(width: 128, height: 128) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    paul: imageSharp(id: { regex: "/paul.jpg/" }) {
+      resolutions(width: 128, height: 128) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
+    luzius: imageSharp(id: { regex: "/luzius.jpg/" }) {
+      resolutions(width: 128, height: 128) {
         ...GatsbyImageSharpResolutions
       }
     }
