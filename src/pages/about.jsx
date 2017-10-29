@@ -141,13 +141,13 @@ const IndexPage = ({ data }: Object) => (
             <Investor
               name="Myke Naef"
               func="Board Member"
-              description="Co-Founder and Ex-CEO Doodle.com"
+              description="Founder Doodle.com"
               img={data.myke}
             />
             <Investor
               name="Paul E. Sevinc"
               func="Board Member"
-              description="Co-Founder and Ex-CTO Doodle.com"
+              description="Co-Founder Doodle.com"
               img={data.paul}
             />
             <Investor
