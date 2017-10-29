@@ -3,8 +3,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
 
-import aboutUs from '../assets/img/about-us.jpg';
-
 const Header = () => (
   <header className="header header-inverse" style={{ backgroundColor: '#00b38d' }}>
     <div className="container text-center">
@@ -84,7 +82,7 @@ const IndexPage = ({ data }: Object) => (
               </p>
             </div>
             <div className="col-lg-6 hidden-md-down align-self-center">
-              <img className="shadow-3 aos-init aos-animate" src={aboutUs} alt="..." data-aos="fade-left" data-aos-duration="1500" />
+              <img className="shadow-3 aos-init aos-animate" src={data.mission} alt="..." data-aos="fade-left" data-aos-duration="1500" />
             </div>
           </div>
         </div>
@@ -184,6 +182,11 @@ export default IndexPage;
 // eslint-disable-next-line no-undef
 export const query = graphql`
   query AboutQuery {
+    mission: imageSharp(id: { regex: "/mission.jpg/" }) {
+      resolutions(width: 480, height: 320) {
+        ...GatsbyImageSharpResolutions
+      }
+    }
     ben: imageSharp(id: { regex: "/ben.jpg/" }) {
       resolutions(width: 255, height: 255) {
         ...GatsbyImageSharpResolutions
