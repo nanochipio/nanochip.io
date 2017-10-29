@@ -86,7 +86,7 @@ Feature.defaultProps = { right: false };
 
 const Partner = ({ img, name }: { img: Object, name: string }) => (
   <div style={{ width: '200px', height: '80px' }}>
-    <Img {...img} alt={name} style={{ overflow: 'visible' }} />
+    <Img {...img} alt={name} style={{ overflow: 'visible', margin: 0 }} />
   </div>
 );
 
@@ -101,14 +101,12 @@ const IndexPage = ({ data }: Object) => (
           <p className="lead">Switzerland’s best companies manage their cap table with Ledgy.</p>
         </header>
 
-        <div className="container">
-          <div className="row gap-y partner align-middle">
-            <Partner img={data.testingtime} name="TestingTime" />
-            <Partner img={data.quitt} name="quitt.ch" />
-            <Partner img={data.cryptofund} name="CryptoFund" />
-            <Partner img={data.frontify} name="Frontify" />
-            <Partner img={data.sherpany} name="Sherpany" />
-          </div>
+        <div className="partner">
+          <Partner img={data.testingtime} name="TestingTime" />
+          <Partner img={data.quitt} name="quitt.ch" />
+          <Partner img={data.cryptofund} name="CryptoFund" />
+          <Partner img={data.frontify} name="Frontify" />
+          <Partner img={data.sherpany} name="Sherpany" />
         </div>
 
       </section>
