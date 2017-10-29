@@ -74,23 +74,12 @@ const IndexPage = ({ data }: Object) => (
           <div className="row">
             <div className="col-12 col-lg-6 pl-50 pr-80">
               <h2>Our Mission</h2>
-              <p className="lead">Energistically transform pandemic manufactured products whereas premier solutions. Compellingly streamline an expanded array of web-readiness rather.</p>
-              <br />
-              <p>
-                <i className="ti-check text-success mr-8" />
-                <span className="fs-14">Deliver a high quality web design</span>
-              </p>
-              <p>
-                <i className="ti-check text-success mr-8" />
-                <span className="fs-14">Support our customers once signing a contract</span>
-              </p>
-              <p>
-                <i className="ti-check text-success mr-8" />
-                <span className="fs-14">Streamline an expanded array of web</span>
-              </p>
-              <p>
-                <i className="ti-check text-success mr-8" />
-                <span className="fs-14">Pursue web-enabled niche markets with professionals</span>
+              <p className="lead">
+                 We really want Europe to be a startup paradise, however currently
+                 the scene is not yet as strong and professional as in other parts of the world.
+                 Therefore we want to establish a new state of the art of how securities
+                 in private companies are managed, exchanged, and traded.
+                 With the goal to make it a breeze for both companies and shareholders.
               </p>
             </div>
             <div className="col-lg-6 hidden-md-down align-self-center">
@@ -106,7 +95,7 @@ const IndexPage = ({ data }: Object) => (
             <small>Team</small>
             <h2>Who we are</h2>
             <hr />
-            <p className="lead">Meet out small team that make those great products.</p>
+            {/* <p className="lead">Meet out small team that make those great products.</p> */}
           </header>
 
 
@@ -114,25 +103,25 @@ const IndexPage = ({ data }: Object) => (
             <Founder
               name="Timo Horstschaefer"
               func=""
-              description=""
-              twitterlink=""
-              linkedinlink=""
+              description="Computer vision background, badminton guy, excited about space elevators"
+              twitterlink="https://twitter.com/thrstschfr"
+              linkedinlink="https://www.linkedin.com/in/timohorstschaefer/"
               img={data.timo}
             />
             <Founder
               name="Ben-Elias Brandt"
               func=""
-              description=""
-              twitterlink=""
-              linkedinlink=""
+              description="Battery materials background, martial arts, fascinated by electric cars"
+              twitterlink="https://twitter.com/bebinoy"
+              linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
               img={data.ben}
             />
             <Founder
               name="Yoko Spirig"
               func=""
-              description=""
-              twitterlink=""
-              linkedinlink=""
+              description="Medical physics background, loves running, wondering about brain-machine interfaces."
+              twitterlink="https://twitter.com/sp_yoko"
+              linkedinlink="https://www.linkedin.com/in/yokospirig/"
               img={data.yoko}
             />
           </div>
@@ -143,30 +132,27 @@ const IndexPage = ({ data }: Object) => (
       <section className="section bg-gray">
         <div className="container">
           <header className="section-header">
-            <small>Investors</small>
+            <small>Advisors</small>
             <h2>Backed by leading investors from Switzerland</h2>
-            <hr />
-            <p className="lead">Meet the team working to make customer support simpler for you.</p>
           </header>
-
 
           <div className="row gap-y">
             <Investor
               name="Myke Naef"
-              func=""
-              description=""
+              func="Board Member"
+              description="Co-Founder and Ex-CEO Doodle.com"
               img={data.myke}
             />
             <Investor
               name="Paul E. Sevinc"
-              func=""
-              description=""
+              func="Board Member"
+              description="Co-Founder and Ex-CTO Doodle.com"
               img={data.paul}
             />
             <Investor
               name="Luzius Meisser"
-              func=""
-              description=""
+              func="Advisor"
+              description="Founder Bitcoin Association Switzerland"
               img={data.luzius}
             />
           </div>
@@ -174,18 +160,17 @@ const IndexPage = ({ data }: Object) => (
           <div className="row gap-y col-12 col-md-10 offset-md-1">
             <Advisor
               name="Adrian Buehrer"
-              func=""
-              description=""
+              func="Advisor"
+              description="Founder students.ch"
               img={data.adrian}
             />
             <Advisor
               name="Elena Walder-Schiavone"
-              func=""
-              description=""
+              func="Advisor"
+              description="lawyer, smartuplaw.ch"
               img={data.elena}
             />
           </div>
-
 
         </div>
       </section>
