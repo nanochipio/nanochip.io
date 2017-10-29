@@ -181,7 +181,7 @@ export default IndexPage;
 // eslint-disable-next-line no-undef
 export const query = graphql`
   query AboutQuery {
-    mission: imageSharp(id: { regex: "/mission.jpeg/" }) {
+    mission: imageSharp(id: { regex: "/mission.png/" }) {
       resolutions(width: 480, height: 320) {
         ...GatsbyImageSharpResolutions
       }
