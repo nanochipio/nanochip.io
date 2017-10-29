@@ -156,7 +156,7 @@ const IndexPage = ({ data }: Object) => (
         <div className="container">
           <div className="row gap-y align-items-center">
             <div className="col-12 col-md-4 col-lg-3 offset-md-2 offset-lg-3 text-center text-md-left">
-              <h4 className="mb-0">First 3 months for free. <br />Then 19 CHF/month.</h4>
+              <h4 className="mb-0">First 3 months for free<br />Then 19 CHF/month</h4>
             </div>
 
             <div className="col-12 col-md-4 col-lg-3">
