@@ -211,14 +211,14 @@ const IndexPage = ({ data }: Object) => (
       </section>
 
 
-      <section className="section bg-gray">
+      <section className="section">
         <div className="container">
           <header className="section-header">
             <small>Features</small>
             <h2>Coming Soon</h2>
             <hr />
             <p className="lead">
-              We’re working hard on bringing new features online for you
+              We’re working hard to bring new features online for you
               in the next couple of months!
             </p>
           </header>
