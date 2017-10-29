@@ -149,7 +149,11 @@ const IndexPage = ({ data }: Object) => (
         </div>
       </section>
 
-      <section className="section section-inverse py-40" style={{ backgroundColor: '#00b0c0' }}>
+      <section className="section section-inverse" id="pricing" style={{ backgroundColor: '#00b0c0' }}>
+        <header className="section-header mb-40">
+          <small>Pricing</small>
+          <p className="lead">No complicated options to choose from.<br />One package. Everything included. It’s easy.</p>
+        </header>
         <div className="container">
           <div className="row gap-y align-items-center">
             <div className="col-12 col-md-5 offset-md-3">
@@ -157,7 +161,7 @@ const IndexPage = ({ data }: Object) => (
             </div>
 
             <div className="col-12 col-md-2">
-              <a className="btn btn-round btn-block btn-white" href="https://app.ledgy.com/sigun">Sign Up Now</a>
+              <a className="btn btn-block btn-white" href="https://app.ledgy.com/sigun">Sign Up Now</a>
             </div>
           </div>
         </div>
@@ -171,8 +175,8 @@ const IndexPage = ({ data }: Object) => (
           <hr />
           <p className="lead">We waited until we could do it right. Then we did! Instead of creating a carbon copy.</p>
         </header>
-        <div className="container">
 
+        <div className="container">
           <Feature
             title="Getting Started page"
             text="As part of efforts to improve user onboarding, I shipped an experiment to a subset of new users showing them a Getting Started page immediately after signup to help them get to what we think are some of the most important actions for new users to take. We compared the subset of users against a control group to see whether such an experience improved engagement over a period of time."
@@ -195,33 +199,26 @@ const IndexPage = ({ data }: Object) => (
             text="Less an illustration, and more a literal proxy. These show up when the feature's introduced. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing. Monotonectally leverage existing standards compliant ideas with distributed data. Efficiently simplify cross-unit systems whereas adaptive testing."
             img={data.feature3}
           />
-
         </div>
       </section>
 
       <section className="section section-inverse py-40" style={{ backgroundColor: '#00b38d' }}>
         <div className="container">
-          <div className="row gap-y align-items-center">
+          <form className="form-glass row gap-y align-items-center" action="" method="post" target="_blank">
             <div className="col-12 col-md-2 offset-md-2">
               <h4 className="mb-0">Stay up to date</h4>
             </div>
-
-            <div className="col-12 col-md-7">
-              <form className="form-glass justify-content-center row  gap-y align-items-center" action="" method="post" target="_blank">
-
-                <div className="col-12 col-md-7">
-                  <div className="input-group input-group-lg">
-                    <span className="input-group-addon"><i className="fa fa-envelope" /></span>
-                    <input type="email" name="EMAIL" className="form-control" placeholder="Email Address" />
-                  </div>
-                </div>
-
-                <div className="col-12 col-md-3">
-                  <button className="btn btn-lg btn-success btn-block">Subscribe</button>
-                </div>
-              </form>
+            <div className="col-12 col-md-4">
+              <div className="input-group input-group-lg">
+                <span className="input-group-addon"><i className="fa fa-envelope" /></span>
+                <input type="email" name="EMAIL" className="form-control" placeholder="Email Address" />
+              </div>
             </div>
-          </div>
+
+            <div className="col-12 col-md-2">
+              <button className="btn btn-lg btn-success btn-block">Subscribe</button>
+            </div>
+          </form>
         </div>
       </section>
 

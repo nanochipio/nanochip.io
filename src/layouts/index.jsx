@@ -31,8 +31,8 @@ const Nav = () => (
           <li className="nav-item">
             <button className="nav-link active btn-link">Product <i className="fa fa-caret-down" /></button>
             <div className="nav-submenu">
-              <Link className="nav-link active" href to="/#start">Get Started</Link>
               <Link className="nav-link active" href to="/#testimonials">Testimonials</Link>
+              <Link className="nav-link active" href to="/#pricing">Pricing</Link>
               <Link className="nav-link active" href to="/#features">Features</Link>
               <Link className="nav-link active" href to="/#faq">FAQ</Link>
             </div>
