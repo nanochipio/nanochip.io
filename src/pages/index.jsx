@@ -52,30 +52,6 @@ const Header = () => (
   </header>
 );
 
-type TestimonialProps = {
-  name: string,
-  company: string,
-  img: Object,
-  text: string,
-}
-const Testimonial = ({ name, company, img, text }: TestimonialProps) => (
-  <div className="col-12 col-md-3" >
-    <div className="card">
-      <div className="card-block px-10">
-        <p className="text-quoted mb-0">{text}</p>
-        <div className="media align-items-center pb-0">
-          <Img className="avatar avatar-xs" {...img} alt={company} />
-          <div className="media-body lh-1">
-            <h6 className="mb-0">{name}</h6>
-            <small>{company}</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-
 const Feature =
 ({ title, text, img, right }: { title: string, text: string, img: Object, right?: boolean}) => (
   <div className="row gap-y align-items-center">
@@ -108,44 +84,33 @@ Feature.defaultProps = { right: false };
 //   </div>
 // );
 
+const Partner = ({ img, name }: { img: Object, name: string }) => (
+  <div style={{ width: '200px', height: '80px' }}>
+    <Img {...img} alt={name} style={{ overflow: 'visible' }} />
+  </div>
+);
+
 const IndexPage = ({ data }: Object) => (
   <div>
     <Header />
     <main className="main-content">
+
       <section className="section" id="testimonials">
+        <header className="section-header mb-40">
+          <small>Testimonials</small>
+          <p className="lead">Switzerland’s best companies manage their cap table with Ledgy.</p>
+        </header>
+
         <div className="container">
-          <header className="section-header">
-            <small>What our users say</small>
-          </header>
-
-          <div className="row gap-y">
-            <Testimonial
-              text="Wow, so mind-blowing. The UX is amazing. I’m jealous!"
-              name="Reto Lämmler"
-              company="TestingTime AG"
-              img={data.testingtime}
-            />
-            <Testimonial
-              text="I thought cap tables were boring. Ledgy proved me wrong."
-              name="David Christen"
-              company="quitt.ch"
-              img={data.quitt}
-            />
-            <Testimonial
-              text="We were looking for a intuitive cap table tool. This is just great!"
-              name="Bernadette Leuzinger"
-              company="CryptoFund AG"
-              img={data.cryptofund}
-            />
-            <Testimonial
-              text="How did earth even turn before there was Ledgy? Total mistery."
-              name="Mathias Brenner"
-              company="Sherpany AG"
-              img={data.sherpany}
-            />
+          <div className="row gap-y partner align-middle">
+            <Partner img={data.testingtime} name="TestingTime" />
+            <Partner img={data.quitt} name="quitt.ch" />
+            <Partner img={data.cryptofund} name="CryptoFund" />
+            <Partner img={data.frontify} name="Frontify" />
+            <Partner img={data.sherpany} name="Sherpany" />
           </div>
-
         </div>
+
       </section>
 
       <section className="section section-inverse" id="pricing" style={{ backgroundColor: '#00b0c0' }}>
@@ -341,16 +306,19 @@ export const query = graphql`
     }
 
     testingtime: imageSharp(id: { regex: "/testingtime/" }) {
-      sizes(maxWidth: 200) { ...GatsbyImageSharpSizes }
+      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
     quitt: imageSharp(id: { regex: "/quitt/" }) {
-      sizes(maxWidth: 200) { ...GatsbyImageSharpSizes }
+      resolutions(width: 80) { ...GatsbyImageSharpResolutions }
     }
     cryptofund: imageSharp(id: { regex: "/cryptofund/" }) {
-      sizes(maxWidth: 200) { ...GatsbyImageSharpSizes }
+      resolutions(width: 180) { ...GatsbyImageSharpResolutions }
     }
     sherpany: imageSharp(id: { regex: "/sherpany/" }) {
-      sizes(maxWidth: 200) { ...GatsbyImageSharpSizes }
+      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+    }
+    frontify: imageSharp(id: { regex: "/frontify/" }) {
+      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
   }
 `;

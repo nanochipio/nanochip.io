@@ -5,6 +5,7 @@ import Link from 'gatsby-link';
 
 import '../assets/vendor/bootstrap/css/bootstrap.css';
 import '../assets/css/scss/thesaas.scss';
+import '../assets/vendor/swiper/css/swiper.css';
 import '../fonts';
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
