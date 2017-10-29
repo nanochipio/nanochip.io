@@ -176,10 +176,10 @@ const IndexPage = ({ data }: Object) => (
       </section>
 
 
-      <section className="section">
+      <section className="section" id="future">
         <div className="container">
           <header className="section-header">
-            <small>Features</small>
+            <small>The Future</small>
             <h2>Coming Soon</h2>
             <hr />
             <p className="lead">
