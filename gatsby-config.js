@@ -47,8 +47,7 @@ module.exports = {
       options: {
         mergeSecurityHeaders: true,
         mergeLinkHeaders: true,
-        mergeCachingHeaders: false,
-        transformHeaders: headers => headers,
+        mergeCachingHeaders: true,
       },
     },
   ],
