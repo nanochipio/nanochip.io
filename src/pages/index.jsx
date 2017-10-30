@@ -111,5 +111,15 @@ export const query = graphql`
     frontify: imageSharp(id: { regex: "/frontify/" }) {
       resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
+
+    lykke: imageSharp(id: { regex: "/lykke/" }) {
+      resolutions(width: 130) { ...GatsbyImageSharpResolutions }
+    }
+    investiere: imageSharp(id: { regex: "/investiere/" }) {
+      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+    }
+    swissfintech: imageSharp(id: { regex: "/swissfintech/" }) {
+      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+    }
   }
 `;

@@ -24,6 +24,16 @@ const References = ({ data }: Object) => (
       <Partner img={data.sherpany} name="Sherpany" />
     </div>
 
+
+    <header className="section-header mb-40">
+      <p className="lead">Partners</p>
+    </header>
+
+    <div className="partner">
+      <Partner img={data.lykke} name="Lykke" />
+      <Partner img={data.investiere} name="investiere" />
+      <Partner img={data.swissfintech} name="SwissFintech" />
+    </div>
   </section>
 );
 
