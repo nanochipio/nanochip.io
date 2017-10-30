@@ -29,9 +29,8 @@ const Nav = () => (
 
       <div className="topbar-right">
         <ul className="topbar-nav nav">
-          <li className="nav-item"> {
-            // eslint-disable-next-line jsx-a11y/anchor-is-valid
-          }<a className="nav-link active" href="#">Product <i className="fa fa-caret-down" /></a>
+          <li className="nav-item">
+            <button className="nav-link active btn-link text-left">Product <i className="fa fa-caret-down" /></button>
             <div className="nav-submenu">
               <Link className="nav-link active" href to="/#testimonials">Testimonials</Link>
               <Link className="nav-link active" href to="/#pricing">Pricing</Link>
