@@ -27,7 +27,7 @@ const References = ({ data }: Object) => (
 
 
     <header className="section-header mb-40">
-      <p className="lead">Partners</p>
+      <p className="lead">Partners & Associations</p>
     </header>
 
     <div className="partner">
