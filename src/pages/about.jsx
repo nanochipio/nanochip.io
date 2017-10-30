@@ -137,13 +137,13 @@ const IndexPage = ({ data }: Object) => (
 
           <div className="row gap-y">
             <Investor
-              name="Myke Naef"
+              name="Myke Näf"
               func="Board Member"
               description="Founder Doodle.com"
               img={data.myke}
             />
             <Investor
-              name="Paul E. Sevinc"
+              name="Paul E. Sevinç"
               func="Board Member"
               description="Founder Doodle.com"
               img={data.paul}
@@ -158,7 +158,7 @@ const IndexPage = ({ data }: Object) => (
 
           <div className="row gap-y col-12 col-md-10 offset-md-1">
             <Advisor
-              name="Adrian Buehrer"
+              name="Adrian Bührer"
               func="Advisor"
               description="Founder students.ch"
               img={data.adrian}
