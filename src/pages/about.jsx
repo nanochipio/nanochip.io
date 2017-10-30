@@ -137,19 +137,19 @@ const IndexPage = ({ data }: Object) => (
             <Investor
               name="Myke Näf"
               func="Board Member"
-              description="Founder Doodle.com"
+              description="Entrepreneur, Business Angel, Founder of Doodle.com"
               img={data.myke}
             />
             <Investor
-              name="Paul E. Sevinç"
+              name="Dr. Paul E. Sevinç"
               func="Board Member"
-              description="Founder Doodle.com"
+              description="Entrepreneur, Technologist, Founder of Doodle.com"
               img={data.paul}
             />
             <Investor
               name="Luzius Meisser"
               func="Advisor"
-              description="Founder Bitcoin Association Switzerland"
+              description="Founder & President Bitcoin Association Switzerland, Founder of Wuala"
               img={data.luzius}
             />
           </div>
@@ -158,13 +158,13 @@ const IndexPage = ({ data }: Object) => (
             <Advisor
               name="Adrian Bührer"
               func="Advisor"
-              description="Founder students.ch"
+              description="Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch"
               img={data.adrian}
             />
             <Advisor
               name="Elena Walder-Schiavone"
               func="Advisor"
-              description="Lawyer, smartuplaw.ch"
+              description="M&A and Private Equity Lawyer with focus in start-up legal advise, Smartuplaw.ch"
               img={data.elena}
             />
           </div>
