@@ -80,7 +80,7 @@ const IndexPage = ({ data }: Object) => (
                  With the goal to make it a breeze for both companies and shareholders.
               </p>
             </div>
-            <div className="col-lg-6 hidden-md-down align-self-center">
+            <div className="col-12 col-lg-6 p-50 align-self-center">
               <Img {...data.mission} className="shadow-3 aos-init aos-animate" alt="mission" data-aos="fade-left" data-aos-duration="1500" />
             </div>
           </div>
@@ -180,9 +180,9 @@ export default IndexPage;
 // eslint-disable-next-line no-undef
 export const query = graphql`
   query AboutQuery {
-    mission: imageSharp(id: { regex: "/mission.png/" }) {
-      resolutions(width: 480, height: 320) {
-        ...GatsbyImageSharpResolutions
+    mission: imageSharp(id: { regex: "/mission/" }) {
+      sizes(maxWidth: 600) {
+        ...GatsbyImageSharpSizes
       }
     }
     ben: imageSharp(id: { regex: "/ben.jpg/" }) {
