@@ -12,6 +12,10 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: { id: 'GTM-P48JT9B' },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Ledgy',
