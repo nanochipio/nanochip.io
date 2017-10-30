@@ -111,6 +111,9 @@ export const query = graphql`
     frontify: imageSharp(id: { regex: "/frontify/" }) {
       resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
+    apiax: imageSharp(id: { regex: "/apiax/" }) {
+      resolutions(width: 110) { ...GatsbyImageSharpResolutions }
+    }
 
     lykke: imageSharp(id: { regex: "/lykke/" }) {
       resolutions(width: 130) { ...GatsbyImageSharpResolutions }
