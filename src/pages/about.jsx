@@ -130,7 +130,7 @@ const IndexPage = ({ data }: Object) => (
         <div className="container">
           <header className="section-header">
             <small>Advisors</small>
-            <h2>Backed by leading investors from Switzerland</h2>
+            <h2>Backed by leading investors</h2>
           </header>
 
           <div className="row gap-y">
