@@ -1,9 +1,13 @@
 module.exports = {
-  siteMetadata: { title: 'Ledgy - Online Share Register' },
+  siteMetadata: {
+    siteUrl: 'https://www.ledgy.com',
+    title: 'Ledgy - Online Share Register',
+  },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

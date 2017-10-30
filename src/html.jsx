@@ -1,7 +1,5 @@
 /* eslint-disable */
 import React from 'react';
-import favicon16 from './img/favicon-16x16.png';
-import favicon32 from './img/favicon-32x32.png';
 
 let stylesStr;
 if (process.env.NODE_ENV === 'production') {
@@ -27,13 +25,13 @@ module.exports = class HTML extends React.Component {
       <html {...this.props.htmlAttributes}>
         <head>
           <title>Ledgy - Online Share Register</title>
-          <meta name="description" content="Ledgy" />
+          <meta name="description" content="Make your life easy with the leading share register and cap table tool for Switzerland." />
           <meta name="keywords" content="cap table, share register" />
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <script src="script.min.js" async />
-          <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
-          <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {this.props.headComponents}
           {css}
