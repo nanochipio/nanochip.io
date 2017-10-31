@@ -149,7 +149,7 @@ const IndexPage = ({ data }: Object) => (
             <Investor
               name="Luzius Meisser"
               func="Advisor"
-              description="Founder & President Bitcoin Association Switzerland, Founder of Wuala"
+              description="Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala"
               img={data.luzius}
             />
           </div>
