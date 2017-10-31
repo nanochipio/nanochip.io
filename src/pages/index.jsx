@@ -122,7 +122,7 @@ export const query = graphql`
       resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
     swissfintech: imageSharp(id: { regex: "/swissfintech/" }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+      resolutions(width: 80) { ...GatsbyImageSharpResolutions }
     }
   }
 `;

@@ -4,7 +4,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 
 const Partner = ({ img, name }: { img: Object, name: string }) => (
-  <div style={{ width: '200px', height: '80px' }}>
+  <div style={{ width: '200px', height: '80px', verticalAlign: 'middle' }}>
     <Img {...img} alt={name} style={{ overflow: 'visible', margin: 0 }} />
   </div>
 );
@@ -32,8 +32,8 @@ const References = ({ data }: Object) => (
 
     <div className="partner">
       <Partner img={data.lykke} name="Lykke" />
-      <Partner img={data.investiere} name="investiere" />
       <Partner img={data.swissfintech} name="SwissFintech" />
+      <Partner img={data.investiere} name="investiere" />
     </div>
   </section>
 );
