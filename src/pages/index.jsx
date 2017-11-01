@@ -40,7 +40,7 @@ const Header = () => (
                 style={{ textDecoration: 'underline' }}
                 className="text-white"
                 href="https://demo.ledgy.com"
-              >Watch the demo
+              >Check out our demo app
               </a>
             </div>
 
@@ -67,11 +67,11 @@ const IndexPage = (props: Object) => (
       <Features {...props} />
 
       <section className="section section-inverse py-40" style={{ backgroundColor: '#60ae50' }}>
-        <div className="row  justify-content-center">
-          <div className="col-10 col-sm-5 col-md-3">
-            <a className="btn btn-lg btn-success btn-block text-center" href="https://demo.ledgy.com">Watch the Demo</a>
-          </div>
+
+        <div className="text-center">
+          <a className="btn btn-lg btn-success" href="https://demo.ledgy.com">Check out our demo app</a>
         </div>
+
       </section>
 
       <Future {...props} />
