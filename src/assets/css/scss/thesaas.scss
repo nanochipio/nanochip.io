@@ -28,6 +28,10 @@
        url('../../..//fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
+.gatsby-image-outer-wrapper {
+  display: inline;
+}
+
 // Core variables and mixins
 //
 @import "variables";
