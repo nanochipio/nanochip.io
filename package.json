@@ -1,0 +1,62 @@
+{
+  "name": "ledgy-landing-page",
+  "description": "Ledgy Landing Page",
+  "version": "1.0.0",
+  "author": "Ledgy AG <contact@ledgy.com>",
+  "repository": "morloy/ledgy-app",
+  "dependencies": {
+    "gatsby": "^1.9.82",
+    "gatsby-image": "^1.0.16",
+    "gatsby-link": "^1.6.23",
+    "gatsby-plugin-google-tagmanager": "^1.0.7",
+    "gatsby-plugin-manifest": "^1.0.8",
+    "gatsby-plugin-netlify": "^1.0.6",
+    "gatsby-plugin-offline": "^1.0.10",
+    "gatsby-plugin-sass": "^1.0.12",
+    "gatsby-plugin-sharp": "^1.6.13",
+    "gatsby-plugin-sitemap": "^1.2.5",
+    "gatsby-source-filesystem": "^1.5.5",
+    "gatsby-transformer-sharp": "^1.6.13",
+    "react": "^15.0.0"
+  },
+  "keywords": [
+    "ledgy"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "test": "eslint . --ext jsx,js && flow"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:flowtype/recommended",
+      "airbnb"
+    ],
+    "plugins": [
+      "flowtype"
+    ],
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "object-curly-newline": [
+        "error",
+        {
+          "multiline": true
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.57.3"
+  }
+}
