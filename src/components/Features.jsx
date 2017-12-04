@@ -1,27 +1,28 @@
 // @flow
 
-import React from 'react';
+import * as React from 'react';
 import Img from 'gatsby-image';
 
 
 const Feature =
-({ title, text, img, right }: { title: string, text: string, img: Object, right?: boolean}) => (
-  <div className="row gap-y align-items-center">
-    {!right &&
-    <div className="col-12 col-md-5">
-      <Img className="rounded shadow-2" {...img} alt={title} />
-    </div>}
+({ title, children, img, right }: {
+  title: string, children: React.Node, img: Object, right?: boolean}) => (
+    <div className="row gap-y align-items-center">
+      {!right &&
+      <div className="col-12 col-md-5">
+        <Img className="rounded shadow-2" {...img} alt={title} />
+      </div>}
 
-    <div className="col-12 col-md-7">
-      <h4>{title}</h4>
-      <p>{text}</p>
+      <div className="col-12 col-md-7">
+        <h4>{title}</h4>
+        <p>{children}</p>
+      </div>
+
+      {right &&
+      <div className="col-12 col-md-5">
+        <Img className="rounded shadow-2" {...img} alt={title} />
+      </div>}
     </div>
-
-    {right &&
-    <div className="col-12 col-md-5">
-      <Img className="rounded shadow-2" {...img} alt={title} />
-    </div>}
-  </div>
 );
 Feature.defaultProps = { right: false };
 
@@ -34,30 +35,34 @@ export default ({ data }: Object) => (
     <div className="container">
       <Feature
         title="All your information safely located in one place"
-        text="The current cap table is always accessible and all related documents are saved on the Ledgy cloud.
-        Inconsistencies are automatically detected by Ledgy’s software, preparing your company for legal requirements and audits in the future."
         img={data.feature1}
-      />
+      >
+      The current cap table is always accessible and
+      all related documents are saved on the Ledgy cloud.
+      Inconsistencies are automatically detected by the software.
+      </Feature>
 
       <hr />
 
       <Feature
         right
         title="Convertible notes and employee stock options"
-        text="
-        Create convertible loans and view them in the fully diluted view of your cap table.
-        Enter your employee incentive plan and track it over time."
         img={data.feature2}
-      />
+      >
+      You create convertible notes, Ledgy takes care of all the calculations.
+      <br />
+      Enter employee incentive plans and track them over time.
+      </Feature>
 
       <hr />
 
       <Feature
         title="Export and share PDFs"
-        text="Per Swiss law, your share register must be signed by the Board of Directors to be valid.
-        For this purpose, it can be exported as a PDF on Ledgy."
         img={data.feature3}
-      />
+      >
+      Per Swiss law, your share register must be signed by the Board of Directors to be valid.
+      For this purpose, it can be exported as a PDF on Ledgy.
+      </Feature>
     </div>
   </section>
 );
