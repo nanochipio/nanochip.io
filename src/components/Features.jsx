@@ -37,9 +37,9 @@ export default ({ data }: Object) => (
         title="All your information safely located in one place"
         img={data.feature1}
       >
-      The current cap table is always accessible and
-      all related documents are saved on the Ledgy cloud.
-      Inconsistencies are automatically detected by the software.
+        The current cap table is always accessible and
+        all related documents are saved on the Ledgy cloud.
+        Inconsistencies are automatically detected by the software.
       </Feature>
 
       <hr />
@@ -49,8 +49,8 @@ export default ({ data }: Object) => (
         title="Convertible notes and employee stock options"
         img={data.feature2}
       >
-      You create convertible notes, Ledgy takes care of all the calculations.<br />
-      Enter employee incentive plans with vesting and track them over time.
+        You create convertible notes, Ledgy takes care of all the calculations.<br />
+        Enter employee incentive plans with vesting and track them over time.
       </Feature>
 
       <hr />
@@ -59,8 +59,8 @@ export default ({ data }: Object) => (
         title="Export and share PDFs"
         img={data.feature3}
       >
-      Per Swiss law, your share register must be signed by the Board of Directors to be valid.
-      For this purpose, it can be exported as a PDF on Ledgy.
+        Per Swiss law, your share register must be signed by the Board of Directors to be valid.
+        For this purpose, it can be exported as a PDF on Ledgy.
       </Feature>
     </div>
   </section>
