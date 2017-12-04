@@ -33,9 +33,9 @@ export default ({ data }: Object) => (
 
     <div className="container">
       <Feature
-        title="All your information located in one place"
+        title="All your information safely located in one place"
         text="The current cap table is always accessible and all related documents are saved on the Ledgy cloud.
-        Use the interactive charts to understand who owns what in your company at a glance."
+        Inconsistencies are automatically detected by Ledgy’s software, preparing your company for legal requirements and audits in the future."
         img={data.feature1}
       />
 
@@ -43,9 +43,10 @@ export default ({ data }: Object) => (
 
       <Feature
         right
-        title="Avoid costly errors"
-        text="Your cap table is built up from past transactions. Its history ensures transparency.
-        Inconsistencies are automatically detected by Ledgy’s software, preparing your company for legal requirements and audits in the future."
+        title="Convertible notes and employee stock options"
+        text="
+        Create convertible loans and view them in the fully diluted view of your cap table.
+        Enter your employee incentive plan and track it over time."
         img={data.feature2}
       />
 
