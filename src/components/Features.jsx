@@ -49,9 +49,8 @@ export default ({ data }: Object) => (
         title="Convertible notes and employee stock options"
         img={data.feature2}
       >
-      You create convertible notes, Ledgy takes care of all the calculations.
-      <br />
-      Enter employee incentive plans and track them over time.
+      You create convertible notes, Ledgy takes care of all the calculations.<br />
+      Enter employee incentive plans with vesting and track them over time.
       </Feature>
 
       <hr />
