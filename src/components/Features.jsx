@@ -5,24 +5,26 @@ import Img from 'gatsby-image';
 
 
 const Feature =
-({ title, children, img, right }: {
-  title: string, children: React.Node, img: Object, right?: boolean}) => (
-    <div className="row gap-y align-items-center">
-      {!right &&
+({
+  title, children, img, right }: {
+  title: string, children: React.Node, img: Object, right?: boolean
+}) => (
+  <div className="row gap-y align-items-center">
+    {!right &&
       <div className="col-12 col-md-5">
         <Img className="rounded shadow-2" {...img} alt={title} />
       </div>}
 
-      <div className="col-12 col-md-7">
-        <h4>{title}</h4>
-        <p>{children}</p>
-      </div>
-
-      {right &&
-      <div className="col-12 col-md-5">
-        <Img className="rounded shadow-2" {...img} alt={title} />
-      </div>}
+    <div className="col-12 col-md-7">
+      <h4>{title}</h4>
+      <p>{children}</p>
     </div>
+
+    {right &&
+      <div className="col-12 col-md-5">
+        <Img className="rounded shadow-2" {...img} alt={title} />
+      </div>}
+  </div>
 );
 Feature.defaultProps = { right: false };
 
@@ -37,9 +39,9 @@ export default ({ data }: Object) => (
         title="All your information safely located in one place"
         img={data.feature1}
       >
-        The current cap table is always accessible and
-        all related documents are saved on the Ledgy cloud.
-        Inconsistencies are automatically detected by the software.
+        The current cap table is always accessible and related documents can be
+        uploaded and attached to transactions. Inconsistencies in transactions
+        are automatically detected.
       </Feature>
 
       <hr />
@@ -59,8 +61,8 @@ export default ({ data }: Object) => (
         title="Export and share PDFs"
         img={data.feature3}
       >
-        Per Swiss law, your share register must be signed by the Board of Directors to be valid.
-        For this purpose, it can be exported as a PDF on Ledgy.
+        Per Swiss law, a share register must be signed by the board of directors to be valid.
+        For this purpose, it can be exported as a PDF.
       </Feature>
     </div>
   </section>
