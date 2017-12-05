@@ -4,9 +4,7 @@ import * as React from 'react';
 import Img from 'gatsby-image';
 
 
-const Feature =
-({
-  title, children, img, right }: {
+const Feature = ({ title, children, img, right }: {
   title: string, children: React.Node, img: Object, right?: boolean
 }) => (
   <div className="row gap-y align-items-center">
