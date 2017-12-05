@@ -114,15 +114,5 @@ export const query = graphql`
     apiax: imageSharp(id: { regex: "/apiax/" }) {
       resolutions(width: 110) { ...GatsbyImageSharpResolutions }
     }
-
-    lykke: imageSharp(id: { regex: "/lykke/" }) {
-      resolutions(width: 130) { ...GatsbyImageSharpResolutions }
-    }
-    investiere: imageSharp(id: { regex: "/investiere/" }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
-    }
-    swissfintech: imageSharp(id: { regex: "/swissfintech/" }) {
-      resolutions(width: 80) { ...GatsbyImageSharpResolutions }
-    }
   }
 `;

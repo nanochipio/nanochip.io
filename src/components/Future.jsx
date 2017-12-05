@@ -18,35 +18,29 @@ export default () => (
 
       <div className="row gap-y">
 
-        <div className="col-12 col-md-3 feature-1">
+        <div className="col-12 col-md-4 feature-1">
           <p className="feature-icon text-dark"><i className="icon-document" /></p>
-          <h5>Convertible Loans</h5>
+          <h5>Tax Certificates</h5>
           <p>
-          Create convertible loans and view them in the fully diluted view of your cap table.
+          Automatically generate tax certificates and send them to your shareholders.
           </p>
         </div>
 
-        <div className="col-12 col-md-3 feature-1">
-          <p className="feature-icon text-warning"><i className="icon-linegraph" /></p>
-          <h5>Employee Options</h5>
-          <p>Enter your employee incentive plan and track it over time.</p>
-        </div>
 
-
-        <div className="col-12 col-md-3 feature-1">
+        <div className="col-12 col-md-4 feature-1">
           <p className="feature-icon text-danger"><i className="icon-telescope" /></p>
           <h5>Investment Scenarios</h5>
           <p>
-                Plan investment rounds by simulating their effect on the cap table.
+          Plan investment rounds by simulating their effect on the cap table.
           </p>
         </div>
 
 
-        <div className="col-12 col-md-3 feature-1">
+        <div className="col-12 col-md-4 feature-1">
           <p className="feature-icon text-success"><i className="icon-profile-female" /></p>
           <h5>Shareholder Login</h5>
           <p>
-                Your shareholders will be able to see all of their investments at any time on Ledgy.
+          Your shareholders will be able to see all of their investments at any time on Ledgy.
           </p>
         </div>
 
