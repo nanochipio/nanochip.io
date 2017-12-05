@@ -25,16 +25,6 @@ const References = ({ data }: Object) => (
       <Partner img={data.apiax} name="Apiax" />
     </div>
 
-
-    <header className="section-header mb-40">
-      <p className="lead">Partners & Associations</p>
-    </header>
-
-    <div className="partner">
-      <Partner img={data.lykke} name="Lykke" />
-      <Partner img={data.swissfintech} name="SwissFintech" />
-      <Partner img={data.investiere} name="investiere" />
-    </div>
   </section>
 );
 
