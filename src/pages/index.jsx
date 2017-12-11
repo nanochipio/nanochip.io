@@ -66,13 +66,19 @@ const IndexPage = (props: Object) => (
       <Pricing {...props} />
       <Features {...props} />
 
-      <section className="section section-inverse py-40" style={{ backgroundColor: '#60ae50' }}>
+
+      <section id="demo" className="section section-inverse" style={{ backgroundColor: '#60ae50' }} >
+
+        <header className="section-header mb-40">
+          <small>Demo</small>
+        </header>
 
         <div className="text-center">
           <a className="btn btn-lg btn-success" href="https://demo.ledgy.com">Check out our demo app</a>
         </div>
 
       </section>
+
 
       <Future {...props} />
       <Subscribe {...props} />
