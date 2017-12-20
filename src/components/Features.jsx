@@ -56,11 +56,12 @@ export default ({ data }: Object) => (
       <hr />
 
       <Feature
-        title="Export and share PDFs"
+        title="Export PDFs and send tax certificates"
         img={data.feature3}
       >
         Per Swiss law, a share register must be signed by the board of directors to be valid.
-        For this purpose, it can be exported as a PDF.
+        For this purpose, it can be exported as a PDF.<br />
+        Automatically generate tax certificates and send them to your shareholders.
       </Feature>
     </div>
   </section>
