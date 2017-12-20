@@ -18,14 +18,6 @@ export default () => (
 
       <div className="row gap-y">
 
-        {/* <div className="col-12 col-md-4 feature-1">
-          <p className="feature-icon text-dark"><i className="icon-document" /></p>
-          <h5>Tax Certificates</h5>
-          <p>
-          Automatically generate tax certificates and send them to your shareholders.
-          </p>
-        </div> */}
-
 
         <div className="col-12 col-md-6 feature-1">
           <p className="feature-icon text-danger"><i className="icon-telescope" /></p>
