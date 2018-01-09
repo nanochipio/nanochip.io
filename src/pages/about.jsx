@@ -119,7 +119,7 @@ const IndexPage = ({ data }: Object) => (
               name="Yoko Spirig"
               func="Physics MSc ETH"
               description="Medical physics background, loves running, wondering about brain-machine interfaces"
-              twitterlink="https://twitter.com/sp_yoko"
+              twitterlink="https://twitter.com/YokoSpirig"
               linkedinlink="https://www.linkedin.com/in/yokospirig/"
               img={data.yoko}
             />
