@@ -29,6 +29,20 @@ module.exports = class HTML extends React.Component {
           <meta name="keywords" content="cap table, stock ledger, shares register" />
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+
+          {/* Facebook social card */}
+          <meta property="og:title" content="Ledgy - Online Cap Table"/>
+          <meta property="og:description" content="Make your life easy with the cap table tool in Switzerland."/>
+          <meta property="og:image" content="https://ledgy.com/thumbnail.jpg"/>
+          <meta property="og:url" content="https://ledgy.com"/>
+
+          {/* Twitter social card */}
+          <meta name="twitter:title" content="Ledgy - Online Cap Table"/>
+          <meta name="twitter:description" content="Make your life easy with the cap table tool in Switzerland."/>
+          <meta name="twitter:image" content="https://ledgy.com/thumbnail.jpg"/>
+          <meta name="twitter:card" content="summary_large_image"/>
+
+
           <script src="script.min.js" async />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
