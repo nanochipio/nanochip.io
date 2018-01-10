@@ -33,13 +33,13 @@ module.exports = class HTML extends React.Component {
           {/* Facebook social card */}
           <meta property="og:title" content="Ledgy - Online Cap Table"/>
           <meta property="og:description" content="Make your life easy with the cap table tool in Switzerland."/>
-          <meta property="og:image" content="https://ledgy.com/static/thumbnail.jpg"/>
+          <meta property="og:image" content="https://ledgy.com/thumbnail.jpg"/>
           <meta property="og:url" content="https://ledgy.com"/>
 
           {/* Twitter social card */}
           <meta name="twitter:title" content="Ledgy - Online Cap Table"/>
           <meta name="twitter:description" content="Make your life easy with the cap table tool in Switzerland."/>
-          <meta name="twitter:image" content="https://ledgy.com/static/thumbnail.jpg"/>
+          <meta name="twitter:image" content="https://ledgy.com/thumbnail.jpg"/>
           <meta name="twitter:card" content="summary_large_image"/>
 
 
