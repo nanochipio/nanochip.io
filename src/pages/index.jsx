@@ -8,7 +8,7 @@ import Features from '../components/Features';
 import Future from '../components/Future';
 import Subscribe from '../components/Subscribe';
 
-const Header = () => (
+const Header = ({ data }: Object) => (
   <header className="header header-inverse h-fullscreen pb-80" style={{ backgroundColor: '#20a8d8' }} id="start">
 
     <div className="container text-center">
@@ -16,13 +16,13 @@ const Header = () => (
       <div className="row h-full">
         <div className="col-12 col-lg-10 offset-lg-1 align-self-center">
 
-          <h1 className="display-2">Online Cap Table</h1>
+          <h1 className="display-2">{data.site.siteMetadata.title}</h1>
           <br />
           <p className="fs-20 w-400 mx-auto hidden-sm-down">
-            Make your life easy with the leading cap table tool in Switzerland.
+            {data.site.siteMetadata.description}
           </p>
           <p className="fs-18 w-250 mx-auto hidden-md-up">
-            Make your life easy with the leading cap table tool in Switzerland.
+            {data.site.siteMetadata.description}
           </p>
 
           <div className="col-10 offset-1 col-md-8 offset-md-2">
@@ -59,7 +59,7 @@ const Header = () => (
 
 const IndexPage = (props: Object) => (
   <div>
-    <Header />
+    <Header {...props} />
     <main className="main-content">
 
       <References {...props} />
@@ -92,6 +92,14 @@ export default IndexPage;
 // eslint-disable-next-line no-undef
 export const query = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        url
+        title
+        description
+      }
+    }
+
     feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
