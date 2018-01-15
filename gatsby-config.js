@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.ledgy.com',
-    title: 'Ledgy - Online Stock Ledger',
+    url: 'https://www.ledgy.com',
+    name: 'Ledgy',
+    title: 'Online Cap Table',
+    description: 'Make your life easy with the leading cap table tool in Switzerland.',
   },
   plugins: [
     'gatsby-plugin-sass',

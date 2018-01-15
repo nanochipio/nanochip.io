@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React from 'react';
+import { siteMetadata } from '../gatsby-config';
 
 let stylesStr;
 if (process.env.NODE_ENV === 'production') {
@@ -21,26 +22,29 @@ module.exports = class HTML extends React.Component {
         />
       );
     }
+    const title = `${siteMetadata.name} - ${siteMetadata.title}`;
+    const thumbnail = `${siteMetadata.url}/thumbnail.png`;
     return (
       <html {...this.props.htmlAttributes}>
         <head>
-          <title>Ledgy - Online Cap Table</title>
-          <meta name="description" content="Make your life easy with the cap table tool in Switzerland." />
+          <title>{title}</title>
+          <meta name="description" content={siteMetadata.description} />
           <meta name="keywords" content="cap table, stock ledger, shares register" />
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
           {/* Facebook social card */}
-          <meta property="og:title" content="Ledgy - Online Cap Table"/>
-          <meta property="og:description" content="Make your life easy with the cap table tool in Switzerland."/>
-          <meta property="og:image" content="https://ledgy.com/thumbnail.jpg"/>
-          <meta property="og:url" content="https://ledgy.com"/>
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={siteMetadata.description} />
+          <meta property="og:image" content={thumbnail} />
+          <meta property="og:url" content={siteMetadata.url} />
 
           {/* Twitter social card */}
-          <meta name="twitter:title" content="Ledgy - Online Cap Table"/>
-          <meta name="twitter:description" content="Make your life easy with the cap table tool in Switzerland."/>
-          <meta name="twitter:image" content="https://ledgy.com/thumbnail.jpg"/>
-          <meta name="twitter:card" content="summary_large_image"/>
+          <meta name="twitter:site" content="@LedgyCom" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={siteMetadata.description} />
+          <meta name="twitter:image" content={thumbnail} />
+          <meta name="twitter:card" content="summary_large_image" />
 
 
           <script src="script.min.js" async />
