@@ -34,12 +34,10 @@ export default ({ data }: Object) => (
 
     <div className="container">
       <Feature
-        title="All your information safely located in one place"
+        title="Financing Round Modeling"
         img={data.feature1}
       >
-        The current cap table is always accessible and related documents can be
-        uploaded and attached to transactions. Inconsistencies in transactions
-        are automatically detected.
+        Plan investment rounds by simulating their effect on the cap table.
       </Feature>
 
       <hr />

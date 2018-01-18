@@ -19,16 +19,7 @@ export default () => (
       <div className="row gap-y">
 
 
-        <div className="col-12 col-md-6 feature-1">
-          <p className="feature-icon text-danger"><i className="icon-telescope" /></p>
-          <h5>Investment Scenarios</h5>
-          <p>
-          Plan investment rounds by simulating their effect on the cap table.
-          </p>
-        </div>
-
-
-        <div className="col-12 col-md-6 feature-1">
+        <div className="col-12 feature-1">
           <p className="feature-icon text-success"><i className="icon-profile-female" /></p>
           <h5>Shareholder Login</h5>
           <p>
