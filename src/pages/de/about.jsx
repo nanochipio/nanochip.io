@@ -1,8 +1,8 @@
-export default from '../components/AboutPage';
+export default from '../../components/AboutPage';
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query AboutQuery {
+  query AboutDeQuery {
     ...AboutPageFragment
   }
 `;
