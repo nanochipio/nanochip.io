@@ -95,7 +95,7 @@ export const indexPageFragment = graphql`
   fragment IndexPageFragment on RootQueryType {
     site {
       siteMetadata {
-        url
+        siteUrl
         title
         description
       }

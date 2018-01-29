@@ -162,10 +162,10 @@ class TemplateWrapper extends React.Component<SiteProps> {
   }
 }
 
-const TranslatableTemplate = translate('layout')(TemplateWrapper);
+const TranslateableTemplate = translate('layout')(TemplateWrapper);
 
 export default (props: Object) => (
   <I18nextProvider i18n={i18n}>
-    <TranslatableTemplate {...props} />
+    <TranslateableTemplate {...props} />
   </I18nextProvider>
 );

@@ -23,7 +23,7 @@ module.exports = class HTML extends React.Component {
       );
     }
     const title = `${siteMetadata.name} - ${siteMetadata.title}`;
-    const thumbnail = `${siteMetadata.url}/thumbnail.png`;
+    const thumbnail = `${siteMetadata.siteUrl}/thumbnail.png`;
     return (
       <html {...this.props.htmlAttributes}>
         <head>
@@ -37,7 +37,7 @@ module.exports = class HTML extends React.Component {
           <meta property="og:title" content={title} />
           <meta property="og:description" content={siteMetadata.description} />
           <meta property="og:image" content={thumbnail} />
-          <meta property="og:url" content={siteMetadata.url} />
+          <meta property="og:url" content={siteMetadata.siteUrl} />
 
           {/* Twitter social card */}
           <meta name="twitter:site" content="@LedgyCom" />
