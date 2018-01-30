@@ -130,7 +130,7 @@ const Footer = (props: LayoutProps) => {
 };
 
 type SiteProps = {
-  location: { pathname: string },
+  lang: string,
   i18n: {
     language: string,
     changeLanguage: (string) => void,
@@ -141,15 +141,14 @@ type SiteProps = {
 
 class TemplateWrapper extends React.Component<SiteProps> {
   componentWillReceiveProps = (props: SiteProps) => {
-    const lang = props.location.pathname.startsWith('/de') ? 'de' : 'en';
-    if (props.i18n.language !== lang) {
-      this.props.i18n.changeLanguage(lang);
+    if (props.i18n.language !== props.lang) {
+      this.props.i18n.changeLanguage(props.lang);
     }
   }
   render = () => {
     const props = {
+      ...this.props,
       prefix: this.props.i18n.language === 'de' ? '/de' : '',
-      lang: this.props.i18n.language,
       t: this.props.t,
     };
     return (
@@ -164,8 +163,11 @@ class TemplateWrapper extends React.Component<SiteProps> {
 
 const TranslateableTemplate = translate('layout')(TemplateWrapper);
 
-export default (props: Object) => (
-  <I18nextProvider i18n={i18n}>
-    <TranslateableTemplate {...props} />
-  </I18nextProvider>
-);
+export default (props: Object) => {
+  const lang = props.location.pathname.startsWith('/de/') ? 'de' : 'en';
+  return (
+    <I18nextProvider i18n={i18n} initialLanguage={lang}>
+      <TranslateableTemplate {...props} lang={lang} />
+    </I18nextProvider>
+  );
+};
