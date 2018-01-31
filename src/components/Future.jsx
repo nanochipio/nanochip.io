@@ -2,16 +2,15 @@
 
 import React from 'react';
 
-export default () => (
+export default ({ t }: Object) => (
   <section className="section" id="future">
     <div className="container">
       <header className="section-header">
-        <small>The Future</small>
-        <h2>Coming Soon</h2>
+        <small>{t('theFuture')}</small>
+        <h2>{t('comingSoon')}</h2>
         <hr />
         <p className="lead">
-              We’re working hard to bring new features online for you
-              in the next couple of months!
+          {t('wereWorkingHard')}
         </p>
       </header>
 
@@ -21,10 +20,8 @@ export default () => (
 
         <div className="col-12 feature-1">
           <p className="feature-icon text-success"><i className="icon-profile-female" /></p>
-          <h5>Shareholder Login</h5>
-          <p>
-          Your shareholders will be able to see all of their investments at any time on Ledgy.
-          </p>
+          <h5>{t('shareholderLogin')}</h5>
+          <p>{t('shareholderLoginDescription')}</p>
         </div>
 
 

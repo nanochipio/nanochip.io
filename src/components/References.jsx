@@ -9,11 +9,11 @@ const Partner = ({ img, name }: { img: Object, name: string }) => (
   </div>
 );
 
-const References = ({ data }: Object) => (
+const References = ({ data, t }: Object) => (
   <section className="section" id="testimonials">
     <header className="section-header mb-40">
-      <small>Testimonials</small>
-      <p className="lead">Switzerland’s best companies manage their cap table with Ledgy.</p>
+      <small>{t('testimonials')}</small>
+      <p className="lead">{t('switzerlandsBestCompanies')}</p>
     </header>
 
     <div className="partner">
@@ -23,6 +23,7 @@ const References = ({ data }: Object) => (
       <Partner img={data.frontify} name="Frontify" />
       <Partner img={data.sherpany} name="Sherpany" />
       <Partner img={data.apiax} name="Apiax" />
+      <Partner img={data.allthings} name="Allthings Technologies" />
     </div>
 
   </section>
