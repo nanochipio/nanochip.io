@@ -13,22 +13,14 @@ i18n
   .use(LanguageDetector)
   .use(reactI18nextModule)
   .init({
-    preload: ['de', 'en'],
     fallbackLng: 'en',
     resources: {
       de: { translation: de, layout: layoutDe },
       en: { translation: en, layout: layoutEn },
     },
-
-    // have a common namespace used around the full app
     ns: ['translation'],
     defaultNS: 'translation',
-
-    debug: true,
-
     interpolation: { escapeValue: false },
-
-    // react: { wait: true },
   });
 
 export default i18n;
