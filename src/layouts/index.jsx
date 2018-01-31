@@ -159,7 +159,7 @@ class TemplateWrapper extends React.Component<SiteProps> {
     return (
       <div>
         <Helmet>
-          <title>{t('title')}</title>
+          <title>{name} - {t('title')}</title>
           <meta name="description" content={t('description')} />
           <meta name="keywords" content={t('keywords')} />
           <meta charSet="utf-8" />
