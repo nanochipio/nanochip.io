@@ -124,5 +124,8 @@ export const indexPageFragment = graphql`
     apiax: imageSharp(id: { regex: "/apiax/" }) {
       resolutions(width: 110) { ...GatsbyImageSharpResolutions }
     }
+    allthings: imageSharp(id: { regex: "/allthings/" }) {
+      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+    }
   }
 `;

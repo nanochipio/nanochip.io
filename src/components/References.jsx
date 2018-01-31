@@ -23,6 +23,7 @@ const References = ({ data, t }: Object) => (
       <Partner img={data.frontify} name="Frontify" />
       <Partner img={data.sherpany} name="Sherpany" />
       <Partner img={data.apiax} name="Apiax" />
+      <Partner img={data.allthings} name="Allthings Technologies" />
     </div>
 
   </section>
