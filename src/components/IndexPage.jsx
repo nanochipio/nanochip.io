@@ -23,10 +23,10 @@ const Header = ({ t }: Object) => (
             {t('description')}
           </p>
           <p className="fs-18 w-250 mx-auto hidden-md-up">
-            {t('title')}
+            {t('description')}
           </p>
 
-          <div className="col-10 offset-1 col-md-8 offset-md-2">
+          <div className="col-10 offset-1">
 
             <form className="form-glass row" action="https://app.ledgy.com/signup" method="get">
               <div className="col-12 col-md-7 my-1">

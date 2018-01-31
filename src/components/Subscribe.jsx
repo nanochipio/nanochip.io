@@ -16,7 +16,7 @@ export default ({ t }: Object) => (
           </div>
         </div>
 
-        <div className="col-12 col-md-3 col-lg-2 py-1">
+        <div className="col-12 col-md-3 py-1">
           <button className="btn btn-lg btn-success btn-block text-center">{t('subscribe')}</button>
         </div>
       </form>
