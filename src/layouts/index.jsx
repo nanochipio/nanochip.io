@@ -53,14 +53,14 @@ const Nav = (props: LayoutProps) => {
             <li className="nav-item"><Link className="nav-link active" href to={`${props.prefix}/about`}>{t('about')}</Link></li>
             <li className="nav-item"><Link className="nav-link active" href to={`${props.prefix}/contact`}>{t('contact')}</Link></li>
             <li className="nav-item"><a className="nav-link active" href="https://blog.ledgy.com">{t('blog')}</a></li>
-            <li className="nav-item">
-              <Link href className="nav-link active" to="/#start">
+            <div className="nav-item d-block">
+              <Link href className="nav-link d-inline active" to="/#start">
                 {props.lang === 'en' ? <u>EN</u> : 'EN'}
-              </Link> |
-              <Link href className="nav-link active" to="/de/#start">
+              </Link>&nbsp;|&nbsp;
+              <Link href className="nav-link d-inline active" to="/de/#start">
                 {props.lang === 'de' ? <u>DE</u> : 'DE'}
               </Link>
-            </li>
+            </div>
             <div className="hidden-md-up lh-2">
               <a className="btn btn-block btn-outline btn-primary" href="https://app.ledgy.com/login">{t('login')}</a>
               <a className="btn btn-block btn-success" href="https://app.ledgy.com/signup">{t('signup')}</a>
