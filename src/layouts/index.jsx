@@ -3,6 +3,7 @@
 import * as React from 'react';
 import Link from 'gatsby-link';
 import { I18nextProvider, translate } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 import i18n from './i18n';
 
 import '../assets/vendor/bootstrap/css/bootstrap.css';
@@ -135,6 +136,9 @@ type SiteProps = {
     language: string,
     changeLanguage: (string) => void,
   },
+  data: { site: { siteMetadata: {
+    name: string, siteUrl: string,
+  } } },
   children: () => React.Node,
   t: (string) => string,
 }
@@ -146,13 +150,40 @@ class TemplateWrapper extends React.Component<SiteProps> {
     }
   }
   render = () => {
-    const props = {
-      ...this.props,
-      prefix: this.props.i18n.language === 'de' ? '/de' : '',
-      t: this.props.t,
-    };
+    const { t } = this.props;
+    const { name, siteUrl } = this.props.data.site.siteMetadata;
+    const prefix = this.props.i18n.language === 'de' ? '/de' : '';
+    const props = { ...this.props, prefix, t };
+    const title = `${name} - ${t('title')}`;
+    const thumbnail = `${siteUrl}/thumbnail.png`;
     return (
       <div>
+        <Helmet>
+          <title>{t('title')}</title>
+          <meta name="description" content={t('description')} />
+          <meta name="keywords" content={t('keywords')} />
+          <meta charSet="utf-8" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+
+          {/* Facebook social card */}
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={t('description')} />
+          <meta property="og:image" content={thumbnail} />
+          <meta property="og:url" content={siteUrl} />
+
+          {/* Twitter social card */}
+          <meta name="twitter:site" content="@LedgyCom" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={t('description')} />
+          <meta name="twitter:image" content={thumbnail} />
+          <meta name="twitter:card" content="summary_large_image" />
+
+
+          <script src="/script.min.js" async />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Helmet>
         <Nav {...props} />
         {this.props.children()}
         <Footer {...props} />
@@ -161,7 +192,7 @@ class TemplateWrapper extends React.Component<SiteProps> {
   }
 }
 
-const TranslateableTemplate = translate('layout')(TemplateWrapper);
+const TranslateableTemplate = translate()(TemplateWrapper);
 
 export default (props: Object) => {
   const lang = props.location.pathname.startsWith('/de/') ? 'de' : 'en';
@@ -171,3 +202,15 @@ export default (props: Object) => {
     </I18nextProvider>
   );
 };
+
+// eslint-disable-next-line no-undef
+export const pageQuery = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        siteUrl
+        name
+      }
+    }
+  }
+`;

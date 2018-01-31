@@ -1,6 +1,7 @@
 {
   "19month": "Dann nur 19 CHF/Firma",
-  "about": {
+  "about": "Über uns",
+  "aboutPage": {
     "aboutUs": "Über uns",
     "adrian": "Investor & Consultant (Farmy.ch, Flatfox.ch), Gründer von Students.ch",
     "advisors": "Berater",
@@ -18,9 +19,11 @@
     "whoWeAre": "Wer wir sind",
     "yoko": "Hintergrund in Medizin-Physik, liebt das Laufen, interessiert sich für Brain-Machine-Interfaces"
   },
+  "blog": "Blog",
   "checkDemo": "Teste die Demo",
   "comingSoon": "Bald verfügbar",
-  "contact": {
+  "contact": "Kontakt",
+  "contactPage": {
     "getInTouch": "Kontaktiere Sie uns",
     "giveUsACall": "Rufen Sie uns an oder kommen sie einfach vorbei. Wir werden unser Bestes geben, alle Anfragen innerhalb von 24 Stunden zu beantworten.",
     "hereAreTheWays": "Hier sind die Möglichkeiten, wie Sie uns bei Fragen kontaktieren können",
@@ -37,13 +40,17 @@
   "enterEmail": "Email-Adresse …",
   "export": "Exportiere PDF-Dokumente und versende Steuerbescheinigungen",
   "exportDescription": "Nach Schweizer Gesetz muss das Aktienregister vom Verwaltungsrat unterschrieben sein, damit es gültig ist. Dafür kannst du einfach ein PDF herunterladen. Generiere Steuerbescheinigungen und sende sie per Knopfdruck an alle Aktionäre.",
-  "features": "Features",
+  "features": "Funktionen",
   "firstMonthFree": "Erster Monat gratis",
+  "keywords": "Aktien, Aktienbuch, Aktienregister, Captable, Shareholder, Startup",
+  "login": "Einloggen",
   "pricing": "Preis",
+  "product": "Produkt",
   "roundModeling": "Modellierung von Finanzierungsrunden",
   "roundModelingDesc": "Plane Finanzierungsrunden simuliere ihren Einfluss auf die Aktienverteilung.",
   "shareholderLogin": "Aktionärslogin",
   "shareholderLoginDescription": "Deine Aktionäre können sich selbst auf Ledgy einloggen und ihre Investitionen mitverfolgen.",
+  "signup": "Anmelden",
   "signUpNow": "Jetzt anmelden",
   "stayUpToDate": "Bleib’ auf dem Laufenden",
   "straightforwardTool": "So einfach wie das Tool. Ein Paket, alles drin.",

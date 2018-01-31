@@ -1,6 +1,7 @@
 {
   "19month": "Then 19 CHF/month per company",
-  "about": {
+  "about": "About",
+  "aboutPage": {
     "aboutUs": "About us",
     "adrian": "Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch",
     "advisors": "Advisors",
@@ -18,9 +19,11 @@
     "whoWeAre": "Who we are",
     "yoko": "Medical physics background, loves running, wondering about brain-machine interfaces"
   },
+  "blog": "Blog",
   "checkDemo": "Check out our demo app",
   "comingSoon": "Coming Soon",
-  "contact": {
+  "contact": "Contact",
+  "contactPage": {
     "getInTouch": "Let’s Get In Touch",
     "giveUsACall": "Give us a call or stop by our door anytime. We will do our best to answer all enquiries within 24 hours on business days.",
     "hereAreTheWays": "Here are the ways you can contact us with any questions you have",
@@ -39,11 +42,15 @@
   "exportDescription": "Per Swiss law, a share register must be signed by the board of directors to be valid. For this purpose, it can be exported as a PDF. Automatically generate tax certificates and send them to your shareholders.",
   "features": "features",
   "firstMonthFree": "First month free",
+  "keywords": "cap table, stock ledger, shares register",
+  "login": "Login",
   "pricing": "Pricing",
+  "product": "Product",
   "roundModeling": "Financing Round Modeling",
   "roundModelingDesc": "Plan investment rounds by simulating their effect on the cap table.",
   "shareholderLogin": "Shareholder Login",
   "shareholderLoginDescription": "Your shareholders will be able to see all of their investments at any time on Ledgy.",
+  "signup": "Signup",
   "signUpNow": "Sign up now",
   "stayUpToDate": "Stay up to date",
   "straightforwardTool": "As straightforward as the tool. One package, everything included.",

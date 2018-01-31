@@ -8,8 +8,8 @@ const Header = ({ t }: Object) => (
     <div className="container text-center">
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
-          <h1>{t('contact.getInTouch')}</h1>
-          <p className="fs-20 opacity-70">{t('contact.hereAreTheWays')}</p>
+          <h1>{t('contactPage.getInTouch')}</h1>
+          <p className="fs-20 opacity-70">{t('contactPage.hereAreTheWays')}</p>
         </div>
       </div>
     </div>
@@ -52,19 +52,19 @@ const IndexPage = (props: Object) => {
                 <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="form-group">
-                    <input className="form-control form-control-lg" type="text" name="name" placeholder={t('contact.yourName')} />
+                    <input className="form-control form-control-lg" type="text" name="name" placeholder={t('contactPage.yourName')} />
                   </div>
 
                   <div className="form-group">
-                    <input className="form-control form-control-lg" type="email" name="email" placeholder={t('contact.yourEmail')} />
+                    <input className="form-control form-control-lg" type="email" name="email" placeholder={t('contactPage.yourEmail')} />
                   </div>
 
                   <div className="form-group">
-                    <textarea className="form-control form-control-lg" name="message" rows="4" placeholder={t('contact.yourMessage')} />
+                    <textarea className="form-control form-control-lg" name="message" rows="4" placeholder={t('contactPage.yourMessage')} />
                   </div>
 
 
-                  <button className="btn btn-lg btn-primary btn-block" type="submit">{t('contact.send')}</button>
+                  <button className="btn btn-lg btn-primary btn-block" type="submit">{t('contactPage.send')}</button>
                 </form>
 
               </div>
@@ -72,11 +72,11 @@ const IndexPage = (props: Object) => {
 
               <div className="col-12 col-md-5 offset-md-1">
                 <div className="bg-grey h-full p-20">
-                  <p>{t('contact.giveUsACall')}</p>
+                  <p>{t('contactPage.giveUsACall')}</p>
 
                   <hr className="w-80" />
 
-                  <p className="lead">Ledgy AG<br />Forchstrasse 60<br />{t('contact.postcode')}</p>
+                  <p className="lead">Ledgy AG<br />Forchstrasse 60<br />{t('contactPage.postcode')}</p>
 
                   <div>
                     <span className="d-inline-block w-20 text-lighter" title="Email">E:</span>

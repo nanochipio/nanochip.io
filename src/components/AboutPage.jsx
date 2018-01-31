@@ -11,8 +11,8 @@ const Header = ({ t }: Object) => (
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
 
-          <h1>{t('about.aboutUs')}</h1>
-          <p className="fs-20 opacity-70">{t('about.findOutAboutOurMission')}</p>
+          <h1>{t('aboutPage.aboutUs')}</h1>
+          <p className="fs-20 opacity-70">{t('aboutPage.findOutAboutOurMission')}</p>
 
         </div>
       </div>
@@ -75,9 +75,9 @@ const IndexPage = (props: Object) => {
           <div className="container">
             <div className="row">
               <div className="col-12 col-lg-6 pl-50 pr-80">
-                <h2>{t('about.ourMission')}</h2>
+                <h2>{t('aboutPage.ourMission')}</h2>
                 <p className="lead">
-                  {t('about.ourMissionDescription')}
+                  {t('aboutPage.ourMissionDescription')}
                 </p>
               </div>
               <div className="col-12 col-lg-6 p-50 align-self-center">
@@ -90,8 +90,8 @@ const IndexPage = (props: Object) => {
         <section className="section">
           <div className="container">
             <header className="section-header">
-              <small>{t('about.team')}</small>
-              <h2>{t('about.whoWeAre')}</h2>
+              <small>{t('aboutPage.team')}</small>
+              <h2>{t('aboutPage.whoWeAre')}</h2>
               <hr />
             </header>
 
@@ -100,7 +100,7 @@ const IndexPage = (props: Object) => {
               <Founder
                 name="Timo Horstschaefer"
                 func="Physics MSc ETH"
-                description={t('about.timo')}
+                description={t('aboutPage.timo')}
                 twitterlink="https://twitter.com/thrstschfr"
                 linkedinlink="https://www.linkedin.com/in/timohorstschaefer/"
                 img={data.timo}
@@ -108,7 +108,7 @@ const IndexPage = (props: Object) => {
               <Founder
                 name="Ben-Elias Brandt"
                 func="Physics MSc ETH"
-                description={t('about.ben')}
+                description={t('aboutPage.ben')}
                 twitterlink="https://twitter.com/bebinoy"
                 linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
                 img={data.ben}
@@ -116,7 +116,7 @@ const IndexPage = (props: Object) => {
               <Founder
                 name="Yoko Spirig"
                 func="Physics MSc ETH"
-                description={t('about.yoko')}
+                description={t('aboutPage.yoko')}
                 twitterlink="https://twitter.com/YokoSpirig"
                 linkedinlink="https://www.linkedin.com/in/yokospirig/"
                 img={data.yoko}
@@ -129,27 +129,27 @@ const IndexPage = (props: Object) => {
         <section className="section bg-gray">
           <div className="container">
             <header className="section-header">
-              <small>{t('about.advisors')}</small>
-              <h2>{t('about.backedBy')}</h2>
+              <small>{t('aboutPage.advisors')}</small>
+              <h2>{t('aboutPage.backedBy')}</h2>
             </header>
 
             <div className="row gap-y">
               <Investor
                 name="Myke Näf"
                 func="Board Member"
-                description={t('about.myke')}
+                description={t('aboutPage.myke')}
                 img={data.myke}
               />
               <Investor
                 name="Dr. Paul E. Sevinç"
                 func="Board Member"
-                description={t('about.paul')}
+                description={t('aboutPage.paul')}
                 img={data.paul}
               />
               <Investor
                 name="Luzius Meisser"
                 func="Advisor"
-                description={t('about.luzius')}
+                description={t('aboutPage.luzius')}
                 img={data.luzius}
               />
             </div>
@@ -158,13 +158,13 @@ const IndexPage = (props: Object) => {
               <Advisor
                 name="Adrian Bührer"
                 func="Advisor"
-                description={t('about.adrian')}
+                description={t('aboutPage.adrian')}
                 img={data.adrian}
               />
               <Advisor
                 name="Elena Walder-Schiavone"
                 func="Advisor"
-                description={t('about.elena')}
+                description={t('aboutPage.elena')}
                 img={data.elena}
               />
             </div>

@@ -5,9 +5,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import { reactI18nextModule } from 'react-i18next';
 
 import en from '../locales/en/translation.json';
-import layoutEn from '../locales/en/layout.json';
 import de from '../locales/de/translation.json';
-import layoutDe from '../locales/de/layout.json';
 
 i18n
   .use(LanguageDetector)
@@ -15,8 +13,8 @@ i18n
   .init({
     fallbackLng: 'en',
     resources: {
-      de: { translation: de, layout: layoutDe },
-      en: { translation: en, layout: layoutEn },
+      de: { translation: de },
+      en: { translation: en },
     },
     ns: ['translation'],
     defaultNS: 'translation',

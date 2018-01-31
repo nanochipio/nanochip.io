@@ -96,14 +96,6 @@ export default translate()(IndexPage);
 // eslint-disable-next-line no-undef
 export const indexPageFragment = graphql`
   fragment IndexPageFragment on RootQueryType {
-    site {
-      siteMetadata {
-        siteUrl
-        title
-        description
-      }
-    }
-
     feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }

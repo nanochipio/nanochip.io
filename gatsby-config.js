@@ -2,10 +2,9 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.ledgy.com',
     name: 'Ledgy',
-    title: 'Online Cap Table',
-    description: 'Make your life easy with the leading cap table tool in Switzerland.',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     'gatsby-transformer-sharp',
