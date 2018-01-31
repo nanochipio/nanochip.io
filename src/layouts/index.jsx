@@ -51,8 +51,8 @@ const Nav = (props: LayoutProps) => {
               </div>
             </li>
             <li className="nav-item"><Link className="nav-link active" href to={`${props.prefix}/about`}>{t('about')}</Link></li>
-            <li className="nav-item"><a className="nav-link active" href="https://blog.ledgy.com">{t('blog')}</a></li>
             <li className="nav-item"><Link className="nav-link active" href to={`${props.prefix}/contact`}>{t('contact')}</Link></li>
+            <li className="nav-item"><a className="nav-link active" href="https://blog.ledgy.com">{t('blog')}</a></li>
             <li className="nav-item">
               <Link href className="nav-link active" to="/#start">
                 {props.lang === 'en' ? <u>EN</u> : 'EN'}

@@ -26,40 +26,37 @@ const Feature = ({ title, children, img, right }: {
 );
 Feature.defaultProps = { right: false };
 
-export default ({ data }: Object) => (
+export default ({ data, t }: Object) => (
   <section className="section" id="features">
     <header className="section-header">
-      <small>Features</small>
+      <small>{t('features')}</small>
     </header>
 
     <div className="container">
       <Feature
-        title="Financing Round Modeling"
+        title={t('roundModeling')}
         img={data.feature1}
       >
-        Plan investment rounds by simulating their effect on the cap table.
+        {t('roundModelingDesc')}
       </Feature>
 
       <hr />
 
       <Feature
         right
-        title="Convertible notes and employee stock options"
+        title={t('convertibles')}
         img={data.feature2}
       >
-        You create convertible notes, Ledgy takes care of all the calculations.<br />
-        Enter employee incentive plans with vesting and track them over time.
+        {t('convertiblesDescription')}
       </Feature>
 
       <hr />
 
       <Feature
-        title="Export PDFs and send tax certificates"
+        title={t('export')}
         img={data.feature3}
       >
-        Per Swiss law, a share register must be signed by the board of directors to be valid.
-        For this purpose, it can be exported as a PDF.<br />
-        Automatically generate tax certificates and send them to your shareholders.
+        {t('exportDescription')}
       </Feature>
     </div>
   </section>

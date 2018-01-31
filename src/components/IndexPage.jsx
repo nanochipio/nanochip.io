@@ -30,7 +30,7 @@ const Header = ({ t }: Object) => (
 
             <form className="form-glass row" action="https://app.ledgy.com/signup" method="get">
               <div className="col-12 col-md-7 my-1">
-                <input type="text" name="email" className="form-control form-control-lg" placeholder={t('enterYourEmail')} />
+                <input type="text" name="email" className="form-control form-control-lg" placeholder={t('enterEmail')} />
               </div>
               <div className="col-12 col-md-5 my-1">
                 <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">{t('tryForFree')}</button>
@@ -58,35 +58,38 @@ const Header = ({ t }: Object) => (
   </header>
 );
 
-const IndexPage = (props: Object) => (
-  <div>
-    <Header {...props} />
-    <main className="main-content">
+const IndexPage = (props: Object) => {
+  const { t } = props;
+  return (
+    <div>
+      <Header {...props} />
+      <main className="main-content">
 
-      <References {...props} />
-      <Pricing {...props} />
-      <Features {...props} />
-
-
-      <section id="demo" className="section section-inverse" style={{ backgroundColor: '#60ae50' }} >
-
-        <header className="section-header mb-40">
-          <small>Demo</small>
-        </header>
-
-        <div className="text-center">
-          <a className="btn btn-lg btn-success" href="https://demo.ledgy.com">Check out our demo app</a>
-        </div>
-
-      </section>
+        <References {...props} />
+        <Pricing {...props} />
+        <Features {...props} />
 
 
-      <Future {...props} />
-      <Subscribe {...props} />
+        <section id="demo" className="section section-inverse" style={{ backgroundColor: '#60ae50' }} >
 
-    </main>
-  </div>
-);
+          <header className="section-header mb-40">
+            <small>{t('demo')}</small>
+          </header>
+
+          <div className="text-center">
+            <a className="btn btn-lg btn-success" href="https://demo.ledgy.com">{t('checkDemo')}</a>
+          </div>
+
+        </section>
+
+
+        <Future {...props} />
+        <Subscribe {...props} />
+
+      </main>
+    </div>
+  );
+};
 
 export default translate()(IndexPage);
 
