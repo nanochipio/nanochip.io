@@ -101,10 +101,10 @@ const Footer = (props: LayoutProps) => {
                 <Link className="nav-link" href to={`${props.prefix}/about`}>{t('about')}</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="https://blog.ledgy.com">{t('blog')}</a>
+                <Link className="nav-link" href to={`${props.prefix}/contact`}>{t('contact')}</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href to={`${props.prefix}/contact`}>{t('contact')}</Link>
+                <a className="nav-link" href="https://blog.ledgy.com">{t('blog')}</a>
               </li>
               <li className="nav-item">
                 <Link href className="nav-link" to="/#start">
@@ -162,8 +162,6 @@ class TemplateWrapper extends React.Component<SiteProps> {
           <title>{name} - {t('title')}</title>
           <meta name="description" content={t('description')} />
           <meta name="keywords" content={t('keywords')} />
-          <meta charSet="utf-8" />
-          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
           {/* Facebook social card */}
           <meta property="og:title" content={title} />
@@ -177,12 +175,6 @@ class TemplateWrapper extends React.Component<SiteProps> {
           <meta name="twitter:description" content={t('description')} />
           <meta name="twitter:image" content={thumbnail} />
           <meta name="twitter:card" content="summary_large_image" />
-
-
-          <script src="/script.min.js" async />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Helmet>
         <Nav {...props} />
         {this.props.children()}
