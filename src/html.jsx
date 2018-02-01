@@ -24,6 +24,12 @@ module.exports = class HTML extends React.Component {
     return (
       <html {...this.props.htmlAttributes}>
         <head>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <script src="/script.min.js" async />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           {this.props.headComponents}
           {css}
         </head>

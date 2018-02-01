@@ -20,10 +20,11 @@ type LayoutProps = {
   t: (string) => string,
 }
 
-const Logo = (props: { prefix: string }) => (
+const Logo = (props: { prefix: string, inverse: boolean }) => (
   <Link href to={`${props.prefix}/#start`}>
     <img className="logo-default" src={logoDefault} width={75} height={30} alt="logo" />
-    <img className="logo-inverse" src={logoInverse} width={75} height={30} alt="logo" />
+    {props.inverse &&
+      <img className="logo-inverse" src={logoInverse} width={75} height={30} alt="logo" />}
   </Link>
 );
 
@@ -35,7 +36,7 @@ const Nav = (props: LayoutProps) => {
 
         <div className="topbar-brand">
           <button className="topbar-toggler">&#9776;</button>
-          <Logo {...props} />
+          <Logo {...props} inverse />
         </div>
 
 
@@ -65,7 +66,7 @@ const Nav = (props: LayoutProps) => {
             <div className="hidden-md-up lh-2">
               <a className="btn btn-block btn-outline btn-primary" href="https://app.ledgy.com/login">{t('login')}</a>
               <a className="btn btn-block btn-success" href="https://app.ledgy.com/signup">{t('signup')}</a>
-              <h4 className="mt-3">First 3 months free<br />Then 19 CHF/month</h4>
+              <h4 className="mt-3">{t('firstMonthFree')}<br />{t('19month')}</h4>
             </div>
           </ul>
           <div className="d-inline-flex ml-30 hidden-sm-down">
@@ -88,12 +89,12 @@ const Footer = (props: LayoutProps) => {
         <div className="row gap-y align-items-center">
           <div className="col-12 col-lg-3">
             <div className="text-center text-lg-left">
-              <Logo {...props} />
+              <Logo {...props} inverse={false} />
             </div>
           </div>
 
           <div className="col-12 col-lg-6">
-            <ul className="nav nav-primary nav-hero">
+            <ul className="nav nav-primary nav-hero d-block d-sm-flex text-center">
               <li className="nav-item">
                 <Link className="nav-link" href to={`${props.prefix}/#product`}>{t('product')}</Link>
               </li>
@@ -101,16 +102,16 @@ const Footer = (props: LayoutProps) => {
                 <Link className="nav-link" href to={`${props.prefix}/about`}>{t('about')}</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="https://blog.ledgy.com">{t('blog')}</a>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link" href to={`${props.prefix}/contact`}>{t('contact')}</Link>
               </li>
               <li className="nav-item">
-                <Link href className="nav-link" to="/#start">
+                <a className="nav-link" href="https://blog.ledgy.com">{t('blog')}</a>
+              </li>
+              <li className="nav-item d-block d-sm-flex">
+                <Link href className="nav-link d-inline" to="/#start">
                   {props.lang === 'en' ? <u>EN</u> : 'EN'}
-                </Link> |
-                <Link href className="nav-link" to="/de/#start">
+                </Link> |&nbsp;
+                <Link href className="nav-link d-inline" to="/de/#start">
                   {props.lang === 'de' ? <u>DE</u> : 'DE'}
                 </Link>
               </li>
@@ -162,8 +163,6 @@ class TemplateWrapper extends React.Component<SiteProps> {
           <title>{name} - {t('title')}</title>
           <meta name="description" content={t('description')} />
           <meta name="keywords" content={t('keywords')} />
-          <meta charSet="utf-8" />
-          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
           {/* Facebook social card */}
           <meta property="og:title" content={title} />
@@ -177,12 +176,6 @@ class TemplateWrapper extends React.Component<SiteProps> {
           <meta name="twitter:description" content={t('description')} />
           <meta name="twitter:image" content={thumbnail} />
           <meta name="twitter:card" content="summary_large_image" />
-
-
-          <script src="/script.min.js" async />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Helmet>
         <Nav {...props} />
         {this.props.children()}
