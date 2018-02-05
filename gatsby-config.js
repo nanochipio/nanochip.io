@@ -46,9 +46,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify',
       options: {
-        mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
-        mergeCachingHeaders: true,
+        allPageHeaders: [
+          "Content-Security-Policy: default-src https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https://csi.gstatic.com https://www.google-analytics.com https://maps.gstatic.com https://maps.googleapis.com https://stats.g.doubleclick.net; object-src 'none'",
+          'Referrer-Policy: strict-origin-when-cross-origin',
+        ],
       },
     },
   ],
