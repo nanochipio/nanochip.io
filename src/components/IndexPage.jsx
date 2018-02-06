@@ -127,5 +127,8 @@ export const indexPageFragment = graphql`
     allthings: imageSharp(id: { regex: "/allthings/" }) {
       resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
+    farmy: imageSharp(id: { regex: "/farmy/" }) {
+      resolutions(width: 120) { ...GatsbyImageSharpResolutions }
+    }
   }
 `;
