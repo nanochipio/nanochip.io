@@ -12,8 +12,8 @@ import '../fonts';
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 
-import en from '../locale/en/messages';
-import de from '../locale/de/messages';
+import en from '../locale/en/messages.json';
+import de from '../locale/de/messages.json';
 
 
 type LayoutProps = {
@@ -140,25 +140,25 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
   const { i18n } = props;
   const { name, siteUrl } = props.data.site.siteMetadata;
   const prefix = props.lang === 'de' ? '/de' : '';
-  const title = `${name} - ${i18n.t`title`}`;
+  const title = `${name} - ${i18n.t`site.title`}`;
   const thumbnail = `${siteUrl}/thumbnail.png`;
   return (
     <div>
       <Helmet>
-        <title>{name} - {i18n.t`title`}</title>
-        <meta name="description" content={i18n.t`description`} />
-        <meta name="keywords" content={i18n.t`keywords`} />
+        <title>{name} - {i18n.t`site.title`}</title>
+        <meta name="description" content={i18n.t`site.description`} />
+        <meta name="keywords" content={i18n.t`site.keywords`} />
 
         {/* Facebook social card */}
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={i18n.t`description`} />
+        <meta property="og:description" content={i18n.t`site.description`} />
         <meta property="og:image" content={thumbnail} />
         <meta property="og:url" content={siteUrl} />
 
         {/* Twitter social card */}
         <meta name="twitter:site" content="@LedgyCom" />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={i18n.t`description`} />
+        <meta name="twitter:description" content={i18n.t`site.description`} />
         <meta name="twitter:image" content={thumbnail} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
@@ -172,7 +172,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
 export default (props: Object) => {
   const lang = props.location.pathname.startsWith('/de/') ? 'de' : 'en';
   return (
-    <I18nProvider language={lang} catalogs={{ en, de }}>
+    <I18nProvider language={lang} catalogs={{ en: { messages: en }, de: { messages: de } }}>
       <TemplateWrapper {...props} lang={lang} />
     </I18nProvider>
   );

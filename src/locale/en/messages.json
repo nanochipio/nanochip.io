@@ -35,8 +35,8 @@
   "We’re working hard to bring new features online for you in the next couple of months!": "We’re working hard to bring new features online for you in the next couple of months!",
   "Shareholder Login": "Shareholder Login",
   "Your shareholders will be able to see all of their investments at any time on Ledgy.": "Your shareholders will be able to see all of their investments at any time on Ledgy.",
-  "title": "title",
-  "description": "description",
+  "site.title": "Online Cap Table",
+  "site.description": "Make your life easy with the leading cap table tool in Switzerland.",
   "Enter email …": "Enter email …",
   "Try for free": "Try for free",
   "Check out our demo app": "Check out our demo app",
@@ -55,5 +55,5 @@
   "Blog": "Blog",
   "Login": "Login",
   "Signup": "Signup",
-  "keywords": "keywords"
+  "site.keywords": "cap table, stock ledger, shares register, simulation, round modeling, equity"
 }

@@ -1,18 +1,13 @@
 {
-  "presets": [
-    "@lingui/babel-preset-react",
+  "plugins": [
+    "@lingui/babel-plugin-transform-js",
+    "@lingui/babel-plugin-transform-react",
   ],
   "env": {
     "extract": {
       "presets": [
         "@babel/preset-react",
         "@babel/preset-flow",
-      ]
-    },
-    "production": {
-      "plugins": [
-        "@lingui/babel-plugin-transform-js",
-        "@lingui/babel-plugin-transform-react",
       ]
     },
   }

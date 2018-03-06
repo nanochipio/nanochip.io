@@ -16,15 +16,13 @@ const Header = ({ i18n }: Props) => (
       <div className="row h-full">
         <div className="col-12 col-lg-10 offset-lg-1 align-self-center">
 
-          <h1 className="display-2"><Trans id="title">Online Cap Table</Trans></h1>
+          <h1 className="display-2"><Trans id="site.title" /></h1>
           <br />
           <p className="fs-20 w-400 mx-auto hidden-sm-down">
-            <Trans id="description">
-              Make your life easy with the leading cap table tool in Switzerland.
-            </Trans>
+            <Trans id="site.description" />
           </p>
           <p className="fs-18 w-250 mx-auto hidden-md-up">
-            <Trans id="description" />
+            <Trans id="site.description" />
           </p>
 
           <div className="col-10 offset-1">

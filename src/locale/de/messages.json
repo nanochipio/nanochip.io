@@ -35,8 +35,8 @@
   "We’re working hard to bring new features online for you in the next couple of months!": "",
   "Shareholder Login": "",
   "Your shareholders will be able to see all of their investments at any time on Ledgy.": "",
-  "title": "",
-  "description": "",
+  "site.title": "Online Aktienbuch",
+  "site.description": "Vereinfache dein Leben mit dem besten online Aktienregister der Schweiz!",
   "Enter email …": "",
   "Try for free": "",
   "Check out our demo app": "",
@@ -55,5 +55,5 @@
   "Blog": "",
   "Login": "",
   "Signup": "",
-  "keywords": ""
+  "site.keywords": ""
 }
