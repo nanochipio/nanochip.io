@@ -1,6 +1,6 @@
 {
   "presets": [
-    "@lingui/babel-preset-react"
+    "@lingui/babel-preset-react",
   ],
   "env": {
     "extract": {
@@ -8,6 +8,12 @@
         "@babel/preset-react",
         "@babel/preset-flow",
       ]
-    }
+    },
+    "production": {
+      "plugins": [
+        "@lingui/babel-plugin-transform-js",
+        "@lingui/babel-plugin-transform-react",
+      ]
+    },
   }
 }

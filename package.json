@@ -24,13 +24,9 @@
     "gatsby-plugin-sitemap": "^1.2.12",
     "gatsby-source-filesystem": "^1.5.18",
     "gatsby-transformer-sharp": "^1.6.18",
-    "i18next": "^10.3.0",
-    "i18next-browser-languagedetector": "^2.1.0",
-    "i18next-xhr-backend": "^1.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-helmet": "^5.2.0",
-    "react-i18next": "^7.3.4"
+    "react-helmet": "^5.2.0"
   },
   "keywords": [
     "ledgy"
@@ -76,9 +72,11 @@
   "lingui": {
     "fallbackLocale": "en",
     "sourceLocale": "en",
-    "localeDir": "<rootDir>/locale",
+    "localeDir": "src/locale",
     "srcPathDirs": [
-      "src/components"
-    ]
+      "src/components",
+      "src/layouts"
+    ],
+    "format": "minimal"
   }
 }

@@ -1,15 +1,19 @@
 // @flow
 
 import React from 'react';
-import { translate } from 'react-i18next';
+import { withI18n, Trans } from '@lingui/react';
 
-const Header = ({ t }: Object) => (
+const Header = () => (
   <header className="header header-inverse" style={{ backgroundColor: '#60ae50' }}>
     <div className="container text-center">
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
-          <h1>{t('contactPage.getInTouch')}</h1>
-          <p className="fs-20 opacity-70">{t('contactPage.hereAreTheWays')}</p>
+          <h1><Trans>Let’s Get In Touch</Trans></h1>
+          <p className="fs-20 opacity-70">
+            <Trans>
+              Here are the ways you can contact us with any questions you have
+            </Trans>
+          </p>
         </div>
       </div>
     </div>
@@ -37,7 +41,7 @@ class Map extends React.Component<{}> {
 }
 
 const IndexPage = (props: Object) => {
-  const { t } = props;
+  const { i18n } = props;
   return (
     <div>
       <Header {...props} />
@@ -52,19 +56,19 @@ const IndexPage = (props: Object) => {
                 <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="form-group">
-                    <input className="form-control form-control-lg" type="text" name="name" placeholder={t('contactPage.yourName')} />
+                    <input className="form-control form-control-lg" type="text" name="name" placeholder={i18n.t`Your name`} />
                   </div>
 
                   <div className="form-group">
-                    <input className="form-control form-control-lg" type="email" name="email" placeholder={t('contactPage.yourEmail')} />
+                    <input className="form-control form-control-lg" type="email" name="email" placeholder={i18n.t`Your email`} />
                   </div>
 
                   <div className="form-group">
-                    <textarea className="form-control form-control-lg" name="message" rows="4" placeholder={t('contactPage.yourMessage')} />
+                    <textarea className="form-control form-control-lg" name="message" rows="4" placeholder={i18n.t`Your message`} />
                   </div>
 
 
-                  <button className="btn btn-lg btn-primary btn-block" type="submit">{t('contactPage.send')}</button>
+                  <button className="btn btn-lg btn-primary btn-block" type="submit">{i18n.t`Send enquiry`}</button>
                 </form>
 
               </div>
@@ -72,11 +76,17 @@ const IndexPage = (props: Object) => {
 
               <div className="col-12 col-md-5 offset-md-1">
                 <div className="bg-grey h-full p-20">
-                  <p>{t('contactPage.giveUsACall')}</p>
+                  <p>
+                    <Trans>
+                      Give us a call or stop by our door anytime. We
+                      will do our best to answer all enquiries
+                      within 24 hours on business days.
+                    </Trans>
+                  </p>
 
                   <hr className="w-80" />
 
-                  <p className="lead">Ledgy AG<br />Forchstrasse 60<br />{t('contactPage.postcode')}</p>
+                  <p className="lead">Ledgy AG<br />Forchstrasse 60<br /><Trans>8008 Zurich, Switzerland</Trans></p>
 
                   <div>
                     <span className="d-inline-block w-20 text-lighter" title="Email">E:</span>
@@ -102,4 +112,4 @@ const IndexPage = (props: Object) => {
   );
 };
 
-export default translate()(IndexPage);
+export default withI18n()(IndexPage);
