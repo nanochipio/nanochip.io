@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Img from 'gatsby-image';
+import { Trans } from '@lingui/react';
 
 const Partner = ({ img, name }: { img: Object, name: string }) => (
   <div style={{ width: '200px' }} className="my-2">
@@ -9,11 +10,15 @@ const Partner = ({ img, name }: { img: Object, name: string }) => (
   </div>
 );
 
-const References = ({ data, t }: Object) => (
+const References = ({ data }: Props) => (
   <section className="section" id="testimonials">
     <header className="section-header mb-40">
-      <small>{t('testimonials')}</small>
-      <p className="lead">{t('switzerlandsBestCompanies')}</p>
+      <small><Trans>Testimonials</Trans></small>
+      <p className="lead">
+        <Trans>
+          Switzerland’s best companies manage their cap table with Ledgy.
+        </Trans>
+      </p>
     </header>
 
     <div className="partner mx-auto" style={{ maxWidth: '800px' }}>

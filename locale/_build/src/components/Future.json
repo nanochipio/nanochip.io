@@ -1,0 +1,42 @@
+{
+  "The Future": {
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        10
+      ]
+    ]
+  },
+  "Coming Soon": {
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        11
+      ]
+    ]
+  },
+  "We’re working hard to bring new features online for you in the next couple of months!": {
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        14
+      ]
+    ]
+  },
+  "Shareholder Login": {
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        27
+      ]
+    ]
+  },
+  "Your shareholders will be able to see all of their investments at any time on Ledgy.": {
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        29
+      ]
+    ]
+  }
+}

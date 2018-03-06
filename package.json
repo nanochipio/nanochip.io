@@ -5,6 +5,10 @@
   "author": "Ledgy AG <contact@ledgy.com>",
   "repository": "morloy/ledgy-app",
   "dependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-flow": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
     "@lingui/react": "^2.0.5",
     "gatsby": "^1.9.183",
     "gatsby-image": "^1.0.35",
@@ -68,5 +72,13 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "flow-bin": "^0.66.0"
+  },
+  "lingui": {
+    "fallbackLocale": "en",
+    "sourceLocale": "en",
+    "localeDir": "<rootDir>/locale",
+    "srcPathDirs": [
+      "src/components"
+    ]
   }
 }

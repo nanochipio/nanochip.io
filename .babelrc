@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "@lingui/babel-preset-react"
+  ],
+  "env": {
+    "extract": {
+      "presets": [
+        "@babel/preset-react",
+        "@babel/preset-flow",
+      ]
+    }
+  }
+}

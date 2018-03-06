@@ -1,0 +1,60 @@
+{
+  "title": {
+    "defaults": "Online Cap Table",
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        21
+      ]
+    ]
+  },
+  "description": {
+    "defaults": "Make your life easy with the leading cap table tool in Switzerland.",
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        24
+      ],
+      [
+        "src/components/IndexPage.jsx",
+        29
+      ]
+    ]
+  },
+  "Enter email …": {
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        36
+      ]
+    ]
+  },
+  "Try for free": {
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        39
+      ]
+    ]
+  },
+  "Check out our demo app": {
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        47
+      ],
+      [
+        "src/components/IndexPage.jsx",
+        81
+      ]
+    ]
+  },
+  "Demo": {
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        77
+      ]
+    ]
+  }
+}

@@ -1,13 +1,14 @@
 // @flow
 
 import React from 'react';
-import { translate } from 'react-i18next';
+import { withI18n, Trans } from '@lingui/react';
+
 
 import References from './References';
 import Features from './Features';
 import Subscribe from './Subscribe';
 
-const Header = ({ t }: Object) => (
+const Header = ({ i18n }: Props) => (
   <header className="header header-inverse h-fullscreen pb-80" style={{ backgroundColor: '#20a8d8' }} id="start">
 
     <div className="container text-center">
@@ -15,23 +16,25 @@ const Header = ({ t }: Object) => (
       <div className="row h-full">
         <div className="col-12 col-lg-10 offset-lg-1 align-self-center">
 
-          <h1 className="display-2">{t('title')}</h1>
+          <h1 className="display-2"><Trans id="title">Online Cap Table</Trans></h1>
           <br />
-          <p className="fs-20 w-450 mx-auto hidden-sm-down">
-            {t('description')}
+          <p className="fs-20 w-400 mx-auto hidden-sm-down">
+            <Trans id="description">
+              Make your life easy with the leading cap table tool in Switzerland.
+            </Trans>
           </p>
           <p className="fs-18 w-250 mx-auto hidden-md-up">
-            {t('description')}
+            <Trans id="description" />
           </p>
 
           <div className="col-10 offset-1">
 
             <form className="form-glass row" action="https://app.ledgy.com/signup" method="get">
               <div className="col-12 col-md-7 my-1">
-                <input type="text" name="email" className="form-control form-control-lg" placeholder={t('enterEmail')} />
+                <input type="text" name="email" className="form-control form-control-lg" placeholder={i18n.t`Enter email …`} />
               </div>
               <div className="col-12 col-md-5 my-1">
-                <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">{t('tryForFree')}</button>
+                <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success"><Trans>Try for free</Trans></button>
               </div>
             </form>
             <div className="row mt-2 pr-3 float-right">
@@ -39,7 +42,7 @@ const Header = ({ t }: Object) => (
                 style={{ textDecoration: 'underline' }}
                 className="text-white"
                 href="https://demo.ledgy.com"
-              >{t('checkDemo')}
+              ><Trans>Check out our demo app</Trans>
               </a>
             </div>
 
@@ -56,20 +59,37 @@ const Header = ({ t }: Object) => (
   </header>
 );
 
-const IndexPage = (props: Object) => (
+const IndexPage = (props: Props) => (
   <div>
     <Header {...props} />
     <main className="main-content">
 
       <References {...props} />
-      <Subscribe {...props} />
+      <Pricing {...props} />
       <Features {...props} />
+
+
+      <section id="demo" className="section section-inverse" style={{ backgroundColor: '#60ae50' }} >
+
+        <header className="section-header mb-40">
+          <small><Trans>Demo</Trans></small>
+        </header>
+
+        <div className="text-center">
+          <a className="btn btn-lg btn-success" href="https://demo.ledgy.com"><Trans>Check out our demo app</Trans></a>
+        </div>
+
+      </section>
+
+
+      <Future {...props} />
+      <Subscribe {...props} />
 
     </main>
   </div>
 );
 
-export default translate()(IndexPage);
+export default withI18n()(IndexPage);
 
 // eslint-disable-next-line no-undef
 export const indexPageFragment = graphql`

@@ -1,0 +1,34 @@
+{
+  "Pricing": {
+    "origin": [
+      [
+        "src/components/Pricing.jsx",
+        9
+      ]
+    ]
+  },
+  "As straightforward as the tool. One package, everything included.": {
+    "origin": [
+      [
+        "src/components/Pricing.jsx",
+        10
+      ]
+    ]
+  },
+  "First month free<0/>Then 19 CHF/month per company": {
+    "origin": [
+      [
+        "src/components/Pricing.jsx",
+        16
+      ]
+    ]
+  },
+  "Sign up now": {
+    "origin": [
+      [
+        "src/components/Pricing.jsx",
+        24
+      ]
+    ]
+  }
+}

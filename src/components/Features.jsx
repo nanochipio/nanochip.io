@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import Img from 'gatsby-image';
+import { Trans } from '@lingui/react';
 
 
 const Feature = ({ title, children, img, right }: {
@@ -26,37 +27,48 @@ const Feature = ({ title, children, img, right }: {
 );
 Feature.defaultProps = { right: false };
 
-export default ({ data, t }: Object) => (
+export default ({ data, i18n }: Props) => (
   <section className="section" id="features">
     <header className="section-header">
-      <small>{t('features')}</small>
+      <small><Trans>Features</Trans></small>
     </header>
 
     <div className="container">
       <Feature
-        title={t('roundModeling')}
+        title={i18n.t`Financing Round Modeling`}
         img={data.feature1}
       >
-        {t('roundModelingDesc')}
+        <Trans>
+          Plan investment rounds by simulating their effect on the cap table.
+        </Trans>
       </Feature>
 
       <hr />
 
       <Feature
         right
-        title={t('convertibles')}
+        title={i18n.t`Convertible notes and employee stock options`}
         img={data.feature2}
       >
-        {t('convertiblesDescription')}
+        <Trans>
+          You create convertible notes, Ledgy takes care of all the
+          calculations. Enter employee incentive plans with vesting
+          and track them over time.
+        </Trans>
       </Feature>
 
       <hr />
 
       <Feature
-        title={t('export')}
+        title={i18n.t`Export PDFs and send tax certificates`}
         img={data.feature3}
       >
-        {t('exportDescription')}
+        <Trans>
+          Per Swiss law, a share register must be signed
+          by the board of directors to be valid. For this
+          purpose, it can be exported as a PDF. Automatically
+          generate tax certificates and send them to your shareholders.
+        </Trans>
       </Feature>
     </div>
   </section>

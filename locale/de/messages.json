@@ -1,0 +1,250 @@
+{
+  "Features": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Features.jsx",
+        33
+      ]
+    ]
+  },
+  "Financing Round Modeling": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Features.jsx",
+        38
+      ]
+    ]
+  },
+  "Plan investment rounds by simulating their effect on the cap table.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Features.jsx",
+        41
+      ]
+    ]
+  },
+  "Convertible notes and employee stock options": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Features.jsx",
+        50
+      ]
+    ]
+  },
+  "You create convertible notes, Ledgy takes care of all the calculations. Enter employee incentive plans with vesting and track them over time.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Features.jsx",
+        53
+      ]
+    ]
+  },
+  "Export PDFs and send tax certificates": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Features.jsx",
+        63
+      ]
+    ]
+  },
+  "Per Swiss law, a share register must be signed by the board of directors to be valid. For this purpose, it can be exported as a PDF. Automatically generate tax certificates and send them to your shareholders.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Features.jsx",
+        66
+      ]
+    ]
+  },
+  "The Future": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        10
+      ]
+    ]
+  },
+  "Coming Soon": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        11
+      ]
+    ]
+  },
+  "We’re working hard to bring new features online for you in the next couple of months!": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        14
+      ]
+    ]
+  },
+  "Shareholder Login": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        27
+      ]
+    ]
+  },
+  "Your shareholders will be able to see all of their investments at any time on Ledgy.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Future.jsx",
+        29
+      ]
+    ]
+  },
+  "title": {
+    "translation": "",
+    "defaults": "Online Cap Table",
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        21
+      ]
+    ]
+  },
+  "description": {
+    "translation": "",
+    "defaults": "Make your life easy with the leading cap table tool in Switzerland.",
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        24
+      ],
+      [
+        "src/components/IndexPage.jsx",
+        29
+      ]
+    ]
+  },
+  "Enter email …": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        36
+      ],
+      [
+        "src/components/Subscribe.jsx",
+        16
+      ]
+    ]
+  },
+  "Try for free": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        39
+      ]
+    ]
+  },
+  "Check out our demo app": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        47
+      ],
+      [
+        "src/components/IndexPage.jsx",
+        81
+      ]
+    ]
+  },
+  "Demo": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/IndexPage.jsx",
+        77
+      ]
+    ]
+  },
+  "Pricing": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Pricing.jsx",
+        9
+      ]
+    ]
+  },
+  "As straightforward as the tool. One package, everything included.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Pricing.jsx",
+        10
+      ]
+    ]
+  },
+  "First month free<0/>Then 19 CHF/month per company": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Pricing.jsx",
+        16
+      ]
+    ]
+  },
+  "Sign up now": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Pricing.jsx",
+        24
+      ]
+    ]
+  },
+  "Testimonials": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/References.jsx",
+        16
+      ]
+    ]
+  },
+  "Switzerland’s best companies manage their cap table with Ledgy.": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/References.jsx",
+        18
+      ]
+    ]
+  },
+  "Stay up to date": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Subscribe.jsx",
+        11
+      ]
+    ]
+  },
+  "Subscribe": {
+    "translation": "",
+    "origin": [
+      [
+        "src/components/Subscribe.jsx",
+        21
+      ]
+    ]
+  }
+}
