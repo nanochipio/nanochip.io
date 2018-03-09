@@ -2,7 +2,7 @@
 
 exports.onRouteUpdate = ({ action }: { action: string }) => {
   if (action === 'PUSH' && window.$) {
-    window.$('body').removeClass('topbar-reveal');
-    window.$('.topbar-backdrop').remove();
+    window.$('body').removeClass('navbar-open');
+    window.$('.backdrop-navbar').remove();
   }
 };

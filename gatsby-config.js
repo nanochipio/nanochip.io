@@ -1,8 +1,5 @@
 module.exports = {
-  siteMetadata: {
-    siteUrl: 'https://www.ledgy.com',
-    name: 'Ledgy',
-  },
+  siteMetadata: { siteUrl: 'https://www.ledgy.com' },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',

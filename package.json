@@ -42,7 +42,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "test": "eslint . --ext jsx,js && flow"
+    "test": "eslint . --ext jsx,js && flow",
+    "extract": "BABEL_ENV=extract lingui extract"
   },
   "eslintConfig": {
     "extends": [

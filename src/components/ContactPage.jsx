@@ -4,7 +4,7 @@ import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 
 const Header = () => (
-  <header className="header header-inverse" style={{ backgroundColor: '#60ae50' }}>
+  <header className="header text-white bg-ledgy">
     <div className="container text-center">
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
@@ -22,8 +22,11 @@ const Header = () => (
 
 class Map extends React.Component<{}> {
   componentDidMount() {
+    if (!window.google && window.$) {
+      $.getScript(`https://maps.googleapis.com/maps/api/js?key=${page.defaults.googleApiKey}&callback=page.initMap`); // eslint-disable-line
+    }
     if (window.thesaas && window.google) {
-      window.thesaas.map();
+      window.page.initMap();
     }
   }
   render() {
@@ -45,9 +48,10 @@ const IndexPage = (props: Object) => {
   return (
     <div>
       <Header {...props} />
+
       <main className="main-content">
 
-        <div className="section">
+        <div className="section bg-gray">
           <div className="container">
 
             <div className="row gap-y">

@@ -2,13 +2,11 @@
 
 import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import Img from 'gatsby-image';
 
-
-import References from './References';
-import Subscribe from './Subscribe';
 
 const Header = () => (
-  <header className="header text-white" style={{ backgroundImage: 'linear-gradient(135deg, #20a8d8 0%, #00afc9 100%)' }}>
+  <header className="header text-white bg-ledgy">
     <div className="container">
       <div className="row align-items-center my-8">
 
@@ -16,17 +14,21 @@ const Header = () => (
           <img src="/img/laptop-1.png" alt="img" />
         </div>
         <div className="col-md-6 ml-auto">
-          <h1><Trans>Online Captable —<br /> Excel was yesterday</Trans></h1>
-          <p className="lead mt-5 mb-7">
+          <h1><Trans id="site.title" /> —<br /> <Trans id="site.slogan" /></h1>
+          <div className="lead mt-5 mb-7">
             <Trans>
+              <p>
               Having headaches with your cap table in Excel?
               Use Ledgy to track all your shares, manage your ESOP and
-              model detailed financing rounds.<br /><br />
+              model detailed financing rounds.
+              </p>
+              <p>
               You are an investor or employee? Get a detailed overview of
               your investment and check the status of your
               vesting schedule.
+              </p>
             </Trans>
-          </p>
+          </div>
           <a className="btn btn-round btn-xl btn-outline-light" href="https://demo.ledgy.com/">See demo</a>
           <a className="btn btn-round btn-xl btn-light ml-3" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
         </div>
@@ -37,13 +39,39 @@ const Header = () => (
   </header>
 );
 
+const Reference = ({ img, name }: { img: Object, name: string }) => (
+  <div style={{ width: '200px' }} className="m-4">
+    <Img {...img} alt={name} style={{ overflow: 'visible', margin: 0 }} />
+  </div>
+);
+
 const IndexPage = (props: Props) => (
   <div>
     <Header {...props} />
     <main className="main-content">
 
-      <References {...props} />
-      <Subscribe {...props} />
+
+      <section className="section py-7" id="references">
+        <div className="container">
+          <header className="section-header mb-3">
+            <h2><Trans>You’re in good company</Trans></h2>
+            <hr className="my-2" />
+            <p className="lead">Many successful companies already use Ledgy to keep track of their share register</p>
+          </header>
+
+          <div className="partner mx-auto" style={{ maxWidth: '1200px' }}>
+            <Reference img={props.data.testingtime} name="TestingTime" />
+            <Reference img={props.data.quitt} name="quitt.ch" />
+            <Reference img={props.data.cryptofund} name="CryptoFund" />
+            <Reference img={props.data.frontify} name="Frontify" />
+            <Reference img={props.data.sherpany} name="Sherpany" />
+            <Reference img={props.data.apiax} name="Apiax" />
+            <Reference img={props.data.allthings} name="Allthings Technologies" />
+            <Reference img={props.data.farmy} name="Farmy" />
+          </div>
+        </div>
+
+      </section>
 
     </main>
   </div>

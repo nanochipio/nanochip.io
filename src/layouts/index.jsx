@@ -38,7 +38,7 @@ const Nav = (props: LayoutProps) => (
 
       <section className="navbar-mobile">
         <nav className="nav nav-navbar ml-auto">
-          <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Why Ledgy?</Trans></Link>
+          <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Why it’s great</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us`}><Trans>About us</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/blog`}><Trans>Blog</Trans></Link>
         </nav>
@@ -54,54 +54,65 @@ const Nav = (props: LayoutProps) => (
   </nav>
 );
 
-
 const Footer = (props: LayoutProps) => (
-  <footer className="site-footer">
-    <div className="container">
-      <div className="row gap-y align-items-center">
-        <div className="col-12 col-lg-3">
-          <div className="text-center text-lg-left">
-            <Logo {...props} inverse={false} />
+  <div>
+    <section className="section bg-pale-secondary p-6">
+      <div className="container">
+        <div className="row gap-y align-items-center">
+          <div className="col-md-5 text-center text-md-left">
+            <h3>Try it for free</h3>
+            <p>Already using Ledgy? <a href="https://app.ledgy.com/login">Sign in</a></p>
           </div>
-        </div>
 
-        <div className="col-12 col-lg-6">
-          <ul className="nav nav-primary nav-hero d-block d-sm-flex text-center">
-            <li className="nav-item">
-              <Link className="nav-link" href to={`${props.prefix}/#product`}><Trans>Product</Trans></Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href to={`${props.prefix}/about`}><Trans>About</Trans></Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href to={`${props.prefix}/contact`}><Trans>Contact</Trans></Link>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="https://blog.ledgy.com"><Trans>Blog</Trans></a>
-            </li>
-            <li className="nav-item d-block d-sm-flex">
-              <Link href className="nav-link d-inline" to="/#start">
-                {props.lang === 'en' ? <u>EN</u> : 'EN'}
-              </Link> |&nbsp;
-              <Link href className="nav-link d-inline" to="/de/#start">
-                {props.lang === 'de' ? <u>DE</u> : 'DE'}
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className="col-12 col-lg-3">
-          <div className="social text-center text-lg-right">
-            <a className="social-twitter" href="https://twitter.com/LedgyCom"><i className="fa fa-twitter" /></a>
-            <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><i className="fa fa-facebook" /></a>
-            <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><i className="fa fa-linkedin" /></a>
+          <div className="col-md-auto ml-auto text-center text-md-right">
+            <a className="btn btn-round btn-xl btn-primary mb-2" href="https://app.ledgy.com/signup">Get Started</a>
           </div>
         </div>
       </div>
-    </div>
-    <div data-provide="map" />
-  </footer>
+    </section>
+    <footer className="footer py-7">
+      <div className="container">
+        <div className="row gap-y">
+
+          <div className="col-md-6 col-xl-4">
+            <p><Logo {...props} /></p>
+          </div>
+
+          <div className="col-6 col-md-3 col-xl-2">
+            <h6 className="mb-4 mt-1"><strong>Company</strong></h6>
+            <div className="nav flex-column">
+              <Link className="nav-link" href to={`${props.prefix}/about-us`}><Trans>About us</Trans></Link>
+              <a className="nav-link" href="https://blog.ledgy.com">Blog</a>
+              <Link className="nav-link" href to={`${props.prefix}/contact`}><Trans>Contact</Trans></Link>
+            </div>
+          </div>
+
+          <div className="col-6 col-md-3 col-xl-2">
+            <h6 className="mb-4 mt-1"><strong>Product</strong></h6>
+            <div className="nav flex-column">
+              <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Why Ledgy?</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/round-modeling`}><Trans>Round Modeling</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/esop`}><Trans>ESOP</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/consistency`}><Trans>Consistency</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/reporting`}><Trans>Reporting</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/investors`}><Trans>Investors</Trans></Link>
+            </div>
+          </div>
+
+          <div className="col-6 col-md-6 col-xl-2 text-center">
+            <div className="social social-bordered">
+              <a className="social-twitter" href="https://twitter.com/LedgyCom"><i className="fa fa-twitter" /></a>
+              <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><i className="fa fa-linkedin" /></a>
+              <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><i className="fa fa-facebook" /></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </div>
 );
+
 
 type SiteProps = {
   ...$Exact<Props>,
@@ -114,14 +125,14 @@ type SiteProps = {
 
 const TemplateWrapper = withI18n()((props: SiteProps) => {
   const { i18n } = props;
-  const { name, siteUrl } = props.data.site.siteMetadata;
+  const { siteUrl } = props.data.site.siteMetadata;
   const prefix = props.lang === 'de' ? '/de' : '';
-  const title = `${name} - ${i18n.t`site.title`}`;
+  const title = `${i18n.t`site.title`} — ${i18n.t`site.slogan`} | ${i18n.t`site.name`}`;
   const thumbnail = `${siteUrl}/thumbnail.png`;
   return (
     <div>
       <Helmet>
-        <title>{name} - {i18n.t`site.title`}</title>
+        <title>{title}</title>
         <meta name="description" content={i18n.t`site.description`} />
         <meta name="keywords" content={i18n.t`site.keywords`} />
 
@@ -139,7 +150,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Nav {...props} prefix={prefix} />
-      {props.children()}
+      {props.children({ ...props, prefix })}
       <Footer {...props} prefix={prefix} />
     </div>
   );
@@ -160,7 +171,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         siteUrl
-        name
       }
     }
   }

@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import { withI18n, Trans } from '@lingui/react';
 
 const Header = () => (
-  <header className="header header-inverse" style={{ backgroundColor: '#00b38d' }}>
+  <header className="header text-white bg-ledgy">
     <div className="container text-center">
 
       <div className="row">

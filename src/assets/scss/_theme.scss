@@ -62,7 +62,7 @@ $color-bg-gray:               #f9f9f9;
 $font-family-base:            "Lato", sans-serif;
 $font-family-title:           "Slabo 27px", sans-serif;
 
-$font-size-base:              0.9375rem;
+$font-size-base:              1.0375rem;
 
 $font-weight-base:            300;
 $line-height-base:            1.5;
@@ -101,4 +101,13 @@ $display4-weight:             200;
 
 .nav-link, .btn {
   text-transform: none !important;
+}
+h6 {
+  font-family: $font-family-base !important;
+}
+.footer {
+  line-height: 1.9 !important;
+}
+.bg-ledgy {
+  background-image: linear-gradient(135deg, #20a8d8 0%, #00afc9 100%);
 }

@@ -6,6 +6,7 @@ declare type I18n = {
 
 declare type Props = {
   i18n: I18n,
+  prefix: string,
   data: Object,
 }
 
