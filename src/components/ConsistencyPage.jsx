@@ -1,0 +1,150 @@
+// @flow
+
+import React from 'react';
+import { withI18n, Trans } from '@lingui/react';
+import { Helmet } from 'react-helmet';
+import Link from 'gatsby-link';
+
+import { appUrl, name } from '../constants';
+
+
+export default withI18n()(({ i18n, prefix }: Props) => (
+  <div>
+    <Helmet>
+      <title>{i18n.t`Consistency`} | {i18n.t`Features`} | {name}</title>
+    </Helmet>
+    <header className="header text-white bg-ledgy">
+      <div className="container text-center">
+
+        <div className="row">
+          <div className="col-12 col-lg-8 offset-lg-2">
+            <h1><Trans>Guaranteed error-free</Trans></h1>
+          </div>
+        </div>
+
+      </div>
+    </header>
+    <main className="main-content">
+
+
+      <section className="section overflow-hidden">
+        <div className="container text-left">
+
+          <div>
+            <header className="section-header text-left">
+              <h2><Trans>Replace your Excel with Ledgy</Trans></h2>
+              <p className="lead">
+                <Trans>
+                  To get started simply enter all transactions from your share
+                  register into Ledgy. This is a good opportunity to really understand
+                  what has been going on in your cap table.<br /><br />
+                  Need help? <Link href to={`${prefix}/contact`}>Contact us</Link> and
+                  we will assist yout to get started with Ledgy.
+                </Trans>
+              </p>
+            </header>
+
+            <div className="row gap-y">
+              <div className="col-md-10 mx-auto mb-7">
+                <img src="/img/create-captable.png" alt="Create a cap table" data-aos="fade-up" data-aos-duration="500" />
+              </div>
+            </div>
+          </div>
+
+          <div className="row align-items-center my-8">
+            <div className="col-md-4">
+              <p className="lead">
+                <Trans>
+                  Ooops, there was an error in your share register?
+                  Don’t worry, Ledgy will track everything you do and assist
+                  you in getting your cap table straight.<br />
+                  Once finished, sit back and relax. Now you can be assured that
+                  your cap table is error-free!
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-8 ml-auto" data-aos="fade-right" data-aos-duration="500">
+              <img src="/img/transaction-error.png" alt="Transaction error checking" />
+            </div>
+          </div>
+
+          <div className="row align-items-center my-8">
+            <div className="col-md-4 ml-auto">
+              <p className="lead">
+                <Trans>
+                  Did you notice the number in the center bottom? Anytime you transfer
+                  share from one shareholder to another, Ledgy will show you many
+                  how many share that particular shareholder has <i>available</i> at
+                  that given point in time.
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-8 order-md-first" data-aos="fade-right" data-aos-duration="500">
+              <img src="/img/available-shares.png" alt="Available shares for transfer" />
+            </div>
+          </div>
+
+          <div className="row align-items-center my-8">
+            <div className="col-md-4 ml-auto">
+              <p className="lead">
+                <Trans>
+                  By the way if you decide to number your shares, we also got you covered.
+                  Ledgy will track who owns which shares for each transaction
+                  and assist you in entering valid share numbers.<br />
+                  With Ledgy you can be sure that no single share number might is
+                  missing or even assigned twice!
+                </Trans>
+              </p>
+            </div>
+
+            <div className="col-md-8" data-aos="fade-right" data-aos-duration="500">
+              <img src="/img/share-number-checking.png" alt="Share number checking" />
+            </div>
+          </div>
+
+          <hr className="my-8" />
+
+          <div>
+            <header className="section-header text-left">
+              <h1><Trans>Nice charts!</Trans></h1>
+              <p className="lead">
+                Finished? Go back to the <a href={`${appUrl}/captable`}>Cap Table</a> page
+                and view the result.
+                At any point in the history of your share register, Ledgy
+                can draw you a nice diagram that represents the current equity
+                distribution of your company.
+              </p>
+            </header>
+
+            <div className="row gap-y">
+              <div className="col-md-10 mx-auto mb-7">
+                <img src="/img/captable-basic.png" alt="A basic cap table" data-aos="fade-left" data-aos-duration="500" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+    </main>
+  </div>
+));
+
+
+// eslint-disable-next-line no-undef
+export const pageFragment = graphql`
+  fragment ConsistencyPageFragment on RootQueryType {
+    feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    feature2: imageSharp(id: { regex: "/src\/img\/feature-2.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    feature3: imageSharp(id: { regex: "/src\/img\/feature-3.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+  }
+`;

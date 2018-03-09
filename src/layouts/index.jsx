@@ -67,7 +67,7 @@ const Footer = (props: LayoutProps) => (
           </div>
 
           <div className="col-md-auto ml-auto text-center text-md-right">
-            <a className="btn btn-round btn-xl btn-primary mb-2" href={`${appUrl}/signup`}>Get Started</a>
+            <a className="d-block d-sm-inline btn btn-round btn-xl btn-primary mb-2" href={`${appUrl}/signup`}>Get Started</a>
           </div>
         </div>
       </div>
@@ -92,10 +92,10 @@ const Footer = (props: LayoutProps) => (
           <div className="col-6 col-md-3 col-xl-2">
             <h6 className="mb-4 mt-1"><strong>Product</strong></h6>
             <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Why Ledgy?</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Why it’s great</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/consistency`}><Trans>Consistency</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/round-modeling`}><Trans>Round Modeling</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/esop`}><Trans>ESOP</Trans></Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/consistency`}><Trans>Consistency</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/reporting`}><Trans>Reporting</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/investors`}><Trans>Investors</Trans></Link>
             </div>

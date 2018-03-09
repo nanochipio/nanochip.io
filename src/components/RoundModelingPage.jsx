@@ -102,7 +102,7 @@ export default withI18n()(({ i18n }: Props) => (
           <div className="row align-items-center">
             <div className="col-md-6 ml-auto">
               <h2><Trans>Apply your scenario</Trans></h2>
-              <p>
+              <p className="lead">
                 <Trans>
                   As soon as you’re done with your financing round, hit the “Convert” button.
                   This will transform the scenario into real transactions in your

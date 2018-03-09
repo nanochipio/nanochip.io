@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
+import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
 
@@ -27,10 +28,10 @@ const Header = () => (
             </Trans>
           </div>
           <a className="btn btn-round btn-xl btn-outline-light" href="https://demo.ledgy.com/">See demo</a>
-          <a className="btn btn-round btn-xl btn-light ml-3" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
+          <a className="btn btn-round btn-xl btn-light ml-2" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
         </div>
 
-        <div className="col-lg-5 order-lg-first">
+        <div className="col-lg-5 order-lg-first" data-aos="fade-up" data-aos-duration="1000" >
           <img src="/img/laptop-1.png" alt="img" />
         </div>
 
@@ -69,7 +70,15 @@ const IndexPage = (props: Props) => (
             <Reference img={props.data.apiax} name="Apiax" />
             <Reference img={props.data.allthings} name="Allthings Technologies" />
             <Reference img={props.data.farmy} name="Farmy" />
+
           </div>
+
+          <div className="mx-auto text-center">
+            <Link href to={`${props.prefix}/features`} className="btn btn-round btn-xl btn-success mt-6" >
+              <Trans>Find out why they trust us</Trans>
+            </Link>
+          </div>
+
         </div>
 
       </section>
