@@ -123,7 +123,7 @@ type SiteProps = {
   data: { site: { siteMetadata: {
     name: string, siteUrl: string,
   } } },
-  children: () => React.Node,
+  children: (Object) => React.Node,
 }
 
 const TemplateWrapper = withI18n()((props: SiteProps) => {

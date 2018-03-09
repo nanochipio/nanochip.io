@@ -68,7 +68,7 @@ $(function() {
     |
     */
 
-    disableAOSonMobile: true,
+    disableAOSonMobile: false,
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ $(function() {
     |
     */
 
-    smoothScroll: true,
+    smoothScroll: false,
 
   });
 
@@ -103,4 +103,3 @@ $(function() {
 
 
 });
-
