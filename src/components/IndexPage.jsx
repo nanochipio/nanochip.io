@@ -8,12 +8,9 @@ import Img from 'gatsby-image';
 const Header = () => (
   <header className="header text-white bg-ledgy">
     <div className="container">
-      <div className="row align-items-center my-8">
+      <div className="row align-items-center my-6 gap-y">
 
-        <div className="col-md-5">
-          <img src="/img/laptop-1.png" alt="img" />
-        </div>
-        <div className="col-md-6 ml-auto">
+        <div className="col-lg-6 ml-auto mb-5">
           <h1><Trans id="site.title" /> —<br /> <Trans id="site.slogan" /></h1>
           <div className="lead mt-5 mb-7">
             <Trans>
@@ -31,6 +28,10 @@ const Header = () => (
           </div>
           <a className="btn btn-round btn-xl btn-outline-light" href="https://demo.ledgy.com/">See demo</a>
           <a className="btn btn-round btn-xl btn-light ml-3" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
+        </div>
+
+        <div className="col-lg-5 order-lg-first">
+          <img src="/img/laptop-1.png" alt="img" />
         </div>
 
 

@@ -111,6 +111,7 @@ const Footer = (props: LayoutProps) => (
 
         </div>
       </div>
+      <div data-provide="map" />
     </footer>
   </div>
 );
@@ -158,14 +159,21 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
   );
 });
 
-export default (props: Object) => {
-  const lang = props.location.pathname.startsWith('/de/') ? 'de' : 'en';
-  return (
-    <I18nProvider language={lang} catalogs={{ en: { messages: en }, de: { messages: de } }}>
-      <TemplateWrapper {...props} lang={lang} />
-    </I18nProvider>
-  );
-};
+
+export default class extends React.Component<{ location: { pathname: string } }> {
+  componentDidMount = () => {
+    require('../assets/js/page'); // eslint-disable-line global-require
+    require('../assets/js/script'); // eslint-disable-line global-require
+  }
+  render = () => {
+    const lang = this.props.location.pathname.startsWith('/de/') ? 'de' : 'en';
+    return (
+      <I18nProvider language={lang} catalogs={{ en: { messages: en }, de: { messages: de } }}>
+        <TemplateWrapper {...this.props} lang={lang} />
+      </I18nProvider>
+    );
+  }
+}
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`

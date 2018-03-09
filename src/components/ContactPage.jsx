@@ -22,10 +22,7 @@ const Header = () => (
 
 class Map extends React.Component<{}> {
   componentDidMount() {
-    if (!window.google && window.$) {
-      $.getScript(`https://maps.googleapis.com/maps/api/js?key=${page.defaults.googleApiKey}&callback=page.initMap`); // eslint-disable-line
-    }
-    if (window.thesaas && window.google) {
+    if (window.page && window.google) {
       window.page.initMap();
     }
   }

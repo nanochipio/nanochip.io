@@ -40,9 +40,6 @@ module.exports = class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-
-          <script src="/assets/js/page.min.js" async />
-          <script src="/assets/js/script.js" async />
         </body>
       </html>
     );
