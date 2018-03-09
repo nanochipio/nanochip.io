@@ -5,6 +5,8 @@ import Link from 'gatsby-link';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
+import { appUrl, name, blogUrl } from '../constants';
+
 import '../assets/scss/page.scss';
 
 import logoDefault from '../img/logo_black.png';
@@ -46,7 +48,7 @@ const Nav = (props: LayoutProps) => (
         <span className="navbar-divider" />
 
         <div>
-          <a className="btn btn-sm btn-round btn-outline-light ml-lg-4 mr-2" href="https://app.ledgy.com"><Trans>Sign In</Trans></a>
+          <a className="btn btn-sm btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}><Trans>Sign In</Trans></a>
         </div>
       </section>
 
@@ -61,11 +63,11 @@ const Footer = (props: LayoutProps) => (
         <div className="row gap-y align-items-center">
           <div className="col-md-5 text-center text-md-left">
             <h3>Try it for free</h3>
-            <p>Already using Ledgy? <a href="https://app.ledgy.com/login">Sign in</a></p>
+            <p>Already using Ledgy? <a href={`${appUrl}/login`}>Sign in</a></p>
           </div>
 
           <div className="col-md-auto ml-auto text-center text-md-right">
-            <a className="btn btn-round btn-xl btn-primary mb-2" href="https://app.ledgy.com/signup">Get Started</a>
+            <a className="btn btn-round btn-xl btn-primary mb-2" href={`${appUrl}/signup`}>Get Started</a>
           </div>
         </div>
       </div>
@@ -82,7 +84,7 @@ const Footer = (props: LayoutProps) => (
             <h6 className="mb-4 mt-1"><strong>Company</strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/about-us`}><Trans>About us</Trans></Link>
-              <a className="nav-link" href="https://blog.ledgy.com">Blog</a>
+              <a className="nav-link" href={blogUrl}>Blog</a>
               <Link className="nav-link" href to={`${props.prefix}/contact`}><Trans>Contact</Trans></Link>
             </div>
           </div>
@@ -127,7 +129,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
   const { i18n } = props;
   const { siteUrl } = props.data.site.siteMetadata;
   const prefix = props.lang === 'de' ? '/de' : '';
-  const title = `${i18n.t`site.title`} — ${i18n.t`site.slogan`} | ${i18n.t`site.name`}`;
+  const title = `${i18n.t`site.title`} — ${i18n.t`site.slogan`} | ${name}`;
   const thumbnail = `${siteUrl}/thumbnail.png`;
   return (
     <div>

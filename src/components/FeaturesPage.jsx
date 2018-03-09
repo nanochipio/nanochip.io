@@ -11,11 +11,12 @@ type FeatureProps = {
   title: ?string,
   children: React.Node,
   url: string,
+  left: ?boolean,
 }
 
-const FeatureRight = (props: FeatureProps) => (
+const Feature = (props: FeatureProps) => (
   <div className="row align-items-center">
-    <div className="col-md-6 ml-auto">
+    <div className="col-md-5 ml-auto">
       <h2>{props.title || props.name}</h2>
       <p>{props.children}</p>
       <Link href to={`${props.prefix}/features/${props.url}`}>
@@ -23,28 +24,9 @@ const FeatureRight = (props: FeatureProps) => (
       </Link>
     </div>
 
-    <div className="col-md-5 order-md-first">
+    <div className={`col-md-5 ml-auto ${props.left || 'order-md-first'}`} data-aos="fade-right" data-aos-duration="500">
       <img src={`/img/${props.url}.png`} alt={props.name} />
     </div>
-  </div>
-);
-
-
-const FeatureLeft = (props: FeatureProps) => (
-  <div className="row align-items-center">
-    <div className="col-md-5 ml-auto">
-      <img src={`/img/${props.url}.png`} alt={props.name} />
-    </div>
-    <div className="col-md-6 order-md-first">
-      <h2>{props.title || props.name}</h2>
-      <p>
-        {props.children}
-      </p>
-      <Link href to={`${props.prefix}/features/${props.url}`}>
-        Read More about {props.name} <i className="ti-angle-right fs-10 ml-1" />
-      </Link>
-    </div>
-
   </div>
 );
 
@@ -72,36 +54,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
     <main className="main-content">
 
 
-      <section className="section overflow-hidden">
+      <section className="section pt-5">
         <div className="container">
 
-          <FeatureRight
-            {...props}
-            name="Financing Round Modeling"
-            url="round-modeling"
-          >
-            What’s the percentage of the founders if a VC
-            invests $2,000,000 at a valuation of $7,500,000 taking into account
-            the 2 convertibles and the ESOP pool?<br />
-            Seriously, we don’t know. But Ledgy does.
-          </FeatureRight>
-
-          <Hr />
-
-          <FeatureLeft
-            {...props}
-            name="Employee Stock Option Plans"
-            url="esop"
-          >
-            Let your employees take part in your companies success.
-            Ledgy supports vesting schedules, real stock, options, with
-            pool, without pool, and much more.<br />
-            Employees can even log into Ledgy and see their vested shares in real-time.
-          </FeatureLeft>
-
-          <Hr />
-
-          <FeatureRight
+          <Feature
             {...props}
             name="Consistency"
             title="Guaranteed Error-Free"
@@ -112,24 +68,52 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             Building a share register with Excel or Word can easily lead to
             inconsistencies. We have you covered. Set up your shares with Ledgy
             and be assured, that all data is consistent.
-          </FeatureRight>
+          </Feature>
 
           <Hr />
 
-          <FeatureLeft
+          <Feature
+            {...props}
+            name="Financing Round Modeling"
+            url="round-modeling"
+            left
+          >
+            What’s the percentage of the founders if a VC
+            invests $2,000,000 at a valuation of $7,500,000 taking into account
+            the 2 convertibles and the ESOP pool?<br />
+            Seriously, we don’t know. But Ledgy does.
+          </Feature>
+
+          <Hr />
+
+          <Feature
+            {...props}
+            name="Employee Stock Option Plans"
+            url="esop"
+          >
+            Let your employees take part in your companies success.
+            Ledgy supports vesting schedules, real stock, options, with
+            pool, without pool, and much more.<br />
+            Employees can even log into Ledgy and see their vested shares in real-time.
+          </Feature>
+
+          <Hr />
+
+          <Feature
             {...props}
             name="Reporting"
             url="reporting"
+            left
           >
             Oh, it’s tax season again and there are 50 holding confirmations
             waiting to be sent to your shareholders.
             Pasting names into document templates, computing the tax value of all share …<br />
             Don’t worry. Generate all holding confirmations with a single click.
-          </FeatureLeft>
+          </Feature>
 
           <Hr />
 
-          <FeatureRight
+          <Feature
             {...props}
             title="Investor Dashboard"
             name="the Investor Dashboard"
@@ -141,7 +125,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             With their share register on Ledgy, there’s only a single source of truth.
             Stop tracking your investments meticulously and simply convince
             your portfolio companies to use Ledgy.
-          </FeatureRight>
+          </Feature>
 
         </div>
       </section>
