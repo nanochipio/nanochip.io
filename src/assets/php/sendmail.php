@@ -1,7 +1,7 @@
 <?php
 
 // Load PHP Mailer
-// 
+//
 require 'PHPMailer/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 
@@ -54,7 +54,7 @@ if ( ! empty( $email ) && filter_var( $email, FILTER_VALIDATE_EMAIL ) )
 {
 
   // detect & prevent header injections
-  // 
+  //
   $test = "/(content-type|bcc:|cc:|to:)/i";
   foreach ( $_POST as $key => $val ) {
     if ( preg_match( $test, $val ) ) {
@@ -64,13 +64,13 @@ if ( ! empty( $email ) && filter_var( $email, FILTER_VALIDATE_EMAIL ) )
 
 
   // Sender name
-  // 
+  //
   $name = '';
   if ( isset( $_POST['name'] ) ) {
     $name = $_POST['name'];
   }
 
-  if ( isset( $_POST['firstname'] ) ) {
+  if ( isset( $_POST['firstname'] ) && isset( $_POST['lastname'] ) ) {
     $name = $_POST['firstname'] .' '. $_POST['lastname'];
   }
 
@@ -104,12 +104,13 @@ if ( ! empty( $email ) && filter_var( $email, FILTER_VALIDATE_EMAIL ) )
   unset( $_POST['subject'], $_POST['message'] );
   $message .= '<br><br><br>';
   foreach ($_POST as $key => $value) {
-    $message .= '<b>'. ucfirst($key) .'</b>: '. $value .'<br>';
+    $key = str_replace( array('-', '_'), ' ', $key);
+    $message .= '<p><b>'. ucfirst($key) .'</b><br>'. nl2br( $value ) .'<p><br><br>';
   }
 
 
   // Prepare PHP Mailer
-  // 
+  //
   $mail->setFrom($sender_email, $sender_name);
   $mail->addAddress($reciever);
   $mail->addReplyTo($email, $name);
@@ -119,7 +120,7 @@ if ( ! empty( $email ) && filter_var( $email, FILTER_VALIDATE_EMAIL ) )
   $mail->AltBody = strip_tags($message);
 
   if( ! $mail->send() ) {
-    echo json_encode( array( 
+    echo json_encode( array(
       'status'  => 'error',
       'message' => $error_message,
       'reason'  => $mail->ErrorInfo,

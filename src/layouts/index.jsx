@@ -5,10 +5,8 @@ import Link from 'gatsby-link';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import '../assets/vendor/bootstrap/css/bootstrap.css';
-import '../assets/css/scss/thesaas.scss';
-import '../assets/vendor/swiper/css/swiper.css';
-import '../fonts';
+import '../assets/scss/page.scss';
+
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 
@@ -22,57 +20,35 @@ type LayoutProps = {
 }
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
-  <Link href to={`${props.prefix}/#start`}>
-    <img className="logo-default" src={logoDefault} width={75} height={30} alt="logo" />
+  <Link href to={`${props.prefix}/#start`} className="navbar-brand">
+    <img className="logo-dark" src={logoDefault} width={100} height={40} alt="Ledgy" />
     {props.inverse &&
-      <img className="logo-inverse" src={logoInverse} width={75} height={30} alt="logo" />}
+      <img className="logo-inverse" src={logoInverse} width={100} height={40} alt="Ledgy" />}
   </Link>
 );
 
 const Nav = (props: LayoutProps) => (
-  <nav className="topbar topbar-inverse topbar-expand-md topbar-sticky">
+  <nav className="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="sticky">
     <div className="container">
 
-      <div className="topbar-brand">
-        <button className="topbar-toggler">&#9776;</button>
+      <div className="navbar-left">
+        <button className="navbar-toggler">&#9776;</button>
         <Logo {...props} inverse />
       </div>
 
+      <section className="navbar-mobile">
+        <nav className="nav nav-navbar ml-auto">
+          <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Why Ledgy?</Trans></Link>
+          <Link className="nav-link" href to={`${props.prefix}/about-us`}><Trans>About us</Trans></Link>
+          <Link className="nav-link" href to={`${props.prefix}/blog`}><Trans>Blog</Trans></Link>
+        </nav>
 
-      <div className="topbar-right">
-        <ul className="topbar-nav nav">
-          <li className="nav-item">
-            <button className="nav-link active btn-link text-left"><Trans>Product</Trans> <i className="fa fa-caret-down" /></button>
-            <div className="nav-submenu">
-              <Link className="nav-link active" href to={`${props.prefix}/#testimonials`}><Trans>Testimonials</Trans></Link>
-              <Link className="nav-link active" href to={`${props.prefix}/#pricing`}><Trans>Pricing</Trans></Link>
-              <Link className="nav-link active" href to={`${props.prefix}/#features`}><Trans>Features</Trans></Link>
-              <Link className="nav-link active" href to={`${props.prefix}/#demo`}><Trans>Demo</Trans></Link>
-              <Link className="nav-link active" href to={`${props.prefix}/#future`}><Trans>The Future</Trans></Link>
-            </div>
-          </li>
-          <li className="nav-item"><Link className="nav-link active" href to={`${props.prefix}/about`}><Trans>About</Trans></Link></li>
-          <li className="nav-item"><Link className="nav-link active" href to={`${props.prefix}/contact`}><Trans>Contact</Trans></Link></li>
-          <li className="nav-item"><a className="nav-link active" href="https://blog.ledgy.com"><Trans>Blog</Trans></a></li>
-          <div className="nav-item d-block">
-            <Link href className="nav-link d-inline active" to="/#start">
-              {props.lang === 'en' ? <u>EN</u> : 'EN'}
-            </Link>&nbsp;|&nbsp;
-            <Link href className="nav-link d-inline active" to="/de/#start">
-              {props.lang === 'de' ? <u>DE</u> : 'DE'}
-            </Link>
-          </div>
-          <div className="hidden-md-up lh-2">
-            <a className="btn btn-block btn-outline btn-primary" href="https://app.ledgy.com/login"><Trans>Login</Trans></a>
-            <a className="btn btn-block btn-success" href="https://app.ledgy.com/signup"><Trans>Signup</Trans></a>
-            <h4 className="mt-3"><Trans>Try for free</Trans></h4>
-          </div>
-        </ul>
-        <div className="d-inline-flex ml-30 hidden-sm-down">
-          <a className="btn btn-sm btn-outline btn-white mr-4" href="https://app.ledgy.com/login"><Trans>Login</Trans></a>
-          <a className="btn btn-sm btn-success" href="https://app.ledgy.com/signup"><Trans>Signup</Trans></a>
+        <span className="navbar-divider" />
+
+        <div>
+          <a className="btn btn-sm btn-round btn-outline-light ml-lg-4 mr-2" href="https://app.ledgy.com"><Trans>Sign In</Trans></a>
         </div>
-      </div>
+      </section>
 
     </div>
   </nav>

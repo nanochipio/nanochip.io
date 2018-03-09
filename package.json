@@ -10,6 +10,10 @@
     "@babel/preset-flow": "^7.0.0-beta.40",
     "@babel/preset-react": "^7.0.0-beta.40",
     "@lingui/react": "^2.0.5",
+    "aos": "^2.2.0",
+    "bootstrap": "^4.0.0",
+    "et-line": "^1.0.1",
+    "font-awesome": "^4.7.0",
     "gatsby": "^1.9.183",
     "gatsby-image": "^1.0.35",
     "gatsby-link": "^1.6.36",
@@ -24,9 +28,11 @@
     "gatsby-plugin-sitemap": "^1.2.12",
     "gatsby-source-filesystem": "^1.5.18",
     "gatsby-transformer-sharp": "^1.6.18",
+    "lity": "^2.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "slick-carousel": "^1.8.1"
   },
   "keywords": [
     "ledgy"

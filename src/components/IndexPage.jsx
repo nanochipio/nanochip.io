@@ -5,54 +5,34 @@ import { withI18n, Trans } from '@lingui/react';
 
 
 import References from './References';
-import Features from './Features';
 import Subscribe from './Subscribe';
 
-const Header = ({ i18n }: Props) => (
-  <header className="header header-inverse h-fullscreen pb-80" style={{ backgroundColor: '#20a8d8' }} id="start">
+const Header = () => (
+  <header className="header text-white" style={{ backgroundImage: 'linear-gradient(135deg, #20a8d8 0%, #00afc9 100%)' }}>
+    <div className="container">
+      <div className="row align-items-center my-8">
 
-    <div className="container text-center">
-
-      <div className="row h-full">
-        <div className="col-12 col-lg-10 offset-lg-1 align-self-center">
-
-          <h1 className="display-2"><Trans id="site.title" /></h1>
-          <br />
-          <p className="fs-20 w-400 mx-auto hidden-sm-down">
-            <Trans id="site.description" />
+        <div className="col-md-5">
+          <img src="/img/laptop-1.png" alt="img" />
+        </div>
+        <div className="col-md-6 ml-auto">
+          <h1><Trans>Online Captable —<br /> Excel was yesterday</Trans></h1>
+          <p className="lead mt-5 mb-7">
+            <Trans>
+              Having headaches with your cap table in Excel?
+              Use Ledgy to track all your shares, manage your ESOP and
+              model detailed financing rounds.<br /><br />
+              You are an investor or employee? Get a detailed overview of
+              your investment and check the status of your
+              vesting schedule.
+            </Trans>
           </p>
-          <p className="fs-18 w-250 mx-auto hidden-md-up">
-            <Trans id="site.description" />
-          </p>
-
-          <div className="col-10 offset-1">
-
-            <form className="form-glass row" action="https://app.ledgy.com/signup" method="get">
-              <div className="col-12 col-md-7 my-1">
-                <input type="text" name="email" className="form-control form-control-lg" placeholder={i18n.t`Enter email …`} />
-              </div>
-              <div className="col-12 col-md-5 my-1">
-                <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success"><Trans>Try for free</Trans></button>
-              </div>
-            </form>
-            <div className="row mt-2 pr-3 float-right">
-              <a
-                style={{ textDecoration: 'underline' }}
-                className="text-white"
-                href="https://demo.ledgy.com"
-              ><Trans>Check out our demo app</Trans>
-              </a>
-            </div>
-
-          </div>
+          <a className="btn btn-round btn-xl btn-outline-light" href="https://demo.ledgy.com/">See demo</a>
+          <a className="btn btn-round btn-xl btn-light ml-3" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
         </div>
 
-        <div className="col-12 align-self-end text-center">
-          <a className="scroll-down-3 scroll-down-inverse" href="#testimonials" data-scrollto="testimonials"><span /></a>
-        </div>
 
       </div>
-
     </div>
   </header>
 );
@@ -63,24 +43,6 @@ const IndexPage = (props: Props) => (
     <main className="main-content">
 
       <References {...props} />
-      <Pricing {...props} />
-      <Features {...props} />
-
-
-      <section id="demo" className="section section-inverse" style={{ backgroundColor: '#60ae50' }} >
-
-        <header className="section-header mb-40">
-          <small><Trans>Demo</Trans></small>
-        </header>
-
-        <div className="text-center">
-          <a className="btn btn-lg btn-success" href="https://demo.ledgy.com"><Trans>Check out our demo app</Trans></a>
-        </div>
-
-      </section>
-
-
-      <Future {...props} />
       <Subscribe {...props} />
 
     </main>
