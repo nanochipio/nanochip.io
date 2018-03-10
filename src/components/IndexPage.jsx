@@ -73,7 +73,7 @@ const IndexPage = (props: Props) => (
 
           </div>
 
-          <div className="mx-auto text-center">
+          <div className="mx-auto text-center mt-5">
             <Link href to={`${props.prefix}/features`} className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6" >
               <Trans>Find out why they trust us</Trans>
             </Link>
