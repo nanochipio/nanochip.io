@@ -9,7 +9,7 @@ const Header = () => (
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
           <h1><Trans>Let’s Get In Touch</Trans></h1>
-          <p className="fs-20 opacity-70">
+          <p>
             <Trans>
               Here are the ways you can contact us with any questions you have
             </Trans>
@@ -48,7 +48,7 @@ const IndexPage = (props: Object) => {
 
       <main className="main-content">
 
-        <div className="section bg-gray">
+        <div className="section">
           <div className="container">
 
             <div className="row gap-y">
@@ -76,7 +76,7 @@ const IndexPage = (props: Object) => {
 
 
               <div className="col-12 col-md-5 offset-md-1">
-                <div className="bg-grey h-full p-20">
+                <div className="bg-gray h-full p-5">
                   <p>
                     <Trans>
                       Give us a call or stop by our door anytime. We
@@ -89,15 +89,8 @@ const IndexPage = (props: Object) => {
 
                   <p className="lead">Ledgy AG<br />Forchstrasse 60<br /><Trans>8008 Zurich, Switzerland</Trans></p>
 
-                  <div>
-                    <span className="d-inline-block w-20 text-lighter" title="Email">E:</span>
-                    <span className="fs-14">contact@ledgy.com</span>
-                  </div>
-
-                  <div>
-                    <span className="d-inline-block w-20 text-lighter" title="Phone">P:</span>
-                    <span className="fs-14">+41 44 585 21 23</span>
-                  </div>
+                  <div>contact@ledgy.com</div>
+                  <div>+41 44 585 21 23</div>
 
                 </div>
               </div>
