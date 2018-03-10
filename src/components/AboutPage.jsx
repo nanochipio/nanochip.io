@@ -12,7 +12,7 @@ const Header = () => (
         <div className="col-12 col-lg-8 offset-lg-2">
 
           <h1><Trans>About us</Trans></h1>
-          <p className="fs-20 opacity-70">
+          <p>
             <Trans>
               Find out about our mission and meet our team and advisors
             </Trans>

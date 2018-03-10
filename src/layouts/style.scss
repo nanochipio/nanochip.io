@@ -6,6 +6,10 @@
   }
 }
 
+.text-white p {
+  color: $gray-100;
+}
+
 .bg-ledgy {
   background-image: linear-gradient(135deg, #20a8d8 0%, #00afc9 100%);
 }
