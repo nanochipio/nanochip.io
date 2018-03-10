@@ -9,11 +9,11 @@ import Img from 'gatsby-image';
 const Header = () => (
   <header className="header text-white bg-ledgy">
     <div className="container">
-      <div className="row align-items-center my-6 gap-y">
+      <div className="row align-items-center mt-5 mb-7">
 
         <div className="col-lg-6 ml-auto mb-5">
           <h1><Trans id="site.title" /> —<br /> <Trans id="site.slogan" /></h1>
-          <div className="lead mt-5 mb-7">
+          <div className="mb-6">
             <Trans>
               <p>
               Having headaches with your cap table in Excel?
@@ -27,8 +27,8 @@ const Header = () => (
               </p>
             </Trans>
           </div>
-          <a className="btn btn-round btn-xl btn-outline-light" href="https://demo.ledgy.com/">See demo</a>
-          <a className="btn btn-round btn-xl btn-light ml-2" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
+          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href="https://demo.ledgy.com/">See demo</a>
+          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
         </div>
 
         <div className="col-lg-5 order-lg-first" data-aos="fade-up" data-aos-duration="1000" >
@@ -58,7 +58,7 @@ const IndexPage = (props: Props) => (
           <header className="section-header mb-3">
             <h2><Trans>You’re in good company</Trans></h2>
             <hr className="my-2" />
-            <p className="lead">Many successful companies already use Ledgy to keep track of their share register</p>
+            <p>Many successful companies already use Ledgy to keep track of their share register</p>
           </header>
 
           <div className="partner mx-auto" style={{ maxWidth: '1200px' }}>

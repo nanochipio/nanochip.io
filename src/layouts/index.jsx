@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import { appUrl, name, blogUrl } from '../constants';
 
 import '../assets/scss/page.scss';
+// import './style.scss';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
@@ -48,7 +49,7 @@ const Nav = (props: LayoutProps) => (
         <span className="navbar-divider" />
 
         <div>
-          <a className="btn btn-sm btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}><Trans>Sign In</Trans></a>
+          <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}><Trans>Sign In</Trans></a>
         </div>
       </section>
 

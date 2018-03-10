@@ -33,7 +33,7 @@ export default withI18n()(({ i18n, prefix }: Props) => (
           <div>
             <header className="section-header text-left">
               <h2><Trans>Replace your Excel with Ledgy</Trans></h2>
-              <p className="lead">
+              <p>
                 <Trans>
                   To get started simply enter all transactions from your share
                   register into Ledgy. This is a good opportunity to really understand
@@ -53,7 +53,7 @@ export default withI18n()(({ i18n, prefix }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-4">
-              <p className="lead">
+              <p>
                 <Trans>
                   Ooops, there was an error in your share register?
                   Don’t worry, Ledgy will track everything you do and assist
@@ -71,7 +71,7 @@ export default withI18n()(({ i18n, prefix }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-4 ml-auto">
-              <p className="lead">
+              <p>
                 <Trans>
                   Did you notice the number in the center bottom? Anytime you transfer
                   share from one shareholder to another, Ledgy will show you many
@@ -88,7 +88,7 @@ export default withI18n()(({ i18n, prefix }: Props) => (
 
           <div className="row align-items-center my-8">
             <div className="col-md-4 ml-auto">
-              <p className="lead">
+              <p>
                 <Trans>
                   By the way if you decide to number your shares, we also got you covered.
                   Ledgy will track who owns which shares for each transaction
@@ -109,7 +109,7 @@ export default withI18n()(({ i18n, prefix }: Props) => (
           <div>
             <header className="section-header text-left">
               <h1><Trans>Nice charts!</Trans></h1>
-              <p className="lead">
+              <p>
                 Finished? Go back to the <a href={`${appUrl}/captable`}>Cap Table</a> page
                 and view the result.
                 At any point in the history of your share register, Ledgy

@@ -32,7 +32,7 @@ export default withI18n()(({ i18n }: Props) => (
           <div>
             <header className="section-header text-left">
               <h2>Explore new scenarios for upcoming funding rounds interactively</h2>
-              <p className="lead">
+              <p>
                 <Trans>
                   Is your startup running well and you’re already thinking about
                   a new financing round to fuel your growth and take your
@@ -58,7 +58,7 @@ export default withI18n()(({ i18n }: Props) => (
 
           <div>
             <header className="section-header text-left">
-              <p className="lead">
+              <p>
                 Scroll down and you will notice that the cap table now
                 indicates the “Round Modeling” mode.
                 This gives you a detailed overview about who owns how many shares
@@ -76,7 +76,7 @@ export default withI18n()(({ i18n }: Props) => (
           <div>
             <header className="section-header text-left mt-3">
               <h2>Share your scenarios</h2>
-              <p className="lead">
+              <p>
                 <Trans>
                   After you’re finished with modeling your financing round you can
                   download the scenario as a pdf document and share it with your co-founders,
@@ -102,7 +102,7 @@ export default withI18n()(({ i18n }: Props) => (
           <div className="row align-items-center">
             <div className="col-md-6 ml-auto">
               <h2><Trans>Apply your scenario</Trans></h2>
-              <p className="lead">
+              <p>
                 <Trans>
                   As soon as you’re done with your financing round, hit the “Convert” button.
                   This will transform the scenario into real transactions in your
