@@ -9,7 +9,7 @@ import Img from 'gatsby-image';
 const Header = () => (
   <header className="header text-white bg-ledgy">
     <div className="container">
-      <div className="row align-items-center mt-5 mb-7">
+      <div className="row align-items-center gap-y mt-5 mb-7">
 
         <div className="col-lg-6 ml-auto mb-5">
           <h1><Trans id="site.title" /> —<br /> <Trans id="site.slogan" /></h1>
@@ -74,7 +74,7 @@ const IndexPage = (props: Props) => (
           </div>
 
           <div className="mx-auto text-center">
-            <Link href to={`${props.prefix}/features`} className="btn btn-round btn-xl btn-success mt-6" >
+            <Link href to={`${props.prefix}/features`} className="btn btn-block d-sm-inline btn-round btn-xl btn-success mt-6" >
               <Trans>Find out why they trust us</Trans>
             </Link>
           </div>

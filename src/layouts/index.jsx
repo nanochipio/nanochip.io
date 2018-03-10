@@ -8,7 +8,6 @@ import { Helmet } from 'react-helmet';
 import { appUrl, name, blogUrl } from '../constants';
 
 import '../assets/scss/page.scss';
-// import './style.scss';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
@@ -59,7 +58,7 @@ const Nav = (props: LayoutProps) => (
 
 const Footer = (props: LayoutProps) => (
   <div>
-    <section className="section bg-pale-secondary p-6">
+    <section className="section bg-pale-secondary py-6">
       <div className="container">
         <div className="row gap-y align-items-center">
           <div className="col-md-5 text-center text-md-left">
@@ -68,7 +67,7 @@ const Footer = (props: LayoutProps) => (
           </div>
 
           <div className="col-md-auto ml-auto text-center text-md-right">
-            <a className="d-block d-sm-inline btn btn-round btn-xl btn-primary mb-2" href={`${appUrl}/signup`}>Get Started</a>
+            <a className="btn-block d-sm-inline btn btn-round btn-xl btn-primary mb-2" href={`${appUrl}/signup`}>Get Started</a>
           </div>
         </div>
       </div>
