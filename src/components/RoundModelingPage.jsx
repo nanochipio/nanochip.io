@@ -4,7 +4,7 @@ import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import { appUrl, name } from '../constants';
+import { name } from '../constants';
 
 
 export default withI18n()(({ i18n }: Props) => (
@@ -38,7 +38,7 @@ export default withI18n()(({ i18n }: Props) => (
                   a new financing round to fuel your growth and take your
                   company to the next level?
                   You will find the round modeling tool directly on
-                  the <a href={`${appUrl}/captable`}>Cap Table</a> page.
+                  the “Cap Table” page.
                   Enter a valuation and you will see how your convertibles apply
                   to your cap table immediately.
                   <br />

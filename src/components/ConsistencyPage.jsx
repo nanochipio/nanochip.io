@@ -5,7 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import Link from 'gatsby-link';
 
-import { appUrl, name } from '../constants';
+import { name } from '../constants';
 
 
 export default withI18n()(({ i18n, prefix }: Props) => (
@@ -110,7 +110,7 @@ export default withI18n()(({ i18n, prefix }: Props) => (
             <header className="section-header text-left">
               <h1><Trans>Nice charts!</Trans></h1>
               <p>
-                Finished? Go back to the <a href={`${appUrl}/captable`}>Cap Table</a> page
+                Finished? Go back to the “Cap Table” page
                 and view the result.
                 At any point in the history of your share register, Ledgy
                 can draw you a nice diagram that represents the current equity
