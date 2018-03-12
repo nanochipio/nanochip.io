@@ -135,6 +135,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
   return (
     <div>
       <Helmet>
+        <html lang={props.lang} />
         <title>{title}</title>
         <meta name="description" content={i18n.t`site.description`} />
         <meta name="keywords" content={i18n.t`site.keywords`} />
