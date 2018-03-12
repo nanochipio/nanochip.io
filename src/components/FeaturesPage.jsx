@@ -117,7 +117,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             {...props}
             title="Investor Dashboard"
             name="the Investor Dashboard"
-            url="investor-dashboard"
+            url="investors"
           >
             You are an investor and want to your portfolio companies?
             The founders are busy and the numbers they give you are different

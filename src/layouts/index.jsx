@@ -63,7 +63,7 @@ const Footer = (props: LayoutProps) => (
         <div className="row gap-y align-items-center">
           <div className="col-md-5 text-center text-md-left">
             <h3>Try it for free</h3>
-            <p>Already using Ledgy? <a href={`${appUrl}/login`}>Sign in</a></p>
+            <p>Already using Ledgy? <a href={`${appUrl}/login`}>Sign in</a>.</p>
           </div>
 
           <div className="col-md-auto ml-auto text-center text-md-right">
