@@ -101,7 +101,7 @@ export default withI18n()(({ i18n }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
+              <div className="col-md-8 mx-auto mb-7">
                 <img src="/img/holding-confirmation.png" alt="Create incentive plan" data-aos="fade-right" data-aos-duration="500" />
               </div>
             </div>
