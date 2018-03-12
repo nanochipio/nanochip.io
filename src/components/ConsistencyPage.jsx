@@ -35,11 +35,17 @@ export default withI18n()(({ i18n, prefix }: Props) => (
               <h2><Trans>Replace your Excel with Ledgy</Trans></h2>
               <p>
                 <Trans>
+                  Keep all the history to your company’s share register at a single place.
+                  No more shuffling around with different documents shared via email, Dropbox,
+                  Google Drive or Slack.<br />
+                  Ledgy will be your single source of truth.
+                  And it’s a damn good one!
+                  <br /><br />
                   To get started simply enter all transactions from your share
                   register into Ledgy. This is a good opportunity to really understand
                   what has been going on in your cap table.<br /><br />
                   Need help? <Link href to={`${prefix}/contact`}>Contact us</Link> and
-                  we will assist yout to get started with Ledgy.
+                  we will assist you to get started with Ledgy.
                 </Trans>
               </p>
             </header>
