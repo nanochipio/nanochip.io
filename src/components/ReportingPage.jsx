@@ -10,7 +10,7 @@ import { name } from '../constants';
 export default withI18n()(({ i18n }: Props) => (
   <div>
     <Helmet>
-      <title>{i18n.t`ESOP`} | {i18n.t`Features`} | {name}</title>
+      <title>{i18n.t`Documents & Reporting`} | {i18n.t`Features`} | {name}</title>
     </Helmet>
     <header className="header text-white bg-ledgy">
       <div className="container text-center">
@@ -31,108 +31,113 @@ export default withI18n()(({ i18n }: Props) => (
 
           <div>
             <header className="section-header text-left">
-              <h2><Trans>Make your employees happy</Trans></h2>
+              <h2><Trans>Make your cap table legally binding</Trans></h2>
               <p>
                 <Trans>
-                  You’re building a fast growing company and want your valuable
-                  employees to be part of your success?
-                  Ledgy offers you a powerful module to manage your
-                  employee stock ownership plans.
-                  No matter if you transfer real stock from your company to your employees,
-                  options from a fixed-size options pool, or even phantom stock.
+                  In order to create a legally binding share register it
+                  is still necessary to add a physical signature.
+                  With Ledgy you can download a beatiful summary of your company’s
+                  history.
                   <br /><br />
-                  Add a vesting schedule to your ESOPs and track their status in real-time.
-                  Coolest thing ever, let your employees log into Ledgy and allow them
-                  to see at any point in time how much stock they have already vested and
-                  how many shares are still outstanding.
-                  <br /><br />
-                  Go to your “Transactions” page and click
-                  the “Add incentive” button to get started.
+                  It includes the current cap table, including the non-diluted and
+                  fully-diluted stake of each shareholder (if you have options/phantom stock),
+                  your convertibles and ESOPs and finally the transaction history,
+                  which tracks every change ever made to your cap table since incorporation.
                 </Trans>
               </p>
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/add-incentive.png" alt="Create incentive plan" data-aos="fade-up" data-aos-duration="500" />
+              <div className="col-md-12 mx-auto mb-7">
+                <img src="/img/share-register-pdf.png" alt="Create incentive plan" data-aos="fade-up" data-aos-duration="500" />
               </div>
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-4">
-              <p>
-                <Trans>
-                  You can define a detailed vesting schedule by defining over how
-                  many months the shares are to be vested, if there’s a cliff and
-                  how often a new batch of shares get assigned to the employee.<br />
-                  As soon as you enter the first numbers, you will see a visual representation
-                  of the  current schedule.
-                </Trans>
-              </p>
-            </div>
-
-            <div className="col-md-8 ml-auto" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/vesting-schedule.png" alt="Vesting schedule for ESOPs" />
-            </div>
-          </div>
 
           <hr className="my-8" />
 
+
+          <header className="section-header text-left">
+            <h2><Trans>Send holding confirmations with ease</Trans></h2>
+          </header>
+
           <div className="row align-items-center my-8">
-            <div className="col-md-4 ml-auto">
+            <div className="col-md-6 ml-auto">
               <p>
                 <Trans>
-                  In the case that your employee shares are implemented as options
-                  or phantom stock, you might want to define a pool first.
-                  Click the “Add pool” to create an options or
-                  phantom stock pool of a given share class and a fixed size.
+                  Remember that day last year during tax season when you had to send
+                  holding confirmations to each of your share, filling out boring
+                  Word templates by hand?
+                  <br /><br />
+                  We’ve got the solution for you. With a single click you create
+                  nicely formatted holding confirmations for all of your shareholders
+                  and send them directly via email.
+                  <br /><br />
+                  Hours of tedious work is now reduced to just a few seconds.
+                  Now that’s really cool!
                 </Trans>
               </p>
             </div>
 
-            <div className="col-md-8 order-md-first" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/add-pool.png" alt="Add an incentives pool" />
+            <div className="col-md-5" data-aos="fade-left" data-aos-duration="500">
+              <img src="/img/send-holding-confirmation.png" alt="Vesting schedule for ESOPs" />
             </div>
           </div>
 
-          <div className="row align-items-center my-8">
-            <div className="col-md-4 ml-auto">
-              <p>
-                <Trans>
-                  After you have added a pool, you can select it from the incentives
-                  screen.
-                  Check back at your “Cap Table” and
-                  press “Fully diluted” to see your newly created
-                  pool and employee incentives!
-                </Trans>
-              </p>
-            </div>
-
-            <div className="col-md-8" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/add-incentive-psop.png" alt="Add incentives from a pool" />
-            </div>
-          </div>
-
-          <hr className="my-8" />
 
           <div>
             <header className="section-header text-left">
-              <h1><Trans>Keep your employees engaged</Trans></h1>
               <p>
-                Once your incentives are submitted to Ledgy it’s time to
-                engage your employees.
-                They are able to log into Ledgy themselves with their email
-                address at any time and see how many shares they have already vested.
+                <Trans>
+                  The holding confirmation lists all assets that a shareholder owns,
+                  as well as their total value needed for the tax declaration.
+                  Employees will be able to see there stock ownership plans and
+                  how many of their total shares they have already vested.
+                  <br />
+                  All documents are ready to be sent to the tax authority!
+                </Trans>
               </p>
             </header>
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/incentives-dashboard.png" alt="ESOPs in the employee dashboard" data-aos="fade-left" data-aos-duration="500" />
+                <img src="/img/holding-confirmation.png" alt="Create incentive plan" data-aos="fade-right" data-aos-duration="500" />
               </div>
             </div>
           </div>
+
+          <hr className="my-8" />
+
+
+          <div>
+            <header className="section-header text-left">
+              <h2><Trans>Bring order into your documents</Trans></h2>
+              <p>
+                <Trans>
+                  Every transaction in your share register usually comes with a
+                  pile of additional documents.
+                  Get rid of complicated folder structures and simply attach them
+                  directly to your transactions.
+                  Ledgy gives you an overview over all documents that you uploaded and
+                  their corresponding transactions.
+                  Also in your transaction history you can select any transaction and have
+                  all connected documents at a glance.
+                  <br /><br />
+                  You can also create unique URLs for your documents and share them
+                  with your shareholders. This eliminates confusion about different
+                  versions of documents, as is often the case when sending documents via email.
+                </Trans>
+              </p>
+            </header>
+
+            <div className="row gap-y">
+              <div className="col-md-10 mx-auto mb-7">
+                <img src="/img/document-management.png" alt="Create incentive plan" data-aos="fade-left" data-aos-duration="500" />
+              </div>
+            </div>
+          </div>
+
 
         </div>
       </section>
