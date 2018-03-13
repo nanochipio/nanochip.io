@@ -4,6 +4,7 @@ import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 
 import { FeatureLinks } from './Features';
 import { name } from '../constants';
@@ -52,8 +53,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/create-captable.png" alt="Create a cap table" data-aos="fade-up" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up" data-aos-duration="500">
+                <Img {...props.data.createCaptable} alt="Create a cap table" />
               </div>
             </div>
           </div>
@@ -72,7 +73,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8 ml-auto" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/transaction-error.png" alt="Transaction error checking" />
+              <Img {...props.data.transactionError} alt="Transaction error checking" />
             </div>
           </div>
 
@@ -89,7 +90,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8 order-md-first" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/available-shares.png" alt="Available shares for transfer" />
+              <Img {...props.data.availableShares} alt="Available shares for transfer" />
             </div>
           </div>
 
@@ -107,7 +108,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/share-number-checking.png" alt="Share number checking" />
+              <Img {...props.data.shareNumberChecking} alt="Share number checking" />
             </div>
           </div>
 
@@ -126,8 +127,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/captable-basic.png" alt="A basic cap table" data-aos="fade-left" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left" data-aos-duration="500">
+                <Img {...props.data.captableBasic} alt="A basic cap table" />
               </div>
             </div>
           </div>
@@ -147,5 +148,21 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 export const pageFragment = graphql`
   fragment ConsistencyPageFragment on RootQueryType {
     ...FeaturesFragment
+
+    createCaptable: imageSharp(id: { regex: "/create-captable.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    transactionError: imageSharp(id: { regex: "/transaction-error.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    availableShares: imageSharp(id: { regex: "/available-shares.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    shareNumberChecking: imageSharp(id: { regex: "/share-number-checking.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    captableBasic: imageSharp(id: { regex: "/captable-basic.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
   }
 `;

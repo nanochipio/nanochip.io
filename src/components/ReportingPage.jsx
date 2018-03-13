@@ -3,6 +3,7 @@
 import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
+import Img from 'gatsby-image';
 
 import { FeatureLinks } from './Features';
 import { name } from '../constants';
@@ -49,8 +50,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-12 mx-auto mb-7">
-                <img src="/img/share-register-pdf.png" alt="Create incentive plan" data-aos="fade-up" data-aos-duration="500" />
+              <div className="col-md-12 mx-auto mb-7" data-aos="fade-up" data-aos-duration="500">
+                <Img {...props.data.shareRegisterPdf} alt="PDF export of the share register" />
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-5" data-aos="fade-left" data-aos-duration="500">
-              <img src="/img/send-holding-confirmation.png" alt="Vesting schedule for ESOPs" />
+              <Img {...props.data.sendHoldingConfirmation} alt="Dialog to holding confirmation" />
             </div>
           </div>
 
@@ -102,8 +103,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-8 mx-auto mb-7">
-                <img src="/img/holding-confirmation.png" alt="Create incentive plan" data-aos="fade-right" data-aos-duration="500" />
+              <div className="col-md-8 mx-auto mb-7" data-aos="fade-right" data-aos-duration="500">
+                <Img {...props.data.holdingConfirmation} alt="Holding confirmation" />
               </div>
             </div>
           </div>
@@ -133,8 +134,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/document-management.png" alt="Create incentive plan" data-aos="fade-left" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left" data-aos-duration="500">
+                <Img {...props.data.documentManagement} alt="Document management" />
               </div>
             </div>
           </div>
@@ -154,5 +155,18 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 export const pageFragment = graphql`
   fragment ReportingPageFragment on RootQueryType {
     ...FeaturesFragment
+
+    shareRegisterPdf: imageSharp(id: { regex: "/share-register-pdf.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    sendHoldingConfirmation: imageSharp(id: { regex: "/send-holding-confirmation.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    holdingConfirmation: imageSharp(id: { regex: "/holding-confirmation.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    documentManagement: imageSharp(id: { regex: "/document-management.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
   }
 `;

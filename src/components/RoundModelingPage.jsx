@@ -3,6 +3,7 @@
 import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
+import Img from 'gatsby-image';
 
 import { FeatureLinks } from './Features';
 import { name } from '../constants';
@@ -51,8 +52,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/round-modeling-sample.png" alt="Round Modeling" data-aos="fade-up" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up" data-aos-duration="500">
+                <Img {...props.data.roundModelingSample} alt="Round Modeling" />
               </div>
             </div>
           </div>
@@ -68,8 +69,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/round-modeling-captable.png" alt="Round Modeling" data-aos="fade-left" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left" data-aos-duration="500">
+                <Img {...props.data.roundModelingCaptable} alt="Cap table during round modeling" />
               </div>
             </div>
           </div>
@@ -91,8 +92,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/round-modeling-pdf.png" alt="Round Modeling" data-aos="fade-up-right" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up-right" data-aos-duration="500">
+                <Img {...props.data.roundModelingPdf} alt="PDF export of the financing round" />
               </div>
             </div>
           </div>
@@ -102,7 +103,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div className="row align-items-center">
             <div className="col-md-6 ml-auto">
-              <h2><Trans>Apply your scenario</Trans></h2>
+              <h2><Trans>Convert to transactions</Trans></h2>
               <p>
                 <Trans>
                   As soon as you’re done with your financing round, hit the “Convert” button.
@@ -113,7 +114,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-5" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/round-modeling-convert.png" alt="Convert financing round" />
+              <Img {...props.data.roundModelingConvert} alt="Convert financing round" />
             </div>
           </div>
 
@@ -132,5 +133,18 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 export const pageFragment = graphql`
   fragment RoundModelingPageFragment on RootQueryType {
     ...FeaturesFragment
+
+    roundModelingSample: imageSharp(id: { regex: "/round-modeling-sample.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    roundModelingCaptable: imageSharp(id: { regex: "/round-modeling-captable.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    roundModelingPdf: imageSharp(id: { regex: "/round-modeling-pdf.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    roundModelingConvert: imageSharp(id: { regex: "/round-modeling-convert.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
   }
 `;

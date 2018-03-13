@@ -3,6 +3,7 @@
 import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
+import Img from 'gatsby-image';
 
 import { FeatureLinks } from './Features';
 import { name } from '../constants';
@@ -46,8 +47,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-8 mx-auto mb-7">
-                <img src="/img/dashboard-cards.png" alt="Round Modeling" data-aos="fade-up" data-aos-duration="500" />
+              <div className="col-md-8 mx-auto mb-7" data-aos="fade-up" data-aos-duration="500">
+                <Img {...props.data.dashboardCards} alt="Investment overview" />
               </div>
             </div>
           </div>
@@ -66,8 +67,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/dashboard-shares.png" alt="Round Modeling" data-aos="fade-left" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left" data-aos-duration="500">
+                <Img {...props.data.dashboardShares} alt="Share details" />
               </div>
             </div>
           </div>
@@ -86,8 +87,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/dashboard-history.png" alt="Round Modeling" data-aos="fade-up-right" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up-right" data-aos-duration="500">
+                <Img {...props.data.dashboardHistory} alt="Transaction history" />
               </div>
             </div>
           </div>
@@ -107,5 +108,15 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 export const pageFragment = graphql`
   fragment InvestorsPageFragment on RootQueryType {
     ...FeaturesFragment
+
+    dashboardCards: imageSharp(id: { regex: "/dashboard-cards.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    dashboardShares: imageSharp(id: { regex: "/dashboard-shares.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    dashboardHistory: imageSharp(id: { regex: "/dashboard-history.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
   }
 `;

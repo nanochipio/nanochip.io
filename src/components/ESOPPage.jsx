@@ -3,6 +3,7 @@
 import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
+import Img from 'gatsby-image';
 
 import { FeatureLinks } from './Features';
 import { name } from '../constants';
@@ -54,8 +55,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/add-incentive.png" alt="Create incentive plan" data-aos="fade-up" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up" data-aos-duration="500">
+                <Img {...props.data.addIncentive} alt="Add incentive plan" />
               </div>
             </div>
           </div>
@@ -73,8 +74,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-8 ml-auto" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/vesting-schedule.png" alt="Vesting schedule for ESOPs" />
+            <div className="col-md-8 ml-auto" data-aos="fade-left" data-aos-duration="500">
+              <Img {...props.data.vestingSchedule} alt="Vesting schedule for ESOPs" />
             </div>
           </div>
 
@@ -93,7 +94,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8 order-md-first" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/add-pool.png" alt="Add an incentives pool" />
+              <Img {...props.data.addPool} alt="Add an incentives pool" />
             </div>
           </div>
 
@@ -110,8 +111,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-8" data-aos="fade-right" data-aos-duration="500">
-              <img src="/img/add-incentive-psop.png" alt="Add incentives from a pool" />
+            <div className="col-md-8" data-aos="fade-left" data-aos-duration="500">
+              <Img {...props.data.addIncentivePsop} alt="Add incentives from a pool" />
             </div>
           </div>
 
@@ -129,8 +130,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7">
-                <img src="/img/incentives-dashboard.png" alt="ESOPs in the employee dashboard" data-aos="fade-left" data-aos-duration="500" />
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up" data-aos-duration="500">
+                <Img {...props.data.incentivesDashboard} alt="ESOPs in the employee dashboard" />
               </div>
             </div>
           </div>
@@ -150,5 +151,21 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 export const pageFragment = graphql`
   fragment ESOPPageFragment on RootQueryType {
     ...FeaturesFragment
+
+    addIncentive: imageSharp(id: { regex: "/add-incentive.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    vestingSchedule: imageSharp(id: { regex: "/vesting-schedule.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    addPool: imageSharp(id: { regex: "/add-pool.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    addIncentivePsop: imageSharp(id: { regex: "/add-incentive-psop.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    incentivesDashboard: imageSharp(id: { regex: "/incentives-dashboard.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
   }
 `;
