@@ -53,7 +53,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up" data-aos-duration="500">
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
                 <Img {...props.data.createCaptable} alt="Create a cap table" />
               </div>
             </div>
@@ -72,7 +72,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-8 ml-auto" data-aos="fade-right" data-aos-duration="500">
+            <div className="col-md-8 ml-auto" data-aos="fade-left">
               <Img {...props.data.transactionError} alt="Transaction error checking" />
             </div>
           </div>
@@ -89,7 +89,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-8 order-md-first" data-aos="fade-right" data-aos-duration="500">
+            <div className="col-md-8 order-md-first" data-aos="fade-right">
               <Img {...props.data.availableShares} alt="Available shares for transfer" />
             </div>
           </div>
@@ -107,7 +107,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-8" data-aos="fade-right" data-aos-duration="500">
+            <div className="col-md-8" data-aos="fade-left">
               <Img {...props.data.shareNumberChecking} alt="Share number checking" />
             </div>
           </div>
@@ -127,7 +127,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left" data-aos-duration="500">
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
                 <Img {...props.data.captableBasic} alt="A basic cap table" />
               </div>
             </div>

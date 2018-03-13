@@ -29,8 +29,7 @@ export const Feature = (props: {
 
     <div
       className={`col-md-5 ml-auto ${props.left ? 'order-md-first' : ''}`}
-      data-aos="fade-right"
-      data-aos-duration="500"
+      data-aos={props.left ? 'fade-right' : 'fade-left'}
     >
       <Img {...props.data[hyphenToCamelCase(props.url)]} alt={props.name} />
     </div>

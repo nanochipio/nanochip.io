@@ -20362,7 +20362,7 @@ window.AOS = __webpack_require__(12);
   page.initAOS = function() {
     var options = {
       offset: 220,
-      duration: 1500,
+      duration: 500,
     }
 
     if ( page.defaults.disableAOSonMobile ) {

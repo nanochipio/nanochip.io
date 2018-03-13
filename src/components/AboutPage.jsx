@@ -42,7 +42,7 @@ const Founder =
 ({ name, func, description, img, twitterlink, fade, linkedinlink }: FounderProps) => (
   <div className="col-12 col-md-6 col-lg-4 team-1">
     {img &&
-      <div data-aos={`fade-${fade}`} data-aos-duration="500">
+      <div data-aos={`fade-${fade}`}>
         <Img {...img} alt={name} />
       </div>}
     <h6>{name}</h6>
@@ -58,7 +58,7 @@ const Founder =
 const Investor = ({ name, func, description, img, fade }: ProfileProps) => (
   <div className="col-12 col-md-4 team-2">
     {img &&
-      <div data-aos={`fade-${fade}`} data-aos-duration="500">
+      <div data-aos={`fade-${fade}`}>
         <Img {...img} alt={name} />
       </div>}
     <h5>{name}</h5>
@@ -71,7 +71,7 @@ const Investor = ({ name, func, description, img, fade }: ProfileProps) => (
 const Advisor = ({ name, func, description, img, fade }: ProfileProps) => (
   <div className="col-12 col-md-6 team-2">
     {img &&
-      <div data-aos={`fade-${fade}`} data-aos-duration="500">
+      <div data-aos={`fade-${fade}`}>
         <Img {...img} alt={name} />
       </div>}
     <h5>{name}</h5>
@@ -103,7 +103,7 @@ const IndexPage = (props: Props) => {
                   </Trans>
                 </p>
               </div>
-              <div className="col-12 col-lg-6 p-50 align-self-center" data-aos="fade-left" data-aos-duration="500">
+              <div className="col-12 col-lg-6 p-50 align-self-center" data-aos="fade-left">
                 <Img {...data.mission} className="shadow-3" alt="mission" />
               </div>
             </div>

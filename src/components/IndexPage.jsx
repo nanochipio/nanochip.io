@@ -29,7 +29,7 @@ const Header = ({ data }: Props) => (
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
         </div>
 
-        <div className="col-lg-6 order-lg-first" data-aos="fade-up" data-aos-duration="500">
+        <div className="col-lg-6 order-lg-first" data-aos="fade-up">
           <Img {...data.laptop} alt="Screenshot of the Ledgy app" />
         </div>
 

@@ -52,7 +52,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up" data-aos-duration="500">
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
                 <Img {...props.data.roundModelingSample} alt="Round Modeling" />
               </div>
             </div>
@@ -69,7 +69,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left" data-aos-duration="500">
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-left">
                 <Img {...props.data.roundModelingCaptable} alt="Cap table during round modeling" />
               </div>
             </div>
@@ -92,7 +92,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </header>
 
             <div className="row gap-y">
-              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up-right" data-aos-duration="500">
+              <div className="col-md-10 mx-auto mb-7" data-aos="fade-up-right">
                 <Img {...props.data.roundModelingPdf} alt="PDF export of the financing round" />
               </div>
             </div>
@@ -113,7 +113,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               </p>
             </div>
 
-            <div className="col-md-5" data-aos="fade-right" data-aos-duration="500">
+            <div className="col-md-5" data-aos="fade-left">
               <Img {...props.data.roundModelingConvert} alt="Convert financing round" />
             </div>
           </div>

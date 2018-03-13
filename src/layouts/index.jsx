@@ -77,7 +77,7 @@ const Footer = (props: LayoutProps) => (
         <div className="row gap-y">
 
           <div className="col-md-6 col-xl-4">
-            <p><Logo {...props} /></p>
+            <p><Logo {...props} inverse={false} /></p>
           </div>
 
           <div className="col-6 col-md-3 col-xl-2">
