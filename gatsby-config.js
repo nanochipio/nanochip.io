@@ -5,6 +5,7 @@ module.exports = {
     'gatsby-plugin-react-next',
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-nprogress',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
