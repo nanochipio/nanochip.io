@@ -159,6 +159,18 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         <meta name="twitter:description" content={i18n.t`site.description`} />
         <meta name="twitter:image" content={thumbnail} />
         <meta name="twitter:card" content="summary" />
+
+        {/* Disable AOS for Google */}
+        <noscript>
+          {`
+            <style type="text/css">
+              [data-aos] {
+                  opacity: 1 !important;
+                  transform: translate(0) scale(1) !important;
+              }
+            </style>
+          `}
+        </noscript>
       </Helmet>
       <Nav {...props} prefix={prefix} />
       {props.children({ ...props, prefix })}
