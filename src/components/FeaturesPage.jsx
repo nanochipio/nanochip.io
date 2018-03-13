@@ -2,18 +2,17 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
-import { Helmet } from 'react-helmet';
 
 import { Feature } from './Features';
+import { Title } from '../layouts/utils';
 
 const Hr = () => <hr className="my-3" />;
 
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
-    <Helmet>
-      <title>Features | {i18n.t`site.name`}</title>
-    </Helmet>
+    <Title title={i18n.t`Features`} />
+
     <header className="header text-white bg-ledgy">
       <div className="container text-center">
 

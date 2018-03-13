@@ -5,7 +5,7 @@ import Link from 'gatsby-link';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import { appUrl, name, blogUrl } from '../constants';
+import { appUrl, name, blogUrl } from './utils';
 
 import '../assets/scss/page.scss';
 
@@ -157,7 +157,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={i18n.t`site.description`} />
         <meta name="twitter:image" content={thumbnail} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
       </Helmet>
       <Nav {...props} prefix={prefix} />
       {props.children({ ...props, prefix })}

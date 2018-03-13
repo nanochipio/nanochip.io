@@ -2,19 +2,17 @@
 
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
-import { Helmet } from 'react-helmet';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from './Features';
-import { name } from '../constants';
+import { Title } from '../layouts/utils';
 
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
-    <Helmet>
-      <title>{i18n.t`Consistency`} | {i18n.t`Features`} | {name}</title>
-    </Helmet>
+    <Title title={i18n.t`Consistency`} section={i18n.t`Features`} />
+
     <header className="header text-white bg-ledgy">
       <div className="container text-center">
 

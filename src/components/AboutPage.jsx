@@ -4,8 +4,12 @@ import * as React from 'react';
 import Img from 'gatsby-image';
 import { withI18n, Trans } from '@lingui/react';
 
-const Header = () => (
+import { Title } from '../layouts/utils';
+
+const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
+    <Title title={i18n.t`About us`} />
+
     <div className="container text-center">
 
       <div className="row">
