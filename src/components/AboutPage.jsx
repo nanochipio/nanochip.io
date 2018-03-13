@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import * as React from 'react';
 import Img from 'gatsby-image';
 import { withI18n, Trans } from '@lingui/react';
 
@@ -30,6 +30,7 @@ type ProfileProps = {
   func: string,
   description: string,
   img: Object,
+  fade: string,
 }
 type FounderProps = {
   ...$Exact<ProfileProps>,
@@ -37,9 +38,13 @@ type FounderProps = {
   linkedinlink: string,
 }
 
-const Founder = ({ name, func, description, img, twitterlink, linkedinlink }: FounderProps) => (
+const Founder =
+({ name, func, description, img, twitterlink, fade, linkedinlink }: FounderProps) => (
   <div className="col-12 col-md-6 col-lg-4 team-1">
-    {img && <Img {...img} alt={name} />}
+    {img &&
+      <div data-aos={`fade-${fade}`} data-aos-duration="500">
+        <Img {...img} alt={name} />
+      </div>}
     <h6>{name}</h6>
     <small>{func}</small>
     <p>{description}</p>
@@ -50,9 +55,12 @@ const Founder = ({ name, func, description, img, twitterlink, linkedinlink }: Fo
   </div>
 );
 
-const Investor = ({ name, func, description, img }: ProfileProps) => (
+const Investor = ({ name, func, description, img, fade }: ProfileProps) => (
   <div className="col-12 col-md-4 team-2">
-    {img && <Img {...img} alt={name} />}
+    {img &&
+      <div data-aos={`fade-${fade}`} data-aos-duration="500">
+        <Img {...img} alt={name} />
+      </div>}
     <h5>{name}</h5>
     <small>{func}</small>
     <p>{description}</p>
@@ -60,9 +68,12 @@ const Investor = ({ name, func, description, img }: ProfileProps) => (
 );
 
 
-const Advisor = ({ name, func, description, img }: ProfileProps) => (
+const Advisor = ({ name, func, description, img, fade }: ProfileProps) => (
   <div className="col-12 col-md-6 team-2">
-    {img && <Img {...img} alt={name} />}
+    {img &&
+      <div data-aos={`fade-${fade}`} data-aos-duration="500">
+        <Img {...img} alt={name} />
+      </div>}
     <h5>{name}</h5>
     <small>{func}</small>
     <p>{description}</p>
@@ -92,8 +103,8 @@ const IndexPage = (props: Props) => {
                   </Trans>
                 </p>
               </div>
-              <div className="col-12 col-lg-6 p-50 align-self-center">
-                <Img {...data.mission} className="shadow-3 aos-init aos-animate" alt="mission" data-aos="fade-left" data-aos-duration="1500" />
+              <div className="col-12 col-lg-6 p-50 align-self-center" data-aos="fade-left" data-aos-duration="500">
+                <Img {...data.mission} className="shadow-3" alt="mission" />
               </div>
             </div>
           </div>
@@ -116,6 +127,7 @@ const IndexPage = (props: Props) => {
                 twitterlink="https://twitter.com/thrstschfr"
                 linkedinlink="https://www.linkedin.com/in/timohorstschaefer/"
                 img={data.timo}
+                fade="up-right"
               />
               <Founder
                 name="Ben-Elias Brandt"
@@ -124,6 +136,7 @@ const IndexPage = (props: Props) => {
                 twitterlink="https://twitter.com/bebinoy"
                 linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
                 img={data.ben}
+                fade="up"
               />
               <Founder
                 name="Yoko Spirig"
@@ -132,6 +145,7 @@ const IndexPage = (props: Props) => {
                 twitterlink="https://twitter.com/YokoSpirig"
                 linkedinlink="https://www.linkedin.com/in/yokospirig/"
                 img={data.yoko}
+                fade="up-left"
               />
             </div>
 
@@ -151,18 +165,21 @@ const IndexPage = (props: Props) => {
                 func="Board Member"
                 description={i18n.t`Entrepreneur, Business Angel, Founder of Doodle.com`}
                 img={data.myke}
+                fade="down-right"
               />
               <Investor
                 name="Dr. Paul E. Sevinç"
                 func="Board Member"
                 description={i18n.t`Entrepreneur, Technologist, Founder of Doodle.com`}
                 img={data.paul}
+                fade="down"
               />
               <Investor
                 name="Luzius Meisser"
                 func="Advisor"
                 description={i18n.t`Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala`}
                 img={data.luzius}
+                fade="down-left"
               />
             </div>
 
@@ -172,12 +189,14 @@ const IndexPage = (props: Props) => {
                 func="Advisor"
                 description={i18n.t`Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch`}
                 img={data.adrian}
+                fade="up-right"
               />
               <Advisor
                 name="Elena Walder-Schiavone"
                 func="Advisor"
                 description={i18n.t`M&A and Private Equity Lawyer with focus in start-up legal advise, Smartuplaw.ch`}
                 img={data.elena}
+                fade="up-left"
               />
             </div>
 
