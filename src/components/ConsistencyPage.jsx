@@ -5,6 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import Link from 'gatsby-link';
 
+import FeatureLinks from './FeatureLinks';
 import { name } from '../constants';
 
 
@@ -130,6 +131,8 @@ export default withI18n()(({ i18n, prefix }: Props) => (
               </div>
             </div>
           </div>
+
+          <FeatureLinks prefix={prefix} page="consistency" />
 
         </div>
       </section>

@@ -4,10 +4,11 @@ import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
+import FeatureLinks from './FeatureLinks';
 import { name } from '../constants';
 
 
-export default withI18n()(({ i18n }: Props) => (
+export default withI18n()(({ i18n, prefix }: Props) => (
   <div>
     <Helmet>
       <title>{i18n.t`ESOP`} | {i18n.t`Features`} | {name}</title>
@@ -133,6 +134,8 @@ export default withI18n()(({ i18n }: Props) => (
               </div>
             </div>
           </div>
+
+          <FeatureLinks prefix={prefix} page="esop" />
 
         </div>
       </section>
