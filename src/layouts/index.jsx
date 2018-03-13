@@ -1,11 +1,11 @@
 // @flow
 
 import * as React from 'react';
-import Link from 'gatsby-link';
+import Link, { navigateTo } from 'gatsby-link';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import { appUrl, name, blogUrl } from './utils';
+import { appUrl, name, blogUrl, getLocale } from './utils';
 
 import '../assets/scss/page.scss';
 
@@ -19,6 +19,7 @@ import de from '../locale/de/messages.json';
 type LayoutProps = {
   prefix: string,
   lang: string,
+  location: { pathname: string },
 }
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
@@ -111,8 +112,8 @@ const Footer = (props: LayoutProps) => (
 
           <div className="col-6 col-md-6 col-xl-2">
             {props.lang === 'de' ?
-              <Link href to="/" className="btn btn-round btn-outline-primary"><Trans>English</Trans></Link> :
-              <Link href to="/de/" className="btn btn-round btn-outline-primary"><Trans>Deutsch</Trans></Link>}
+              <Link href to={props.location.pathname.replace('/de', '')} className="btn btn-round btn-outline-primary"><Trans>English</Trans></Link> :
+              <Link href to={`/de${props.location.pathname}`} className="btn btn-round btn-outline-primary"><Trans>Deutsch</Trans></Link>}
           </div>
 
         </div>
@@ -171,6 +172,15 @@ export default class extends React.Component<{ location: { pathname: string } }>
   componentDidMount = () => {
     require('../assets/js/page'); // eslint-disable-line global-require
     require('../assets/js/script'); // eslint-disable-line global-require
+
+    const { pathname } = this.props.location;
+    if (getLocale() === 'de') {
+      if (!pathname.startsWith('/de')) {
+        navigateTo(`/de${this.props.location.pathname}`);
+      }
+    } else if (pathname.startsWith('/de')) {
+      navigateTo(this.props.location.pathname.replace('/de', ''));
+    }
   }
   render = () => {
     const lang = this.props.location.pathname.startsWith('/de/') ? 'de' : 'en';

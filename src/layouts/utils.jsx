@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
+import { chain, includes } from 'lodash';
 
 export const name = 'Ledgy';
 export const appUrl = 'https://app.ledgy.com';
@@ -21,3 +22,14 @@ export const Title = (props: { title: string, section?: string }) => {
   );
 };
 Title.defaultProps = { section: '' };
+
+const browserLanguagePropertyKeys = ['languages', 'language', 'browserLanguage', 'userLanguage', 'systemLanguage'];
+const availableLanguages = ['de', 'en'];
+export const getLocale = () => chain(window.navigator)
+  .pick(browserLanguagePropertyKeys)
+  .values()
+  .flatten()
+  .compact()
+  .map(s => s.substr(0, 2))
+  .find(s => includes(availableLanguages, s))
+  .value() || 'en';

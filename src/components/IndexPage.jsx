@@ -25,7 +25,7 @@ const Header = ({ data }: Props) => (
               </Trans>
             </p>
           </div>
-          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href="https://demo.ledgy.com/">See demo</a>
+          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href="https://demo.ledgy.com/"><Trans>See the demo</Trans></a>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
         </div>
 

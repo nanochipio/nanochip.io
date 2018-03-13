@@ -29,6 +29,7 @@
     "gatsby-source-filesystem": "~1.5.18",
     "gatsby-transformer-sharp": "~1.6.18",
     "lity": "~2.3.0",
+    "lodash": "^4.17.5",
     "react": "~16.2.0",
     "react-dom": "~16.2.0",
     "react-helmet": "~5.2.0",
