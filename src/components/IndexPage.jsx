@@ -11,27 +11,25 @@ const Header = ({ data }: Props) => (
     <div className="container">
       <div className="row align-items-center gap-y mt-5 mb-7">
 
-        <div className="col-lg-6 ml-auto mb-5">
-          <h1><Trans id="site.title" /> —<br /> <Trans id="site.slogan" /></h1>
+        <div className="col-lg-5 ml-auto mb-5">
+          <h1><Trans>Build trust around your cap table</Trans></h1>
           <div className="mb-6">
-            <Trans>
-              <p>
-              Having headaches with your cap table in Excel?
-              Use Ledgy to track all your shares, manage your ESOP and
-              model detailed financing rounds.
-              </p>
-              <p>
-              You are an investor or employee? Get a detailed overview of
-              your investment and check the status of your
-              vesting schedule.
-              </p>
-            </Trans>
+            <p>
+              <Trans>
+                Use Ledgy to track all your shares, manage your ESOPs and
+                model detailed financing rounds.
+                <br /><br />
+                You are an investor or employee? Get a detailed overview of
+                your investment and check the status of your
+                vesting schedule.
+              </Trans>
+            </p>
           </div>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href="https://demo.ledgy.com/">See demo</a>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
         </div>
 
-        <div className="col-lg-5 order-lg-first" data-aos="fade-up" data-aos-duration="500">
+        <div className="col-lg-6 order-lg-first" data-aos="fade-up" data-aos-duration="500">
           <Img {...data.laptop} alt="Screenshot of the Ledgy app" />
         </div>
 
