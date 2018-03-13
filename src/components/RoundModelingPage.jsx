@@ -141,7 +141,7 @@ export const pageFragment = graphql`
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
     roundModelingPdf: imageSharp(id: { regex: "/round-modeling-pdf.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes }
     }
     roundModelingConvert: imageSharp(id: { regex: "/round-modeling-convert.png/" }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }

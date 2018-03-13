@@ -104,7 +104,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-8 mx-auto mb-7" data-aos="fade-right" data-aos-duration="500">
-                <Img {...props.data.holdingConfirmation} alt="Holding confirmation" />
+                <Img {...props.data.holdingConfirmationPdf} alt="Holding confirmation" />
               </div>
             </div>
           </div>
@@ -157,13 +157,13 @@ export const pageFragment = graphql`
     ...FeaturesFragment
 
     shareRegisterPdf: imageSharp(id: { regex: "/share-register-pdf.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+      sizes(maxWidth: 2400) { ...GatsbyImageSharpSizes }
     }
     sendHoldingConfirmation: imageSharp(id: { regex: "/send-holding-confirmation.png/" }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
     }
-    holdingConfirmation: imageSharp(id: { regex: "/holding-confirmation.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    holdingConfirmationPdf: imageSharp(id: { regex: "/holding-confirmation-pdf.png/" }) {
+      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes }
     }
     documentManagement: imageSharp(id: { regex: "/document-management.png/" }) {
       sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
