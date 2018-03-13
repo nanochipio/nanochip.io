@@ -132,7 +132,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
 
       <p className="col-md-6 offset-md-5 text-right text-lighter small-2">
-        Illustrations created by <a href="https://www.freepik.com/alekksall">Alekksall</a>
+        Illustrations by <a href="https://www.freepik.com/alekksall">Alekksall</a>
       </p>
 
     </main>

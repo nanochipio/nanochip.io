@@ -42,7 +42,7 @@ const Nav = (props: LayoutProps) => (
         <nav className="nav nav-navbar ml-auto">
           <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Why it’s awesome</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us`}><Trans>About us</Trans></Link>
-          <Link className="nav-link" href to={`${props.prefix}/blog`}><Trans>Blog</Trans></Link>
+          <a className="nav-link" href={blogUrl}><Trans>Blog</Trans></a>
         </nav>
 
         <span className="navbar-divider" />
