@@ -63,7 +63,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <Feature
             {...props}
-            name="Employee Stock Option Plans"
+            name="Employee Stock Ownership Plans"
             url="esop"
           >
             Let your employees take part in your companies success.
