@@ -6,7 +6,7 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
 
-const Header = () => (
+const Header = ({ data }: Props) => (
   <header className="header text-white bg-ledgy">
     <div className="container">
       <div className="row align-items-center gap-y mt-5 mb-7">
@@ -31,8 +31,8 @@ const Header = () => (
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
         </div>
 
-        <div className="col-lg-5 order-lg-first" data-aos="fade-up" data-aos-duration="1000" >
-          <img src="/img/laptop-1.png" alt="img" />
+        <div className="col-lg-5 order-lg-first" data-aos="fade-up" data-aos-duration="500">
+          <Img {...data.laptop} alt="Screenshot of the Ledgy app" />
         </div>
 
 
@@ -92,14 +92,8 @@ export default withI18n()(IndexPage);
 // eslint-disable-next-line no-undef
 export const indexPageFragment = graphql`
   fragment IndexPageFragment on RootQueryType {
-    feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature2: imageSharp(id: { regex: "/src\/img\/feature-2.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature3: imageSharp(id: { regex: "/src\/img\/feature-3.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    laptop: imageSharp(id: { regex: "/laptop.png/" }) {
+      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes_noBase64 }
     }
 
     testingtime: imageSharp(id: { regex: "/testingtime/" }) {

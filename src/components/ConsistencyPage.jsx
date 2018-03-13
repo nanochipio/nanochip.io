@@ -5,11 +5,11 @@ import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 import Link from 'gatsby-link';
 
-import FeatureLinks from './FeatureLinks';
+import { FeatureLinks } from './Features';
 import { name } from '../constants';
 
 
-export default withI18n()(({ i18n, prefix }: Props) => (
+export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Helmet>
       <title>{i18n.t`Consistency`} | {i18n.t`Features`} | {name}</title>
@@ -45,7 +45,7 @@ export default withI18n()(({ i18n, prefix }: Props) => (
                   To get started simply enter all transactions from your share
                   register into Ledgy. This is a good opportunity to really understand
                   what has been going on in your cap table.<br /><br />
-                  Need help? <Link href to={`${prefix}/contact`}>Contact us</Link> and
+                  Need help? <Link href to={`${props.prefix}/contact`}>Contact us</Link> and
                   we will assist you to get started with Ledgy.
                 </Trans>
               </p>
@@ -132,7 +132,7 @@ export default withI18n()(({ i18n, prefix }: Props) => (
             </div>
           </div>
 
-          <FeatureLinks prefix={prefix} page="consistency" />
+          <FeatureLinks {...props} page="consistency" />
 
         </div>
       </section>
@@ -146,14 +146,6 @@ export default withI18n()(({ i18n, prefix }: Props) => (
 // eslint-disable-next-line no-undef
 export const pageFragment = graphql`
   fragment ConsistencyPageFragment on RootQueryType {
-    feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature2: imageSharp(id: { regex: "/src\/img\/feature-2.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature3: imageSharp(id: { regex: "/src\/img\/feature-3.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
+    ...FeaturesFragment
   }
 `;

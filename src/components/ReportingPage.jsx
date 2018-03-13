@@ -4,11 +4,11 @@ import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import FeatureLinks from './FeatureLinks';
+import { FeatureLinks } from './Features';
 import { name } from '../constants';
 
 
-export default withI18n()(({ i18n, prefix }: Props) => (
+export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
     <Helmet>
       <title>{i18n.t`Documents & Reporting`} | {i18n.t`Features`} | {name}</title>
@@ -139,7 +139,7 @@ export default withI18n()(({ i18n, prefix }: Props) => (
             </div>
           </div>
 
-          <FeatureLinks prefix={prefix} page="round-modeling" />
+          <FeatureLinks {...props} page="round-modeling" />
 
         </div>
       </section>
@@ -153,14 +153,6 @@ export default withI18n()(({ i18n, prefix }: Props) => (
 // eslint-disable-next-line no-undef
 export const pageFragment = graphql`
   fragment ReportingPageFragment on RootQueryType {
-    feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature2: imageSharp(id: { regex: "/src\/img\/feature-2.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature3: imageSharp(id: { regex: "/src\/img\/feature-3.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
+    ...FeaturesFragment
   }
 `;

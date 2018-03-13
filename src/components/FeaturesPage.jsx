@@ -3,32 +3,8 @@
 import React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
-import Link from 'gatsby-link';
 
-type FeatureProps = {
-  prefix: string,
-  name: string,
-  title: ?string,
-  children: React.Node,
-  url: string,
-  left: ?boolean,
-}
-
-const Feature = (props: FeatureProps) => (
-  <div className="row align-items-center">
-    <div className="col-md-5 ml-auto">
-      <h2>{props.title || props.name}</h2>
-      <p>{props.children}</p>
-      <Link href to={`${props.prefix}/features/${props.url}`}>
-        Read More about {props.name} <i className="ti-angle-right fs-10 ml-1" />
-      </Link>
-    </div>
-
-    <div className={`col-md-5 ml-auto ${props.left || 'order-md-first'}`} data-aos="fade-right" data-aos-duration="500">
-      <img src={`/img/${props.url}.png`} alt={props.name} />
-    </div>
-  </div>
-);
+import { Feature } from './Features';
 
 const Hr = () => <hr className="my-3" />;
 
@@ -143,14 +119,6 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 // eslint-disable-next-line no-undef
 export const pageFragment = graphql`
   fragment FeaturesPageFragment on RootQueryType {
-    feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature2: imageSharp(id: { regex: "/src\/img\/feature-2.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature3: imageSharp(id: { regex: "/src\/img\/feature-3.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
+    ...FeaturesFragment
   }
 `;
