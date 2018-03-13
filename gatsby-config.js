@@ -41,6 +41,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        navigateFallback: null,
+        navigateFallbackWhitelist: [],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-netlify',
       options: {
         allPageHeaders: [
@@ -49,6 +56,5 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-offline',
   ],
 };
