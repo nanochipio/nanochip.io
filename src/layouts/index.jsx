@@ -109,6 +109,12 @@ const Footer = (props: LayoutProps) => (
             </div>
           </div>
 
+          <div className="col-6 col-md-6 col-xl-2">
+            {props.lang === 'de' ?
+              <Link href to="/" className="btn btn-round btn-outline-primary"><Trans>English</Trans></Link> :
+              <Link href to="/de/" className="btn btn-round btn-outline-primary"><Trans>Deutsch</Trans></Link>}
+          </div>
+
         </div>
       </div>
       <div data-provide="map" />
@@ -130,7 +136,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
   const { i18n } = props;
   const { siteUrl } = props.data.site.siteMetadata;
   const prefix = props.lang === 'de' ? '/de' : '';
-  const title = `${i18n.t`site.title`} — ${i18n.t`site.slogan`} | ${name}`;
+  const title = `${i18n.t`Build trust around your cap table`} | ${name}`;
   const thumbnail = `${siteUrl}/thumbnail.png`;
   return (
     <div>
