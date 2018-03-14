@@ -12,7 +12,7 @@ const Header = ({ i18n, data }: Props) => (
       <div className="row align-items-center gap-y mt-5 mb-7">
 
         <div className="col-lg-5 ml-auto mb-5">
-          <h1><Trans>Build trust<br />in your cap table</Trans></h1>
+          <h1><Trans>Build trust in your cap table</Trans></h1>
           <div className="mb-6">
             <p>
               <Trans>
@@ -56,7 +56,12 @@ const IndexPage = (props: Props) => (
           <header className="section-header mb-3">
             <h2><Trans>You’re in good company</Trans></h2>
             <hr className="my-2" />
-            <p>Many successful companies already use Ledgy to keep track of their share register</p>
+            <p>
+              <Trans>
+                Many successful companies already use Ledgy to keep track of
+                their share register.
+              </Trans>
+            </p>
           </header>
 
           <div className="partner mx-auto" style={{ maxWidth: '1200px' }}>
