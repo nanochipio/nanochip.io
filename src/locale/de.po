@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-03-14T12:42:07.010Z\n"
-"PO-Revision-Date: 2018-03-14 17:58+0100\n"
+"PO-Revision-Date: 2018-03-14 18:01+0100\n"
 "Language: de\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -307,32 +307,33 @@ msgstr "Holding Confirmation"
 msgid "Bring order into your documents"
 msgstr "Bring’ Ordnung in deine Dokumente"
 
+#, fuzzy
 msgid "Every transaction in your share register usually comes with a pile of additional documents, like contracts. Get rid of complicated folder structures and simply attach them directly to your transactions. Ledgy gives you an overview over all documents that you uploaded and their corresponding transactions. Also in your transaction history you can select any transaction and see all connected documents at a glance.<0/><1/>You can also share your documents by sending a simple link to your shareholders. This eliminates confusion about different versions of documents, as it is often the case when sending documents via email."
-msgstr "Jede Transaktion in Ihrem Aktienregister enthält normalerweise einen Stapel zusätzlicher Dokumente, z. B. Verträge. Befreien Sie sich von komplizierten Ordnerstrukturen und hängen Sie diese einfach direkt an Ihre Transaktionen an. Ledgy gibt Ihnen einen Überblick über alle von Ihnen hochgeladenen Dokumente und deren entsprechende Transaktionen. Außerdem können Sie in Ihrer Transaktionshistorie beliebige Transaktionen auswählen und alle verbundenen Dokumente auf einen Blick sehen. <0/> <1/> Sie können Ihre Dokumente auch teilen, indem Sie einen einfachen Link an Ihre Aktionäre senden. Auf diese Weise werden Verwechslungen bei verschiedenen Versionen von Dokumenten vermieden, wie dies häufig beim Senden von Dokumenten per E-Mail der Fall ist."
+msgstr "Jede Transaktion in deinem Aktienregister enthält normalerweise einen Stapel zusätzlicher Dokumente, wie zum Beispiel Verträge. Befreie dich von komplizierten Ordnerstrukturen und verknüpfe sie einfach direkt mit deinen Transaktionen an. Ledgy gibt dir einen Überblick über alle von dir hochgeladenen Dokumente und deren verknüpften Transaktionen. Außerdem kannst du im Transaktionsverlauf beliebige Transaktionen auswählen und alle damit verknüpften Dokumente auf einen Blick einsehen. <0/> <1/> Du kannst Dokumente auch einfach per Link mit deinen Aktionären teilen. Auf diese Weise werden Verwechslungen bei verschiedenen Versionen von Dokumenten vermieden, was häufig beim Senden von Dokumenten per E-Mail der Fall ist."
 
 msgid "Document management"
 msgstr "Dokumenten-Management"
 
 msgid "Simulate the outcome of your upcoming financing rounds. Detailed models give you a headstart over angels and VCs."
-msgstr "Simulieren Sie das Ergebnis Ihrer bevorstehenden Finanzierungsrunde. Detaillierte Modelle geben Ihnen einen Vorsprung gegenüber Engeln und VCs."
+msgstr "Simuliere das Ergebnis einer bevorstehenden Finanzierungsrunde. Detaillierte Modelle geben dir einen Vorsprung gegenüber Business Angels und VCs."
 
 msgid "Explore new scenarios for upcoming financing rounds interactively"
-msgstr "Erforschen Sie interaktiv neue Szenarien für bevorstehende Finanzierungsrunden"
+msgstr "Erforsche interaktiv neue Szenarien für bevorstehende Finanzierungsrunden"
 
 msgid "Is your startup running well and you’re already thinking about a new financing round to fuel your growth and take your company to the next level?<0/><1/>Enter a valuation and you will see how your convertibles apply to your cap table immediately. If your convertible has a cap, discount or an interest—Ledgy does the math for you. Add an investment and enter the value of the investment. Watch in real-time how the new investment impacts your current shareholder distribution.<2/><3/>You can find the round modeling tool directly on the <4>Cap Table</4> page."
-msgstr "Läuft Ihr Startup gut und Sie denken bereits über eine neue Finanzierungsrunde nach, um Ihr Wachstum anzukurbeln und Ihr Unternehmen auf die nächste Stufe zu bringen? <0/> <1/> Geben Sie eine Bewertung ein und Sie werden sehen, wie sich Ihre Wandelanleihen auf Ihr Unternehmen auswirken Kappentabelle sofort. Wenn Ihr Cabrio einen Cap hat, hilft Discount oder ein Zins-Ledgy für Sie. Fügen Sie eine Investition hinzu und geben Sie den Wert der Investition ein. Beobachten Sie in Echtzeit, wie sich die neue Investition auf Ihre aktuelle Aktionärsverteilung auswirkt. <2/> <3/> Das Rundungsmodell-Tool finden Sie direkt auf der Seite <4> Cap Table </ 4>."
+msgstr "Läuft dein Startup gut und du denkst bereits über eine neue Finanzierungsrunde nach, um das Wachstum anzukurbeln und dein Unternehmen auf die nächste Stufe zu bringen?<0/><1/> Gib’ eine Valvation ein und du wirst sofort sehen, wie sich deine Convertibles auf den Cap Table deines Startup auswirken. Und falls dein Convertible ausserdem einen Cap oder Discount hat—Ledgy kümmert sich um alles. Füge eine neues Investment hinzu und gib’ den Wert der Investments an. Beobachte in Echtzeit, wie sich das neue Investment auf deine aktuelle Aktionärsverteilung auswirkt. <2/> <3/> Das Finanzierungsrunden-Tool findest du direkt auf der <4>Cap Table</ 4>-Seite."
 
 msgid "Scroll down and you will notice that the cap table now indicates the <0>Round Modeling</0> mode. This gives you a detailed overview about who owns how many shares after applying the new financing round. Cool, eh?"
-msgstr "Scrollen Sie nach unten und Sie werden feststellen, dass die Cap-Tabelle jetzt den Modus <0> Round Modeling </ 0> anzeigt. So erhalten Sie nach der Anwendung der neuen Finanzierungsrunde einen detaillierten Überblick darüber, wer wie viele Aktien besitzt. Cool, was?"
+msgstr "Scrolle nach unten und du wirst sehen, dass sich der Cap Table jetzt im Modus <0>Round modeling</ 0> befindet. So erhältst du nach der Anwendung der neuen Finanzierungsrunde einen detaillierten Überblick darüber, wer wie viele Aktien besitzt. Ganz schön cool, oder?"
 
 msgid "Cap table during round modeling"
-msgstr "Cap-Tabelle während der runden Modellierung"
+msgstr "Cap Table während der während der Finanzierungsrundensimulation"
 
 msgid "Share your scenarios"
-msgstr "Teilen Sie Ihre Szenarien"
+msgstr "Teile deine Szenarien"
 
 msgid "After you’re finished with modeling your financing round, you can download the scenario as a PDF document and share it with your co-founders, lawyers and investors. The document includes the pre– and post–money valuation of your company, all investments and convertibles with their resulting share price and number of shares and, of course, the resulting cap table. At the end you will also find valuable plots to visualize the new development step of your company."
-msgstr "Nachdem Sie mit der Modellierung Ihrer Finanzierungsrunde fertig sind, können Sie das Szenario als PDF-Dokument herunterladen und mit Ihren Mitgründern, Anwälten und Investoren teilen. Das Dokument enthält die Pre- und Post-Money-Bewertung Ihres Unternehmens, aller Investments und Wandelanleihen mit dem daraus resultierenden Aktienkurs und der Anzahl der Aktien und natürlich die daraus resultierende Cap-Tabelle. Am Ende finden Sie auch wertvolle Grundstücke, um den neuen Entwicklungsschritt Ihres Unternehmens zu visualisieren."
+msgstr "Nachdem du mit der Modellierung der Finanzierungsrunde fertig bist, kannst du das Szenario als PDF-Dokument herunterladen und mit deinen Mitgründern, Anwälten und Investoren teilen. Das Dokument enthält die Pre- und Post-Money-Valuation deines Startups, alle Investments und Konvertibles mit dem daraus resultierenden Aktienpreisen, sowie der Anzahl der Aktien und natürlich den daraus resultierenden Cap Table. Am Ende findest du auch wertvolle Plots, um den neuen Entwicklungsschritt deines Unternehmens zu visualisieren."
 
 msgid "PDF export of the financing round"
 msgstr "PDF-Export der Finanzierungsrunde"
