@@ -112,8 +112,8 @@ const Footer = (props: LayoutProps) => (
 
           <div className="col-6 col-md-6 col-xl-2">
             {props.lang === 'de' ?
-              <Link href to={props.location.pathname.replace('/de', '')} className="btn btn-round btn-outline-primary"><Trans>English</Trans></Link> :
-              <Link href to={`/de${props.location.pathname}`} className="btn btn-round btn-outline-primary"><Trans>Deutsch</Trans></Link>}
+              <Link href to={props.location.pathname.replace('/de', '')} className="btn btn-round btn-outline-primary">English</Link> :
+              <Link href to={`/de${props.location.pathname}`} className="btn btn-round btn-outline-primary">Deutsch</Link>}
           </div>
 
         </div>
