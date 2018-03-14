@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-03-14T12:42:07.010Z\n"
-"PO-Revision-Date: 2018-03-14 16:42+0100\n"
+"PO-Revision-Date: 2018-03-14 17:05+0100\n"
 "Language: de\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -111,52 +111,52 @@ msgid "Contact"
 msgstr "Kontakt"
 
 msgid "Let’s Get In Touch"
-msgstr "Lass uns in Kontakt treten"
+msgstr "Wir sind für dich da"
 
 msgid "Here are the ways you can contact us with any questions you have"
 msgstr "Hier sind die Möglichkeiten, wie Sie uns bei Fragen kontaktieren können"
 
 msgid "Your name"
-msgstr "Ihr Name"
+msgstr "Dein Name"
 
 msgid "Your email"
 msgstr "Deine E-Mail"
 
 msgid "Your message"
-msgstr "Ihre Nachricht"
+msgstr "Deine Nachricht"
 
 msgid "Send enquiry"
-msgstr "Anfrage absenden"
+msgstr "Abschicken"
 
 msgid "Give us a call or stop by our door anytime. We will do our best to answer all enquiries within 24 hours on business days."
-msgstr "Rufen Sie uns an oder halten Sie jederzeit an unserer Tür. Wir werden unser Bestes geben, um alle Anfragen innerhalb von 24 Stunden an Werktagen zu beantworten."
+msgstr "Ruf an oder komm vorbei. Falls du uns nicht erreichst, werden wir uns so schnell wie möglich bei dir melden."
 
 msgid "8008 Zurich, Switzerland"
-msgstr "Zürich Schweiz"
+msgstr "8008 Zürich, Schweiz"
 
 msgid "ESOP"
 msgstr "Mitarbeiterbeteiligungsplan"
 
 msgid "Keep your employees motivated at work. They deserve it. Ledgy's ESOP module will help you to make it happen."
-msgstr "Halten Sie Ihre Mitarbeiter bei der Arbeit motiviert. Sie verdienen es. Das ESOP-Modul von Ledgy wird Ihnen dabei helfen."
+msgstr "Motiviere deine Mitarbeiter bei der Arbeit. Sie verdienen es. Das ESOP-Modul von Ledgy wird dir dabei helfen."
 
 msgid "Employee Stock Ownership Plans"
 msgstr "Mitarbeiterbeteiligungspläne"
 
 msgid "Make your employees happy"
-msgstr "Machen Sie Ihre Mitarbeiter glücklich"
+msgstr "Mach deine Mitarbeiter glücklich"
 
 msgid "You’re building a fast growing company and want your valuable employees to be part of your success? Ledgy offers you a powerful module to manage your employee stock ownership plans. No matter if you transfer real stock from your company to an employee, options from a fixed-size pool or even phantom stock.<0/><1/>Add a vesting schedule to your ESOPs and track their status in real-time. Coolest thing ever, let your employees log into Ledgy and allow them to see at any point in time how much stock they have already vested and how many shares are still outstanding.<2/><3/>Go to your <4>Transactions</4> page and click the <5>Add incentive</5> button to get started."
-msgstr "Sie bauen ein schnell wachsendes Unternehmen auf und möchten, dass Ihre wertvollen Mitarbeiter Teil Ihres Erfolges sind? Ledgy bietet Ihnen ein leistungsfähiges Modul zur Verwaltung Ihrer Mitarbeiterbeteiligungspläne. Ganz gleich, ob Sie echte Aktien von Ihrem Unternehmen auf einen Mitarbeiter, Optionen aus einem Pool mit fester Größe oder sogar Phantom Stocks übertragen. <0/> <1/> Fügen Sie Ihren ESOPs einen Terminplan hinzu und verfolgen Sie deren Status in Echtzeit. Coolste Sache aller Zeiten: Lassen Sie Ihre Mitarbeiter bei Ledgy einloggen und sehen Sie zu jedem Zeitpunkt, wie viele Aktien sie bereits erworben haben und wie viele Aktien noch ausstehen. <2/> <3/> Gehen Sie zu Ihren <4> Transaktionen </ 4> und klicken Sie auf <5> Incentive hinzufügen </ 5>, um loszulegen."
+msgstr "Du baust ein schnell wachsendes Unternehmen auf und möchtest, dass deine Mitarbeiter Teil des Erfolges sind? Ledgy bietet dir ein leistungsfähiges Modul zur Verwaltung deiner Mitarbeiterbeteiligungspläne. Egal ob du Aktien deines Unternehmens an einen Mitarbeiter, Optionen aus einem Pool mit fester Größe oder sogar Phantom Aktien übertragen willst. <0/><1/>Füge Vesting zu deinen ESOPs hinzu und verfolge deren Status in Echtzeit. Das beste daran: Deine Mitarbeiter können sich bei Ledgy einloggen und sehen zu jedem Zeitpunkt, wie viele Aktien sie bereits besitzen und wie viele ihnen zugeteilt sind. <2/><3/>Leg los, indem du auf die Seite <4>Transactions</4> gehst und <5> Add Incentive</ 5> auswählst."
 
 msgid "Add incentive plan"
-msgstr "Incentive-Plan hinzufügen"
+msgstr "Beteiligungsplan hinzufügen"
 
 msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, if there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
-msgstr "Sie können einen detaillierten Fälligkeitsplan erstellen, indem Sie festlegen, über wie viele Monate die Anteile übertragen werden sollen, ob es sich um eine Klippe handelt und wie oft eine neue Charge Aktien dem Mitarbeiter zugewiesen wird. <0/> Sobald Sie die ersten Zahlen eingeben , sehen Sie eine visuelle Darstellung des aktuellen Zeitplans."
+msgstr "Du kannst ein detailliertes Vesting hinzufügen, indem du festlegst, über wie viele Monate die Anteile übertragen werden sollen, ob es einen Cliff gibt und wie regelmäßig die Anteile vesten sollen. <0/> Sobald du die ersten Zahlen eingibst, siehst du eine visuelle Darstellung des aktuellen Vestings."
 
 msgid "Vesting schedule for ESOPs"
-msgstr "Zeitplan für ESOPs"
+msgstr "ESOP Vesting"
 
 msgid "In the case that your employee shares are implemented as options or phantom stock, you might want to define an ESOP pool first. Click the <0>Add pool</0> to create an options or phantom stock pool of a given share class and a fixed size."
 msgstr "Wenn Ihre Mitarbeiteraktien als Optionen oder Phantom Stock implementiert sind, möchten Sie möglicherweise zuerst einen ESOP-Pool definieren. Klicken Sie auf <0> Pool hinzufügen </ 0>, um einen Pool für Optionen oder virtuelle Aktien einer bestimmten Aktienklasse und eine feste Größe zu erstellen."
