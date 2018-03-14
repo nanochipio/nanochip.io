@@ -39,12 +39,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   As an investor you can profit a lot from Ledgy.
-                  Any of your portfolio companies that uses our platform will
+                  Any of your portfolio companies that uses the platform will
                   appear in your investment dashboard.
                   See your key performance indicators of your investments at a glance.
                   <br /><br />
                   Never lose track about how much you invested in which company and what’s
-                  the value of your investments today.
+                  the approximate value of your investments today.
                 </Trans>
               </p>
             </header>
@@ -64,9 +64,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   your investments. Check out what’s your stake in the company,
                   how many shares you own and how much you initially invested.
                   <br />
-                  Each update that the founders enter into their share register on Ledgy
-                  will subsequently be used to compute the current value of your shares
-                  and your return.
+                  Each valuation update that the founders enter into their share register on Ledgy
+                  will be reflected in the current value of your shares and your return.
                 </Trans>
               </p>
             </header>
@@ -84,9 +83,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   The transaction history will tell you exactly what happened to
                   your shares at what time.
-                  Keep track of when you bought or sold shares, at which price, or
-                  simply how much your convertible was worth and whether there was
-                  a cap, discount or interest.
+                  Keep track of when you bought or sold shares and at which price. See which
+                  options you are currently holding or how much interest is currently
+                  on your convertible and whether there was a cap or discount.
                 </Trans>
               </p>
             </header>
