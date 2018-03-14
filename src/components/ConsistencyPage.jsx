@@ -39,7 +39,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <h2><Trans>Replace your Excel with Ledgy</Trans></h2>
               <p>
                 <Trans>
-                  Keep all the history to your company’s share register at a single place.
+                  Keep all the history of your company’s share register at a single place.
                   No more shuffling around with different documents shared via email, Dropbox,
                   Google Drive or Slack.<br />
                   Ledgy will be your single source of truth.
@@ -66,8 +66,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   Ooops, there was an error in your share register?
-                  Don’t worry, Ledgy will track everything you do and assist
-                  you in getting your cap table straight.<br />
+                  Don’t worry, Ledgy will assist you in getting your cap table straight.<br />
                   Once finished, sit back and relax. Now you can be assured that
                   your cap table is error-free!
                 </Trans>
@@ -84,8 +83,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   Did you notice the number in the center bottom? Anytime you transfer
-                  share from one shareholder to another, Ledgy will show you many
-                  how many share that particular shareholder has <i>available</i> at
+                  shares from one shareholder to another, Ledgy will show you
+                  how many shares that particular shareholder has <i>available</i> at
                   that given point in time.
                 </Trans>
               </p>
@@ -103,8 +102,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   By the way if you decide to number your shares, we also got you covered.
                   Ledgy will track who owns which shares for each transaction
                   and assist you in entering valid share numbers.<br />
-                  With Ledgy you can be sure that no single share number might is
-                  missing or even assigned twice!
+                  With Ledgy you can be sure that no single share number goes
+                  missing or is assigned twice.
                 </Trans>
               </p>
             </div>
@@ -120,11 +119,13 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <header className="section-header text-left">
               <h1><Trans>Nice charts!</Trans></h1>
               <p>
-                Finished? Go back to the “Cap Table” page
-                and view the result.
-                At any point in the history of your share register, Ledgy
-                can draw you a nice diagram that represents the current equity
-                distribution of your company.
+                <Trans>
+                  Finished? Go back to the <i>Cap Table</i> page
+                  and view the result.
+                  At any point in the history of your share register, Ledgy
+                  can draw you a nice diagram that represents the current equity
+                  distribution of your company.
+                </Trans>
               </p>
             </header>
 
