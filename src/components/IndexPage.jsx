@@ -6,7 +6,7 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
 
-const Header = ({ data }: Props) => (
+const Header = ({ i18n, data }: Props) => (
   <header className="header text-white bg-ledgy">
     <div className="container">
       <div className="row align-items-center gap-y mt-5 mb-7">
@@ -30,7 +30,7 @@ const Header = ({ data }: Props) => (
         </div>
 
         <div className="col-lg-6 order-lg-first" data-aos="fade-up">
-          <Img {...data.laptop} alt="Screenshot of the Ledgy app" />
+          <Img {...data.laptop} alt={i18n.t`Screenshot of the Ledgy app`} />
         </div>
 
 

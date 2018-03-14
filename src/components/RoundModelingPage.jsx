@@ -35,27 +35,30 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div>
             <header className="section-header text-left">
-              <h2>Explore new scenarios for upcoming funding rounds interactively</h2>
+              <h2>Explore new scenarios for upcoming financing rounds interactively</h2>
               <p>
                 <Trans>
                   Is your startup running well and you’re already thinking about
                   a new financing round to fuel your growth and take your
                   company to the next level?
-                  You will find the round modeling tool directly on
-                  the “Cap Table” page.
+                  <br />
+                  <br />
                   Enter a valuation and you will see how your convertibles apply
                   to your cap table immediately.
-                  <br />
                   Add an investment and enter the value of the investment.
                   Watch in real-time how the new investment impacts your current
                   shareholder distribution.
+                  <br />
+                  <br />
+                  You can find the round modeling tool directly on
+                  the “Cap Table” page.
                 </Trans>
               </p>
             </header>
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.roundModelingSample} alt="Round Modeling" />
+                <Img {...props.data.roundModelingSample} alt={i18n.t`Round Modeling`} />
               </div>
             </div>
           </div>
@@ -72,7 +75,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-left">
-                <Img {...props.data.roundModelingCaptable} alt="Cap table during round modeling" />
+                <Img {...props.data.roundModelingCaptable} alt={i18n.t`Cap table during round modeling`} />
               </div>
             </div>
           </div>
@@ -83,10 +86,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   After you’re finished with modeling your financing round you can
-                  download the scenario as a pdf document and share it with your co-founders,
+                  download the scenario as a PDF document and share it with your co-founders,
                   friends and investors.
-                  The documents includes the pre-money valuation of your company,
-                  all investments and convertibles and the resulting cap table.
+                  The document includes the pre– and post–money valuation of your company,
+                  all investments and convertibles and, of course, the resulting cap table.
                   At the end you will also find valuable plots to visualize the new
                   development step of your company.
                 </Trans>
@@ -95,7 +98,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-up-right">
-                <Img {...props.data.roundModelingPdf} alt="PDF export of the financing round" />
+                <Img {...props.data.roundModelingPdf} alt={i18n.t`PDF export of the financing round`} />
               </div>
             </div>
           </div>
@@ -109,14 +112,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   As soon as you’re done with your financing round, hit the “Convert” button.
-                  This will transform the scenario into real transactions in your
+                  This will transform the scenario into real transactions for your
                   share register and make it visible to all shareholders and investors.
                 </Trans>
               </p>
             </div>
 
             <div className="col-md-5" data-aos="fade-left">
-              <Img {...props.data.roundModelingConvert} alt="Convert financing round" />
+              <Img {...props.data.roundModelingConvert} alt={i18n.t`Convert financing round`} />
             </div>
           </div>
 

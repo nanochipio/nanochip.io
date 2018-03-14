@@ -111,7 +111,7 @@ const IndexPage = (props: Props) => {
                 </p>
               </div>
               <div className="col-12 col-lg-6 p-50 align-self-center" data-aos="fade-left">
-                <Img {...data.mission} className="shadow-3" alt="mission" />
+                <Img {...data.mission} className="shadow-3" alt={i18n.t`mission`} />
               </div>
             </div>
           </div>

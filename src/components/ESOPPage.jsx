@@ -58,7 +58,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.addIncentive} alt="Add incentive plan" />
+                <Img {...props.data.addIncentive} alt={i18n.t`Add incentive plan`} />
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8 ml-auto" data-aos="fade-left">
-              <Img {...props.data.vestingSchedule} alt="Vesting schedule for ESOPs" />
+              <Img {...props.data.vestingSchedule} alt={i18n.t`Vesting schedule for ESOPs`} />
             </div>
           </div>
 
@@ -96,7 +96,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8 order-md-first" data-aos="fade-right">
-              <Img {...props.data.addPool} alt="Add an incentives pool" />
+              <Img {...props.data.addPool} alt={i18n.t`Add an incentives pool`} />
             </div>
           </div>
 
@@ -114,7 +114,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8" data-aos="fade-left">
-              <Img {...props.data.addIncentivePsop} alt="Add incentives from a pool" />
+              <Img {...props.data.addIncentivePsop} alt={i18n.t`Add incentives from a pool`} />
             </div>
           </div>
 
@@ -133,7 +133,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.incentivesDashboard} alt="ESOPs in the employee dashboard" />
+                <Img {...props.data.incentivesDashboard} alt={i18n.t`ESOPs in the employee dashboard`} />
               </div>
             </div>
           </div>

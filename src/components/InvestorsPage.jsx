@@ -35,22 +35,23 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div>
             <header className="section-header text-left">
-              <h2>Your portfolio at a glance</h2>
+              <h2><Trans>Your portfolio at a glance</Trans></h2>
               <p>
                 <Trans>
-                  Also as an investor you can profit a lot from Ledgy.
+                  As an investor you can profit a lot from Ledgy.
                   Any of your portfolio companies that uses our platform will
                   appear in your investment dashboard.
                   See your key performance indicators of your investments at a glance.
-                  <br />
-                  Never lose track about how much, where and in what you invested.
+                  <br /><br />
+                  Never lose track about how much you invested in which company and what’s
+                  the value of your investments today.
                 </Trans>
               </p>
             </header>
 
             <div className="row gap-y">
               <div className="col-md-8 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.dashboardCards} alt="Investment overview" />
+                <Img {...props.data.dashboardCards} alt={i18n.t`Investment overview`} />
               </div>
             </div>
           </div>
@@ -58,19 +59,21 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           <div>
             <header className="section-header text-left">
               <p>
-                The detailed investment table gives an overview over the metrics of
-                your investments. Check out what’s your stake in the company,
-                how many shares you own and how much you initially invested.
-                <br />
-                Each update that the founders enter into their share register on Ledgy
-                will subsequently be used to compute the current value of your shares
-                and your return.
+                <Trans>
+                  The detailed investment table gives an overview over the metrics of
+                  your investments. Check out what’s your stake in the company,
+                  how many shares you own and how much you initially invested.
+                  <br />
+                  Each update that the founders enter into their share register on Ledgy
+                  will subsequently be used to compute the current value of your shares
+                  and your return.
+                </Trans>
               </p>
             </header>
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-left">
-                <Img {...props.data.dashboardShares} alt="Share details" />
+                <Img {...props.data.dashboardShares} alt={i18n.t`Share details`} />
               </div>
             </div>
           </div>
@@ -90,7 +93,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-up-right">
-                <Img {...props.data.dashboardHistory} alt="Transaction history" />
+                <Img {...props.data.dashboardHistory} alt={i18n.t`Transaction history`} />
               </div>
             </div>
           </div>

@@ -53,7 +53,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-12 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.shareRegisterPdf} alt="PDF export of the share register" />
+                <Img {...props.data.shareRegisterPdf} alt={i18n.t`PDF export of the share register`} />
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-5" data-aos="fade-left">
-              <Img {...props.data.sendHoldingConfirmation} alt="Dialog to holding confirmation" />
+              <Img {...props.data.sendHoldingConfirmation} alt={i18n.t`Dialog to holding confirmation`} />
             </div>
           </div>
 
@@ -106,7 +106,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-8 mx-auto mb-7" data-aos="fade-right">
-                <Img {...props.data.holdingConfirmationPdf} alt="Holding confirmation" />
+                <Img {...props.data.holdingConfirmationPdf} alt={i18n.t`Holding confirmation`} />
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-left">
-                <Img {...props.data.documentManagement} alt="Document management" />
+                <Img {...props.data.documentManagement} alt={i18n.t`Document management`} />
               </div>
             </div>
           </div>

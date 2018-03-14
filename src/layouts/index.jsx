@@ -24,9 +24,9 @@ type LayoutProps = {
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
   <Link href to={`${props.prefix}/#start`} className="navbar-brand">
-    <img className="logo-dark" src={logoDefault} width={100} height={40} alt="Ledgy" />
+    <img className="logo-dark" src={logoDefault} width={100} height={40} alt={name} />
     {props.inverse &&
-      <img className="logo-inverse" src={logoInverse} width={100} height={40} alt="Ledgy" />}
+      <img className="logo-inverse" src={logoInverse} width={100} height={40} alt={name} />}
   </Link>
 );
 

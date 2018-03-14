@@ -56,7 +56,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.createCaptable} alt="Create a cap table" />
+                <Img {...props.data.createCaptable} alt={i18n.t`Create a cap table`} />
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8 ml-auto" data-aos="fade-left">
-              <Img {...props.data.transactionError} alt="Transaction error checking" />
+              <Img {...props.data.transactionError} alt={i18n.t`Transaction error checking`} />
             </div>
           </div>
 
@@ -92,7 +92,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8 order-md-first" data-aos="fade-right">
-              <Img {...props.data.availableShares} alt="Available shares for transfer" />
+              <Img {...props.data.availableShares} alt={i18n.t`Available shares for transfer`} />
             </div>
           </div>
 
@@ -110,7 +110,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
 
             <div className="col-md-8" data-aos="fade-left">
-              <Img {...props.data.shareNumberChecking} alt="Share number checking" />
+              <Img {...props.data.shareNumberChecking} alt={i18n.t`Share number checking`} />
             </div>
           </div>
 
@@ -130,7 +130,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
             <div className="row gap-y">
               <div className="col-md-10 mx-auto mb-7" data-aos="fade-up">
-                <Img {...props.data.captableBasic} alt="A basic cap table" />
+                <Img {...props.data.captableBasic} alt={i18n.t`A basic cap table`} />
               </div>
             </div>
           </div>

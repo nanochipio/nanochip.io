@@ -41,8 +41,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             Did you know that the many share registers are incomplete or
             just wrong?
             Building a share register with Excel or Word can easily lead to
-            inconsistencies. We have you covered. Set up your shares with Ledgy
-            and be assured, that all data is consistent.
+            inconsistencies.
+            Set up your shares with Ledgy
+            and be assured, that all data is consistent at any time.
           </Feature>
 
           <Hr />
@@ -53,9 +54,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             url="round-modeling"
             left
           >
-            What’s the percentage of the founders if a VC
+            What’s the percentage of the founders after a VC
             invests $2,000,000 at a valuation of $7,500,000 taking into account
-            the 2 convertibles and the ESOP pool?<br />
+            the 2 outstanding convertible loans and increasing the ESOP pool?<br />
             Seriously, we don’t know. But Ledgy does.
           </Feature>
 
@@ -66,24 +67,23 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             name="Employee Stock Ownership Plans"
             url="esop"
           >
-            Let your employees take part in your companies success.
-            Ledgy supports vesting schedules, real stock, options, with
-            pool, without pool, and much more.<br />
-            Employees can even log into Ledgy and see their vested shares in real-time.
+            Let your employees be part of your company’s success.
+            Ledgy supports vested stock, options, inverse vesting, ESOP pools, and much more.<br />
+            Employees can even log into Ledgy and track their vested shares in real–time.
           </Feature>
 
           <Hr />
 
           <Feature
             {...props}
-            name="Reporting"
+            name="Reporting & Documents"
             url="reporting"
             left
           >
             Oh, it’s tax season again and there are 50 holding confirmations
             waiting to be sent to your shareholders.
             Pasting names into document templates, computing the tax value of all share …<br />
-            Don’t worry. Generate all holding confirmations with a single click.
+            Don’t worry. Generate  and send all important documents with a single click.
           </Feature>
 
           <Hr />
@@ -94,12 +94,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             name="the Investor Dashboard"
             url="investors"
           >
-            You are an investor and want to your portfolio companies?
+            You are an investor and want to track your portfolio companies?
             The founders are busy and the numbers they give you are different
-            from your own records?
+            from your own records?<br />
             With their share register on Ledgy, there’s only a single source of truth.
-            Stop tracking your investments meticulously and simply convince
-            your portfolio companies to use Ledgy.
+            Convince your companies and you will never miss anything regarding your investments.
           </Feature>
 
         </div>
