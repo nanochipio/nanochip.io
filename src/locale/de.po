@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-03-14T12:42:07.010Z\n"
-"PO-Revision-Date: 2018-03-14 17:40+0100\n"
+"PO-Revision-Date: 2018-03-14 17:58+0100\n"
 "Language: de\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -338,16 +338,17 @@ msgid "PDF export of the financing round"
 msgstr "PDF-Export der Finanzierungsrunde"
 
 msgid "Convert to transactions"
-msgstr "In Transaktionen konvertieren"
+msgstr "Zu Transaktionen umwandeln"
 
+#, fuzzy
 msgid "As soon as you’re done with your financing round, hit the <0>Convert</0> button. This will transform the scenario into real transactions for your share register and make it visible to all shareholders and investors."
-msgstr "Sobald Sie mit Ihrer Finanzierungsrunde fertig sind, drücken Sie die Taste <0> Convert </ 0>. Dadurch wird das Szenario in echte Transaktionen für Ihr Aktienregister umgewandelt und für alle Aktionäre und Anleger sichtbar gemacht."
+msgstr "Sobald du mit der Finanzierungsrunde fertig bist, drücke die Taste <0> Convert </ 0>. Dadurch wird das Szenario in echten Transaktionen in deinem Aktienregister umgewandelt und für alle Aktionäre und Anleger sichtbar gemacht."
 
 msgid "Convert financing round"
 msgstr "Finanzierungsrunde umwandeln"
 
 msgid "Why it’s awesome"
-msgstr "Warum es großartig ist"
+msgstr "Warum Ledgy benutzen"
 
 msgid "Blog"
 msgstr "Blog"
@@ -356,10 +357,10 @@ msgid "Sign In"
 msgstr "Anmelden"
 
 msgid "Try it for free"
-msgstr "VERSUCH KOSTENLOS"
+msgstr "Kostenlos ausprobieren"
 
 msgid "Already using Ledgy?"
-msgstr "Verwenden Sie schon Ledgy?"
+msgstr "Verwendest du schon Ledgy?"
 
 msgid "Sign in"
 msgstr "Anmelden"
@@ -368,10 +369,10 @@ msgid "Company"
 msgstr "Firma"
 
 msgid "Build trust around your cap table"
-msgstr "Bilden Sie Vertrauen um Ihren Kappentisch"
+msgstr "Bilde Vertrauen um deinen Cap Table"
 
 msgid "Manage your cap table with Ledgy. The single place to track all your shares, manage your ESOPs and model detailed financing rounds."
-msgstr "Verwalte deinen Cap-Tisch mit Ledgy. Der einzige Ort, um alle Ihre Aktien zu verfolgen, verwalten Sie Ihre ESOPs und modellieren detaillierte Finanzierungsrunden."
+msgstr "Verwalte deinen Cap Table mit Ledgy. Der einzige Ort, um alle deine Aktien zu verfolgen, deine ESOPs zu verwalten und detaillierte Finanzierungsrunden zu modellieren."
 
 msgid "cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors"
-msgstr "cap table, stock ledger, Aktienregister, Startup, runde Modellierung, Aktien, esop, Reporting, Investoren"
+msgstr "Cap Table, Aktienregister, Startup, Modellierung von Finanzierungsrunden, Aktien, esop, Reporting, Investoren"
