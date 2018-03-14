@@ -39,14 +39,15 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   In order to create a legally binding share register it
-                  is still necessary to add a physical signature.
-                  With Ledgy you can download a beatiful summary of your company’s
-                  history.
+                  is necessary to add a handwritten signature.
+                  With Ledgy you can download a beautiful snapshot
+                  of your company’s shares structure.
+                  Simply print and sign it to have a legally valid document.
                   <br /><br />
                   It includes the current cap table, including the non-diluted and
                   fully-diluted stake of each shareholder (if you have options/phantom stock),
-                  your convertibles and ESOPs and finally the transaction history,
-                  which tracks every change ever made to your cap table since incorporation.
+                  your convertibles and ESOPs, and finally the transaction history,
+                  which tracks every change ever made to your cap table since the incorporation.
                 </Trans>
               </p>
             </header>
@@ -71,15 +72,14 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   Remember that day last year during tax season when you had to send
-                  holding confirmations to each of your share, filling out boring
+                  holding confirmations to each shareholder, filling out boring
                   Word templates by hand?
                   <br /><br />
-                  We’ve got the solution for you. With a single click you create
+                  We’ve got the solution for you. With a single click Ledgy creates
                   nicely formatted holding confirmations for all of your shareholders
                   and send them directly via email.
                   <br /><br />
-                  Hours of tedious work is now reduced to just a few seconds.
-                  Now that’s really cool!
+                  Hours of tedious work is now reduced to just a few seconds. Hurray!
                 </Trans>
               </p>
             </div>
@@ -96,8 +96,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   The holding confirmation lists all assets that a shareholder owns,
                   as well as their total value needed for the tax declaration.
-                  Employees will be able to see there stock ownership plans and
-                  how many of their total shares they have already vested.
+                  Employees will be able to see their stock ownership plans and
+                  how many of their total shares they already have vested.
                   <br />
                   All documents are ready to be sent to the tax authority!
                 </Trans>
@@ -120,17 +120,18 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   Every transaction in your share register usually comes with a
-                  pile of additional documents.
+                  pile of additional documents, like contracts.
                   Get rid of complicated folder structures and simply attach them
                   directly to your transactions.
                   Ledgy gives you an overview over all documents that you uploaded and
                   their corresponding transactions.
-                  Also in your transaction history you can select any transaction and have
+                  Also in your transaction history you can select any transaction and see
                   all connected documents at a glance.
                   <br /><br />
-                  You can also create unique URLs for your documents and share them
-                  with your shareholders. This eliminates confusion about different
-                  versions of documents, as is often the case when sending documents via email.
+                  You can also share your documents by sending a simple
+                  link to your shareholders.
+                  This eliminates confusion about different
+                  versions of documents, as it is often the case when sending documents via email.
                 </Trans>
               </p>
             </header>
