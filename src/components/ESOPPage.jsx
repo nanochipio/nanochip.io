@@ -50,8 +50,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   to see at any point in time how much stock they have already vested and
                   how many shares are still outstanding.
                   <br /><br />
-                  Go to your “Transactions” page and click
-                  the “Add incentive” button to get started.
+                  Go to your <i>Transactions</i> page and click
+                  the <i>Add incentive</i> button to get started.
                 </Trans>
               </p>
             </header>
@@ -89,7 +89,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   In the case that your employee shares are implemented as options
                   or phantom stock, you might want to define an ESOP pool first.
-                  Click the “Add pool” to create an options or
+                  Click the <i>Add pool</i> to create an options or
                   phantom stock pool of a given share class and a fixed size.
                 </Trans>
               </p>
@@ -106,7 +106,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   After you have added a pool, you can select it from the incentives
                   screen.
-                  Check back at your “Cap Table” and press “Fully diluted” to see
+                  Check back at your <i>Cap Table</i> and press <i>Fully diluted</i> to see
                   the newly created pool and employee incentives!
                 </Trans>
               </p>

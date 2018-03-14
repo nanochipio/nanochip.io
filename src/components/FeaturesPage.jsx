@@ -91,7 +91,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               Oh, it’s tax season again and there are 50 holding confirmations
               waiting to be sent to your shareholders.
               This means pasting names into document templates,
-              computing the tax value of all shares … <br />
+              computing the tax value of all shares… <br />
               Don’t worry. Generate and send all important documents with a single click on Ledgy.
             </Trans>
           </Feature>
