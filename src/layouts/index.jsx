@@ -131,6 +131,7 @@ type SiteProps = {
     name: string, siteUrl: string,
   } } },
   children: (Object) => React.Node,
+  location: { pathname: string },
 }
 
 const TemplateWrapper = withI18n()((props: SiteProps) => {
