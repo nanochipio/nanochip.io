@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-03-14T12:42:07.010Z\n"
-"PO-Revision-Date: 2018-03-14 17:11+0100\n"
+"PO-Revision-Date: 2018-03-14 17:26+0100\n"
 "Language: de\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -155,24 +155,23 @@ msgstr "Beteiligungsplan hinzufügen"
 msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, if there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 msgstr "Sie können einen detaillierten Fälligkeitsplan erstellen, indem Sie festlegen, über wie viele Monate die Anteile übertragen werden sollen, ob es sich um eine Klippe handelt und wie oft eine neue Charge Aktien dem Mitarbeiter zugewiesen wird. <0/> Sobald Sie die ersten Zahlen eingeben , sehen Sie eine visuelle Darstellung des aktuellen Zeitplans."
 
-#, fuzzy
 msgid "Vesting schedule for ESOPs"
-msgstr "ESOP Vesting"
+msgstr "ESOP-Vesting"
 
 msgid "In the case that your employee shares are implemented as options or phantom stock, you might want to define an ESOP pool first. Click the <0>Add pool</0> to create an options or phantom stock pool of a given share class and a fixed size."
-msgstr "Wenn Ihre Mitarbeiteraktien als Optionen oder Phantom Stock implementiert sind, möchten Sie möglicherweise zuerst einen ESOP-Pool definieren. Klicken Sie auf <0> Pool hinzufügen </ 0>, um einen Pool für Optionen oder virtuelle Aktien einer bestimmten Aktienklasse und eine feste Größe zu erstellen."
+msgstr "Falls du Optionen oder Phantom Stock als Mitarbeiterbeteiligung anbietest, solltest du zuerst einen ESOP-Pool definieren. Klicke auf <0>Pool hinzufügen</0>, um einen Pool für Optionen oder Phantom Stock einer bestimmten Aktienklasse und eine feste Größe zu erstellen."
 
 msgid "Add an incentives pool"
-msgstr "Fügen Sie einen Prämienpool hinzu"
+msgstr "Füge einen Incentives-Pool hinzu"
 
 msgid "After you have added a pool, you can select it from the incentives screen. Check back at your <0>Cap Table</0> and press <1>Fully diluted</1> to see the newly created pool and employee incentives!"
-msgstr "Nachdem Sie einen Pool hinzugefügt haben, können Sie ihn über den Bildschirm \"Anreize\" auswählen. Schaue zurück an deiner <0> Deckentabelle </ 0> und drücke <1> vollständig verdünnt </ 1>, um die neu erstellten Pool- und Mitarbeiteranreize zu sehen!"
+msgstr "Nachdem du einen Pool hinzugefügt hast, kannst du ihn Investives-Formular auswählen. Gehe zurück zur <0>Cap Table</0>-Seite und klicke auf <1>Fully diluted</1>, um die neu erstellten Pool- und Mitarbeiterbeteiligungen zu sehen!"
 
 msgid "Add incentives from a pool"
-msgstr "Füge Anreize aus einem Pool hinzu"
+msgstr "Füge Mitarbeiterbeteiligungen aus einem Pool hinzu"
 
 msgid "Keep your employees engaged"
-msgstr "Halten Sie Ihre Mitarbeiter engagiert"
+msgstr "Motiviere deine Mitarbeiter"
 
 msgid "ESOPs in the employee dashboard"
 msgstr "ESOPs im Mitarbeiter-Dashboard"
