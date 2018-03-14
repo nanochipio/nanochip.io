@@ -42,10 +42,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   employees to be part of your success?
                   Ledgy offers you a powerful module to manage your
                   employee stock ownership plans.
-                  No matter if you transfer real stock from your company to your employees,
-                  options from a fixed-size options pool, or even phantom stock.
+                  No matter if you transfer real stock from your company to an employee,
+                  options from a fixed–size pool, or even phantom stock.
                   <br /><br />
-                  Add a vesting schedule to your ESOPs and track their status in real-time.
+                  Add a vesting schedule to your ESOPs and track their status in real–time.
                   Coolest thing ever, let your employees log into Ledgy and allow them
                   to see at any point in time how much stock they have already vested and
                   how many shares are still outstanding.
@@ -67,11 +67,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <div className="col-md-4">
               <p>
                 <Trans>
-                  You can define a detailed vesting schedule by defining over how
+                  You can create a detailed vesting schedule by defining over how
                   many months the shares are to be vested, if there’s a cliff and
-                  how often a new batch of shares get assigned to the employee.<br />
+                  how often a new batch of shares gets assigned to the employee.<br />
                   As soon as you enter the first numbers, you will see a visual representation
-                  of the  current schedule.
+                  of the current schedule.
                 </Trans>
               </p>
             </div>
@@ -88,7 +88,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   In the case that your employee shares are implemented as options
-                  or phantom stock, you might want to define a pool first.
+                  or phantom stock, you might want to define an ESOP pool first.
                   Click the “Add pool” to create an options or
                   phantom stock pool of a given share class and a fixed size.
                 </Trans>
@@ -106,9 +106,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   After you have added a pool, you can select it from the incentives
                   screen.
-                  Check back at your “Cap Table” and
-                  press “Fully diluted” to see your newly created
-                  pool and employee incentives!
+                  Check back at your “Cap Table” and press “Fully diluted” to see
+                  the newly created pool and employee incentives!
                 </Trans>
               </p>
             </div>
@@ -138,7 +137,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <FeatureLinks {...props} page="esop" />
+          <FeatureLinks {...props} i18n={i18n} page="esop" />
 
         </div>
       </section>

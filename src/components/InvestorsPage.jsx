@@ -98,7 +98,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             </div>
           </div>
 
-          <FeatureLinks {...props} page="investors" />
+          <FeatureLinks {...props} i18n={i18n} page="investors" />
 
         </div>
       </section>

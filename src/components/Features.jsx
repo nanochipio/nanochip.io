@@ -23,7 +23,7 @@ export const Feature = (props: {
       <h2>{props.title || props.name}</h2>
       <p>{props.children}</p>
       <Link href to={`${props.prefix}/features/${props.url}`}>
-        Read More about {props.name} <i className="ti-angle-right fs-10 ml-1" />
+        <Trans>Read More about</Trans> {props.name} <i className="ti-angle-right fs-10 ml-1" />
       </Link>
     </div>
 
@@ -68,10 +68,11 @@ const FeatureLink = (props: {
 );
 
 
-export const FeatureLinks = (props: {
+export const FeatureLinks = ({ i18n, ...props }: {
   prefix: string,
   page: string,
   data: Object,
+  i18n: I18n,
 }) => (
   <div>
     <hr className="my-5" />
@@ -82,11 +83,11 @@ export const FeatureLinks = (props: {
 
     <div className="row gap-y">
 
-      <FeatureLink {...props} name="Consistency" url="consistency" />
-      <FeatureLink {...props} name="Round Modeling" url="round-modeling" />
-      <FeatureLink {...props} name="ESOP" url="esop" />
-      <FeatureLink {...props} name="Reporting" url="reporting" />
-      <FeatureLink {...props} name="Investors" url="investors" />
+      <FeatureLink {...props} name={i18n.t`Consistency`} url="consistency" />
+      <FeatureLink {...props} name={i18n.t`Round Modeling`} url="round-modeling" />
+      <FeatureLink {...props} name={i18n.t`ESOP`} url="esop" />
+      <FeatureLink {...props} name={i18n.t`Reporting`} url="reporting" />
+      <FeatureLink {...props} name={i18n.t`Investors`} url="investors" />
 
     </div>
   </div>
