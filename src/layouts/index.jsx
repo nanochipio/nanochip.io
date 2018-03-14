@@ -63,12 +63,12 @@ const Footer = (props: LayoutProps) => (
       <div className="container">
         <div className="row gap-y align-items-center">
           <div className="col-md-5 text-center text-md-left">
-            <h3>Try it for free</h3>
-            <p>Already using Ledgy? <a href={`${appUrl}/login`}>Sign in</a>.</p>
+            <h3><Trans>Try it for free</Trans></h3>
+            <p><Trans>Already using Ledgy?</Trans> <a href={`${appUrl}/login`}><Trans>Sign in</Trans></a>.</p>
           </div>
 
           <div className="col-md-auto ml-auto text-center text-md-right">
-            <a className="btn-block d-sm-inline btn btn-round btn-xl btn-primary mb-2" href={`${appUrl}/signup`}>Get Started</a>
+            <a className="btn-block d-sm-inline btn btn-round btn-xl btn-primary mb-2" href={`${appUrl}/signup`}><Trans>Get Started</Trans></a>
           </div>
         </div>
       </div>
@@ -82,10 +82,10 @@ const Footer = (props: LayoutProps) => (
           </div>
 
           <div className="col-6 col-md-3 col-xl-2">
-            <h6 className="mb-4 mt-1"><strong>Company</strong></h6>
+            <h6 className="mb-4 mt-1"><strong><Trans>Company</Trans></strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/about-us`}><Trans>About us</Trans></Link>
-              <a className="nav-link" href={blogUrl}>Blog</a>
+              <a className="nav-link" href={blogUrl}><Trans>Blog</Trans></a>
               <Link className="nav-link" href to={`${props.prefix}/contact`}><Trans>Contact</Trans></Link>
             </div>
           </div>
@@ -131,6 +131,7 @@ type SiteProps = {
     name: string, siteUrl: string,
   } } },
   children: (Object) => React.Node,
+  location: { pathname: string },
 }
 
 const TemplateWrapper = withI18n()((props: SiteProps) => {
