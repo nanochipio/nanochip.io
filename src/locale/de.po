@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-03-14T12:42:07.010Z\n"
-"PO-Revision-Date: 2018-03-14 17:05+0100\n"
+"PO-Revision-Date: 2018-03-14 17:10+0100\n"
 "Language: de\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -155,6 +155,7 @@ msgstr "Beteiligungsplan hinzufügen"
 msgid "You can create a detailed vesting schedule by defining over how many months the shares are to be vested, if there’s a cliff and how often a new batch of shares gets assigned to the employee.<0/>As soon as you enter the first numbers, you will see a visual representation of the current schedule."
 msgstr "Du kannst ein detailliertes Vesting hinzufügen, indem du festlegst, über wie viele Monate die Anteile übertragen werden sollen, ob es einen Cliff gibt und wie regelmäßig die Anteile vesten sollen. <0/> Sobald du die ersten Zahlen eingibst, siehst du eine visuelle Darstellung des aktuellen Vestings."
 
+#, fuzzy
 msgid "Vesting schedule for ESOPs"
 msgstr "ESOP Vesting"
 
@@ -237,38 +238,39 @@ msgstr "Verwenden Sie Ledgy, um alle Ihre Aktien zu verfolgen, verwalten Sie Ihr
 msgid "See the demo"
 msgstr "Siehe die Demo"
 
+#, fuzzy
 msgid "Get Started"
-msgstr "Jetzt starten"
+msgstr "Los geht’s"
 
 msgid "Screenshot of the Ledgy app"
-msgstr "Screenshot der Ledgy App"
+msgstr "Screenshot der Ledgy-App"
 
 msgid "You’re in good company"
-msgstr "Du bist in guter Gesellschaft"
+msgstr "Du befindest dich in guter Gesellschaft"
 
 msgid "Find out why they trust us"
 msgstr "Finde heraus, warum sie uns vertrauen"
 
 msgid "Investors love to track the progress of their companies. Help them to be excited about what you have achieved."
-msgstr "Investoren lieben es, den Fortschritt ihrer Unternehmen zu verfolgen. Hilf ihnen, sich auf das zu freuen, was du erreicht hast."
+msgstr "Investoren lieben es, den Fortschritt ihrer Unternehmen zu verfolgen. Hilf ihnen, sich darüber zu freuen, was ihr schon erreicht habt."
 
 msgid "Your portfolio at a glance"
-msgstr "Ihr Portfolio auf einen Blick"
+msgstr "Dein Portfolio auf einen Blick"
 
 msgid "As an investor you can profit a lot from Ledgy. Any of your portfolio companies that uses the platform will appear in your investment dashboard. See your key performance indicators of your investments at a glance.<0/><1/>Never lose track about how much you invested in which company and what’s the approximate value of your investments today."
-msgstr "Als Investor können Sie viel von Ledgy profitieren. Alle Ihre Portfoliounternehmen, die die Plattform verwenden, werden in Ihrem Investment-Dashboard angezeigt. Sehen Sie Ihre wichtigsten Leistungsindikatoren Ihrer Anlagen auf einen Blick. <0/> <1/> Sie verlieren nie den Überblick darüber, wie viel Sie in welches Unternehmen investiert haben und wie hoch der ungefähre Wert Ihrer Investitionen heute ist."
+msgstr "Als Investor kannst die sehr von Ledgy profitieren. Alle deine Portfoliounternehmen, die unsere Plattform verwenden, werden in deinem Investment-Dashboard angezeigt. Dort hast du die wichtigsten Leistungsindikatoren deine Investments auf einen Blick. <0/> <1/> Verliere nie mehr den Überblick darüber, wie viel du in welches Unternehmen investiert hast und wie viel deine Investments heute wert sind."
 
 msgid "Investment overview"
-msgstr "Investitionsübersicht"
+msgstr "Investment-Übersicht"
 
 msgid "The detailed investment table gives an overview over the metrics of your investments. Check out what’s your stake in the company, how many shares you own and how much you initially invested.<0/>Each valuation update that the founders enter into their share register on Ledgy will be reflected in the current value of your shares and your return."
-msgstr "Die detaillierte Anlagetabelle gibt einen Überblick über die Kennzahlen Ihrer Anlagen. Prüfen Sie, wie hoch Ihr Anteil am Unternehmen ist, wie viele Anteile Sie besitzen und wie viel Sie ursprünglich angelegt haben. <0/> Jedes Bewertungsupdate, das die Gründer in ihr Aktienregister auf Ledgy eintragen, wird sich im aktuellen Wert Ihrer Aktien und Ihres Rückkehr."
+msgstr "Die detaillierte Tabelle gibt dir einen Überblick über die wichtigsten Kennzahlen deiner Investments. Schau’ nach, wie hoch dein Anteil am Unternehmen ist, wie viele Anteile du besitzt und wie viel du ursprünglich investiert hast. <0/> Jedes Update der Unternehmensbewertung, das die Gründer in ihr Aktienregister auf Ledgy eintragen, wird sich im aktuellen Wert deiner Aktien und deinem Ertrag wiederspiegeln."
 
 msgid "Share details"
-msgstr "Teilen Details"
+msgstr "Aktiendetails"
 
 msgid "The transaction history will tell you exactly what happened to your shares at what time. Keep track of when you bought or sold shares and at which price. See which options you are currently holding or how much interest is currently on your convertible and whether there was a cap or discount."
-msgstr "Der Transaktionsverlauf zeigt Ihnen genau, was zu welcher Zeit mit Ihren Aktien passiert ist. Verfolgen Sie, wann Sie Aktien gekauft und verkauft haben und zu welchem ​​Preis. Sehen Sie, welche Optionen Sie gerade halten oder wie viel Interesse derzeit an Ihrem Convertible besteht und ob es eine Cap oder einen Discount gab."
+msgstr "Der Transaktionsverlauf zeigt dir genau an, was zu welchem Zeitpunkt mit deine Aktien passiert ist. Verfolge wann du Aktien gekauft und verkauft hast, und zu welchem ​​Preis. Schau’ nach, welche Optionen die gerade besitzt oder wie hoch die Interest-Rate bei deinem Convertible ist und ob er einen Cap oder einen Discount hat."
 
 msgid "Transaction history"
 msgstr "Verlauf der Transaktionen"
@@ -277,13 +279,14 @@ msgid "Documents & Reporting"
 msgstr "Dokumente und Berichte"
 
 msgid "Save painful work inserting numbers into templates. Automated documents and reports at your fingertips."
-msgstr "Sparen Sie schmerzhafte Arbeit beim Einfügen von Zahlen in Vorlagen. Automatisierte Dokumente und Berichte zur Hand."
+msgstr "Erspare dir die mühsame Arbeit beim Einfügen von Zahlen in Vorlagen. Automatisierte Dokumente und Berichte mit einem einzigen Klick."
 
 msgid "Make your cap table legally binding"
-msgstr "Machen Sie Ihren Mützentisch rechtsverbindlich"
+msgstr "Mach’ dein Aktienregister rechtsgültig"
 
+#, fuzzy
 msgid "In order to create a legally binding share register it is necessary to add a handwritten signature. With Ledgy you can download a beautiful snapshot of your company’s shares structure. Simply print and sign it to have a legally valid document.<0/><1/>It includes the current cap table, including the non-diluted and fully-diluted stake of each shareholder (if you have options or phantom stock), your convertibles and ESOPs, and finally the transaction history, which tracks every change ever made to your cap table since the incorporation."
-msgstr "Um ein rechtsverbindliches Aktienregister zu erstellen, muss eine handschriftliche Unterschrift hinzugefügt werden. Mit Ledgy können Sie eine schöne Momentaufnahme der Aktienstruktur Ihres Unternehmens herunterladen. Einfach drucken und unterschreiben, um ein rechtsgültiges Dokument zu erhalten. <0/> <1/> Es enthält die aktuelle Obergrenze, einschließlich des unverwässerten und voll verwässerten Anteils jedes Aktionärs (wenn Sie Optionen oder Phantom Stock haben), Ihre Convertibles und ESOPs, und schließlich die Transaktionshistorie, die jede Veränderung seit der Gründung abbildet."
+msgstr "Um ein rechtsverbindliches Aktienregister zu erstellen, muss eine schriftliche Unterschrift hinzugefügt werden. Mit Ledgy können Sie eine schöne Momentaufnahme der Aktienstruktur Ihres Unternehmens herunterladen. Einfach drucken und unterschreiben, um ein rechtsgültiges Dokument zu erhalten. <0/> <1/> Es enthält die aktuelle Obergrenze, einschließlich des unverwässerten und voll verwässerten Anteils jedes Aktionärs (wenn Sie Optionen oder Phantom Stock haben), Ihre Convertibles und ESOPs, und schließlich die Transaktionshistorie, die jede Veränderung seit der Gründung abbildet."
 
 msgid "PDF export of the share register"
 msgstr "PDF-Export des Aktienregisters"
