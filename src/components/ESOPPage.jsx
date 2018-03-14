@@ -43,9 +43,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   Ledgy offers you a powerful module to manage your
                   employee stock ownership plans.
                   No matter if you transfer real stock from your company to an employee,
-                  options from a fixed–size pool, or even phantom stock.
+                  options from a fixed-size pool or even phantom stock.
                   <br /><br />
-                  Add a vesting schedule to your ESOPs and track their status in real–time.
+                  Add a vesting schedule to your ESOPs and track their status in real-time.
                   Coolest thing ever, let your employees log into Ledgy and allow them
                   to see at any point in time how much stock they have already vested and
                   how many shares are still outstanding.

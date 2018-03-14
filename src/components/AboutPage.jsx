@@ -96,7 +96,7 @@ const IndexPage = (props: Props) => {
                     We want to empower entrepreneurs. They
                     should be able to focus on their business,
                     not on bureaucratic paperwork. This is why we want to
-                    establish a new, state–of–the–art tool to manage,
+                    establish a new, state-of-the-art tool to manage,
                     exchange, and trade securities in private companies. Our
                     goal is to make shares management a breeze for both
                     companies and shareholders.
@@ -104,7 +104,7 @@ const IndexPage = (props: Props) => {
                 </p>
               </div>
               <div className="col-12 col-lg-6 p-50 align-self-center" data-aos="fade-left">
-                <Img {...data.mission} className="shadow-3" alt={i18n.t`space elevator image`} />
+                <Img {...data.mission} className="shadow-3" alt={i18n.t`Space elevator`} />
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ const IndexPage = (props: Props) => {
               <Founder
                 name="Yoko Spirig"
                 func="Physics MSc ETH"
-                description={i18n.t`Medical physics background, loves running, wondering about brain-machine interfaces`}
+                description={i18n.t`Medical physics background, loves running, wondering about brain–machine interfaces`}
                 twitterlink="https://twitter.com/YokoSpirig"
                 linkedinlink="https://www.linkedin.com/in/yokospirig/"
                 img={data.yoko}

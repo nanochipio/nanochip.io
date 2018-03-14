@@ -45,7 +45,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   Simply print and sign it to have a legally valid document.
                   <br /><br />
                   It includes the current cap table, including the non-diluted and
-                  fully-diluted stake of each shareholder (if you have options/phantom stock),
+                  fully-diluted stake of each shareholder (if you have options or phantom stock),
                   your convertibles and ESOPs, and finally the transaction history,
                   which tracks every change ever made to your cap table since the incorporation.
                 </Trans>

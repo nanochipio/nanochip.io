@@ -75,7 +75,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               Let your employees be part of your company’s success.
               Ledgy supports vested stock, options, inverse vesting,
               ESOP pools, and much more.<br />
-              Employees can even log into Ledgy and track their vested shares in real–time.
+              Employees can even log into Ledgy and track their vested shares in real-time.
             </Trans>
           </Feature>
 

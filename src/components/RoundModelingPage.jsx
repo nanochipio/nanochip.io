@@ -49,8 +49,8 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   <br />
                   Enter a valuation and you will see how your convertibles apply
                   to your cap table immediately.
-                  If your convertible has a cap, discount or an interest
-                  – Ledgy does the math for you.
+                  If your convertible has a cap, discount or
+                  an interest—Ledgy does the math for you.
                   Add an investment and enter the value of the investment.
                   Watch in real-time how the new investment impacts your current
                   shareholder distribution.
