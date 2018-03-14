@@ -17,14 +17,7 @@ const Header = ({ i18n }: Props) => (
 
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
-
           <h1><Trans>About us</Trans></h1>
-          <p>
-            <Trans>
-              Find out about our mission and meet our team and advisors
-            </Trans>
-          </p>
-
         </div>
       </div>
 
@@ -103,7 +96,7 @@ const IndexPage = (props: Props) => {
                     We want to empower entrepreneurs. They
                     should be able to focus on their business,
                     not on bureaucratic paperwork. This is why we want to
-                    establish a new, state-of-the-art tool to manage,
+                    establish a new, state–of–the–art tool to manage,
                     exchange, and trade securities in private companies. Our
                     goal is to make shares management a breeze for both
                     companies and shareholders.
@@ -111,7 +104,7 @@ const IndexPage = (props: Props) => {
                 </p>
               </div>
               <div className="col-12 col-lg-6 p-50 align-self-center" data-aos="fade-left">
-                <Img {...data.mission} className="shadow-3" alt={i18n.t`mission`} />
+                <Img {...data.mission} className="shadow-3" alt={i18n.t`space elevator image`} />
               </div>
             </div>
           </div>
@@ -120,9 +113,7 @@ const IndexPage = (props: Props) => {
         <section className="section">
           <div className="container">
             <header className="section-header">
-              <small><Trans>Team</Trans></small>
-              <h2><Trans>Who we are</Trans></h2>
-              <hr />
+              <h2><Trans>Team</Trans></h2>
             </header>
 
 
@@ -137,9 +128,9 @@ const IndexPage = (props: Props) => {
                 fade="up-right"
               />
               <Founder
-                name="Ben-Elias Brandt"
+                name="Ben Brandt"
                 func="Physics MSc ETH"
-                description={i18n.t`Battery materials background, martial arts, fascinated by electric cars`}
+                description={i18n.t`Battery science background, martial arts, fascinated by electric cars`}
                 twitterlink="https://twitter.com/bebinoy"
                 linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
                 img={data.ben}
@@ -162,7 +153,6 @@ const IndexPage = (props: Props) => {
         <section className="section bg-gray">
           <div className="container">
             <header className="section-header">
-              <small><Trans>Advisors</Trans></small>
               <h2><Trans>Backed by some really cool investors</Trans></h2>
             </header>
 
