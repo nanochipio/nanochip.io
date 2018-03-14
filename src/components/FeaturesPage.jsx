@@ -38,12 +38,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             title="Guaranteed Error-Free"
             url="consistency"
           >
-            Did you know that the many share registers are incomplete or
-            just wrong?
+            Did you know that many share registers are incomplete or
+            contain errors?
             Building a share register with Excel or Word can easily lead to
             inconsistencies.
             Set up your shares with Ledgy
-            and be assured, that all data is consistent at any time.
+            and be sure that all data is consistent at any time.
           </Feature>
 
           <Hr />
@@ -54,10 +54,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             url="round-modeling"
             left
           >
-            What’s the percentage of the founders after a VC
+            What’s the stake percentage of the founders after a VC
             invests $2,000,000 at a valuation of $7,500,000 taking into account
             the 2 outstanding convertible loans and increasing the ESOP pool?<br />
-            Seriously, we don’t know. But Ledgy does.
+            Honestly, we don’t know. But Ledgy does.
           </Feature>
 
           <Hr />
@@ -82,8 +82,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
           >
             Oh, it’s tax season again and there are 50 holding confirmations
             waiting to be sent to your shareholders.
-            Pasting names into document templates, computing the tax value of all share …<br />
-            Don’t worry. Generate  and send all important documents with a single click.
+            This means pasting names into document templates,
+            computing the tax value of all shares… <br />
+            Don’t worry. Generate and send all important documents with a single click on Ledgy.
           </Feature>
 
           <Hr />
