@@ -6,7 +6,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "POT-Creation-Date: 2018-03-14T12:42:07.010Z\n"
-"PO-Revision-Date: 2018-03-14 17:26+0100\n"
+"PO-Revision-Date: 2018-03-14 17:40+0100\n"
 "Language: de\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -284,28 +284,28 @@ msgid "Make your cap table legally binding"
 msgstr "Mach’ dein Aktienregister rechtsgültig"
 
 msgid "In order to create a legally binding share register it is necessary to add a handwritten signature. With Ledgy you can download a beautiful snapshot of your company’s shares structure. Simply print and sign it to have a legally valid document.<0/><1/>It includes the current cap table, including the non-diluted and fully-diluted stake of each shareholder (if you have options or phantom stock), your convertibles and ESOPs, and finally the transaction history, which tracks every change ever made to your cap table since the incorporation."
-msgstr "Um ein rechtsverbindliches Aktienregister zu erstellen, muss eine handschriftliche Unterschrift hinzugefügt werden. Mit Ledgy können Sie eine schöne Momentaufnahme der Aktienstruktur Ihres Unternehmens herunterladen. Einfach drucken und unterschreiben, um ein rechtsgültiges Dokument zu erhalten. <0/> <1/> Es enthält die aktuelle Obergrenze, einschließlich des unverwässerten und voll verwässerten Anteils jedes Aktionärs (wenn Sie Optionen oder Phantom Stock haben), Ihre Convertibles und ESOPs, und schließlich die Transaktionshistorie, die jede Veränderung seit der Gründung abbildet."
+msgstr "Damit das Aktienregister rechtsgültig ist, muss eine handschriftliche Unterschrift hinzugefügt werden. Mit Ledgy kannst du jederzeit ein PDF deines aktuellen Aktienregisters herunterladen. Einfach ausdrucken und unterschreiben, und du hast ein rechtsgültiges Dokument. <0/> <1/> Es enthält den aktuelle Cap Table, einschließlich des non-diluted und fully-diluted Anteil jedes Aktionärs (falls es Optionen oder Phantom Stock gibt), deine Convertibles und ESOPs, und natürlich auch die Transaktionsverlauf, der jede Veränderung seit der Gründung abbildet."
 
 msgid "PDF export of the share register"
 msgstr "PDF-Export des Aktienregisters"
 
 msgid "Send holding confirmations with ease"
-msgstr "Sende Bestätigungen mit Leichtigkeit"
+msgstr "Sende “Holding Confirmations” mit Leichtigkeit"
 
 msgid "Remember that day last year during tax season when you had to send holding confirmations to each shareholder, filling out boring Word templates by hand?<0/><1/>We’ve got the solution for you. With a single click Ledgy creates nicely formatted holding confirmations for all of your shareholders and send them directly via email.<2/><3/>Hours of tedious work is now reduced to just a few seconds. Hurray!"
-msgstr "Erinnern Sie sich an diesen Tag im letzten Jahr während der Steuerperiode, als Sie jedem Aktionär eine Bestätigung schicken mussten, um langweilige Word-Vorlagen von Hand auszufüllen? <0/> <1/> Wir haben die Lösung für Sie. Mit einem einzigen Klick erstellt Ledgy schön formatierte Besitzbestätigungen für alle Ihre Aktionäre und sendet diese direkt per E-Mail. <2/> <3/> Stunden mühsamer Arbeit sind nun auf wenige Sekunden reduziert. Hurra!"
+msgstr "Erinnerst du dich noch an den Tag letztes Jahr als die Steuerbescheinigungen verschickt werden mussten? Als du jedem einzelnen Aktionär eine Auszug schicken und langweilige Word-Vorlagen von Hand ausfüllen musstest? <0/> <1/> Wir haben die Lösung für dich. Mit einem einzigen Klick erstellt Ledgy schön formatiert “Holding Confirmations” für alle deine Aktionäre und sendet diese direkt per E-Mail. <2/> <3/> Stunden mühsamer Arbeit sind nun auf wenige Sekunden reduziert. Cool!"
 
 msgid "Dialog to holding confirmation"
-msgstr "Dialog zum Halten der Bestätigung"
+msgstr "Dialog um “Holding Confirmations” zu versenden"
 
 msgid "The holding confirmation lists all assets that a shareholder owns, as well as their total value needed for the tax declaration. Employees will be able to see their stock ownership plans and how many of their total shares they already have vested.<0/>All documents are ready to be sent to the tax authority!"
-msgstr "Die Depotbestätigung listet alle Vermögenswerte auf, die einem Aktionär gehören, sowie deren Gesamtwert, der für die Steuererklärung benötigt wird. Mitarbeiter können ihre Aktienbeteiligungspläne sehen und wieviele ihrer gesamten Aktien sie bereits erworben haben. <0/> Alle Dokumente sind bereit, an die Steuerbehörde geschickt zu werden!"
+msgstr "Die “Holding Konfirmation” listet alle Vermögenswerte auf, die einem Aktionär gehören, sowie deren Gesamtwert, welcher für die Steuererklärung benötigt wird. Mitarbeiter können ihre Mitarbeiterbeteiligungspläne einsehen und wieviele ihrer Aktien sie bereits erworben haben. <0/> Alle Dokumente sind bereits fertig, um direkt an die Steuerbehörde verschickt zu werden!"
 
 msgid "Holding confirmation"
-msgstr "Bestätigung halten"
+msgstr "Holding Confirmation"
 
 msgid "Bring order into your documents"
-msgstr "Bringen Sie Ordnung in Ihre Dokumente"
+msgstr "Bring’ Ordnung in deine Dokumente"
 
 msgid "Every transaction in your share register usually comes with a pile of additional documents, like contracts. Get rid of complicated folder structures and simply attach them directly to your transactions. Ledgy gives you an overview over all documents that you uploaded and their corresponding transactions. Also in your transaction history you can select any transaction and see all connected documents at a glance.<0/><1/>You can also share your documents by sending a simple link to your shareholders. This eliminates confusion about different versions of documents, as it is often the case when sending documents via email."
 msgstr "Jede Transaktion in Ihrem Aktienregister enthält normalerweise einen Stapel zusätzlicher Dokumente, z. B. Verträge. Befreien Sie sich von komplizierten Ordnerstrukturen und hängen Sie diese einfach direkt an Ihre Transaktionen an. Ledgy gibt Ihnen einen Überblick über alle von Ihnen hochgeladenen Dokumente und deren entsprechende Transaktionen. Außerdem können Sie in Ihrer Transaktionshistorie beliebige Transaktionen auswählen und alle verbundenen Dokumente auf einen Blick sehen. <0/> <1/> Sie können Ihre Dokumente auch teilen, indem Sie einen einfachen Link an Ihre Aktionäre senden. Auf diese Weise werden Verwechslungen bei verschiedenen Versionen von Dokumenten vermieden, wie dies häufig beim Senden von Dokumenten per E-Mail der Fall ist."
