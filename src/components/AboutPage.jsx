@@ -8,7 +8,10 @@ import { Title } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
-    <Title title={i18n.t`About us`} />
+    <Title
+      title={i18n.t`About us`}
+      description={i18n.t`Meet the three random folks who went out to build truly a great product. And learn more about the people who trust in us.`}
+    />
 
     <div className="container text-center">
 

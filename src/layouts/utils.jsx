@@ -9,19 +9,23 @@ export const appUrl = 'https://app.ledgy.com';
 export const demoUrl = 'https://app.ledgy.com';
 export const blogUrl = 'https://blog.ledgy.com';
 
-export const Title = (props: { title: string, section?: string }) => {
-  const title = props.section ?
-    `${props.title} | ${props.section} | ${name}` :
-    `${props.title} | ${name}`;
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta property="og:title" content={title} />
-      <meta name="twitter:title" content={title} />
-    </Helmet>
-  );
-};
-Title.defaultProps = { section: '' };
+export const Title = (props: {
+  title: string,
+  section?: string,
+  description?: string,
+}) => (
+  <Helmet>
+    <title>{props.title} {props.section && `| ${props.section}`} | {name}</title>
+    {props.description && <meta name="description" content={props.description} />}
+
+    <meta property="og:title" content={props.title} />
+    {props.description && <meta property="og:description" content={props.description} />}
+
+    <meta name="twitter:title" content={props.title} />
+    {props.description && <meta name="twitter:description" content={props.description} />}
+  </Helmet>
+);
+Title.defaultProps = { section: '', description: '' };
 
 const browserLanguagePropertyKeys = ['languages', 'language', 'browserLanguage', 'userLanguage', 'systemLanguage'];
 const availableLanguages = ['de', 'en'];

@@ -10,7 +10,11 @@ import { Title } from '../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
-    <Title title={i18n.t`Financing Round Modeling`} section={i18n.t`Features`} />
+    <Title
+      title={i18n.t`Financing Round Modeling`}
+      section={i18n.t`Features`}
+      description={i18n.t`Simulate the outcome of your upcoming financing rounds. Detailed models give you a headstart over angels and VCs.`}
+    />
 
     <header className="header text-white bg-ledgy">
       <div className="container text-center">

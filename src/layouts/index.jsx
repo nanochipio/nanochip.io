@@ -5,7 +5,7 @@ import Link, { navigateTo } from 'gatsby-link';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import { appUrl, name, blogUrl, getLocale } from './utils';
+import { Title, appUrl, name, blogUrl, getLocale } from './utils';
 
 import '../assets/scss/page.scss';
 
@@ -137,27 +137,27 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
   const { i18n } = props;
   const { siteUrl } = props.data.site.siteMetadata;
   const prefix = props.lang === 'de' ? '/de' : '';
-  const title = `${i18n.t`Build trust around your cap table`} | ${name}`;
-  const thumbnail = `${siteUrl}/thumbnail.png`;
+  const thumbnailUrl = `${siteUrl}/thumbnail.png`;
   return (
     <div>
+      <Title
+        title={i18n.t`Build trust around your cap table`}
+        description={i18n.t`Manage your cap table with Ledgy. The single place to track all your shares, manage your ESOPs and model detailed financing rounds.`}
+      />
       <Helmet>
         <html lang={props.lang} />
-        <title>{title}</title>
-        <meta name="description" content={i18n.t`site.description`} />
-        <meta name="keywords" content={i18n.t`site.keywords`} />
+        <meta name="keywords" content={i18n.t`cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors`} />
+        <meta name="author" content="Ledgy" />
 
         {/* Facebook social card */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={i18n.t`site.description`} />
-        <meta property="og:image" content={thumbnail} />
+        <meta property="og:site_name" content={name} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={thumbnailUrl} />
         <meta property="og:url" content={siteUrl} />
 
         {/* Twitter social card */}
         <meta name="twitter:site" content="@LedgyCom" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={i18n.t`site.description`} />
-        <meta name="twitter:image" content={thumbnail} />
+        <meta name="twitter:image" content={thumbnailUrl} />
         <meta name="twitter:card" content="summary" />
 
         {/* Disable AOS for Google */}

@@ -11,7 +11,11 @@ import { Title } from '../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
-    <Title title={i18n.t`Consistency`} section={i18n.t`Features`} />
+    <Title
+      title={i18n.t`Consistency`}
+      section={i18n.t`Features`}
+      description={i18n.t`Track the complete history of your shares. Integrated consistency checks will guarantee that your cap table is error-free.`}
+    />
 
     <header className="header text-white bg-ledgy">
       <div className="container text-center">

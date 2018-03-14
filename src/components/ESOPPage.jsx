@@ -10,7 +10,11 @@ import { Title } from '../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
-    <Title title={i18n.t`ESOP`} section={i18n.t`Features`} />
+    <Title
+      title={i18n.t`ESOP`}
+      section={i18n.t`Features`}
+      description={i18n.t`Keep your employees motivated at work. They deserve it. Ledgy's ESOP module will help you to make it happen.`}
+    />
 
     <header className="header text-white bg-ledgy">
       <div className="container text-center">

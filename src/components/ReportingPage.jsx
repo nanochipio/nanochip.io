@@ -10,7 +10,11 @@ import { Title } from '../layouts/utils';
 
 export default withI18n()(({ i18n, ...props }: Props) => (
   <div>
-    <Title title={i18n.t`Documents & Reporting`} section={i18n.t`Features`} />
+    <Title
+      title={i18n.t`Documents & Reporting`}
+      section={i18n.t`Features`}
+      description={i18n.t`Save painful work inserting numbers into templates. Automated documents and reports at your fingertips.`}
+    />
 
     <header className="header text-white bg-ledgy">
       <div className="container text-center">
