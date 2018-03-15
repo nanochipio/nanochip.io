@@ -5,6 +5,7 @@ import { withI18n, Trans } from '@lingui/react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
+import { FeatureLinks } from './Features';
 
 const Header = ({ i18n, data }: Props) => (
   <header className="header text-white bg-ledgy">
@@ -82,8 +83,10 @@ const IndexPage = (props: Props) => (
             </Link>
           </div>
 
-        </div>
 
+          <FeatureLinks {...props} page="index" />
+
+        </div>
       </section>
 
     </main>
@@ -95,6 +98,8 @@ export default withI18n()(IndexPage);
 // eslint-disable-next-line no-undef
 export const indexPageFragment = graphql`
   fragment IndexPageFragment on RootQueryType {
+    ...FeaturesFragment
+
     laptop: imageSharp(id: { regex: "/laptop.png/" }) {
       sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes_noBase64 }
     }
