@@ -123,10 +123,12 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <header className="section-header text-left">
               <h1><Trans>Keep your employees engaged</Trans></h1>
               <p>
-                Once your incentives are submitted to Ledgy it’s time to
-                engage your employees.
-                They are able to log into Ledgy themselves with their email
-                address at any time and see how many shares they have already vested.
+                <Trans>
+                  Once your incentives are submitted to Ledgy it’s time to
+                  engage your employees.
+                  They are able to log into Ledgy themselves with their email
+                  address at any time and see how many shares they have already vested.
+                </Trans>
               </p>
             </header>
 
