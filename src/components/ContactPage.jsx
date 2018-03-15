@@ -1,15 +1,23 @@
 // @flow
 
-import React from 'react';
-import { translate } from 'react-i18next';
+import * as React from 'react';
+import { withI18n, Trans } from '@lingui/react';
 
-const Header = ({ t }: Object) => (
-  <header className="header header-inverse" style={{ backgroundColor: '#60ae50' }}>
+import { Title } from '../layouts/utils';
+
+const Header = ({ i18n }: Props) => (
+  <header className="header text-white bg-ledgy">
+    <Title title={i18n.t`Contact`} />
+
     <div className="container text-center">
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
-          <h1>{t('contactPage.getInTouch')}</h1>
-          <p className="fs-20 opacity-70">{t('contactPage.hereAreTheWays')}</p>
+          <h1><Trans>Let’s Get In Touch</Trans></h1>
+          <p>
+            <Trans>
+              Here are the ways you can contact us with any questions you have
+            </Trans>
+          </p>
         </div>
       </div>
     </div>
@@ -18,8 +26,8 @@ const Header = ({ t }: Object) => (
 
 class Map extends React.Component<{}> {
   componentDidMount() {
-    if (window.thesaas && window.google) {
-      window.thesaas.map();
+    if (window.page && window.google) {
+      window.page.initMap();
     }
   }
   render() {
@@ -37,10 +45,11 @@ class Map extends React.Component<{}> {
 }
 
 const IndexPage = (props: Object) => {
-  const { t } = props;
+  const { i18n } = props;
   return (
     <div>
       <Header {...props} />
+
       <main className="main-content">
 
         <div className="section">
@@ -52,41 +61,40 @@ const IndexPage = (props: Object) => {
                 <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="form-group">
-                    <input className="form-control form-control-lg" type="text" name="name" placeholder={t('contactPage.yourName')} />
+                    <input className="form-control form-control-lg" type="text" name="name" placeholder={i18n.t`Your name`} />
                   </div>
 
                   <div className="form-group">
-                    <input className="form-control form-control-lg" type="email" name="email" placeholder={t('contactPage.yourEmail')} />
+                    <input className="form-control form-control-lg" type="email" name="email" placeholder={i18n.t`Your email`} />
                   </div>
 
                   <div className="form-group">
-                    <textarea className="form-control form-control-lg" name="message" rows="4" placeholder={t('contactPage.yourMessage')} />
+                    <textarea className="form-control form-control-lg" name="message" rows="4" placeholder={i18n.t`Your message`} />
                   </div>
 
 
-                  <button className="btn btn-lg btn-primary btn-block" type="submit">{t('contactPage.send')}</button>
+                  <button className="btn btn-lg btn-primary btn-block" type="submit">{i18n.t`Send enquiry`}</button>
                 </form>
 
               </div>
 
 
               <div className="col-12 col-md-5 offset-md-1">
-                <div className="bg-grey h-full p-20">
-                  <p>{t('contactPage.giveUsACall')}</p>
+                <div className="bg-gray h-full p-5">
+                  <p>
+                    <Trans>
+                      Give us a call or stop by our door anytime. We
+                      will do our best to answer all enquiries
+                      within 24 hours on business days.
+                    </Trans>
+                  </p>
 
                   <hr className="w-80" />
 
-                  <p className="lead">Ledgy AG<br />Forchstrasse 60<br />{t('contactPage.postcode')}</p>
+                  <p className="lead">Ledgy AG<br />Forchstrasse 60<br /><Trans>8008 Zurich, Switzerland</Trans></p>
 
-                  <div>
-                    <span className="d-inline-block w-20 text-lighter" title="Email">E:</span>
-                    <span className="fs-14">contact@ledgy.com</span>
-                  </div>
-
-                  <div>
-                    <span className="d-inline-block w-20 text-lighter" title="Phone">P:</span>
-                    <span className="fs-14">+41 44 585 21 23</span>
-                  </div>
+                  <div>contact@ledgy.com</div>
+                  <div>+41 44 585 21 23</div>
 
                 </div>
               </div>
@@ -102,4 +110,4 @@ const IndexPage = (props: Object) => {
   );
 };
 
-export default translate()(IndexPage);
+export default withI18n()(IndexPage);

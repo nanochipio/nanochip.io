@@ -1,19 +1,23 @@
 // @flow
 
-import React from 'react';
+import * as React from 'react';
 import Img from 'gatsby-image';
-import { translate } from 'react-i18next';
+import { withI18n, Trans } from '@lingui/react';
 
-const Header = ({ t }: Object) => (
-  <header className="header header-inverse" style={{ backgroundColor: '#00b38d' }}>
+import { Title } from '../layouts/utils';
+
+const Header = ({ i18n }: Props) => (
+  <header className="header text-white bg-ledgy">
+    <Title
+      title={i18n.t`About us`}
+      description={i18n.t`Meet the three random folks who went out to build truly a great product. And learn more about the people who trust in us.`}
+    />
+
     <div className="container text-center">
 
       <div className="row">
         <div className="col-12 col-lg-8 offset-lg-2">
-
-          <h1>{t('aboutPage.aboutUs')}</h1>
-          <p className="fs-20 opacity-70">{t('aboutPage.findOutAboutOurMission')}</p>
-
+          <h1><Trans>About us</Trans></h1>
         </div>
       </div>
 
@@ -26,6 +30,7 @@ type ProfileProps = {
   func: string,
   description: string,
   img: Object,
+  fade: string,
 }
 type FounderProps = {
   ...$Exact<ProfileProps>,
@@ -33,9 +38,13 @@ type FounderProps = {
   linkedinlink: string,
 }
 
-const Founder = ({ name, func, description, img, twitterlink, linkedinlink }: FounderProps) => (
+const Founder =
+({ name, func, description, img, twitterlink, fade, linkedinlink }: FounderProps) => (
   <div className="col-12 col-md-6 col-lg-4 team-1">
-    {img && <Img {...img} alt={name} />}
+    {img &&
+      <div data-aos={`fade-${fade}`}>
+        <Img {...img} alt={name} />
+      </div>}
     <h6>{name}</h6>
     <small>{func}</small>
     <p>{description}</p>
@@ -46,9 +55,12 @@ const Founder = ({ name, func, description, img, twitterlink, linkedinlink }: Fo
   </div>
 );
 
-const Investor = ({ name, func, description, img }: ProfileProps) => (
+const Investor = ({ name, func, description, img, fade }: ProfileProps) => (
   <div className="col-12 col-md-4 team-2">
-    {img && <Img {...img} alt={name} />}
+    {img &&
+      <div data-aos={`fade-${fade}`}>
+        <Img {...img} alt={name} />
+      </div>}
     <h5>{name}</h5>
     <small>{func}</small>
     <p>{description}</p>
@@ -56,17 +68,20 @@ const Investor = ({ name, func, description, img }: ProfileProps) => (
 );
 
 
-const Advisor = ({ name, func, description, img }: ProfileProps) => (
+const Advisor = ({ name, func, description, img, fade }: ProfileProps) => (
   <div className="col-12 col-md-6 team-2">
-    {img && <Img {...img} alt={name} />}
+    {img &&
+      <div data-aos={`fade-${fade}`}>
+        <Img {...img} alt={name} />
+      </div>}
     <h5>{name}</h5>
     <small>{func}</small>
     <p>{description}</p>
   </div>
 );
 
-const IndexPage = (props: Object) => {
-  const { data, t } = props;
+const IndexPage = (props: Props) => {
+  const { data, i18n } = props;
   return (
     <div>
       <Header {...props} />
@@ -75,13 +90,21 @@ const IndexPage = (props: Object) => {
           <div className="container">
             <div className="row">
               <div className="col-12 col-lg-6 pl-50 pr-80">
-                <h2>{t('aboutPage.ourMission')}</h2>
+                <h2><Trans>Our mission</Trans></h2>
                 <p className="lead">
-                  {t('aboutPage.ourMissionDescription')}
+                  <Trans>
+                    We want to empower entrepreneurs. They
+                    should be able to focus on their business,
+                    not on bureaucratic paperwork. This is why we want to
+                    establish a new, state-of-the-art tool to manage,
+                    exchange, and trade securities in private companies. Our
+                    goal is to make shares management a breeze for both
+                    companies and shareholders.
+                  </Trans>
                 </p>
               </div>
-              <div className="col-12 col-lg-6 p-50 align-self-center">
-                <Img {...data.mission} className="shadow-3 aos-init aos-animate" alt="mission" data-aos="fade-left" data-aos-duration="1500" />
+              <div className="col-12 col-lg-6 p-50 align-self-center" data-aos="fade-left">
+                <Img {...data.mission} className="shadow-3" alt={i18n.t`Space elevator`} />
               </div>
             </div>
           </div>
@@ -90,9 +113,7 @@ const IndexPage = (props: Object) => {
         <section className="section">
           <div className="container">
             <header className="section-header">
-              <small>{t('aboutPage.team')}</small>
-              <h2>{t('aboutPage.whoWeAre')}</h2>
-              <hr />
+              <h2><Trans>Team</Trans></h2>
             </header>
 
 
@@ -100,26 +121,29 @@ const IndexPage = (props: Object) => {
               <Founder
                 name="Timo Horstschaefer"
                 func="Physics MSc ETH"
-                description={t('aboutPage.timo')}
+                description={i18n.t`Computer vision background, badminton guy, wants to build a space elevator`}
                 twitterlink="https://twitter.com/thrstschfr"
                 linkedinlink="https://www.linkedin.com/in/timohorstschaefer/"
                 img={data.timo}
+                fade="up-right"
               />
               <Founder
-                name="Ben-Elias Brandt"
+                name="Ben Brandt"
                 func="Physics MSc ETH"
-                description={t('aboutPage.ben')}
+                description={i18n.t`Battery science background, martial arts, fascinated by electric cars`}
                 twitterlink="https://twitter.com/bebinoy"
                 linkedinlink="https://www.linkedin.com/in/ben-elias-brandt-680a95110/"
                 img={data.ben}
+                fade="up"
               />
               <Founder
                 name="Yoko Spirig"
                 func="Physics MSc ETH"
-                description={t('aboutPage.yoko')}
+                description={i18n.t`Medical physics background, loves running, wondering about brain–machine interfaces`}
                 twitterlink="https://twitter.com/YokoSpirig"
                 linkedinlink="https://www.linkedin.com/in/yokospirig/"
                 img={data.yoko}
+                fade="up-left"
               />
             </div>
 
@@ -129,28 +153,30 @@ const IndexPage = (props: Object) => {
         <section className="section bg-gray">
           <div className="container">
             <header className="section-header">
-              <small>{t('aboutPage.advisors')}</small>
-              <h2>{t('aboutPage.backedBy')}</h2>
+              <h2><Trans>Backed by some really cool investors</Trans></h2>
             </header>
 
             <div className="row gap-y">
               <Investor
                 name="Myke Näf"
                 func="Board Member"
-                description={t('aboutPage.myke')}
+                description={i18n.t`Entrepreneur, Business Angel, Founder of Doodle.com`}
                 img={data.myke}
+                fade="down-right"
               />
               <Investor
                 name="Dr. Paul E. Sevinç"
                 func="Board Member"
-                description={t('aboutPage.paul')}
+                description={i18n.t`Entrepreneur, Technologist, Founder of Doodle.com`}
                 img={data.paul}
+                fade="down"
               />
               <Investor
                 name="Luzius Meisser"
                 func="Advisor"
-                description={t('aboutPage.luzius')}
+                description={i18n.t`Founder of Meisser Economics, Bitcoin Association Switzerland, and Wuala`}
                 img={data.luzius}
+                fade="down-left"
               />
             </div>
 
@@ -158,14 +184,16 @@ const IndexPage = (props: Object) => {
               <Advisor
                 name="Adrian Bührer"
                 func="Advisor"
-                description={t('aboutPage.adrian')}
+                description={i18n.t`Investor & Consultant (Farmy.ch, Flatfox.ch), Founder of Students.ch`}
                 img={data.adrian}
+                fade="up-right"
               />
               <Advisor
                 name="Elena Walder-Schiavone"
                 func="Advisor"
-                description={t('aboutPage.elena')}
+                description={i18n.t`M&A and Private Equity Lawyer with focus in start-up legal advise, Smartuplaw.ch`}
                 img={data.elena}
+                fade="up-left"
               />
             </div>
 
@@ -176,7 +204,7 @@ const IndexPage = (props: Object) => {
   );
 };
 
-export default translate()(IndexPage);
+export default withI18n()(IndexPage);
 
 // eslint-disable-next-line no-undef
 export const aboutPageFragment = graphql`

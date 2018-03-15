@@ -1,87 +1,102 @@
 // @flow
 
-import React from 'react';
-import { translate } from 'react-i18next';
+import * as React from 'react';
+import { withI18n, Trans } from '@lingui/react';
+import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 
-import References from './References';
-import Features from './Features';
-import Subscribe from './Subscribe';
 
-const Header = ({ t }: Object) => (
-  <header className="header header-inverse h-fullscreen pb-80" style={{ backgroundColor: '#20a8d8' }} id="start">
+const Header = ({ i18n, data }: Props) => (
+  <header className="header text-white bg-ledgy">
+    <div className="container">
+      <div className="row align-items-center gap-y mt-5 mb-7">
 
-    <div className="container text-center">
-
-      <div className="row h-full">
-        <div className="col-12 col-lg-10 offset-lg-1 align-self-center">
-
-          <h1 className="display-2">{t('title')}</h1>
-          <br />
-          <p className="fs-20 w-450 mx-auto hidden-sm-down">
-            {t('description')}
-          </p>
-          <p className="fs-18 w-250 mx-auto hidden-md-up">
-            {t('description')}
-          </p>
-
-          <div className="col-10 offset-1">
-
-            <form className="form-glass row" action="https://app.ledgy.com/signup" method="get">
-              <div className="col-12 col-md-7 my-1">
-                <input type="text" name="email" className="form-control form-control-lg" placeholder={t('enterEmail')} />
-              </div>
-              <div className="col-12 col-md-5 my-1">
-                <button style={{ height: '100%' }} className="btn btn-block btn-lg btn-success">{t('tryForFree')}</button>
-              </div>
-            </form>
-            <div className="row mt-2 pr-3 float-right">
-              <a
-                style={{ textDecoration: 'underline' }}
-                className="text-white"
-                href="https://demo.ledgy.com"
-              >{t('checkDemo')}
-              </a>
-            </div>
-
+        <div className="col-lg-5 ml-auto mb-5">
+          <h1><Trans>Build trust in your cap table</Trans></h1>
+          <div className="mb-6">
+            <p>
+              <Trans>
+                Use Ledgy to track all your shares, manage your ESOPs and
+                model detailed financing rounds.
+                <br /><br />
+                You are an investor or employee? Get a detailed overview of
+                your investment and check the status of your
+                vesting schedule.
+              </Trans>
+            </p>
           </div>
+          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href="https://demo.ledgy.com/"><Trans>See the demo</Trans></a>
+          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
         </div>
 
-        <div className="col-12 align-self-end text-center">
-          <a className="scroll-down-3 scroll-down-inverse" href="#testimonials" data-scrollto="testimonials"><span /></a>
+        <div className="col-lg-6 order-lg-first" data-aos="fade-up">
+          <Img {...data.laptop} alt={i18n.t`Screenshot of the Ledgy app`} />
         </div>
+
 
       </div>
-
     </div>
   </header>
 );
 
-const IndexPage = (props: Object) => (
+const Reference = ({ img, name }: { img: Object, name: string }) => (
+  <div style={{ width: '200px' }} className="m-4">
+    <Img {...img} alt={name} style={{ overflow: 'visible', margin: 0 }} />
+  </div>
+);
+
+const IndexPage = (props: Props) => (
   <div>
     <Header {...props} />
     <main className="main-content">
 
-      <References {...props} />
-      <Subscribe {...props} />
-      <Features {...props} />
+
+      <section className="section py-7" id="references">
+        <div className="container">
+          <header className="section-header mb-3">
+            <h2><Trans>You’re in good company</Trans></h2>
+            <hr className="my-2" />
+            <p>
+              <Trans>
+                Many successful companies already use Ledgy to keep track of
+                their share register.
+              </Trans>
+            </p>
+          </header>
+
+          <div className="partner mx-auto" style={{ maxWidth: '1200px' }}>
+            <Reference img={props.data.testingtime} name="TestingTime" />
+            <Reference img={props.data.quitt} name="quitt.ch" />
+            <Reference img={props.data.cryptofund} name="CryptoFund" />
+            <Reference img={props.data.frontify} name="Frontify" />
+            <Reference img={props.data.sherpany} name="Sherpany" />
+            <Reference img={props.data.apiax} name="Apiax" />
+            <Reference img={props.data.allthings} name="Allthings Technologies" />
+            <Reference img={props.data.farmy} name="Farmy" />
+
+          </div>
+
+          <div className="mx-auto text-center mt-5">
+            <Link href to={`${props.prefix}/features`} className="btn btn-block d-sm-inline btn-round btn-xl btn-outline-primary mt-6" >
+              <Trans>Find out why they trust us</Trans>
+            </Link>
+          </div>
+
+        </div>
+
+      </section>
 
     </main>
   </div>
 );
 
-export default translate()(IndexPage);
+export default withI18n()(IndexPage);
 
 // eslint-disable-next-line no-undef
 export const indexPageFragment = graphql`
   fragment IndexPageFragment on RootQueryType {
-    feature1: imageSharp(id: { regex: "/src\/img\/feature-1.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature2: imageSharp(id: { regex: "/src\/img\/feature-2.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
-    }
-    feature3: imageSharp(id: { regex: "/src\/img\/feature-3.png/" }) {
-      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    laptop: imageSharp(id: { regex: "/laptop.png/" }) {
+      sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes_noBase64 }
     }
 
     testingtime: imageSharp(id: { regex: "/testingtime/" }) {

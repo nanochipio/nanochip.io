@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+import * as React from 'react';
 
 let stylesStr;
 if (process.env.NODE_ENV === 'production') {
@@ -26,10 +26,9 @@ module.exports = class HTML extends React.Component {
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <script src="/script.min.js" async />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           {this.props.headComponents}
           {css}
         </head>

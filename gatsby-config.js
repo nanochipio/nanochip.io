@@ -1,13 +1,11 @@
 module.exports = {
-  siteMetadata: {
-    siteUrl: 'https://www.ledgy.com',
-    name: 'Ledgy',
-  },
+  siteMetadata: { siteUrl: 'https://www.ledgy.com' },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-next',
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-nprogress',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
@@ -41,6 +39,13 @@ module.exports = {
             type: 'image/png',
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        navigateFallback: null,
+        navigateFallbackWhitelist: [],
       },
     },
     {

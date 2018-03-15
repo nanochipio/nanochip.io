@@ -12,8 +12,8 @@ $(function() {
   | Read their complete description and modify them based on your need.
   |
   */
- 
-  thesaas.config({
+
+  page.config({
 
     /*
     |--------------------------------------------------------------------------
@@ -43,6 +43,35 @@ $(function() {
 
     /*
     |--------------------------------------------------------------------------
+    | Google reCAPTCHA
+    |--------------------------------------------------------------------------
+    |
+    | reCAPTCHA protects you against spam and other types of automated abuse.
+    | Please signup for an API key pair and insert your `Site key` value to the
+    | following variable.
+    |
+    | http://www.google.com/recaptcha/admin
+    |
+    */
+
+    reCaptchaSiteKey:  '6Ldaf0MUAAAAAHdsMv_7dND7BSTvdrE6VcQKpM-n',
+
+    // See available languages: https://developers.google.com/recaptcha/docs/language
+    reCaptchaLanguage: '',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Disable AOS on mobile
+    |--------------------------------------------------------------------------
+    |
+    | If true, the Animate On Scroll animations don't run on mobile devices.
+    |
+    */
+
+    disableAOSonMobile: false,
+
+    /*
+    |--------------------------------------------------------------------------
     | Smooth Scroll
     |--------------------------------------------------------------------------
     |
@@ -50,8 +79,8 @@ $(function() {
     | visitor a better experience for scrolling.
     |
     */
-   
-    smoothScroll: true
+
+    smoothScroll: false,
 
   });
 

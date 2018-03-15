@@ -1,63 +1,115 @@
 // @flow
 
 import * as React from 'react';
+import { Trans } from '@lingui/react';
+import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
 
-const Feature = ({ title, children, img, right }: {
-  title: string, children: React.Node, img: Object, right?: boolean
-}) => (
-  <div className="row gap-y align-items-center">
-    {!right &&
-      <div className="col-12 col-md-5">
-        <Img className="rounded shadow-2" {...img} alt={title} />
-      </div>}
+const hyphenToCamelCase = (s: string) =>
+  s.replace(/-([a-z])/g, g => g[1].toUpperCase());
 
-    <div className="col-12 col-md-7">
-      <h4>{title}</h4>
-      <p>{children}</p>
+export const Feature = (props: {
+  prefix: string,
+  name: string,
+  title?: string,
+  children: React.Node,
+  url: string,
+  left?: boolean,
+  data: Object,
+}) => (
+  <div className="row align-items-center">
+    <div className="col-md-5 ml-auto">
+      <h2>{props.title || props.name}</h2>
+      <p>{props.children}</p>
+      <Link href to={`${props.prefix}/features/${props.url}`}>
+        <Trans>Read More about</Trans> {props.name} <i className="ti-angle-right fs-10 ml-1" />
+      </Link>
     </div>
 
-    {right &&
-      <div className="col-12 col-md-5">
-        <Img className="rounded shadow-2" {...img} alt={title} />
-      </div>}
+    <div
+      className={`col-md-5 ml-auto ${props.left ? 'order-md-first' : ''}`}
+      data-aos={props.left ? 'fade-right' : 'fade-left'}
+    >
+      <Img {...props.data[hyphenToCamelCase(props.url)]} alt={props.name} />
+    </div>
   </div>
 );
-Feature.defaultProps = { right: false };
+Feature.defaultProps = {
+  title: '',
+  left: false,
+};
 
-export default ({ data, t }: Object) => (
-  <section className="section" id="features">
-    <header className="section-header">
-      <small>{t('features')}</small>
+const FeatureLink = (props: {
+  name: string,
+  url: string,
+  prefix: string,
+  page: string,
+  data: Object,
+}) => (
+  props.page !== props.url &&
+  <div className="col-6 px-3 col-lg-3">
+    <Link href to={`${props.prefix}/features/${props.url}`}>
+      <div className="card border hover-shadow-8">
+        <div className="card-body mb-0 pb-0 px-2 h-125">
+          <h6 className="card-title text-center">{props.name}</h6>
+        </div>
+        <div className="mx-auto" style={{ height: '8rem', width: '8rem' }}>
+          <Img
+            className="card-img-bottom"
+            {...props.data[hyphenToCamelCase(props.url)]}
+            alt={props.name}
+            style={{ maxHeight: '100%', maxWidth: '100%' }}
+          />
+        </div>
+      </div>
+    </Link>
+  </div>
+);
+
+
+export const FeatureLinks = ({ i18n, ...props }: {
+  prefix: string,
+  page: string,
+  data: Object,
+  i18n: I18n,
+}) => (
+  <div>
+    <hr className="my-5" />
+
+    <header className="section-header ">
+      <h2><Trans>Discover more about Ledgy</Trans></h2>
     </header>
 
-    <div className="container">
-      <Feature
-        title={t('roundModeling')}
-        img={data.feature1}
-      >
-        {t('roundModelingDesc')}
-      </Feature>
+    <div className="row gap-y">
 
-      <hr />
+      <FeatureLink {...props} name={i18n.t`Consistency`} url="consistency" />
+      <FeatureLink {...props} name={i18n.t`Round Modeling`} url="round-modeling" />
+      <FeatureLink {...props} name={i18n.t`ESOP`} url="esop" />
+      <FeatureLink {...props} name={i18n.t`Reporting`} url="reporting" />
+      <FeatureLink {...props} name={i18n.t`Investors`} url="investors" />
 
-      <Feature
-        right
-        title={t('convertibles')}
-        img={data.feature2}
-      >
-        {t('convertiblesDescription')}
-      </Feature>
-
-      <hr />
-
-      <Feature
-        title={t('export')}
-        img={data.feature3}
-      >
-        {t('exportDescription')}
-      </Feature>
     </div>
-  </section>
+  </div>
 );
+
+// eslint-disable-next-line no-undef
+export const FeaturesFragment = graphql`
+  fragment FeaturesFragment on RootQueryType {
+    consistency: imageSharp(id: { regex: "/consistency.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    roundModeling: imageSharp(id: { regex: "/round-modeling.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    esop: imageSharp(id: { regex: "/esop.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    reporting: imageSharp(id: { regex: "/reporting.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+    investors: imageSharp(id: { regex: "/investors.png/" }) {
+      sizes(maxWidth: 800) { ...GatsbyImageSharpSizes }
+    }
+  }
+`;
