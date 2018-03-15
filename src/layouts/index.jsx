@@ -77,7 +77,7 @@ const Footer = (props: LayoutProps) => (
       <div className="container">
         <div className="row gap-y">
 
-          <div className="col-md-6 col-xl-4">
+          <div className="col-md-6 col-xl-3">
             <p><Logo {...props} inverse={false} /></p>
           </div>
 
@@ -90,7 +90,7 @@ const Footer = (props: LayoutProps) => (
             </div>
           </div>
 
-          <div className="col-6 col-md-3 col-xl-2">
+          <div className="col-6 col-md-3 col-xl-3">
             <h6 className="mb-4 mt-1"><strong>Product</strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Why it’s awesome</Trans></Link>
