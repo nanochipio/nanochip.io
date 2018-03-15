@@ -75,15 +75,19 @@ export const FeatureLinks = ({ i18n, ...props }: {
   i18n: I18n,
 }) => (
   <div>
-    <hr className="my-5" />
 
     <header className="section-header ">
-      <h2><Trans>Discover more about Ledgy</Trans></h2>
+      <hr className="mt-7 mb-5" />
+      <h2>{props.page === 'index' ?
+        <Trans>Features</Trans> :
+        <Trans>Discover more about Ledgy</Trans>}
+      </h2>
     </header>
 
     <div className="row gap-y">
 
-      <FeatureLink {...props} name={i18n.t`Consistency`} url="consistency" />
+      {props.page !== 'index' &&
+        <FeatureLink {...props} name={i18n.t`Consistency`} url="consistency" />}
       <FeatureLink {...props} name={i18n.t`Round Modeling`} url="round-modeling" />
       <FeatureLink {...props} name={i18n.t`ESOP`} url="esop" />
       <FeatureLink {...props} name={i18n.t`Reporting`} url="reporting" />
