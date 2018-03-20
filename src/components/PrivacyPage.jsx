@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from 'react';
+import Link from 'gatsby-link';
 import { withI18n, Trans } from '@lingui/react';
 
 import { Title } from '../layouts/utils';
@@ -55,7 +56,7 @@ const IndexPage = (props: Object) => (
                 <i className="fa fa-users fa-3x d-block" />
                 <Trans>
                   Company and cap table information<br />
-                  Names, addresses and stakes of each shareholder
+                  Names, addresses, and stakes of each shareholder
                   if you choose to enter them
                 </Trans>
               </div>
@@ -64,7 +65,7 @@ const IndexPage = (props: Object) => (
                 <i className="fa fa-bar-chart fa-3x d-block" />
                 <Trans>
                   General activity<br />
-                  Name, time and which action you perform when using app.ledgy.com
+                  Name, time, and which action you perform when using app.ledgy.com
                 </Trans>
               </div>
 
@@ -141,7 +142,7 @@ const IndexPage = (props: Object) => (
                 <Trans>
                   Security<br />
                   Highest security standards give you peace of
-                  mind. <a href="/security">Read more</a>.
+                  mind. <Link href to={`${props.prefix}/security/`}>Read more</Link>.
                 </Trans>
               </div>
 
