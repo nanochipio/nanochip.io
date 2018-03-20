@@ -156,11 +156,6 @@ const IndexPage = (props: Object) => (
 
             </div>
 
-            <h2><Trans>Now the legal stuff</Trans></h2>
-            <p>
-              Lorem ipsum dolor sit amet
-            </p>
-
           </header>
 
         </div>
