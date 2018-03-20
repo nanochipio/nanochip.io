@@ -32,7 +32,7 @@ const IndexPage = (props: Object) => (
             <p>
               <Trans>
                 Your privacy and your data’s security is extremely important to us.
-                We understand how sensitive captable information is for any business.
+                We understand how sensitive cap table information is for any business.
                 And we also know how little anyone likes to read long and difficult to
                 understand privacy policies.
                 That’s why we give you a human-readable overview up-front.
@@ -54,7 +54,7 @@ const IndexPage = (props: Object) => (
               <div className="col-12 col-md-6">
                 <i className="fa fa-users fa-3x d-block" />
                 <Trans>
-                  Company and captable information<br />
+                  Company and cap table information<br />
                   Names, addresses and stakes of each shareholder
                   if you choose to enter them
                 </Trans>
@@ -98,7 +98,7 @@ const IndexPage = (props: Object) => (
                 <Trans>
                   Third-party integrations<br />
                   Which we use to run and improve our service for you.
-                  It contains no captable or other sensitive data.
+                  It contains no cap table or other sensitive data.
                   They are listed below.
                 </Trans>
               </div>

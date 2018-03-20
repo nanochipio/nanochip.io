@@ -32,7 +32,7 @@ const IndexPage = (props: Object) => (
             <p>
               <Trans>
                 Your privacy and your data’s security is extremely important to us.
-                We understand how sensitive captable information is for any business.
+                We understand how sensitive cap table information is for any business.
                 Here is what we do to protect your data.
               </Trans>
             </p>
@@ -56,7 +56,7 @@ const IndexPage = (props: Object) => (
                 <i className="fa fa-lock fa-3x d-block" />
                 <Trans>
                   Secure passwords<br />
-                  Only transmitted/stored encrypted with battle-tested <a target="_blank" rel="noopener noreferrer" href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
+                  Only transmitted/stored encrypted with the battle-tested <a target="_blank" rel="noopener noreferrer" href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
                 </Trans>
               </div>
 
