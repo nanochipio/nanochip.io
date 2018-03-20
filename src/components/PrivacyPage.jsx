@@ -124,7 +124,7 @@ const IndexPage = (props: Object) => (
                 <Trans>
                   Stored in the EU<br />
                   Your cap table data is stored at
-                  an <a href="http://clevercloud.com/">independent provider</a> in Paris.
+                  an <a target="_blank" rel="noopener noreferrer" href="http://clevercloud.com/">independent provider</a> in Paris.
                 </Trans>
               </div>
 
