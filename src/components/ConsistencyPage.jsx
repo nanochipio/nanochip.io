@@ -48,7 +48,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   To get started simply enter all transactions from your share
                   register into Ledgy. This is a good opportunity to really understand
                   what has been going on in your cap table.<br /><br />
-                  Need help? <Link href to={`${props.prefix}/contact`}>Contact us</Link> and
+                  Need help? <Link href to={`${props.prefix}/contact/`}>Contact us</Link> and
                   we will assist you to get started with Ledgy.
                 </Trans>
               </p>

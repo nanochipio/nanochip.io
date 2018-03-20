@@ -22,7 +22,7 @@ export const Feature = (props: {
     <div className="col-md-5 ml-auto">
       <h2>{props.title || props.name}</h2>
       <p>{props.children}</p>
-      <Link href to={`${props.prefix}/features/${props.url}`}>
+      <Link href to={`${props.prefix}/features/${props.url}/`}>
         <Trans>Read More about</Trans> {props.name} <i className="ti-angle-right fs-10 ml-1" />
       </Link>
     </div>
@@ -49,7 +49,7 @@ const FeatureLink = (props: {
 }) => (
   props.page !== props.url &&
   <div className="col-6 px-3 col-lg-3">
-    <Link href to={`${props.prefix}/features/${props.url}`}>
+    <Link href to={`${props.prefix}/features/${props.url}/`}>
       <div className="card border hover-shadow-8">
         <div className="card-body mb-0 pb-0 px-2 h-125">
           <h6 className="card-title text-center">{props.name}</h6>
