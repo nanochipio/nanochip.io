@@ -144,7 +144,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
     <div>
       <Title
         title={i18n.t`Build trust in your cap table`}
-        description={i18n.t`Manage your cap table with Ledgy. The single place to track all your shares, manage your ESOPs and model detailed financing rounds.`}
+        description={i18n.t`Manage your Cap Table, not your Excel! Ledgy is the single place to track the complete history of your shares, manage your ESOPs and model detailed financing rounds. Enjoy a guaranteed error-free cap table and engage your investors and employees. Try Now For Free!`}
       />
       <Helmet>
         <html lang={props.lang} />

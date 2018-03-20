@@ -10,7 +10,7 @@ const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
     <Title
       title={i18n.t`About us`}
-      description={i18n.t`Meet the three random folks who went out to build truly a great product. And learn more about the people who trust in us.`}
+      description={i18n.t`Meet the team behind Ledgy that went out to build truly a great product. Learn more about the people who trust in us.`}
     />
 
     <div className="container text-center">
