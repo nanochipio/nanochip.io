@@ -41,8 +41,8 @@ const Nav = (props: LayoutProps) => (
 
       <section className="navbar-mobile">
         <nav className="nav nav-navbar ml-auto">
-          <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Features</Trans></Link>
-          <Link className="nav-link" href to={`${props.prefix}/about-us`}><Trans>About us</Trans></Link>
+          <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
+          <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
           <a className="nav-link" href={blogUrl}><Trans>Blog</Trans></a>
         </nav>
 
@@ -84,21 +84,21 @@ const Footer = (props: LayoutProps) => (
           <div className="col-6 col-md-3 col-xl-2">
             <h6 className="mb-4 mt-1"><strong><Trans>Company</Trans></strong></h6>
             <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/about-us`}><Trans>About us</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
               <a className="nav-link" href={blogUrl}><Trans>Blog</Trans></a>
-              <Link className="nav-link" href to={`${props.prefix}/contact`}><Trans>Contact</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/contact/`}><Trans>Contact</Trans></Link>
             </div>
           </div>
 
           <div className="col-6 col-md-3 col-xl-3">
             <h6 className="mb-4 mt-1"><strong><Trans>Product</Trans></strong></h6>
             <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/features`}><Trans>Features</Trans></Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/consistency`}><Trans>Consistency</Trans></Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/round-modeling`}><Trans>Round Modeling</Trans></Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/esop`}><Trans>ESOP</Trans></Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/reporting`}><Trans>Reporting</Trans></Link>
-              <Link className="nav-link" href to={`${props.prefix}/features/investors`}><Trans>Investors</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/consistency/`}><Trans>Consistency</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/round-modeling/`}><Trans>Round Modeling</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/esop/`}><Trans>ESOP</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/reporting/`}><Trans>Reporting</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/features/investors/`}><Trans>Investors</Trans></Link>
             </div>
           </div>
 
@@ -106,6 +106,7 @@ const Footer = (props: LayoutProps) => (
             <div className="social social-bordered">
               <a className="social-twitter" href="https://twitter.com/LedgyCom"><i className="fa fa-twitter" /></a>
               <a className="social-linkedin" href="https://www.linkedin.com/company/ledgy"><i className="fa fa-linkedin" /></a>
+              <a className="social-angellist" href="https://angel.co/ledgy"><i className="fa fa-angellist" /></a>
               <a className="social-facebook" href="https://www.facebook.com/LedgyCom/"><i className="fa fa-facebook" /></a>
             </div>
           </div>
@@ -143,7 +144,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
     <div>
       <Title
         title={i18n.t`Build trust in your cap table`}
-        description={i18n.t`Manage your cap table with Ledgy. The single place to track all your shares, manage your ESOPs and model detailed financing rounds.`}
+        description={i18n.t`Manage your Cap Table, not your Excel! Ledgy is the single place to track the complete history of your shares, manage your ESOPs and model detailed financing rounds. Enjoy a guaranteed error-free cap table and engage your investors and employees. Try Now For Free!`}
       />
       <Helmet>
         <html lang={props.lang} />
