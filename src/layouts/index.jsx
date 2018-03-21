@@ -162,7 +162,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         {/* Twitter social card */}
         <meta name="twitter:site" content="@LedgyCom" />
         <meta name="twitter:image" content={thumbnailUrl} />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
 
         {/* Disable AOS for Google */}
         <noscript>
