@@ -157,7 +157,6 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         <meta property="og:site_name" content={name} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={thumbnailUrl} />
-        <meta property="og:url" content={siteUrl} />
 
         {/* Twitter social card */}
         <meta name="twitter:site" content="@LedgyCom" />
