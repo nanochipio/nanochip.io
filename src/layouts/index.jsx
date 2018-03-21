@@ -86,6 +86,8 @@ const Footer = (props: LayoutProps) => (
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
               <a className="nav-link" href={blogUrl}><Trans>Blog</Trans></a>
+              <Link className="nav-link" href to={`${props.prefix}/privacy/`}><Trans>Privacy</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/security/`}><Trans>Security</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/contact/`}><Trans>Contact</Trans></Link>
             </div>
           </div>

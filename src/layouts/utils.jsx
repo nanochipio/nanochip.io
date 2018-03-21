@@ -37,3 +37,18 @@ export const getLocale = () => chain(window.navigator)
   .map(s => s.substr(0, 2))
   .find(s => includes(availableLanguages, s))
   .value() || 'en';
+
+export const PrivacyElement = ({ icon, title, body }: {
+  icon: string, title: string | React.Element<any>, body?: string | React.Element<any>
+}) => (
+  <div className="col-12 col-md-6 d-flex">
+    <div className="float-left mr-2">
+      <i className={`${icon} fa-3x fa-fw`} />
+    </div>
+    <div>
+      <strong className="d-block">{title}</strong>
+      {body && body}
+    </div>
+  </div>
+);
+PrivacyElement.defaultProps = { body: '' };

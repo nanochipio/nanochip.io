@@ -5,28 +5,28 @@
   "author": "Ledgy AG <contact@ledgy.com>",
   "repository": "morloy/ledgy-app",
   "dependencies": {
-    "@babel/core": "~7.0.0-beta.40",
-    "@babel/preset-env": "~7.0.0-beta.40",
-    "@babel/preset-flow": "~7.0.0-beta.40",
-    "@babel/preset-react": "~7.0.0-beta.40",
+    "@babel/core": "~7.0.0-beta.42",
+    "@babel/preset-env": "~7.0.0-beta.42",
+    "@babel/preset-flow": "~7.0.0-beta.42",
+    "@babel/preset-react": "~7.0.0-beta.42",
     "@lingui/react": "~2.0.5",
     "aos": "~2.2.0",
     "bootstrap": "~4.0.0",
     "et-line": "~1.0.1",
     "font-awesome": "~4.7.0",
-    "gatsby": "~1.9.183",
-    "gatsby-image": "~1.0.35",
+    "gatsby": "~1.9.238",
+    "gatsby-image": "~1.0.42",
     "gatsby-link": "~1.6.36",
     "gatsby-plugin-google-tagmanager": "~1.0.15",
     "gatsby-plugin-manifest": "~1.0.15",
     "gatsby-plugin-netlify": "~1.0.17",
     "gatsby-plugin-nprogress": "~1.0.14",
     "gatsby-plugin-offline": "~1.0.15",
-    "gatsby-plugin-react-helmet": "~2.0.4",
+    "gatsby-plugin-react-helmet": "~2.0.8",
     "gatsby-plugin-react-next": "~1.0.10",
-    "gatsby-plugin-sass": "~1.0.18",
+    "gatsby-plugin-sass": "~1.0.23",
     "gatsby-plugin-sharp": "~1.6.13",
-    "gatsby-plugin-sitemap": "~1.2.12",
+    "gatsby-plugin-sitemap": "~1.2.18",
     "gatsby-source-filesystem": "~1.5.18",
     "gatsby-transformer-sharp": "~1.6.18",
     "lity": "~2.3.0",
@@ -45,7 +45,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "test": "eslint . --ext jsx,js && flow",
-    "extract": "BABEL_ENV=extract lingui extract"
+    "extract": "BABEL_ENV=extract lingui extract --clean && i18next-conv -l de -s src/locale/de/messages.json -t src/locale/de.po"
   },
   "eslintConfig": {
     "extends": [
@@ -68,16 +68,18 @@
     }
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "~7.0.0-beta.40",
+    "@babel/plugin-proposal-class-properties": "~7.0.0-beta.42",
     "@lingui/babel-preset-react": "~2.0.5",
+    "@lingui/cli": "~2.0.5",
     "babel-eslint": "~8.2.2",
-    "eslint": "~4.18.2",
+    "eslint": "~4.19.0",
     "eslint-config-airbnb": "~16.1.0",
     "eslint-plugin-flowtype": "~2.46.1",
     "eslint-plugin-import": "~2.9.0",
     "eslint-plugin-jsx-a11y": "~6.0.3",
     "eslint-plugin-react": "~7.7.0",
-    "flow-bin": "~0.67.1"
+    "flow-bin": "~0.68.0",
+    "i18next-conv": "~6.0.0"
   },
   "lingui": {
     "fallbackLocale": "en",
