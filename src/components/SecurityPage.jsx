@@ -8,7 +8,7 @@ import { Title, PrivacyElement } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
-    <Title title={i18n.t`Privacy`} />
+    <Title title={i18n.t`Security`} />
 
     <div className="container text-center">
       <div className="row">
@@ -32,7 +32,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
           <header className="section-header text-left">
             <p>
               <Trans>
-                Your privacy and your data’s security is extremely important to us.
+                Your privacy and your data’s security are extremely important to us.
                 We understand how sensitive cap table information is for any business.
                 Here is what we do to protect your data.
               </Trans>
@@ -52,10 +52,10 @@ const IndexPage = ({ i18n, ...props }: Object) => (
 
               <PrivacyElement
                 icon="fa fa-lock"
-                title={i18n.t`Secure passwords`}
+                title={i18n.t`Password encryption`}
                 body={
                   <Trans>
-                    Only transmitted/stored encrypted with the battle-tested <a target="_blank" rel="noopener noreferrer" href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
+                    Stored encrypted with the battle-tested <a target="_blank" rel="noopener noreferrer" href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
                   </Trans>
                 }
               />

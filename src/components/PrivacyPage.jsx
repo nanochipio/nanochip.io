@@ -32,7 +32,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
           <header className="section-header text-left">
             <p>
               <Trans>
-                Your privacy and your data’s security is extremely important to us.
+                Your privacy and your data’s security are extremely important to us.
                 We understand how sensitive cap table information is for any business.
                 And we also know how little anyone likes to read long and difficult to
                 understand privacy policies.
@@ -43,7 +43,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
             <h2><Trans>What we collect</Trans></h2>
 
-            <div className="row gap-y mb-5">
+            <div className="row gap-y my-5">
               <PrivacyElement
                 icon="fa fa-sign-in"
                 title={i18n.t`Your login information`}
@@ -72,7 +72,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
             <h2><Trans>Who we share it with</Trans></h2>
 
-            <div className="row gap-y mb-5">
+            <div className="row gap-y my-5">
 
               <PrivacyElement
                 icon="fa fa-user text-success"
@@ -116,7 +116,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                     <Trans>Data resellers</Trans>
                   </span>
                 }
-                body="We don’t sell any data in general"
+                body={i18n.t`We don’t sell any data in general`}
               />
 
             </div>
@@ -124,7 +124,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
             <h2><Trans>How we treat your data</Trans></h2>
 
-            <div className="row gap-y mb-5">
+            <div className="row gap-y my-5">
 
               <PrivacyElement
                 icon="fa fa-cloud"

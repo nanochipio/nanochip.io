@@ -124,9 +124,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <h5><Trans>Privacy</Trans></h5>
               <p>
                 <Trans>
-                  We deeply care about your privacy. Your data only belongs to you.<br />
-                  <Link href to={`${props.prefix}/privacy/`}>Read more  <i className="ti-angle-right fs-10 ml-1" /></Link>
+                  We deeply care about your privacy. Your data only belongs to you.
                 </Trans>
+                <br />
+                <Link href to={`${props.prefix}/privacy/`}><Trans>Read more</Trans>  <i className="ti-angle-right fs-10 ml-1" /></Link>
               </p>
             </div>
 
@@ -135,9 +136,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <h5><Trans>Security</Trans></h5>
               <p>
                 <Trans>
-                  Your data is safe with us. Enjoy the highest security standards. No kidding.<br />
-                  <Link href to={`${props.prefix}/security/`}>Read more  <i className="ti-angle-right fs-10 ml-1" /></Link>
+                  Your data is safe with us. Enjoy the highest security standards. No kidding.
                 </Trans>
+                <br />
+                <Link href to={`${props.prefix}/security/`}><Trans>Read more</Trans>  <i className="ti-angle-right fs-10 ml-1" /></Link>
               </p>
             </div>
           </div>
