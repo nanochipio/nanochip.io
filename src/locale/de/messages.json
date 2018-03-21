@@ -1,5 +1,4 @@
 {
-  "We don’t sell any data in general": "Wir verkaufen generell keine Daten",
   "About us": "Über uns",
   "Meet the team behind Ledgy that went out to build truly a great product. Learn more about the people who trust in us.": "Lerne das Team hinter Ledgy kennen, welches dieses geniale Produkt entwickelt hat. Erfahre mehr über die Leute, die uns Vertrauen.",
   "Our mission": "Unsere Mission",
@@ -111,6 +110,7 @@
   "Ad networks": "Werbenetzwerke",
   "We don’t sell any data for ads": "Wir verkaufen keine Daten für Werbung",
   "Data resellers": "Data Resellers",
+  "We don’t sell any data in general": "Wir verkaufen generell keine Daten",
   "How we treat your data": "Wie wir deine Daten behandeln",
   "Stored in the EU": "Alle Daten in der EU",
   "Your cap table data is stored at an <0>independent provider</0> in Paris, France": "Dein Aktienregister ist bei einem <0>unabhängigen Anbieter</0> in Frankreich, Paris gespeichert",
@@ -143,6 +143,7 @@
   "Convert to transactions": "Zu Transaktionen umwandeln",
   "As soon as you’re done with your financing round, hit the <0>Convert</0> button. This will transform the scenario into real transactions for your share register and make it visible to all shareholders and investors.": "Sobald du mit der Finanzierungsrunde fertig bist, drücke den <0>Convert</0>-Button. Dadurch wird das Szenario in echten Transaktionen in deinem Aktienregister umgewandelt und für alle Mitgründer und Investoren sichtbar gemacht.",
   "Convert financing round": "Finanzierungsrunde umwandeln",
+  "At Ledgy we take your security seriously. Strong passwords, solid encryption, two-factor authentication, and permanent code reviews are among our high safety standards. Learn out more about why you can have peace-of-mind while managing your cap table with Ledgy.": "Wir bei Ledgy nehmen deine Sicherheit ernst. Sichere Passwörter, solide Verschlüsselung, Zwei-Factor-Authentifizierung, und permanente Code-Reviews gehören zu unserern hohen Sicherheitsstandards. Erfahre mehr darüber, warum du mit gutem Gewissen deinen Cap Table mit Ledgy verwalten kannst.",
   "Your privacy and your data’s security are extremely important to us. We understand how sensitive cap table information is for any business. Here is what we do to protect your data.": "Deine Privatsphäre und die Sicherheit deiner Daten sind uns sehr wichig. Uns ist klar, wie sensibel der Cap Table für jede Firma ist. So schützen wir deine Daten:",
   "Strong passwords": "Sichere Passwörter",
   "Users have to set a <0>very strong password</0>": "Alle Nutzer müssen ein <0>extrem sicheres Passwort</0> wählen",
