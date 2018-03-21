@@ -105,7 +105,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                     <Trans>Ad networks</Trans>
                   </span>
                 }
-                body="We don’t sell any data for ads"
+                body={i18n.t`We don’t sell any data for ads`}
               />
 
               <PrivacyElement
@@ -149,7 +149,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                 body={
                   <Trans>
                     Highest security standards give you peace of
-                    mind. <Link href to={`${props.prefix}/security/`}>Learn more</Link>
+                    mind. <Link href to={`${props.prefix}/security/`}>Read more  <i className="ti-angle-right fs-10 ml-1" /></Link>
                   </Trans>
                 }
               />
