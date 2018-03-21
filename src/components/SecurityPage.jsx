@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from 'react';
+import Link from 'gatsby-link';
 import { withI18n, Trans } from '@lingui/react';
 
 import { Title, PrivacyElement } from '../layouts/utils';
@@ -34,11 +35,6 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 Your privacy and your data’s security is extremely important to us.
                 We understand how sensitive cap table information is for any business.
                 Here is what we do to protect your data.
-              </Trans>
-            </p>
-            <p>
-              <Trans>
-                If you have any questions, just <a href="mailto:contact@ledgy.com">write us</a>.
               </Trans>
             </p>
 
@@ -109,6 +105,12 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
             </div>
+
+            <p>
+              <Trans>
+                If you have any questions or discover anything suspicious, please <Link href to={`${props.prefix}/contact/`}>get in touch with us</Link>.
+              </Trans>
+            </p>
 
           </header>
 

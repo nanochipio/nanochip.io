@@ -59,7 +59,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
               <PrivacyElement
                 icon="fa fa-bar-chart"
                 title={i18n.t`General activity`}
-                body={i18n.t`Name, time, and which action you perform when using app.ledgy.com to understand and improve our service`}
+                body={i18n.t`Name, time, and which action you perform when using the app to understand and improve our service`}
               />
 
               <PrivacyElement
@@ -82,9 +82,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                     <Trans>Your shareholders</Trans>
                   </span>
                 }
-                body={i18n.t`Their own stake in your company, no further details.
-                  Only if they are registered on Ledgy
-                  with the same email address you used to add them.`}
+                body={i18n.t`In case you add them with an email address, shareholders can see their own stake in your company. No further details.`}
               />
 
               <PrivacyElement
@@ -96,8 +94,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                   </span>
                 }
                 body={i18n.t`Which we use to run and improve our service for you.
-                  It contains no cap table or other sensitive data.
-                  They are listed below.`}
+                  It contains no cap table or other sensitive data.`}
               />
 
               <PrivacyElement
@@ -108,7 +105,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                     <Trans>Ad networks</Trans>
                   </span>
                 }
-                body="We don't sell any data for ads"
+                body="We don’t sell any data for ads"
               />
 
               <PrivacyElement
@@ -119,7 +116,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                     <Trans>Data resellers</Trans>
                   </span>
                 }
-                body="We don't sell any data in general"
+                body="We don’t sell any data in general"
               />
 
             </div>
@@ -135,7 +132,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                 body={
                   <Trans>
                     Your cap table data is stored at
-                    an <a target="_blank" rel="noopener noreferrer" href="https://www.clever-cloud.com/">independent provider</a> in Paris.
+                    an <a target="_blank" rel="noopener noreferrer" href="https://www.clever-cloud.com/">independent provider</a> in Paris, France
                   </Trans>
                 }
               />
@@ -143,7 +140,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
               <PrivacyElement
                 icon="fa fa-database"
                 title={i18n.t`Backups`}
-                body={i18n.t`Regular backups ensure nothing is ever lost.`}
+                body={i18n.t`Regular backups ensure nothing is ever lost`}
               />
 
               <PrivacyElement
@@ -152,7 +149,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                 body={
                   <Trans>
                     Highest security standards give you peace of
-                    mind. <Link href to={`${props.prefix}/security/`}>Read more</Link>.
+                    mind. <Link href to={`${props.prefix}/security/`}>Learn more</Link>
                   </Trans>
                 }
               />
@@ -162,8 +159,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                 title={i18n.t`Deleting your personal data`}
                 body={
                   <Trans>
-                    Please write
-                    to <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>.
+                    Please <Link href to={`${props.prefix}/contact/`}>get in touch with us</Link>
                   </Trans>
                 }
               />
