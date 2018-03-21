@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { withI18n, Trans } from '@lingui/react';
 
-import { Title } from '../layouts/utils';
+import { Title, PrivacyElement } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
@@ -19,9 +19,9 @@ const Header = ({ i18n }: Props) => (
   </header>
 );
 
-const IndexPage = (props: Object) => (
+const IndexPage = ({ i18n, ...props }: Object) => (
   <div>
-    <Header {...props} />
+    <Header i18n={i18n} {...props} />
 
     <main className="main-content">
 
@@ -44,69 +44,70 @@ const IndexPage = (props: Object) => (
 
             <div className="row gap-y text-center my-5">
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-key fa-3x d-block" />
-                <Trans>
-                  Strong passwords<br />
-                  Users have to set a <a target="_blank" rel="noopener noreferrer" href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/">very strong password</a>
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-key"
+                title={i18n.t`Strong passwords`}
+                body={
+                  <Trans>
+                    Users have to set a <a target="_blank" rel="noopener noreferrer" href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/">very strong password</a>
+                  </Trans>
+                }
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-lock fa-3x d-block" />
-                <Trans>
-                  Secure passwords<br />
-                  Only transmitted/stored encrypted with the battle-tested <a target="_blank" rel="noopener noreferrer" href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-lock"
+                title={i18n.t`Secure passwords`}
+                body={
+                  <Trans>
+                    Only transmitted/stored encrypted with the battle-tested <a target="_blank" rel="noopener noreferrer" href="https://codahale.com/how-to-safely-store-a-password/">bcrypt algorithm</a>
+                  </Trans>
+                }
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-shield fa-3x d-block" />
-                <Trans>
-                  Two-factor authentication<br />
-                  For an even better protection of accounts
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-shield"
+                title={i18n.t`Two-factor authentication`}
+                body={i18n.t`For an even better protection of accounts`}
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-user-plus fa-3x d-block" />
-                <Trans>
-                  Peer-reviewed code<br />
-                  The code is always reviewed by at least one other engineer
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-exchange"
+                title={i18n.t`Peer-reviewed code`}
+                body={i18n.t`The code is always reviewed by at least one other engineer`}
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-exchange fa-3x d-block" />
-                <Trans>
-                  Server call rate limit<br />
-                  The frequency of server calls is limited to prevent brute-force attacks
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-user-plus"
+                title={i18n.t`Server call rate limit`}
+                body={i18n.t`The frequency of server calls is limited to prevent brute-force attacks`}
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-user-secret fa-3x d-block" />
-                <Trans>
-                  Encrypted connection<br />
-                  The site is accessible only through HTTPS (<a target="_blank" rel="noopener noreferrer" href="https://www.ssllabs.com/ssltest/analyze?d=app.ledgy.com">A+ rating</a>)
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-user-secret"
+                title={i18n.t`Encrypted connection`}
+                body={
+                  <Trans>
+                    The site is accessible only through HTTPS (<a target="_blank" rel="noopener noreferrer" href="https://www.ssllabs.com/ssltest/analyze?d=app.ledgy.com">A+ rating</a>)
+                  </Trans>
+                }
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-desktop fa-3x d-block" />
-                <Trans>
-                  Content-Security-Policy<br />
-                  HTTP headers prevent cross-site scripting and code injection (<a target="_blank" rel="noopener noreferrer" href="https://observatory.mozilla.org/analyze.html?host=app.ledgy.com">A+ rating</a>)
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-desktop"
+                title={i18n.t`Content-Security-Policy`}
+                body={
+                  <Trans>
+                    HTTP headers prevent cross-site scripting and code injection (<a target="_blank" rel="noopener noreferrer" href="https://observatory.mozilla.org/analyze.html?host=app.ledgy.com">A+ rating</a>)
+                  </Trans>
+                }
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-database fa-3x d-block" />
-                <Trans>
-                  Backups<br />
-                  Daily backups ensure nothing is ever lost
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-database"
+                title={i18n.t`Backups`}
+                body={i18n.t`Daily backups ensure nothing is ever lost`}
+              />
+
             </div>
 
           </header>

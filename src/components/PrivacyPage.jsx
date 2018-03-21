@@ -4,7 +4,7 @@ import * as React from 'react';
 import Link from 'gatsby-link';
 import { withI18n, Trans } from '@lingui/react';
 
-import { Title } from '../layouts/utils';
+import { Title, PrivacyElement } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
@@ -18,14 +18,6 @@ const Header = ({ i18n }: Props) => (
       </div>
     </div>
   </header>
-);
-
-const PrivacyElement = ({ icon, title, body }: {icon: string, title: string, body: string}) => (
-  <div className="col-12 col-md-6">
-    <i className={`${icon} fa-3x d-block`} />
-    {title}<br />
-    {body}
-  </div>
 );
 
 const IndexPage = ({ i18n, ...props }: Props) => (

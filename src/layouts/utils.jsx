@@ -37,3 +37,12 @@ export const getLocale = () => chain(window.navigator)
   .map(s => s.substr(0, 2))
   .find(s => includes(availableLanguages, s))
   .value() || 'en';
+
+export const PrivacyElement
+  = ({ icon, title, body }: {icon: string, title: string, body: string}) => (
+    <div className="col-12 col-md-6">
+      <i className={`${icon} fa-3x d-block`} />
+      {title}<br />
+      {body}
+    </div>
+  );
