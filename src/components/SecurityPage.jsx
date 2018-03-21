@@ -42,7 +42,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               </Trans>
             </p>
 
-            <div className="row gap-y text-center my-5">
+            <div className="row gap-y my-5">
 
               <PrivacyElement
                 icon="fa fa-key"

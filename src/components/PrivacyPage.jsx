@@ -43,7 +43,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
             <h2><Trans>What we collect</Trans></h2>
 
-            <div className="row gap-y text-center mb-5">
+            <div className="row gap-y mb-5">
               <PrivacyElement
                 icon="fa fa-sign-in"
                 title={i18n.t`Your login information`}
@@ -52,7 +52,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
               <PrivacyElement
                 icon="fa fa-users"
-                title={i18n.t`Company and cap table information`}
+                title={i18n.t`Company information`}
                 body={i18n.t`Names, addresses, and stakes of each shareholder if you choose to enter them`}
               />
 
@@ -72,7 +72,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
             <h2><Trans>Who we share it with</Trans></h2>
 
-            <div className="row gap-y text-center mb-5">
+            <div className="row gap-y mb-5">
 
               <PrivacyElement
                 icon="fa fa-user text-success"
@@ -104,20 +104,22 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                 icon="fa fa-sitemap text-muted"
                 title={
                   <span>
-                    <i className="fa fa-times mr-2 text-muted " />
+                    <i className="fa fa-times mr-2 text-muted" />
                     <Trans>Ad networks</Trans>
                   </span>
                 }
+                body="We don't sell any data for ads"
               />
 
               <PrivacyElement
                 icon="fa fa-shopping-cart text-muted"
                 title={
                   <span>
-                    <i className="fa fa-times mr-2 text-muted " />
+                    <i className="fa fa-times mr-2 text-muted" />
                     <Trans>Data resellers</Trans>
                   </span>
                 }
+                body="We don't sell any data in general"
               />
 
             </div>
@@ -125,7 +127,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
 
             <h2><Trans>How we treat your data</Trans></h2>
 
-            <div className="row gap-y text-center mb-5">
+            <div className="row gap-y mb-5">
 
               <PrivacyElement
                 icon="fa fa-cloud"
