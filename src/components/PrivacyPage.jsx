@@ -53,19 +53,19 @@ const IndexPage = ({ i18n, ...props }: Props) => (
               <PrivacyElement
                 icon="fa fa-users"
                 title={i18n.t`Company information`}
-                body={i18n.t`Names, addresses, and stakes of each shareholder if you choose to enter them`}
+                body={i18n.t`Names, addresses, and stakes of each shareholder`}
               />
 
               <PrivacyElement
                 icon="fa fa-bar-chart"
                 title={i18n.t`General activity`}
-                body={i18n.t`Name, time, and which action you perform when using app.ledgy.com`}
+                body={i18n.t`Name, time, and which action you perform when using app.ledgy.com to understand and improve our service`}
               />
 
               <PrivacyElement
                 icon="fa fa-desktop "
                 title={i18n.t`Device and browser specs`}
-                body={i18n.t`In case a crash happens, so we can fix it as fast as possible`}
+                body={i18n.t`In case a crash happens, which helps us to fix it as fast as possible`}
               />
             </div>
 

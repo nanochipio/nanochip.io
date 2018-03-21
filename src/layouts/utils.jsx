@@ -42,7 +42,9 @@ export const PrivacyElement = ({ icon, title, body }: {
   icon: string, title: string | React.Element<any>, body?: string | React.Element<any>
 }) => (
   <div className="col-12 col-md-6 d-flex">
-    <i className={`${icon} fa-3x d-block float-left mr-3 fa-fw`} />
+    <div className="float-left mr-2">
+      <i className={`${icon} fa-3x fa-fw`} />
+    </div>
     <div>
       <strong className="d-block">{title}</strong>
       {body && body}
