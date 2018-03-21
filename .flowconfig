@@ -10,4 +10,4 @@ module.system.node.resolve_dirname=node_modules
 
 
 [ignore]
-.*/node_modules/.*\.json
+.*/node_modules/config-chain/test/broken.json
