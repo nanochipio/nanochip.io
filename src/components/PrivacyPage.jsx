@@ -20,9 +20,17 @@ const Header = ({ i18n }: Props) => (
   </header>
 );
 
-const IndexPage = (props: Object) => (
+const PrivacyElement = ({ icon, title, body }: {icon: string, title: string, body: string}) => (
+  <div className="col-12 col-md-6">
+    <i className={`${icon} fa-3x d-block`} />
+    {title}<br />
+    {body}
+  </div>
+);
+
+const IndexPage = ({ i18n, ...props }: Props) => (
   <div>
-    <Header {...props} />
+    <Header i18n={i18n} {...props} />
 
     <main className="main-content">
 
@@ -44,75 +52,81 @@ const IndexPage = (props: Object) => (
             <h2><Trans>What we collect</Trans></h2>
 
             <div className="row gap-y text-center mb-5">
-              <div className="col-12 col-md-6">
-                <i className="fa fa-sign-in fa-3x d-block" />
-                <Trans>
-                  Your login information <br />
-                  Name, email, encrypted password
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-sign-in"
+                title={i18n.t`Your login information`}
+                body={i18n.t`Name, email, encrypted password`}
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-users fa-3x d-block" />
-                <Trans>
-                  Company and cap table information<br />
-                  Names, addresses, and stakes of each shareholder
-                  if you choose to enter them
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-users"
+                title={i18n.t`Company and cap table information`}
+                body={i18n.t`Names, addresses, and stakes of each shareholder if you choose to enter them`}
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-bar-chart fa-3x d-block" />
-                <Trans>
-                  General activity<br />
-                  Name, time, and which action you perform when using app.ledgy.com
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-bar-chart"
+                title={i18n.t`General activity`}
+                body={i18n.t`Name, time, and which action you perform when using app.ledgy.com`}
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-desktop fa-3x d-block" />
-                <Trans>
-                  Device and browser specs<br />
-                  In case a crash happens, so we can fix it as fast as possible
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-desktop "
+                title={i18n.t`Device and browser specs`}
+                body={i18n.t`In case a crash happens, so we can fix it as fast as possible`}
+              />
             </div>
 
 
             <h2><Trans>Who we share it with</Trans></h2>
 
             <div className="row gap-y text-center mb-5">
-              <div className="col-12 col-md-6">
-                <i className="fa fa-user fa-3x d-block text-success" />
-                <i className="fa fa-check mr-2 text-success" />
-                <Trans>
-                  Your shareholders<br />
-                   Their own stake in your company, no further details.
-                   Only if they are registered on Ledgy
-                   with the same email address you used to add them.
-                </Trans>
-              </div>
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-plug fa-3x d-block text-success" />
-                <i className="fa fa-check mr-2 text-success" />
-                <Trans>
-                  Third-party integrations<br />
-                  Which we use to run and improve our service for you.
+              <PrivacyElement
+                icon="fa fa-user text-success"
+                title={
+                  <span>
+                    <i className="fa fa-check mr-2 text-success" />
+                    <Trans>Your shareholders</Trans>
+                  </span>
+                }
+                body={i18n.t`Their own stake in your company, no further details.
+                  Only if they are registered on Ledgy
+                  with the same email address you used to add them.`}
+              />
+
+              <PrivacyElement
+                icon="fa fa-plug text-success"
+                title={
+                  <span>
+                    <i className="fa fa-check mr-2 text-success" />
+                    <Trans>Third-party integrations</Trans>
+                  </span>
+                }
+                body={i18n.t`Which we use to run and improve our service for you.
                   It contains no cap table or other sensitive data.
-                  They are listed below.
-                </Trans>
-              </div>
+                  They are listed below.`}
+              />
 
-              <div className="col-12 col-md-6 text-muted">
-                <i className="fa fa-sitemap fa-3x d-block" />
-                <i className="fa fa-times mr-2" /><Trans>Ad networks</Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-sitemap text-muted"
+                title={
+                  <span>
+                    <i className="fa fa-times mr-2 text-muted " />
+                    <Trans>Ad networks</Trans>
+                  </span>
+                }
+              />
 
-              <div className="col-12 col-md-6 text-muted">
-                <i className="fa fa-shopping-cart fa-3x d-block mt-3" />
-                <i className="fa fa-times mr-2" /><Trans>Data resellers</Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-shopping-cart text-muted"
+                title={
+                  <span>
+                    <i className="fa fa-times mr-2 text-muted " />
+                    <Trans>Data resellers</Trans>
+                  </span>
+                }
+              />
 
             </div>
 
@@ -120,40 +134,45 @@ const IndexPage = (props: Object) => (
             <h2><Trans>How we treat your data</Trans></h2>
 
             <div className="row gap-y text-center mb-5">
-              <div className="col-12 col-md-6 ">
-                <i className="fa fa-cloud fa-3x d-block" />
-                <Trans>
-                  Stored in the EU<br />
-                  Your cap table data is stored at
-                  an <a target="_blank" rel="noopener noreferrer" href="https://www.clever-cloud.com/">independent provider</a> in Paris.
-                </Trans>
-              </div>
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-database fa-3x d-block" />
-                <Trans>
-                  Backups<br />
-                  Regular backups ensure nothing is ever lost.
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-cloud"
+                title={i18n.t`Stored in the EU`}
+                body={
+                  <Trans>
+                    Your cap table data is stored at
+                    an <a target="_blank" rel="noopener noreferrer" href="https://www.clever-cloud.com/">independent provider</a> in Paris.
+                  </Trans>
+                }
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-lock fa-3x d-block" />
-                <Trans>
-                  Security<br />
-                  Highest security standards give you peace of
-                  mind. <Link href to={`${props.prefix}/security/`}>Read more</Link>.
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-database"
+                title={i18n.t`Backups`}
+                body={i18n.t`Regular backups ensure nothing is ever lost.`}
+              />
 
-              <div className="col-12 col-md-6">
-                <i className="fa fa-question-circle fa-3x d-block" />
-                <Trans>
-                  Deleting your personal data<br />
-                  Please write
-                  to <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>.
-                </Trans>
-              </div>
+              <PrivacyElement
+                icon="fa fa-lock"
+                title={i18n.t`Security`}
+                body={
+                  <Trans>
+                    Highest security standards give you peace of
+                    mind. <Link href to={`${props.prefix}/security/`}>Read more</Link>.
+                  </Trans>
+                }
+              />
+
+              <PrivacyElement
+                icon="fa fa-question-circle"
+                title={i18n.t`Deleting your personal data`}
+                body={
+                  <Trans>
+                    Please write
+                    to <a href="mailto:contact@ledgy.com">contact@ledgy.com</a>.
+                  </Trans>
+                }
+              />
 
             </div>
 
