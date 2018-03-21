@@ -8,7 +8,10 @@ import { Title, PrivacyElement } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
-    <Title title={i18n.t`Security`} />
+    <Title
+      title={i18n.t`Security`}
+      description={i18n.t`At Ledgy we take your security seriously. Strong passwords, solid encryption, two-factor authentication, and permanent code reviews are among our high safety standards. Learn out more about why you can have peace-of-mind while managing your cap table with Ledgy.`}
+    />
 
     <div className="container text-center">
       <div className="row">

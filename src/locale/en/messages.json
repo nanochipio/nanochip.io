@@ -1,5 +1,4 @@
 {
-  "We don’t sell any data in general": "We don’t sell any data in general",
   "About us": "About us",
   "Meet the team behind Ledgy that went out to build truly a great product. Learn more about the people who trust in us.": "Meet the team behind Ledgy that went out to build truly a great product. Learn more about the people who trust in us.",
   "Our mission": "Our mission",
@@ -111,6 +110,7 @@
   "Ad networks": "Ad networks",
   "We don’t sell any data for ads": "We don’t sell any data for ads",
   "Data resellers": "Data resellers",
+  "We don’t sell any data in general": "We don’t sell any data in general",
   "How we treat your data": "How we treat your data",
   "Stored in the EU": "Stored in the EU",
   "Your cap table data is stored at an <0>independent provider</0> in Paris, France": "Your cap table data is stored at an <0>independent provider</0> in Paris, France",
@@ -143,6 +143,7 @@
   "Convert to transactions": "Convert to transactions",
   "As soon as you’re done with your financing round, hit the <0>Convert</0> button. This will transform the scenario into real transactions for your share register and make it visible to all shareholders and investors.": "As soon as you’re done with your financing round, hit the <0>Convert</0> button. This will transform the scenario into real transactions for your share register and make it visible to all shareholders and investors.",
   "Convert financing round": "Convert financing round",
+  "At Ledgy we take your security seriously. Strong passwords, solid encryption, two-factor authentication, and permanent code reviews are among our high safety standards. Learn out more about why you can have peace-of-mind while managing your cap table with Ledgy.": "At Ledgy we take your security seriously. Strong passwords, solid encryption, two-factor authentication, and permanent code reviews are among our high safety standards. Learn out more about why you can have peace-of-mind while managing your cap table with Ledgy.",
   "Your privacy and your data’s security are extremely important to us. We understand how sensitive cap table information is for any business. Here is what we do to protect your data.": "Your privacy and your data’s security are extremely important to us. We understand how sensitive cap table information is for any business. Here is what we do to protect your data.",
   "Strong passwords": "Strong passwords",
   "Users have to set a <0>very strong password</0>": "Users have to set a <0>very strong password</0>",
