@@ -8,13 +8,13 @@ import Img from 'gatsby-image';
 import { FeatureLinks } from './Features';
 
 const Header = ({ i18n, data }: Props) => (
-  <header className="header text-white bg-ledgy">
+  <header className="header bg-ledgy">
     <div className="container">
       <div className="row align-items-center gap-y mt-5 mb-7">
 
-        <div className="col-lg-5 ml-auto mb-5">
-          <h1><Trans>Build trust in your cap table</Trans></h1>
-          <div className="mb-6">
+        <div className="col-lg-5 ml-auto mb-5 ">
+          <div className="mb-6 text-white">
+            <h1><Trans>Build trust in your cap table</Trans></h1>
             <p>
               <Trans>
                 Use Ledgy to track all your shares, manage your ESOPs and
