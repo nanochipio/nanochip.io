@@ -63,7 +63,7 @@ const Footer = (props: LayoutProps) => (
       <div className="container">
         <div className="row gap-y align-items-center">
           <div className="col-md-5 text-center text-md-left">
-            <h3><Trans>Try it for free</Trans></h3>
+            <h3><Trans>Try now. It’s free.</Trans></h3>
             <p><Trans>Already using Ledgy?</Trans> <a href={`${appUrl}/login`}><Trans>Sign in</Trans></a>.</p>
           </div>
 
@@ -78,7 +78,7 @@ const Footer = (props: LayoutProps) => (
         <div className="row gap-y">
 
           <div className="col-md-6 col-xl-3">
-            <p><Logo {...props} inverse={false} /></p>
+            <Logo {...props} inverse={false} />
           </div>
 
           <div className="col-6 col-md-3 col-xl-2">
