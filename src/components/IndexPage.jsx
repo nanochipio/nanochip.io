@@ -8,12 +8,12 @@ import Img from 'gatsby-image';
 import { FeatureLinks } from './Features';
 
 const Header = ({ i18n, data }: Props) => (
-  <header className="header bg-ledgy">
+  <header className="header bg-ledgy pb-0">
     <div className="container">
       <div className="row align-items-center gap-y mt-5 mb-7">
 
-        <div className="col-lg-5 ml-auto mb-5 ">
-          <div className="mb-6 text-white">
+        <div className="col-lg-5 ml-auto mb-6">
+          <div className="mb-4 text-white">
             <h1><Trans>Build trust in your cap table</Trans></h1>
             <p>
               <Trans>
@@ -25,6 +25,7 @@ const Header = ({ i18n, data }: Props) => (
                 vesting schedule.
               </Trans>
             </p>
+            <p><Trans>Try now. It’s free.</Trans></p>
           </div>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href="https://demo.ledgy.com/"><Trans>See the demo</Trans></a>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="https://app.ledgy.com/signup"><Trans>Get Started</Trans></a>
