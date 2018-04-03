@@ -22,9 +22,11 @@ export const Feature = (props: {
     <div className="col-md-5 ml-auto">
       <h2>{props.title || props.name}</h2>
       <p>{props.children}</p>
-      <Link href to={`${props.prefix}/features/${props.url}/`}>
-        <Trans>Read More about</Trans> {props.name} <i className="ti-angle-right fs-10 ml-1" />
-      </Link>
+      <p>
+        <Link href to={`${props.prefix}/features/${props.url}/`}>
+          <Trans>Learn more about</Trans> {props.name}
+        </Link>
+      </p>
     </div>
 
     <div

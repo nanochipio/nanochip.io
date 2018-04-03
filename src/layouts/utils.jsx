@@ -45,10 +45,10 @@ export const PrivacyElement = ({ icon, title, body }: {
     <div className="float-left mr-2">
       <i className={`${icon} fa-3x fa-fw`} />
     </div>
-    <div>
+    <p>
       <strong className="d-block">{title}</strong>
       {body && body}
-    </div>
+    </p>
   </div>
 );
 PrivacyElement.defaultProps = { body: '' };
