@@ -11,6 +11,9 @@ p > a {
   border-bottom: 1px solid $color-primary;
   padding-bottom: 1px;
 }
+.text-white a {
+  border-bottom-color: rgba(255, 255, 255, 0.8);
+}
 
 .text-white p {
   color: $gray-100;
