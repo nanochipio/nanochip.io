@@ -6,7 +6,7 @@ import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
 import { Title, appUrl, name, blogUrl } from './utils';
-import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
+import { catalogs, langFromPath, langPrefix, deprefix, getLocale } from '../i18n-config';
 
 import '../assets/scss/page.scss';
 
@@ -114,7 +114,7 @@ const Footer = (props: LayoutProps) => (
 
           <div className="col-6 col-md-6 col-xl-2">
             {props.lang === 'de' ?
-              <Link href to={props.location.pathname.replace('/de', '')} className="btn btn-round btn-outline-primary">English</Link> :
+              <Link href to={deprefix(props.location.pathname)} className="btn btn-round btn-outline-primary">English</Link> :
               <Link href to={`/de${props.location.pathname}`} className="btn btn-round btn-outline-primary">Deutsch</Link>}
           </div>
 
