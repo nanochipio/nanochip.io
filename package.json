@@ -88,7 +88,7 @@
     "sourceLocale": "en",
     "localeDir": "src/locale",
     "srcPathDirs": [
-      "src/components",
+      "src/pages",
       "src/layouts"
     ],
     "format": "minimal"
