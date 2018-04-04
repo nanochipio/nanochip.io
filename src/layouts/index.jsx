@@ -44,6 +44,7 @@ const Nav = (props: LayoutProps) => (
         <h6 className="d-sm-none">Ledgy</h6>
         <nav className="nav nav-navbar ml-auto">
           <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
+          <Link className="nav-link" href to={`${props.prefix}/pricing/`}><Trans>Pricing</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
           <a className="nav-link" href={blogUrl}><Trans>Blog</Trans></a>
         </nav>
@@ -100,6 +101,7 @@ const Footer = (props: LayoutProps) => (
             <h6 className="mb-4 mt-1"><strong><Trans>Product</Trans></strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/pricing/`}><Trans>Pricing</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/consistency/`}><Trans>Consistency</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/round-modeling/`}><Trans>Round Modeling</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/esop/`}><Trans>ESOP</Trans></Link>
