@@ -5,15 +5,13 @@ import Link, { navigateTo } from 'gatsby-link';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import { Title, appUrl, name, blogUrl, getLocale } from './utils';
+import { Title, appUrl, name, blogUrl } from './utils';
+import { catalogs, langFromPath, langPrefix, getLocale } from '../i18n-config';
 
 import '../assets/scss/page.scss';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
-
-import en from '../locale/en/messages.json';
-import de from '../locale/de/messages.json';
 
 
 type LayoutProps = {
@@ -141,7 +139,7 @@ type SiteProps = {
 const TemplateWrapper = withI18n()((props: SiteProps) => {
   const { i18n } = props;
   const { siteUrl } = props.data.site.siteMetadata;
-  const prefix = props.lang === 'de' ? '/de' : '';
+  const prefix = langPrefix(props.lang);
   const thumbnailUrl = `${siteUrl}/thumbnail.png`;
   return (
     <div>
@@ -195,9 +193,9 @@ export default class extends React.Component<{ location: { pathname: string } }>
     }
   }
   render = () => {
-    const lang = this.props.location.pathname.startsWith('/de/') ? 'de' : 'en';
+    const lang = langFromPath(this.props.location.pathname);
     return (
-      <I18nProvider language={lang} catalogs={{ en: { messages: en }, de: { messages: de } }}>
+      <I18nProvider language={lang} catalogs={catalogs}>
         <TemplateWrapper {...this.props} lang={lang} />
       </I18nProvider>
     );
