@@ -5,8 +5,12 @@ import { Trans } from '@lingui/react';
 
 import { appUrl } from '../layouts/utils';
 
-export default class extends React.Component<Props, { email: string, invalid: boolean }> {
-  state = { email: '', invalid: false };
+export default class extends React.Component<Props, {
+  email: string,
+  invalid: boolean,
+  loading: boolean,
+}> {
+  state = { email: '', invalid: false, loading: false };
   re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // eslint-disable-line no-useless-escape
   handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -19,6 +23,7 @@ export default class extends React.Component<Props, { email: string, invalid: bo
       this.setState({ invalid: true });
       return;
     }
+    this.setState({ loading: true });
     const email = encodeURIComponent(this.state.email);
 
     window.dataLayer = window.dataLayer || [];
@@ -51,7 +56,11 @@ export default class extends React.Component<Props, { email: string, invalid: bo
             placeholder={i18n.t`Enter your email…`}
           />
           <div className="input-group-append">
-            <button type="submit" className="btn btn-primary btn-xl"><Trans>Sign Up Free</Trans></button>
+            <button type="submit" className="btn btn-primary btn-xl">
+              {this.state.loading ?
+                <Trans><i className="fa fa-spin fa-spinner" aria-hidden="true" /> Signing up…</Trans> :
+                <Trans>Get Started</Trans>}
+            </button>
           </div>
         </div>
         <div className="d-none">
