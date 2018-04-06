@@ -38,6 +38,7 @@ const Nav = (props: LayoutProps) => (
       </div>
 
       <section className="navbar-mobile">
+        <h6 className="d-sm-none">Ledgy</h6>
         <nav className="nav nav-navbar ml-auto">
           <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
@@ -165,7 +166,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         {/* Disable AOS for Google */}
         <noscript>
           {`
-            <style type="text/css">
+            <style>
               [data-aos] {
                   opacity: 1 !important;
                   transform: translate(0) scale(1) !important;

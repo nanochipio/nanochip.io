@@ -121,7 +121,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div>
             <header className="section-header text-left">
-              <h1><Trans>Keep your employees engaged</Trans></h1>
+              <h2><Trans>Keep your employees engaged</Trans></h2>
               <p>
                 <Trans>
                   Once your incentives are submitted to Ledgy it’s time to

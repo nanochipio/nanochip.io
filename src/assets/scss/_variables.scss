@@ -436,7 +436,7 @@ $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:       0rem !default;
 $input-btn-focus-color:       rgba($color-primary, .25) !default;
-$input-btn-focus-box-shadow:  none !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
 $input-btn-padding-y-xs:      .375rem !default;
 $input-btn-padding-x-xs:      .5rem !default;
@@ -610,4 +610,3 @@ $breadcrumb-bg:                     transparent !default;
 $breadcrumb-divider-color:          $color-text-lighter !default;
 $breadcrumb-active-color:           $color-text !default;
 $breadcrumb-divider:                "" !default;
-

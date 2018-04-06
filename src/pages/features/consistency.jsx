@@ -117,7 +117,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
 
           <div>
             <header className="section-header text-left">
-              <h1><Trans>Nice charts!</Trans></h1>
+              <h2><Trans>Nice charts!</Trans></h2>
               <p>
                 <Trans>
                   Finished? Go back to the <i>Cap Table</i> page
