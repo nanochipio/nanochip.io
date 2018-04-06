@@ -5,6 +5,15 @@ import { Trans } from '@lingui/react';
 
 import { appUrl } from '../layouts/utils';
 
+const Submit = ({ className, loading }: { className?: string, loading: boolean }) => (
+  <button type="submit" className={`btn btn-primary btn-round btn-xl ${className || ''}`}>
+    {loading ?
+      <Trans><i className="fa fa-spin fa-spinner" aria-hidden="true" /> Signing up…</Trans> :
+      <Trans>Get Started</Trans>}
+  </button>
+);
+Submit.defaultProps = { className: '' };
+
 export default class extends React.Component<Props, {
   email: string,
   invalid: boolean,
@@ -50,21 +59,18 @@ export default class extends React.Component<Props, {
           <input
             type="text"
             name="email"
-            className="form-control form-control-md"
+            className="form-control form-control"
             value={this.state.email}
             onChange={this.handleChange}
             placeholder={i18n.t`Enter your email…`}
           />
-          <div className="input-group-append">
-            <button type="submit" className="btn btn-primary btn-xl">
-              {this.state.loading ?
-                <Trans><i className="fa fa-spin fa-spinner" aria-hidden="true" /> Signing up…</Trans> :
-                <Trans>Get Started</Trans>}
-            </button>
+          <div className="input-group-append d-none d-sm-block">
+            <Submit {...this.state} />
           </div>
         </div>
+        <Submit {...this.state} className="d-sm-none btn-block py-3 mt-2 fs-17" />
         <div className="d-none">
-          <label htmlFor="bot-field">Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          <div>Don’t fill this out if you’re human: <input name="bot-field" /></div>
           <input name="referrer" />
           <input name="href" />
         </div>

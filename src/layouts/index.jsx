@@ -60,20 +60,18 @@ const Nav = (props: LayoutProps) => (
 
 const Footer = (props: LayoutProps) => (
   <div>
-    <section className="section bg-pale-secondary py-10" id="try">
-      <div className="container text-center">
+    <section className="section bg-pale-secondary" id="try">
+      <div className="container text-center signup py-7">
         <h2><Trans>Try Ledgy now. It’s free.</Trans></h2>
 
-        <div className="col-md-7 mx-auto">
-          <SignupForm {...props} />
+        <SignupForm {...props} />
 
-          <p>
-            <Trans>
+        <p>
+          <Trans>
               Still hesitating?&nbsp;
-              <Link href to={`${props.prefix}/features/`}><Trans>Learn more about our features</Trans></Link>.
-            </Trans>
-          </p>
-        </div>
+            <Link href to={`${props.prefix}/features/`}><Trans>Learn more about our features</Trans></Link>.
+          </Trans>
+        </p>
 
       </div>
     </section>

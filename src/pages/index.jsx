@@ -66,7 +66,7 @@ const IndexPage = (props: Props) => (
             </p>
           </header>
 
-          <div className="partner mx-auto" style={{ maxWidth: '1200px' }}>
+          <div className="partner mx-auto">
             <Reference img={props.data.testingtime} name="TestingTime" />
             <Reference img={props.data.quitt} name="quitt.ch" />
             <Reference img={props.data.cryptofund} name="CryptoFund" />

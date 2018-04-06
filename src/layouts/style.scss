@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.9;
 }
 .partner {
+  max-width: 1200px;
   text-align: left;
 }
 .section-header p {
@@ -47,4 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-xl {
   font-weight: 400;
   font-size: 0.8em;
+}
+.signup {
+  max-width: 600px;
 }
