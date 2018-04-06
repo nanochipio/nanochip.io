@@ -60,7 +60,7 @@ export default class extends React.Component<Props, { email: string, invalid: bo
           <input name="href" />
         </div>
         <small className={`text-danger ${this.state.invalid ? '' : 'invisible'}`}>
-          Oops. This email address is invalid.
+          <Trans>Oops. This email address is invalid.</Trans>
         </small>
       </form>
     );
