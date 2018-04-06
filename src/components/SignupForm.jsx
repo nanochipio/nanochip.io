@@ -26,7 +26,7 @@ export default class extends React.Component<Props, { email: string, invalid: bo
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `form-name=signup&email=${email}&referrer=${encodeURIComponent(document.referrer)}`,
+      body: `form-name=signup&email=${email}&referrer=${encodeURIComponent(document.referrer)}&href=${encodeURIComponent(window.location.href)}`,
     });
 
     window.location.href = `${appUrl}/signup?email=${email}`;
@@ -57,6 +57,7 @@ export default class extends React.Component<Props, { email: string, invalid: bo
         <div className="d-none">
           <label htmlFor="bot-field">Don’t fill this out if you’re human: <input name="bot-field" /></label>
           <input name="referrer" />
+          <input name="href" />
         </div>
         <small className={`text-danger ${this.state.invalid ? '' : 'invisible'}`}>
           Oops. This email address is invalid.
