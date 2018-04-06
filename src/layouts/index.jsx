@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 
 import { Title, appUrl, name, blogUrl } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix, getLocale } from '../i18n-config';
+import SignupForm from '../components/SignupForm';
 
 import '../assets/scss/page.scss';
 
@@ -15,7 +16,7 @@ import logoInverse from '../img/logo_white.png';
 
 
 type LayoutProps = {
-  prefix: string,
+  ...$Exact<Props>,
   lang: string,
   location: { pathname: string },
 }
@@ -56,20 +57,24 @@ const Nav = (props: LayoutProps) => (
   </nav>
 );
 
+
 const Footer = (props: LayoutProps) => (
   <div>
-    <section className="section bg-pale-secondary py-6">
-      <div className="container">
-        <div className="row gap-y align-items-center">
-          <div className="col-md-5 text-center text-md-left">
-            <h3><Trans>Try now. It’s free.</Trans></h3>
-            <p><Trans>Already using Ledgy?</Trans> <a href={`${appUrl}/login`}><Trans>Sign in</Trans></a>.</p>
-          </div>
+    <section className="section bg-pale-secondary py-10" id="try">
+      <div className="container text-center">
+        <h2><Trans>Try Ledgy now. It’s free.</Trans></h2>
 
-          <div className="col-md-auto ml-auto text-center text-md-right">
-            <a className="btn-block d-sm-inline btn btn-round btn-xl btn-primary mb-2" href={`${appUrl}/signup`}><Trans>Get Started</Trans></a>
-          </div>
+        <div className="col-md-7 mx-auto">
+          <SignupForm {...props} />
+
+          <p>
+            <Trans>
+              Still hesitating?&nbsp;
+              <Link href to={`${props.prefix}/features/`}><Trans>Learn more about our features</Trans></Link>.
+            </Trans>
+          </p>
         </div>
+
       </div>
     </section>
     <footer className="footer py-7">

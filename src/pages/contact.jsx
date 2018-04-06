@@ -72,6 +72,9 @@ const IndexPage = (props: Object) => {
                     <textarea className="form-control form-control-lg" name="message" rows="4" placeholder={i18n.t`Your message`} />
                   </div>
 
+                  <div className="form-group d-none">
+                    <label htmlFor="bot-field">Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                  </div>
 
                   <button className="btn btn-lg btn-primary btn-block" type="submit">{i18n.t`Send message`}</button>
                 </form>
