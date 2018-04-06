@@ -20,12 +20,16 @@ export default class extends React.Component<Props, { email: string, invalid: bo
       return;
     }
     const email = encodeURIComponent(this.state.email);
-    window.location.href = `${appUrl}/signup?email=${email}`;
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'signup' });
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `form-name=signup&email=${email}&referrer=${encodeURIComponent(document.referrer)}`,
     });
+
+    window.location.href = `${appUrl}/signup?email=${email}`;
   }
   render = () => {
     const { i18n } = this.props;
