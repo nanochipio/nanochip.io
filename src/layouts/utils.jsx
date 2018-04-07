@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-import { chain, includes } from 'lodash';
 
 export const name = 'Ledgy';
 export const appUrl = 'https://app.ledgy.com';
@@ -26,29 +25,3 @@ export const Title = (props: {
   </Helmet>
 );
 Title.defaultProps = { section: '', description: '' };
-
-const browserLanguagePropertyKeys = ['languages', 'language', 'browserLanguage', 'userLanguage', 'systemLanguage'];
-const availableLanguages = ['de', 'en'];
-export const getLocale = () => chain(window.navigator)
-  .pick(browserLanguagePropertyKeys)
-  .values()
-  .flatten()
-  .compact()
-  .map(s => s.substr(0, 2))
-  .find(s => includes(availableLanguages, s))
-  .value() || 'en';
-
-export const PrivacyElement = ({ icon, title, body }: {
-  icon: string, title: string | React.Element<any>, body?: string | React.Element<any>
-}) => (
-  <div className="col-12 col-md-6 d-flex">
-    <div className="float-left mr-2">
-      <i className={`${icon} fa-3x fa-fw`} />
-    </div>
-    <p>
-      <strong className="d-block">{title}</strong>
-      {body && body}
-    </p>
-  </div>
-);
-PrivacyElement.defaultProps = { body: '' };

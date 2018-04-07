@@ -5,19 +5,18 @@ import Link, { navigateTo } from 'gatsby-link';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import { Title, appUrl, name, blogUrl, getLocale } from './utils';
+import { Title, appUrl, name, blogUrl } from './utils';
+import { catalogs, langFromPath, langPrefix, deprefix, getLocale } from '../i18n-config';
+import SignupForm from '../components/SignupForm';
 
 import '../assets/scss/page.scss';
 
 import logoDefault from '../img/logo_black.png';
 import logoInverse from '../img/logo_white.png';
 
-import en from '../locale/en/messages.json';
-import de from '../locale/de/messages.json';
-
 
 type LayoutProps = {
-  prefix: string,
+  ...$Exact<Props>,
   lang: string,
   location: { pathname: string },
 }
@@ -40,6 +39,7 @@ const Nav = (props: LayoutProps) => (
       </div>
 
       <section className="navbar-mobile">
+        <h6 className="d-sm-none">Ledgy</h6>
         <nav className="nav nav-navbar ml-auto">
           <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
@@ -57,20 +57,22 @@ const Nav = (props: LayoutProps) => (
   </nav>
 );
 
+
 const Footer = (props: LayoutProps) => (
   <div>
-    <section className="section bg-pale-secondary py-6">
-      <div className="container">
-        <div className="row gap-y align-items-center">
-          <div className="col-md-5 text-center text-md-left">
-            <h3><Trans>Try now. It’s free.</Trans></h3>
-            <p><Trans>Already using Ledgy?</Trans> <a href={`${appUrl}/login`}><Trans>Sign in</Trans></a>.</p>
-          </div>
+    <section className="section bg-pale-secondary" id="try">
+      <div className="container text-center signup py-7">
+        <h2><Trans>Try Ledgy now. It’s free.</Trans></h2>
 
-          <div className="col-md-auto ml-auto text-center text-md-right">
-            <a className="btn-block d-sm-inline btn btn-round btn-xl btn-primary mb-2" href={`${appUrl}/signup`}><Trans>Get Started</Trans></a>
-          </div>
-        </div>
+        <SignupForm {...props} />
+
+        <p>
+          <Trans>
+              Still hesitating?&nbsp;
+            <Link href to={`${props.prefix}/features/`}><Trans>Learn more about our features</Trans></Link>.
+          </Trans>
+        </p>
+
       </div>
     </section>
     <footer className="footer py-7">
@@ -116,7 +118,7 @@ const Footer = (props: LayoutProps) => (
 
           <div className="col-6 col-md-6 col-xl-2">
             {props.lang === 'de' ?
-              <Link href to={props.location.pathname.replace('/de', '')} className="btn btn-round btn-outline-primary">English</Link> :
+              <Link href to={deprefix(props.location.pathname)} className="btn btn-round btn-outline-primary">English</Link> :
               <Link href to={`/de${props.location.pathname}`} className="btn btn-round btn-outline-primary">Deutsch</Link>}
           </div>
 
@@ -141,7 +143,7 @@ type SiteProps = {
 const TemplateWrapper = withI18n()((props: SiteProps) => {
   const { i18n } = props;
   const { siteUrl } = props.data.site.siteMetadata;
-  const prefix = props.lang === 'de' ? '/de' : '';
+  const prefix = langPrefix(props.lang);
   const thumbnailUrl = `${siteUrl}/thumbnail.png`;
   return (
     <div>
@@ -167,7 +169,7 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
         {/* Disable AOS for Google */}
         <noscript>
           {`
-            <style type="text/css">
+            <style>
               [data-aos] {
                   opacity: 1 !important;
                   transform: translate(0) scale(1) !important;
@@ -195,9 +197,9 @@ export default class extends React.Component<{ location: { pathname: string } }>
     }
   }
   render = () => {
-    const lang = this.props.location.pathname.startsWith('/de/') ? 'de' : 'en';
+    const lang = langFromPath(this.props.location.pathname);
     return (
-      <I18nProvider language={lang} catalogs={{ en: { messages: en }, de: { messages: de } }}>
+      <I18nProvider language={lang} catalogs={catalogs}>
         <TemplateWrapper {...this.props} lang={lang} />
       </I18nProvider>
     );

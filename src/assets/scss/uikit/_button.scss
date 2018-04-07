@@ -22,7 +22,7 @@ button:focus {
 
 .btn-link:hover,
 .btn-link:focus {
-  text-decoration: normal;
+  text-decoration: initial;
 }
 
 .btn-outline-secondary {
@@ -198,4 +198,3 @@ $btn-height-xl: 46px; //$line-height-base * 13px + 11px + 9px + 2px;
     height: $btn-height-xs;
   }
 }
-
