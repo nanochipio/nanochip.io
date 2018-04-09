@@ -42,7 +42,7 @@ const Header = ({ i18n, data }: Props) => (
 );
 
 const Reference = ({ img, name }: { img: Object, name: string }) => (
-  <div style={{ width: '200px' }} className="m-4">
+  <div style={{ width: '200px' }} className="my-4">
     <Img {...img} alt={name} style={{ overflow: 'visible', margin: 0 }} />
   </div>
 );
@@ -67,7 +67,7 @@ const IndexPage = (props: Props) => (
           </header>
 
           <div className="partner mx-auto">
-            <Reference img={props.data.testingtime} name="TestingTime" />
+            <Reference img={props.data.viu} name="VIU Eyeware" />
             <Reference img={props.data.quitt} name="quitt.ch" />
             <Reference img={props.data.cryptofund} name="CryptoFund" />
             <Reference img={props.data.frontify} name="Frontify" />
@@ -105,8 +105,8 @@ export const pageQuery = graphql`
       sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes_noBase64 }
     }
 
-    testingtime: imageSharp(id: { regex: "/testingtime/" }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+    viu: imageSharp(id: { regex: "/viu/" }) {
+      resolutions(width: 120) { ...GatsbyImageSharpResolutions }
     }
     quitt: imageSharp(id: { regex: "/quitt/" }) {
       resolutions(width: 80) { ...GatsbyImageSharpResolutions }
