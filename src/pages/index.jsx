@@ -10,7 +10,7 @@ import { FeatureLinks } from '../components/Features';
 const Header = ({ i18n, data }: Props) => (
   <header className="header bg-ledgy pb-0">
     <div className="container">
-      <div className="row align-items-center gap-y mt-5 mb-7">
+      <div className="row align-items-center gap-y mt-5 mb-7 mx-1">
 
         <div className="col-lg-5 ml-auto mb-6">
           <div className="mb-4 text-white">
