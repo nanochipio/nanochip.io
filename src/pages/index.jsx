@@ -43,7 +43,7 @@ const Header = ({ i18n, data }: Props) => (
 
 const Reference = ({ img, name }: { img: Object, name: string }) => (
   <div style={{ width: '200px' }} className="my-4">
-    <Img {...img} alt={name} style={{ overflow: 'visible', margin: 0 }} />
+    <Img {...img} alt={name} />
   </div>
 );
 
@@ -66,15 +66,15 @@ const IndexPage = (props: Props) => (
             </p>
           </header>
 
-          <div className="partner mx-auto">
-            <Reference img={props.data.viu} name="VIU Eyeware" />
-            <Reference img={props.data.quitt} name="quitt.ch" />
+          <div className="partner">
             <Reference img={props.data.cryptofund} name="CryptoFund" />
-            <Reference img={props.data.frontify} name="Frontify" />
-            <Reference img={props.data.sherpany} name="Sherpany" />
-            <Reference img={props.data.apiax} name="Apiax" />
+            <Reference img={props.data.viu} name="VIU Eyeware" />
             <Reference img={props.data.allthings} name="Allthings Technologies" />
             <Reference img={props.data.farmy} name="Farmy" />
+            <Reference img={props.data.sherpany} name="Sherpany" />
+            <Reference img={props.data.frontify} name="Frontify" />
+            <Reference img={props.data.apiax} name="Apiax" />
+            <Reference img={props.data.quitt} name="quitt.ch" />
 
           </div>
 

@@ -37,7 +37,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .partner {
   max-width: 1200px;
-  text-align: left;
+
+  img {
+    margin: 0
+  }
 }
 .section-header p {
   font-size: inherit;
