@@ -25,7 +25,7 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
   <Link href to={`${props.prefix}/#start`} className="navbar-brand">
     <img className="logo-dark" src={logoDefault} width={100} height={40} alt={name} />
     {props.inverse &&
-      <img className="logo-inverse" src={logoInverse} width={100} height={40} alt={name} />}
+      <img className="logo-light" src={logoInverse} width={100} height={40} alt={name} />}
   </Link>
 );
 
@@ -48,10 +48,9 @@ const Nav = (props: LayoutProps) => (
 
         <span className="navbar-divider" />
 
-        <div>
-          <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}><Trans>Sign In</Trans></a>
-        </div>
       </section>
+
+      <a className="btn btn-round btn-outline-light ml-lg-4 mr-2" href={appUrl}><Trans>Sign In</Trans></a>
 
     </div>
   </nav>

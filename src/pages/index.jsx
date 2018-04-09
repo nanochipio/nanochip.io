@@ -10,7 +10,7 @@ import { FeatureLinks } from '../components/Features';
 const Header = ({ i18n, data }: Props) => (
   <header className="header bg-ledgy pb-0">
     <div className="container">
-      <div className="row align-items-center gap-y mt-5 mb-7">
+      <div className="row align-items-center gap-y mt-5 mb-7 mx-1">
 
         <div className="col-lg-5 ml-auto mb-6">
           <div className="mb-4 text-white">
@@ -42,8 +42,8 @@ const Header = ({ i18n, data }: Props) => (
 );
 
 const Reference = ({ img, name }: { img: Object, name: string }) => (
-  <div style={{ width: '200px' }} className="m-4">
-    <Img {...img} alt={name} style={{ overflow: 'visible', margin: 0 }} />
+  <div style={{ width: '200px' }} className="my-4">
+    <Img {...img} alt={name} />
   </div>
 );
 
@@ -66,15 +66,15 @@ const IndexPage = (props: Props) => (
             </p>
           </header>
 
-          <div className="partner mx-auto">
-            <Reference img={props.data.testingtime} name="TestingTime" />
-            <Reference img={props.data.quitt} name="quitt.ch" />
+          <div className="partner">
             <Reference img={props.data.cryptofund} name="CryptoFund" />
-            <Reference img={props.data.frontify} name="Frontify" />
-            <Reference img={props.data.sherpany} name="Sherpany" />
-            <Reference img={props.data.apiax} name="Apiax" />
+            <Reference img={props.data.viu} name="VIU Eyeware" />
             <Reference img={props.data.allthings} name="Allthings Technologies" />
             <Reference img={props.data.farmy} name="Farmy" />
+            <Reference img={props.data.sherpany} name="Sherpany" />
+            <Reference img={props.data.frontify} name="Frontify" />
+            <Reference img={props.data.apiax} name="Apiax" />
+            <Reference img={props.data.quitt} name="quitt.ch" />
 
           </div>
 
@@ -105,8 +105,8 @@ export const pageQuery = graphql`
       sizes(maxWidth: 2000) { ...GatsbyImageSharpSizes_noBase64 }
     }
 
-    testingtime: imageSharp(id: { regex: "/testingtime/" }) {
-      resolutions(width: 150) { ...GatsbyImageSharpResolutions }
+    viu: imageSharp(id: { regex: "/viu/" }) {
+      resolutions(width: 120) { ...GatsbyImageSharpResolutions }
     }
     quitt: imageSharp(id: { regex: "/quitt/" }) {
       resolutions(width: 80) { ...GatsbyImageSharpResolutions }

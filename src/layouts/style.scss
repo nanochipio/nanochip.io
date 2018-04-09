@@ -29,6 +29,10 @@ p > a {
   text-transform: none;
   font-weight: 400;
 }
+.stick .btn-outline-light {
+  color: $color-primary;
+  border-color: $color-primary;
+}
 h1, h2, h3, h4, h5, h6 {
   hyphens: auto;
 }
@@ -37,7 +41,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .partner {
   max-width: 1200px;
-  text-align: left;
+
+  img {
+    margin: 0
+  }
 }
 .section-header p {
   font-size: inherit;
