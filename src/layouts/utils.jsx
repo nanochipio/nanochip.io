@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 
 export const name = 'Ledgy';
 export const appUrl = 'https://app.ledgy.com';
-export const demoUrl = 'https://app.ledgy.com';
+export const demoUrl = 'https://demo.ledgy.com';
 export const blogUrl = 'https://blog.ledgy.com';
 
 export const Title = (props: {

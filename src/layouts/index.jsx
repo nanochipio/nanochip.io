@@ -5,7 +5,7 @@ import Link, { navigateTo } from 'gatsby-link';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import { Title, appUrl, name, blogUrl } from './utils';
+import { Title, name, appUrl, blogUrl, demoUrl } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -71,8 +71,14 @@ const Footer = (props: LayoutProps) => (
 
           <p>
             <Trans>
-                Still hesitating?&nbsp;
-              <Link href to={`${props.prefix}/features/`}><Trans>Learn more about our features</Trans></Link>.
+              Still hesitating?&nbsp;
+              <Link href to={`${props.prefix}/features/`}>Learn more about our features</Link>.
+            </Trans>
+          </p>
+          <p>
+            <Trans>
+              Or have a quick look at our&nbsp;
+              <a href={`${demoUrl}`} target="_blank">Demo</a>.
             </Trans>
           </p>
 
