@@ -71,13 +71,13 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               />
 
               <PrivacyElement
-                icon="fa fa-exchange"
+                icon="fa fa-user-plus"
                 title={i18n.t`Peer-reviewed code`}
                 body={i18n.t`The code is always reviewed by at least one other engineer`}
               />
 
               <PrivacyElement
-                icon="fa fa-user-plus"
+                icon="fa fa-exchange"
                 title={i18n.t`Server call rate limit`}
                 body={i18n.t`The frequency of server calls is limited to prevent brute-force attacks`}
               />
