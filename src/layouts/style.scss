@@ -11,6 +11,9 @@ p > a {
   border-bottom: 1px solid $color-primary;
   padding-bottom: 1px;
 }
+.text-white a {
+  border-bottom-color: rgba(255, 255, 255, 0.8);
+}
 
 .text-white p {
   color: $gray-100;
@@ -67,4 +70,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 .imprint h6 {
   margin-bottom: 0;
+}
+.pricing-3 {
+  h6 { height: 2rem }
+  li {
+    position: relative;
+    margin-left: 1em;
+    height: 3em;
+    line-height: 1.2;
+  }
+  li::before {
+    content: "\E64C";
+    font-family: 'themify';
+    color: $color-success;
+    position: absolute;
+    left: -1.5em;
+  }
 }

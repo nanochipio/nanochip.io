@@ -6,8 +6,9 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
 import { FeatureLinks } from '../components/Features';
+import { demoUrl } from '../layouts/utils';
 
-const Header = ({ i18n, data }: Props) => (
+const Header = ({ i18n, data, prefix }: Props) => (
   <header className="header bg-ledgy pb-0">
     <div className="container">
       <div className="row align-items-center gap-y mt-5 mb-7 mx-1">
@@ -25,9 +26,9 @@ const Header = ({ i18n, data }: Props) => (
                 vesting schedule.
               </Trans>
             </p>
-            <p><Trans>Try Ledgy now. It’s free.</Trans></p>
+            <p><Trans>Try Ledgy now. It’s <Link href to={`${prefix}/pricing/`}>free</Link>.</Trans></p>
           </div>
-          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href="https://demo.ledgy.com/"><Trans>See the demo</Trans></a>
+          <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-outline-light" href={demoUrl} target="_blank"><Trans>See the demo</Trans></a>
           <a className="btn btn-block d-sm-inline btn-xl mx-1 btn-round btn-light" href="#try"><Trans>Get Started</Trans></a>
         </div>
 

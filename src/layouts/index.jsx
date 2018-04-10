@@ -5,7 +5,7 @@ import Link, { navigateTo } from 'gatsby-link';
 import { I18nProvider, withI18n, Trans } from '@lingui/react';
 import { Helmet } from 'react-helmet';
 
-import { Title, appUrl, name, blogUrl } from './utils';
+import { Title, name, appUrl, blogUrl, demoUrl } from './utils';
 import { catalogs, langFromPath, langPrefix, deprefix, getLocale } from '../i18n-config';
 import SignupForm from '../components/SignupForm';
 
@@ -44,6 +44,7 @@ const Nav = (props: LayoutProps) => (
         <h6 className="d-sm-none">Ledgy</h6>
         <nav className="nav nav-navbar ml-auto">
           <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
+          <Link className="nav-link" href to={`${props.prefix}/pricing/`}><Trans>Pricing</Trans></Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us/`}><Trans>About us</Trans></Link>
           <a className="nav-link" href={blogUrl}><Trans>Blog</Trans></a>
         </nav>
@@ -70,8 +71,14 @@ const Footer = (props: LayoutProps) => (
 
           <p>
             <Trans>
-                Still hesitating?&nbsp;
-              <Link href to={`${props.prefix}/features/`}><Trans>Learn more about our features</Trans></Link>.
+              Still hesitating?&nbsp;
+              <Link href to={`${props.prefix}/features/`}>Learn more about our features</Link>.
+            </Trans>
+          </p>
+          <p>
+            <Trans>
+              Or have a quick look at our&nbsp;
+              <a href={`${demoUrl}`} target="_blank">live Demo</a>.
             </Trans>
           </p>
 
@@ -100,6 +107,7 @@ const Footer = (props: LayoutProps) => (
             <h6 className="mb-4 mt-1"><strong><Trans>Product</Trans></strong></h6>
             <div className="nav flex-column">
               <Link className="nav-link" href to={`${props.prefix}/features/`}><Trans>Features</Trans></Link>
+              <Link className="nav-link" href to={`${props.prefix}/pricing/`}><Trans>Pricing</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/consistency/`}><Trans>Consistency</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/round-modeling/`}><Trans>Round Modeling</Trans></Link>
               <Link className="nav-link" href to={`${props.prefix}/features/esop/`}><Trans>ESOP</Trans></Link>
