@@ -42,7 +42,7 @@ export default withI18n()(({ i18n }: Props) => (
             <hr />
             <p>
               <Trans>
-                In case you came here looking for fancy option
+                If you came here looking for fancy option
                 plans, we got you covered:
               </Trans>
             </p>

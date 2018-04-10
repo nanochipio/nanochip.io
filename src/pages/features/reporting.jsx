@@ -38,11 +38,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <h2><Trans>Make your cap table legally binding</Trans></h2>
               <p>
                 <Trans>
-                  In order to create a legally binding share register, it
-                  is necessary to add a handwritten signature.
+                  To create a legally binding share register, it
+                  must contain a handwritten signature.
                   With Ledgy you can download a beautiful snapshot
                   of your company’s shares structure.
-                  Simply print and sign it to have a legally valid document.
+                  Print and sign it to have a legally valid document.
                   <br /><br />
                   It includes the current cap table, including the non-diluted and
                   fully-diluted stake of each shareholder (if you have options or phantom stock),
@@ -79,7 +79,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   nicely formatted holding confirmations for all of your shareholders
                   and send them directly via email.
                   <br /><br />
-                  Hours of tedious work is now reduced to just a few seconds. Hurray!
+                  Reduce hours of tedious work to just a few seconds. Hurray!
                 </Trans>
               </p>
             </div>
@@ -121,11 +121,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                 <Trans>
                   Every transaction in your share register usually comes with a
                   pile of additional documents, like contracts.
-                  Get rid of complicated folder structures and simply attach them
+                  Get rid of complicated folder structures and attach them
                   directly to your transactions.
                   Ledgy gives you an overview of all documents that you uploaded and
                   their corresponding transactions.
-                  Also in your transaction history you can select any transaction and see
+                  Also in your transaction history, you can select any transaction and see
                   all connected documents at a glance.
                   <br /><br />
                   You can also share your documents by sending a simple

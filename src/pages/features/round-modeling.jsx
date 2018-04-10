@@ -47,7 +47,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   company to the next level?
                   <br />
                   <br />
-                  Enter a valuation and you will see how your convertibles apply
+                  Enter a valuation, and you will see how your convertibles apply
                   to your cap table immediately.
                   If your convertible has a cap, discount or
                   an interest—Ledgy does the math for you.
@@ -73,7 +73,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <header className="section-header text-left">
               <p>
                 <Trans>
-                  Scroll down and you will notice that the cap table now
+                  Scroll down, and you will notice that the cap table now
                   indicates the <i>Round Modeling</i> mode.
                   This gives you a detailed overview of who owns how many shares
                   after applying the new financing round. Cool, eh?

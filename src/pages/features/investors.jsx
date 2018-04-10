@@ -84,7 +84,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   The transaction history will tell you exactly what happened to
                   your shares at what time.
                   Keep track of when you bought or sold shares and at which price. See which
-                  options you are currently holding or how much interest is currently
+                  options you are currently holding or how much interest is
                   on your convertible and whether there was a cap or discount.
                 </Trans>
               </p>

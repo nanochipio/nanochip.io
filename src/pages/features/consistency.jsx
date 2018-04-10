@@ -45,10 +45,10 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   Ledgy will be your single source of truth.
                   And it’s a damn good one!
                   <br /><br />
-                  To get started simply enter all transactions from your share
-                  register into Ledgy. This is a good opportunity to really understand
+                  To get started enter all transactions from your share
+                  register into Ledgy. That’s is an excellent opportunity to understand
                   what has been going on in your cap table.<br /><br />
-                  Need help? <Link href to={`${props.prefix}/contact/`}>Contact us</Link> and
+                  Need help? <Link href to={`${props.prefix}/contact/`}>Contact us</Link>, and
                   we will assist you to get started with Ledgy.
                 </Trans>
               </p>
@@ -66,7 +66,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   Oops, there was an error in your share register?
-                  Don’t worry, Ledgy will assist you in getting your cap table straight.<br />
+                  Don’t worry; Ledgy will assist you in getting your cap table straight.<br />
                   Once finished, sit back and relax. Now you can be assured that
                   your cap table is error-free!
                 </Trans>
@@ -123,7 +123,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   Finished? Go back to the <i>Cap Table</i> page
                   and view the result.
                   At any point in the history of your share register, Ledgy
-                  can draw you a nice diagram that represents the current equity
+                  can draw you a helpful diagram that represents the current equity
                   distribution of your company.
                 </Trans>
               </p>

@@ -42,7 +42,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             <Trans>
               Did you know that many share registers are incomplete or
               contain errors?
-              Building a share register with Excel or Word can easily lead to
+              Building a share register with Excel or Word can quickly lead to
               inconsistencies.
               Set up your shares with Ledgy
               and be sure that all data is consistent at any time.
@@ -76,7 +76,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               Let your employees be part of your company’s success.
               Ledgy supports vested stock, options, inverse vesting,
               ESOP pools, and much more.<br />
-              Employees can even log into Ledgy and track their vested shares in real-time.
+              Employees can even log in to Ledgy and track their vested shares in real-time.
             </Trans>
           </Feature>
 
@@ -89,11 +89,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             left
           >
             <Trans>
-              Oh, it’s tax season again and there are 50 holding confirmations
+              Oh, it’s tax season again, and 50 holding confirmations are
               waiting to be sent to your shareholders.
               This means pasting names into document templates,
               computing the tax value of all shares… <br />
-              Don’t worry. Generate and send all important documents with a single click on Ledgy.
+              Don’t worry. Generate and send all relevant documents with a single click on Ledgy.
             </Trans>
           </Feature>
 
@@ -106,11 +106,11 @@ export default withI18n()(({ i18n, ...props }: Props) => (
             url="investors"
           >
             <Trans>
-              You are an investor and want to track your portfolio companies?
+              Are you an investor and want to track your portfolio companies?
               The founders are busy and the numbers they give you are different
               from your own records?<br />
               With their share register on Ledgy, there’s only a single source of truth.
-              Convince your companies and you will never miss anything regarding your investments.
+              Convince your companies, and you will never miss anything regarding your investments.
             </Trans>
           </Feature>
 
@@ -125,7 +125,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   Cap table data is sensitive.
-                  That’s why we deeply care about your privacy.
+                  That’s why we genuinely care about your privacy.
                 </Trans>
                 <br />
                 <Link href to={`${props.prefix}/privacy/`}><Trans>Read more</Trans>  <i className="ti-angle-right fs-10 ml-1" /></Link>

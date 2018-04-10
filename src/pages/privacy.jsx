@@ -34,8 +34,8 @@ const IndexPage = ({ i18n, ...props }: Props) => (
             <p>
               <Trans>
                 We understand how sensitive cap table information is for any business.
-                That’s why your privacy and your data’s security is extremely important to us.
-                And we also know how little anyone likes to read long and difficult to
+                That’s why your privacy and your data’s security is crucial to us.
+                And we also know how little anyone likes to read long and hard to
                 understand privacy policies. So we give you a human-readable overview up-front.
               </Trans>
             </p>
@@ -82,7 +82,7 @@ const IndexPage = ({ i18n, ...props }: Props) => (
                     <Trans>Your shareholders</Trans>
                   </span>
                 }
-                body={i18n.t`In case you add them with an email address, shareholders can see their own stake in your company. No further details.`}
+                body={i18n.t`If you add them with an email address, shareholders can see their own stake in your company. No further details.`}
               />
 
               <PrivacyElement
