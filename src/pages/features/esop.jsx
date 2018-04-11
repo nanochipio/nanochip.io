@@ -46,7 +46,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
                   options from a fixed-size pool or even phantom stock.
                   <br /><br />
                   Add a vesting schedule to your ESOPs and track their status in real-time.
-                  Coolest thing ever, let your employees log into Ledgy and allow them
+                  Coolest thing ever, let your employees log in to Ledgy and allow them
                   to see at any point in time how much stock they have already vested and
                   how many shares are still outstanding.
                   <br /><br />
@@ -68,7 +68,7 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <p>
                 <Trans>
                   You can create a detailed vesting schedule by defining over how
-                  many months the shares are to be vested, if there’s a cliff and
+                  many months the shares are to be vested if there’s a cliff and
                   how often a new batch of shares gets assigned to the employee.<br />
                   As soon as you enter the first numbers, you will see a visual representation
                   of the current schedule.
@@ -124,9 +124,9 @@ export default withI18n()(({ i18n, ...props }: Props) => (
               <h2><Trans>Keep your employees engaged</Trans></h2>
               <p>
                 <Trans>
-                  Once your incentives are submitted to Ledgy it’s time to
+                  Once your incentives are submitted to Ledgy, it’s time to
                   engage your employees.
-                  They are able to log into Ledgy themselves with their email
+                  They can log in to Ledgy themselves with their email
                   address at any time and see how many shares they have already vested.
                 </Trans>
               </p>

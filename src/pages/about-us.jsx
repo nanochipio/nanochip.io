@@ -10,7 +10,7 @@ const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
     <Title
       title={i18n.t`About us`}
-      description={i18n.t`Meet the team behind Ledgy that went out to build truly a great product. Learn more about the people who trust in us.`}
+      description={i18n.t`Meet the team behind Ledgy that went out to build a genuinely great product. Learn more about the people who trust in us.`}
     />
 
     <div className="container text-center">
@@ -95,7 +95,7 @@ const IndexPage = (props: Props) => {
                   <Trans>
                     We want to empower entrepreneurs. They
                     should be able to focus on their business,
-                    not on bureaucratic paperwork. This is why we want to
+                    not on bureaucratic paperwork. That’s why we want to
                     establish a new, state-of-the-art tool to manage,
                     exchange, and trade securities in private companies. Our
                     goal is to make shares management a breeze for both

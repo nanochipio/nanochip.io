@@ -21,7 +21,7 @@ const Header = ({ i18n, data, prefix }: Props) => (
                 Use Ledgy to track all your shares, manage your ESOPs and
                 model detailed financing rounds.
                 <br /><br />
-                You are an investor or employee? Get a detailed overview of
+                Are you an investor or employee? Get a comprehensive overview of
                 your investment and check the status of your
                 vesting schedule.
               </Trans>

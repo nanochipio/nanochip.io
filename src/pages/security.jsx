@@ -11,7 +11,7 @@ const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
     <Title
       title={i18n.t`Security`}
-      description={i18n.t`At Ledgy we take your security seriously. Strong passwords, solid encryption, two-factor authentication, and permanent code reviews are among our high safety standards. Find out more about why you can have peace-of-mind while managing your cap table with Ledgy.`}
+      description={i18n.t`At Ledgy we take your security seriously. Strong passwords, robust encryption, two-factor authentication, and permanent code reviews are among our high safety standards. Find out more about why you can have peace-of-mind while managing your cap table with Ledgy.`}
     />
 
     <div className="container text-center">
@@ -37,7 +37,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
             <p>
               <Trans>
                 We understand how sensitive cap table information is for any business.
-                That’s why your privacy and your data’s security is extremely important to us.
+                That’s why your privacy and your data’s security is crucial to us.
                 Here is what we do to protect your data.
               </Trans>
             </p>
@@ -49,7 +49,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
                 title={i18n.t`Strong passwords`}
                 body={
                   <Trans>
-                    Users have to set a <a target="_blank" rel="noopener noreferrer" href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/">very strong password</a>
+                    Users have to set a <a target="_blank" rel="noopener noreferrer" href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/">secure password</a>
                   </Trans>
                 }
               />
@@ -67,7 +67,7 @@ const IndexPage = ({ i18n, ...props }: Object) => (
               <PrivacyElement
                 icon="fa fa-shield"
                 title={i18n.t`Two-factor authentication`}
-                body={i18n.t`For an even better protection of accounts`}
+                body={i18n.t`For even better protection of accounts`}
               />
 
               <PrivacyElement
