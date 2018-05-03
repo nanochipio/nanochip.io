@@ -8,10 +8,10 @@ const PrivacyElement = ({ icon, title, body }: {
   <div className="col-12 col-md-6">
     <div className="media">
       <i className={`${icon} fa-3x fa-fw mr-2`} />
-      <div className="media-body">
+      <p className="media-body mb-0">
         <strong className="d-block">{title}</strong>
         {body && body}
-      </div>
+      </p>
     </div>
   </div>
 );
