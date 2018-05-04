@@ -11,9 +11,9 @@ import { demoUrl } from '../layouts/utils';
 const Header = ({ i18n, data, prefix }: Props) => (
   <header className="header bg-ledgy pb-0">
     <div className="container">
-      <div className="row align-items-center gap-y mt-5 mb-7 mx-1">
+      <div className="row align-items-center gap-y mt-5 pb-7">
 
-        <div className="col-lg-5 ml-auto mb-6">
+        <div className="col-lg-6 ml-auto">
           <div className="mb-4 text-white">
             <h1><Trans>Build trust in your cap table</Trans></h1>
             <p>
@@ -61,20 +61,19 @@ const IndexPage = (props: Props) => (
             <hr className="my-2" />
             <p>
               <Trans>
-                Many successful companies already use Ledgy to keep track of
-                their share register.
+                Many successful companies already use Ledgy to manage their ownership
               </Trans>
             </p>
           </header>
 
           <div className="partner">
+            <Reference img={props.data.bexio} name="Bexio" />
             <Reference img={props.data.cryptofund} name="CryptoFund" />
             <Reference img={props.data.viu} name="VIU Eyeware" />
             <Reference img={props.data.allthings} name="Allthings Technologies" />
             <Reference img={props.data.farmy} name="Farmy" />
             <Reference img={props.data.sherpany} name="Sherpany" />
             <Reference img={props.data.frontify} name="Frontify" />
-            <Reference img={props.data.apiax} name="Apiax" />
             <Reference img={props.data.quitt} name="quitt.ch" />
 
           </div>
@@ -121,7 +120,7 @@ export const pageQuery = graphql`
     frontify: imageSharp(id: { regex: "/frontify/" }) {
       resolutions(width: 150) { ...GatsbyImageSharpResolutions }
     }
-    apiax: imageSharp(id: { regex: "/apiax/" }) {
+    bexio: imageSharp(id: { regex: "/bexio/" }) {
       resolutions(width: 110) { ...GatsbyImageSharpResolutions }
     }
     allthings: imageSharp(id: { regex: "/allthings/" }) {
