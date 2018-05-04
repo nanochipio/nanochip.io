@@ -61,8 +61,7 @@ const IndexPage = (props: Props) => (
             <hr className="my-2" />
             <p>
               <Trans>
-                Many successful companies already use Ledgy to keep track of
-                their share register.
+                Many successful companies already use Ledgy to manage their ownership
               </Trans>
             </p>
           </header>
