@@ -11,9 +11,9 @@ import { demoUrl } from '../layouts/utils';
 const Header = ({ i18n, data, prefix }: Props) => (
   <header className="header bg-ledgy pb-0">
     <div className="container">
-      <div className="row align-items-center gap-y mt-5 mb-7 mx-1">
+      <div className="row align-items-center gap-y mt-5 mb-7">
 
-        <div className="col-lg-5 ml-auto mb-6">
+        <div className="col-lg-6 ml-auto pb-6">
           <div className="mb-4 text-white">
             <h1><Trans>Build trust in your cap table</Trans></h1>
             <p>
