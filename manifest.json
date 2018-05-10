@@ -1,0 +1,16 @@
+{
+  "main.css": "styles.css",
+  "main.js": "render-page.js",
+  "main.js.map": "render-page.js.map",
+  "static/fontawesome-webfont.eot": "static/fontawesome-webfont.674f50d2.eot",
+  "static/fontawesome-webfont.eot?v=4.7.0": "static/fontawesome-webfont.674f50d2.eot",
+  "static/fontawesome-webfont.svg?v=4.7.0": "static/fontawesome-webfont.912ec66d.svg",
+  "static/fontawesome-webfont.ttf?v=4.7.0": "static/fontawesome-webfont.b06871f2.ttf",
+  "static/fontawesome-webfont.woff2?v=4.7.0": "static/fontawesome-webfont.af7ae505.woff2",
+  "static/fontawesome-webfont.woff?v=4.7.0": "static/fontawesome-webfont.fee66e71.woff",
+  "static/themify.eot": "static/themify.2c454669.eot",
+  "static/themify.eot?-fvbane": "static/themify.2c454669.eot",
+  "static/themify.svg?-fvbane": "static/themify.9c8e96ec.svg",
+  "static/themify.ttf?-fvbane": "static/themify.e23a7dca.ttf",
+  "static/themify.woff?-fvbane": "static/themify.a1ecc3b8.woff"
+}
