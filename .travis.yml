@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "7"
+  - "8"
+install:
+  - yarn install
+cache:
+  yarn: true
+  directories:
+    - node_modules
+script: yarn run build
+after_success:
+  - ./push.sh
+env:
+  global:
+    - secure: "ClEWUh/1DwZuxB7LmyEL+fwflkw6jkZx9Jeqv8B0lQQt8ac3Goj/8ulzsDGahSSzWXvfcmQ9NfQ1VWewnJDLmWEVexY5p9l34VdAJDQ/aDyxg6X7LAZ8eb+pbdWfEiZsCnKYHgv3MjwEUS4pEFKo9V9jir8rYsGEkgd8XxeUzVENFvoeWiUzcEJJDjZkaG2rJOQ9geLbt4orYkPzy4BjUGpFpKnN/62TMUHrEdWeU7zaxpKarmmJonKOmVdzXOLPGGx7zf6O+ELXlkfdenOJXfaXE0MvFDy4dxuBW1HygOYdxSKNFjRklbvRpF1RNPYoxK7ihmoTgoAMCeRkJ9ArovMgY44dtPmotX+gIEJjUXNbnh3V1Jh4+L0S+ZmCJdrsLyY7PBNps59SBhbWZK3mq46ROV9v0nu4Wz821YVRACtu0CVdlSB9WiPCQ/a4ERqor8/e+XoNaGXP3MZ6jCJo5lYdbOf8kyqZxEVl+sXVM852vKirr2kifpd4qKtX03ufJyg1KsP5NN2lRmJc28byNRbS3DtcXog+wi9ziQd2cyoPO080kmcUX9NUQGIwu/tsE7Iiri54yo6r+3CFxmQBxD3lG9a4z0zGgCm/pzc/jvrvX4MB8etEU/Akp7fDbsJ7xPOqh7+DkcXnqk8L3Yyt7s7SEpQ6ZIwW2TI7n9tSrcQ="
