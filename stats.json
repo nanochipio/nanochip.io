@@ -16,33 +16,33 @@
       "component---src-pages-security-js-262e734fa3f11f80f6c6.js",
       "component---src-pages-security-js-262e734fa3f11f80f6c6.js.map"
     ],
+    "path---vi-services": [
+      "path---vi-services-9ab9a8df0fa40b2c1cd5.js",
+      "path---vi-services-9ab9a8df0fa40b2c1cd5.js.map"
+    ],
     "path---vi-about-us": [
       "path---vi-about-us-ab7b756968a44a0cd847.js",
       "path---vi-about-us-ab7b756968a44a0cd847.js.map"
     ],
-    "component---src-pages-features-investors-js": [
-      "component---src-pages-features-investors-js-911005d35ac0a2a8935f.js",
-      "component---src-pages-features-investors-js-911005d35ac0a2a8935f.js.map"
+    "path---vi-services-investors": [
+      "path---vi-services-investors-98b9cc676b673bd471ff.js",
+      "path---vi-services-investors-98b9cc676b673bd471ff.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-11198dce5eae43d3d36e.js",
-      "component---src-pages-index-js-11198dce5eae43d3d36e.js.map"
+      "component---src-pages-index-js-6685b8ab25de18e1bd6e.js",
+      "component---src-pages-index-js-6685b8ab25de18e1bd6e.js.map"
     ],
     "path---security": [
       "path---security-e56dc589c189b44dd414.js",
       "path---security-e56dc589c189b44dd414.js.map"
     ],
-    "path---features-esop": [
-      "path---features-esop-99efeeb448246dae61ca.js",
-      "path---features-esop-99efeeb448246dae61ca.js.map"
+    "path---vi-services-reporting": [
+      "path---vi-services-reporting-e3f8649eb174a2c54f9c.js",
+      "path---vi-services-reporting-e3f8649eb174a2c54f9c.js.map"
     ],
     "path---vi-pricing": [
       "path---vi-pricing-75e093c9656dca4718c0.js",
       "path---vi-pricing-75e093c9656dca4718c0.js.map"
-    ],
-    "path---features": [
-      "path---features-ace24ea5bd4e167c93f4.js",
-      "path---features-ace24ea5bd4e167c93f4.js.map"
     ],
     "path---": [
       "path----4921fba7f482d2ab9b8f.js",
@@ -56,21 +56,17 @@
       "component---src-pages-contact-js-71ffb2954fcbf3c6f2a6.js",
       "component---src-pages-contact-js-71ffb2954fcbf3c6f2a6.js.map"
     ],
-    "component---src-pages-features-js": [
-      "component---src-pages-features-js-4457dede84acf2e52ad0.js",
-      "component---src-pages-features-js-4457dede84acf2e52ad0.js.map"
+    "path---services-round-modeling": [
+      "path---services-round-modeling-a652d94539d98e88b38e.js",
+      "path---services-round-modeling-a652d94539d98e88b38e.js.map"
     ],
-    "path---vi-features-investors": [
-      "path---vi-features-investors-98b9cc676b673bd471ff.js",
-      "path---vi-features-investors-98b9cc676b673bd471ff.js.map"
+    "path---services-reporting": [
+      "path---services-reporting-4ae295903c803af228b1.js",
+      "path---services-reporting-4ae295903c803af228b1.js.map"
     ],
-    "component---src-pages-features-consistency-js": [
-      "component---src-pages-features-consistency-js-67bc4613432333871d1c.js",
-      "component---src-pages-features-consistency-js-67bc4613432333871d1c.js.map"
-    ],
-    "path---vi-features-consistency": [
-      "path---vi-features-consistency-95dec2f1f7381752110a.js",
-      "path---vi-features-consistency-95dec2f1f7381752110a.js.map"
+    "path---vi-services-round-modeling": [
+      "path---vi-services-round-modeling-8b92c2d41a6ce0edd4a9.js",
+      "path---vi-services-round-modeling-8b92c2d41a6ce0edd4a9.js.map"
     ],
     "path---pricing": [
       "path---pricing-e56dc589c189b44dd414.js",
@@ -81,44 +77,44 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-ae02009a44ee8c9b40ce.js",
-      "component---src-layouts-index-js-ae02009a44ee8c9b40ce.js.map"
+      "component---src-layouts-index-js-d6ff9722e8a50684f328.js",
+      "component---src-layouts-index-js-d6ff9722e8a50684f328.js.map"
+    ],
+    "component---src-pages-services-consistency-js": [
+      "component---src-pages-services-consistency-js-67bc4613432333871d1c.js",
+      "component---src-pages-services-consistency-js-67bc4613432333871d1c.js.map"
     ],
     "path---index": [
       "path---index-b7e434123abbd43e6ea9.js",
       "path---index-b7e434123abbd43e6ea9.js.map"
     ],
-    "path---vi-features-reporting": [
-      "path---vi-features-reporting-e3f8649eb174a2c54f9c.js",
-      "path---vi-features-reporting-e3f8649eb174a2c54f9c.js.map"
-    ],
-    "path---features-round-modeling": [
-      "path---features-round-modeling-a652d94539d98e88b38e.js",
-      "path---features-round-modeling-a652d94539d98e88b38e.js.map"
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-c4d04eeb81debf787840.js",
+      "component---src-pages-404-js-c4d04eeb81debf787840.js.map"
     ],
     "path---privacy": [
       "path---privacy-e56dc589c189b44dd414.js",
       "path---privacy-e56dc589c189b44dd414.js.map"
     ],
-    "commons": [
-      "commons-ecb7f5401b964eee7f4b.js",
-      "commons-ecb7f5401b964eee7f4b.js.map"
+    "path---vi-services-esop": [
+      "path---vi-services-esop-15d340f520427a780060.js",
+      "path---vi-services-esop-15d340f520427a780060.js.map"
     ],
-    "component---src-pages-features-esop-js": [
-      "component---src-pages-features-esop-js-bbbaf94a688bf410607d.js",
-      "component---src-pages-features-esop-js-bbbaf94a688bf410607d.js.map"
+    "commons": [
+      "commons-c73b1ca41279934426e9.js",
+      "commons-c73b1ca41279934426e9.js.map"
     ],
     "component---src-pages-about-us-js": [
       "component---src-pages-about-us-js-2057acd2d90d87bee8fe.js",
       "component---src-pages-about-us-js-2057acd2d90d87bee8fe.js.map"
     ],
-    "component---src-pages-features-reporting-js": [
-      "component---src-pages-features-reporting-js-b4102062f8c0d498f6cf.js",
-      "component---src-pages-features-reporting-js-b4102062f8c0d498f6cf.js.map"
+    "path---vi-services-consistency": [
+      "path---vi-services-consistency-95dec2f1f7381752110a.js",
+      "path---vi-services-consistency-95dec2f1f7381752110a.js.map"
     ],
-    "component---src-pages-features-round-modeling-js": [
-      "component---src-pages-features-round-modeling-js-05ad550fd267a26892e6.js",
-      "component---src-pages-features-round-modeling-js-05ad550fd267a26892e6.js.map"
+    "path---services-esop": [
+      "path---services-esop-99efeeb448246dae61ca.js",
+      "path---services-esop-99efeeb448246dae61ca.js.map"
     ],
     "path---vi-contact": [
       "path---vi-contact-75e093c9656dca4718c0.js",
@@ -128,9 +124,13 @@
       "path---404-html-e56dc589c189b44dd414.js",
       "path---404-html-e56dc589c189b44dd414.js.map"
     ],
-    "component---src-pages-404-jsx": [
-      "component---src-pages-404-jsx-c4d04eeb81debf787840.js",
-      "component---src-pages-404-jsx-c4d04eeb81debf787840.js.map"
+    "component---src-pages-services-esop-js": [
+      "component---src-pages-services-esop-js-bbbaf94a688bf410607d.js",
+      "component---src-pages-services-esop-js-bbbaf94a688bf410607d.js.map"
+    ],
+    "component---src-pages-services-reporting-js": [
+      "component---src-pages-services-reporting-js-b4102062f8c0d498f6cf.js",
+      "component---src-pages-services-reporting-js-b4102062f8c0d498f6cf.js.map"
     ],
     "path---contact": [
       "path---contact-e56dc589c189b44dd414.js",
@@ -140,37 +140,25 @@
       "path---vi-security-75e093c9656dca4718c0.js",
       "path---vi-security-75e093c9656dca4718c0.js.map"
     ],
-    "path---vi-features-round-modeling": [
-      "path---vi-features-round-modeling-8b92c2d41a6ce0edd4a9.js",
-      "path---vi-features-round-modeling-8b92c2d41a6ce0edd4a9.js.map"
+    "path---services-consistency": [
+      "path---services-consistency-3add562333573c1fb48d.js",
+      "path---services-consistency-3add562333573c1fb48d.js.map"
     ],
-    "path---features-investors": [
-      "path---features-investors-2c571e308865e8401895.js",
-      "path---features-investors-2c571e308865e8401895.js.map"
+    "component---src-pages-services-round-modeling-js": [
+      "component---src-pages-services-round-modeling-js-05ad550fd267a26892e6.js",
+      "component---src-pages-services-round-modeling-js-05ad550fd267a26892e6.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-e56dc589c189b44dd414.js",
       "path---offline-plugin-app-shell-fallback-e56dc589c189b44dd414.js.map"
     ],
-    "path---features-consistency": [
-      "path---features-consistency-3add562333573c1fb48d.js",
-      "path---features-consistency-3add562333573c1fb48d.js.map"
-    ],
-    "path---vi-features-esop": [
-      "path---vi-features-esop-15d340f520427a780060.js",
-      "path---vi-features-esop-15d340f520427a780060.js.map"
-    ],
     "component---src-pages-pricing-js": [
       "component---src-pages-pricing-js-3a9f418c8d328b2c1206.js",
       "component---src-pages-pricing-js-3a9f418c8d328b2c1206.js.map"
     ],
-    "path---vi-features": [
-      "path---vi-features-9ab9a8df0fa40b2c1cd5.js",
-      "path---vi-features-9ab9a8df0fa40b2c1cd5.js.map"
-    ],
     "app": [
-      "app-c7da08137fc733bd7ede.js",
-      "app-c7da08137fc733bd7ede.js.map"
+      "app-a838631307c63ba90237.js",
+      "app-a838631307c63ba90237.js.map"
     ],
     "path---vi-404-html": [
       "path---vi-404-html-75e093c9656dca4718c0.js",
@@ -188,9 +176,21 @@
       "path---vi-privacy-75e093c9656dca4718c0.js",
       "path---vi-privacy-75e093c9656dca4718c0.js.map"
     ],
-    "path---features-reporting": [
-      "path---features-reporting-4ae295903c803af228b1.js",
-      "path---features-reporting-4ae295903c803af228b1.js.map"
+    "path---services": [
+      "path---services-ace24ea5bd4e167c93f4.js",
+      "path---services-ace24ea5bd4e167c93f4.js.map"
+    ],
+    "path---services-investors": [
+      "path---services-investors-2c571e308865e8401895.js",
+      "path---services-investors-2c571e308865e8401895.js.map"
+    ],
+    "component---src-pages-services-js": [
+      "component---src-pages-services-js-4457dede84acf2e52ad0.js",
+      "component---src-pages-services-js-4457dede84acf2e52ad0.js.map"
+    ],
+    "component---src-pages-services-investors-js": [
+      "component---src-pages-services-investors-js-911005d35ac0a2a8935f.js",
+      "component---src-pages-services-investors-js-911005d35ac0a2a8935f.js.map"
     ]
   }
 }
