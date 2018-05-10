@@ -1,5 +1,6 @@
-## Build trust in your cap table – www.ledgy.com
-Use Ledgy to track all your shares, manage your ESOPs and model detailed financing rounds.
+## Official Nanochip Website 
+
+– https://nanochip.io - Based on Leggy
 
 ## Built with 
 * [GatsbyJS](https://github.com/gatsbyjs/gatsby)

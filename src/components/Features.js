@@ -23,7 +23,7 @@ export const Feature = (props: {
       <h2>{props.title || props.name}</h2>
       <p>{props.children}</p>
       <p>
-        <Link href to={`${props.prefix}/features/${props.url}/`}>
+        <Link href to={`${props.prefix}/services/${props.url}/`}>
           <Trans>Learn more about</Trans> {props.name}
         </Link>
       </p>
@@ -51,7 +51,7 @@ const FeatureLink = (props: {
 }) => (
   props.page !== props.url &&
   <div className="col-6 px-3 col-lg-3">
-    <Link href to={`${props.prefix}/features/${props.url}/`}>
+    <Link href to={`${props.prefix}/services/${props.url}/`}>
       <div className="card border hover-shadow-8">
         <div className="card-body mb-0 pb-0 px-2 h-125">
           <h6 className="card-title text-center">{props.name}</h6>

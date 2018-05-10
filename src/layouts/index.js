@@ -57,11 +57,11 @@ const Nav = (props: LayoutProps) => (
       <section className="navbar-mobile">
         <h6 className="d-sm-none">Nanochip</h6>
         <nav className="nav nav-navbar ml-auto">
-          <Link className="nav-link" href to={`${props.prefix}/features/`}>
+          <Link className="nav-link" href to={`${props.prefix}/services/`}>
             <Trans>Features</Trans>
           </Link>
-          <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
-            <Trans>Pricing</Trans>
+          <Link className="nav-link" href to={`${props.prefix}/products/`}>
+            <Trans>Products</Trans>
           </Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
             <Trans>About us</Trans>
