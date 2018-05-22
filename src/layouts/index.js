@@ -1,7 +1,8 @@
 // @flow
 
 import * as React from "react";
-import Link, { navigateTo } from "gatsby-link";
+import { navigateTo } from "gatsby-link";
+import Link from "../components/Link";
 import { I18nProvider, withI18n, Trans } from "@lingui/react";
 import { Helmet } from "react-helmet";
 
@@ -23,11 +24,11 @@ type LayoutProps = {
 };
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
-  <Link href to={`${props.prefix}/#start`} className="navbar-brand">
+  <Link href to={`${props.prefix}/#start`} className="navbar-brand" style={{width:"180px"}}>
     <img
       className="logo-dark"
       src={logoDefault}
-      width={160}
+      width={168}
       height={40}
       alt={name}
     />
@@ -35,7 +36,7 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
       <img
         className="logo-light"
         src={logoInverse}
-        width={160}
+        width={168}
         height={40}
         alt={name}
       />
@@ -63,10 +64,15 @@ const Nav = (props: LayoutProps) => (
           <Link className="nav-link" href to={`${props.prefix}/products/`}>
             <Trans>Products</Trans>
           </Link>
+          <Link className="nav-link" href="https://iotmaker.vn">
+            <Trans>Shop</Trans>
+          </Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
             <Trans>About us</Trans>
           </Link>
-          
+          <Link className="nav-link" href to={`${props.prefix}/contact/`}>
+            <Trans>Contact Us</Trans>
+          </Link>
         </nav>
 
         <span className="navbar-divider" />
@@ -149,7 +155,7 @@ const Footer = (props: LayoutProps) => (
                 <Trans>Security</Trans>
               </Link>
               <Link className="nav-link" href to={`${props.prefix}/contact/`}>
-                <Trans>Contact & Imprint</Trans>
+                <Trans>Contact Us</Trans>
               </Link>
             </div>
           </div>
@@ -204,37 +210,21 @@ const Footer = (props: LayoutProps) => (
               </Link>
             </div>
           </div>
-
-          <div className="col-6 col-md-6 col-xl-2 text-center px-1">
+          <div className="col-6 col-md-6 col-xl-3 px-1">
             <div className="social social-bordered">
-              <a className="social-twitter" href="https://twitter.com/LedgyCom">
-                <i className="fa fa-twitter" />
-              </a>
+              <h7 className="fw-500">
+                <Trans>Connect with us: </Trans>
+              </h7>
               <a
-                className="social-linkedin"
-                href="https://www.linkedin.com/company/ledgy"
-              >
-                <i className="fa fa-linkedin" />
-              </a>
-              <a
-                className="social-facebook"
-                href="https://www.facebook.com/LedgyCom/"
+                className="offset-1 social-facebook"
+                href="https://www.facebook.com/iotmaker.vn/"
               >
                 <i className="fa fa-facebook" />
-              </a>
-              <a className="social-angellist" href="https://angel.co/ledgy">
-                <i className="fa fa-angellist" />
-              </a>
-              <a
-                className="social-xing"
-                href="https://www.xing.com/companies/ledgy"
-              >
-                <i className="fa fa-xing" />
               </a>
             </div>
           </div>
 
-          <div className="col-6 col-md-6 col-xl-2">
+          {/* <div className="col-6 col-md-6 col-xl-2">
             {props.lang === "vi" ? (
               <Link
                 href
@@ -252,7 +242,7 @@ const Footer = (props: LayoutProps) => (
                 Vietnam
               </Link>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
       <div data-provide="map" />

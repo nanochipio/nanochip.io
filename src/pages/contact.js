@@ -7,7 +7,7 @@ import { Title } from '../layouts/utils';
 
 const Header = ({ i18n }: Props) => (
   <header className="header text-white bg-ledgy">
-    <Title title={i18n.t`Contact`} />
+    <Title title={i18n.t`Infomation`} />
 
     <div className="container text-center">
       <div className="row">
@@ -35,11 +35,11 @@ class Map extends React.Component<{}> {
       id="map"
       className="h-400"
       data-provide="map"
-      data-lat="47.3627638"
-      data-lng="8.5579592"
-      data-marker-lat="47.3627638"
-      data-marker-lng="8.5579592"
-      data-zoom="14"
+      data-lat="10.787389"
+      data-lng="106.685126"
+      data-marker-lat="10.787389"
+      data-marker-lng="106.685126"
+      data-zoom="18"
     />);
   }
 }
@@ -76,43 +76,35 @@ const IndexPage = (props: Object) => {
                     <label htmlFor="bot-field">Don’t fill this out if you’re human: <input name="bot-field" /></label>
                   </div>
 
-                  <button className="btn btn-lg btn-primary btn-block" type="submit">{i18n.t`Send message`}</button>
+                  <button className="btn btn-xl btn-lg btn-primary btn-block" type="submit">{i18n.t`Send message`}</button>
                 </form>
 
               </div>
 
-
               <div className="col-12 col-xl-6">
                 <div className="bg-gray h-full p-5 imprint">
 
-                  <h5><Trans>Imprint</Trans></h5>
+                  <h5><Trans>Head Office</Trans></h5>
 
                   <div className="row">
                     <div className="col-md-6">
 
                       <p>
-                        <h6>Ledgy AG</h6>
-                        Forchstrasse 60<br />
-                        8008 Zürich<br />
-                        <Trans>Switzerland</Trans>
-                      </p>
-
-                      <p>
-                        <h6><Trans>Contact</Trans></h6>
-                        <a href="mailto:contact@ledgy.com">contact@ledgy.com</a><br />
-                        +41 (0) 44 585 21 23
+                        <h6><Trans>Address</Trans></h6>
+                        <Trans>Mezzanine floor An Phu Plaza </Trans><br />
+                        <Trans>117-119 Ly Chinh Thang, Ward 7, Dist 3</Trans><br />
+                        <Trans>Ho Chi Minh City, Vietnam</Trans>
                       </p>
                     </div>
                     <div className="col-md-6">
-                      <p>
+                      {/* <p>
                         <h6><Trans>VAT number</Trans></h6>
-                        CHE‑261.454.963 MWST
-                      </p>
+                        0313885664
+                      </p> */}
                       <p>
-                        <h6><Trans>Managing directors</Trans></h6>
-                        Yoko Spirig<br />
-                        Ben-Elias Brandt<br />
-                        Timo Horstschäfer
+                        <h6><Trans>Contact</Trans></h6>
+                        <a href="mailto:hello@nanochip.io">hello@nanochip.io</a><br />
+                        +84 2866 824 204
                       </p>
                     </div>
                   </div>
