@@ -30617,7 +30617,8 @@ return /******/ (function(modules) { // webpackBootstrap
     // Google map
     //
     if ( $('[data-provide~="map"]').length && window["google.maps.Map"] === undefined ) {
-      $.getScript("https://maps.googleapis.com/maps/api/js?key="+ page.defaults.googleApiKey +"&callback=page.initMap");
+			// $.getScript("https://maps.googleapis.com/maps/api/js?key="+ page.defaults.googleApiKey +"&callback=page.initMap");
+			$.getScript("https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false");
     }
 
     // Google Analytics
@@ -30904,7 +30905,7 @@ return /******/ (function(modules) { // webpackBootstrap
       }
 
       setting = $.extend(setting, page.getDataOptions($(this)));
-
+			
       var map = new google.maps.Map( $(this)[0], {
         center: {
           lat: Number(setting.lat),
@@ -30946,9 +30947,10 @@ return /******/ (function(modules) { // webpackBootstrap
           }
       }
 
-    });
-
+		});
+			
   }
+
 
 }(jQuery);
 

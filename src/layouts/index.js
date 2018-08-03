@@ -8,14 +8,11 @@ import { Helmet } from "react-helmet";
 
 import { Title, name, appUrl, blogUrl, demoUrl } from "./utils";
 import { catalogs, langFromPath, langPrefix, getLocale } from "../i18n-config";
-import SignupForm from "../components/SignupForm";
 
 import "../assets/scss/page.scss";
 
 import logoDefault from "../assets/img/nanochip-light.svg";
 import logoInverse from "../assets/img/nanochip-dark.svg";
-
-const hasFooter = (pathname: string) => !pathname.match(/contact/);
 
 type LayoutProps = {
   ...$Exact<Props>,
@@ -24,11 +21,16 @@ type LayoutProps = {
 };
 
 const Logo = (props: { prefix: string, inverse: boolean }) => (
-  <Link href to={`${props.prefix}/#start`} className="navbar-brand" style={{width:"180px"}}>
+  <Link
+    href
+    to={`${props.prefix}/`}
+    className="navbar-brand"
+    style={{ width: "180px" }}
+  >
     <img
       className="logo-dark"
       src={logoDefault}
-      width={168}
+      width={140}
       height={40}
       alt={name}
     />
@@ -36,7 +38,7 @@ const Logo = (props: { prefix: string, inverse: boolean }) => (
       <img
         className="logo-light"
         src={logoInverse}
-        width={168}
+        width={140}
         height={40}
         alt={name}
       />
@@ -57,18 +59,15 @@ const Nav = (props: LayoutProps) => (
 
       <section className="navbar-mobile">
         <h6 className="d-sm-none">Nanochip</h6>
-        <nav className="nav nav-navbar ml-auto">
+        <nav className="nav nav-navbar ml-auto font-family-roboto">
           <Link className="nav-link" href to={`${props.prefix}/services/`}>
-            <Trans>Features</Trans>
+            <Trans>Services</Trans>
           </Link>
           <Link className="nav-link" href to={`${props.prefix}/products/`}>
             <Trans>Products</Trans>
           </Link>
-          <Link className="nav-link" href="https://iotmaker.vn">
-            <Trans>Shop</Trans>
-          </Link>
           <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
-            <Trans>About us</Trans>
+            <Trans>About Us</Trans>
           </Link>
           <Link className="nav-link" href to={`${props.prefix}/contact/`}>
             <Trans>Contact Us</Trans>
@@ -76,178 +75,93 @@ const Nav = (props: LayoutProps) => (
         </nav>
 
         <span className="navbar-divider" />
+        {props.lang === "vi" ? (
+          <Link
+            href
+            to={props.location.pathname.substr(3)}
+            className="btn btn-round btn-outline-light ml-lg-4 mr-2"
+          >
+            English
+          </Link>
+        ) : (
+          <Link
+            href
+            to={`/vi${props.location.pathname}`}
+            className="btn btn-round btn-outline-light ml-lg-4 mr-2"
+          >
+            Vietnamese
+          </Link>
+        )}
       </section>
-      {props.lang === "vi" ? (
-        <Link
-          href
-          to={props.location.pathname.substr(3)}
-          className="btn btn-round btn-outline-light ml-lg-4 mr-2"
-        >
-          English
-        </Link>
-      ) : (
-        <Link
-          href
-          to={`/vi${props.location.pathname}`}
-          className="btn btn-round btn-outline-light ml-lg-4 mr-2"
-        >
-          Vietnamese
-        </Link>
-      )}
     </div>
   </nav>
 );
 
 const Footer = (props: LayoutProps) => (
-  <div>
-    {hasFooter(props.location.pathname) && (
-      <section className="section bg-pale-secondary" id="try">
-        <div className="container text-center signup py-7">
-          <h2>
-            <Trans>Try Ledgy now. It’s free.</Trans>
-          </h2>
-
-          <SignupForm {...props} />
-
-          <p>
-            <Trans>
-              Still hesitating?&nbsp;
-              <Link href to={`${props.prefix}/features/`}>
-                Learn more about our features
-              </Link>.
-            </Trans>
-          </p>
-          <p>
-            <Trans>
-              Or have a quick look at our&nbsp;
-              <a href={`${demoUrl}`} target="_blank">
-                live Demo
-              </a>.
-            </Trans>
-          </p>
+  <footer className="footer py-7 bg-gray">
+    <div className="container ">
+      <div className="row gap-y">
+        <div className="col-md-6 col-xl-3">
+          <Logo {...props} inverse={false} />
         </div>
-      </section>
-    )}
-    <footer className="footer py-7">
-      <div className="container">
-        <div className="row gap-y">
-          <div className="col-md-6 col-xl-3">
-            <Logo {...props} inverse={false} />
-          </div>
 
-          <div className="col-6 col-md-3 col-xl-2">
-            <h6 className="mb-4 mt-1">
-              <strong>
-                <Trans>Company</Trans>
-              </strong>
-            </h6>
-            <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
-                <Trans>About us</Trans>
-              </Link>
-              <a className="nav-link" href={blogUrl}>
-                <Trans>Blog</Trans>
-              </a>
-              <Link className="nav-link" href to={`${props.prefix}/privacy/`}>
-                <Trans>Privacy</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/security/`}>
-                <Trans>Security</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/contact/`}>
-                <Trans>Contact Us</Trans>
-              </Link>
-            </div>
+        <div className="col-6 col-md-3 col-xl-2">
+          <h6 className="mb-4 mt-1">
+            <strong>
+              <Trans>Company</Trans>
+            </strong>
+          </h6>
+          <div className="nav flex-column">
+            <Link className="nav-link" href to={`${props.prefix}/about-us/`}>
+              <Trans>About Us</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/privacy/`}>
+              <Trans>Privacy</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/security/`}>
+              <Trans>Security</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/contact/`}>
+              <Trans>Contact Us</Trans>
+            </Link>
           </div>
+        </div>
 
-          <div className="col-6 col-md-3 col-xl-3">
-            <h6 className="mb-4 mt-1">
-              <strong>
-                <Trans>Product</Trans>
-              </strong>
-            </h6>
-            <div className="nav flex-column">
-              <Link className="nav-link" href to={`${props.prefix}/features/`}>
-                <Trans>Features</Trans>
-              </Link>
-              <Link className="nav-link" href to={`${props.prefix}/pricing/`}>
-                <Trans>Pricing</Trans>
-              </Link>
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/features/consistency/`}
-              >
-                <Trans>Consistency</Trans>
-              </Link>
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/features/round-modeling/`}
-              >
-                <Trans>Round Modeling</Trans>
-              </Link>
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/features/esop/`}
-              >
-                <Trans>ESOP</Trans>
-              </Link>
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/features/reporting/`}
-              >
-                <Trans>Reporting</Trans>
-              </Link>
-              <Link
-                className="nav-link"
-                href
-                to={`${props.prefix}/features/investors/`}
-              >
-                <Trans>Investors</Trans>
-              </Link>
-            </div>
+        <div className="col-6 col-md-3 col-xl-3">
+          <h6 className="mb-4 mt-1">
+            <strong>
+              <Trans>Business</Trans>
+            </strong>
+          </h6>
+          <div className="nav flex-column">
+            <Link className="nav-link" href to={`${props.prefix}/products/`}>
+              <Trans>Products</Trans>
+            </Link>
+            <Link className="nav-link" href to={`${props.prefix}/services/`}>
+              <Trans>Services</Trans>
+            </Link>
+            <Link className="nav-link" href={"https://iotmaker.vn"}>
+              <Trans>Store</Trans>
+            </Link>
           </div>
-          <div className="col-6 col-md-6 col-xl-3 px-1">
-            <div className="social social-bordered">
-              <h7 className="fw-500">
-                <Trans>Connect with us: </Trans>
-              </h7>
-              <a
-                className="offset-1 social-facebook"
-                href="https://www.facebook.com/iotmaker.vn/"
-              >
-                <i className="fa fa-facebook" />
-              </a>
-            </div>
+        </div>
+        <div className="col-6 col-md-5 col-xl-3 px-1">
+          <div className="social social-bordered">
+            <h7 className="fw-500">
+              <Trans>Follow us on: </Trans>
+            </h7>
+            <a
+              className="offset-1 social-facebook"
+              href="https://www.facebook.com/iotmaker.vn/"
+            >
+              <i className="fa fa-facebook" />
+            </a>
           </div>
-
-          {/* <div className="col-6 col-md-6 col-xl-2">
-            {props.lang === "vi" ? (
-              <Link
-                href
-                to={props.location.pathname.substr(3)}
-                className="btn btn-round btn-outline-primary"
-              >
-                English
-              </Link>
-            ) : (
-              <Link
-                href
-                to={`/vi${props.location.pathname}`}
-                className="btn btn-round btn-outline-primary"
-              >
-                Vietnam
-              </Link>
-            )}
-          </div> */}
         </div>
       </div>
-      <div data-provide="map" />
-    </footer>
-  </div>
+    </div>
+    <div data-provide="map" />
+  </footer>
 );
 
 type SiteProps = {
@@ -277,34 +191,29 @@ const TemplateWrapper = withI18n()((props: SiteProps) => {
   return (
     <div>
       <Title
-        title={i18n.t`Build trust in your cap table`}
-        description={i18n.t`Manage your Cap Table, not your Excel! Ledgy is the single place to track the complete history of your shares, manage your ESOPs and model detailed financing rounds. Enjoy a guaranteed error-free cap table and engage your investors and employees. Try Now For Free!`}
+        title={i18n.t`Make your world more intelligence`}
+        description={i18n.t`We are a team which good enginers, we will help you control your life esier and more intelligence.`}
       />
       <Helmet>
         <html lang={props.lang} />
         <meta
           name="keywords"
-          content={i18n.t`cap table, stock ledger, share register, startup, round modeling, equity, esop, reporting, investors`}
+          content={i18n.t`startup, esp, esp32, esp8266, arduino, UnoX, IoT, iotmaker, espressif, nanochip`}
         />
-        <meta name="author" content="Ledgy" />
+        <meta name="author" content="nanochip" />
 
         {/* Facebook social card */}
         <meta property="og:site_name" content={name} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={thumbnailUrl} />
 
-        {/* Twitter social card */}
-        <meta name="twitter:site" content="@LedgyCom" />
-        <meta name="twitter:image" content={thumbnailUrl} />
-        <meta name="twitter:card" content="summary_large_image" />
-
         <link rel="alternate" href={EnPathname} hrefLang="x-default" />
         <link rel="alternate" href={EnPathname} hrefLang="en" />
         <link
           rel="alternate"
-          href={`${siteUrl}${pathname.startsWith("/vi") ? "" : "/vi"}${
-            pathname
-          }`}
+          href={`${siteUrl}${
+            pathname.startsWith("/vi") ? "" : "/vi"
+          }${pathname}`}
           hrefLang="vi"
         />
 

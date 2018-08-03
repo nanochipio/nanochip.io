@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,600,700|Dosis:200,400,500,600|Arial:100,200,300,400,500");
 
 @include media-breakpoint-up(md) {
   html {
@@ -9,7 +9,7 @@
 
 @include media-breakpoint-up(xl) {
   .team-1 p {
-    height: 4.5rem
+    height: 4.5rem;
   }
 }
 
@@ -29,20 +29,26 @@ p > a {
   background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
 }
 .nav-link {
-  font-size: 0.8em !important;
+  font-size: 0.7em !important;
 }
 .btn {
   font-size: 0.6em;
 }
-.nav-navbar .nav-link, .btn {
+.nav-navbar .nav-link,
+.btn {
   text-transform: none;
-  font-weight: 400;
+  font-weight: bold;
 }
 .stick .btn-outline-light {
   color: $color-primary;
   border-color: $color-primary;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   hyphens: auto;
 }
 .footer {
@@ -52,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
 
   img {
-    margin: 0
+    margin: 0;
   }
 }
 .section-header p {
@@ -75,7 +81,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 .pricing-3 {
-  h6 { height: 2rem }
+  h6 {
+    height: 2rem;
+  }
   li {
     position: relative;
     margin-left: 1em;
@@ -84,9 +92,21 @@ h1, h2, h3, h4, h5, h6 {
   }
   li::before {
     content: "\E64C";
-    font-family: 'themify';
+    font-family: "themify";
     color: $color-success;
     position: absolute;
     left: -1.5em;
   }
+}
+
+.font-family-arial {
+  font-family: "Arial", sans-serif;
+}
+
+.font-family-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-family-open-sans {
+  font-family: "Open Sans", sans-serif;
 }
