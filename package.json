@@ -1,9 +1,9 @@
 {
-  "name": "ledgy-landing-page",
-  "description": "Ledgy Landing Page",
+  "name": "Nanochip-Website",
+  "description": "Nanochip-Websit",
   "version": "1.0.0",
-  "author": "Ledgy AG <contact@ledgy.com>",
-  "repository": "morloy/ledgy-app",
+  "author": "Nanochip <hello@nanochip.cio>",
+  "repository": "nanochipio/nanochip.io",
   "dependencies": {
     "@babel/core": "~7.0.0-beta.44",
     "@babel/preset-env": "~7.0.0-beta.44",
@@ -39,7 +39,7 @@
     "slick-carousel": "~1.8.1"
   },
   "keywords": [
-    "ledgy"
+    "nanochipio"
   ],
   "license": "MIT",
   "main": "n/a",

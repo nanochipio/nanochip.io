@@ -1,8 +1,6 @@
-'use strict';
+"use strict";
 
 $(function() {
-
-
   /*
   |--------------------------------------------------------------------------
   | Configure your website
@@ -14,7 +12,6 @@ $(function() {
   */
 
   page.config({
-
     /*
     |--------------------------------------------------------------------------
     | Google API Key
@@ -27,7 +24,7 @@ $(function() {
     |
     */
 
-    googleApiKey: 'AIzaSyDRBLFOTTh2NFM93HpUA4ZrA99yKnCAsto',
+    googleApiKey: "AIzaSyDSsnMCHx0H2Xustv-U22JYqdufJuhfjCc",
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +36,7 @@ $(function() {
     |
     */
 
-    googleAnalyticsId: '',
+    googleAnalyticsId: "",
 
     /*
     |--------------------------------------------------------------------------
@@ -54,10 +51,10 @@ $(function() {
     |
     */
 
-    reCaptchaSiteKey:  '6Ldaf0MUAAAAAHdsMv_7dND7BSTvdrE6VcQKpM-n',
+    reCaptchaSiteKey: "6Ldaf0MUAAAAAHdsMv_7dND7BSTvdrE6VcQKpM-n",
 
     // See available languages: https://developers.google.com/recaptcha/docs/language
-    reCaptchaLanguage: '',
+    reCaptchaLanguage: "",
 
     /*
     |--------------------------------------------------------------------------
@@ -80,13 +77,8 @@ $(function() {
     |
     */
 
-    smoothScroll: false,
-
+    smoothScroll: false
   });
-
-
-
-
 
   /*
   |--------------------------------------------------------------------------
@@ -98,8 +90,4 @@ $(function() {
   | them in this file.
   |
   */
-
-
-
-
 });
